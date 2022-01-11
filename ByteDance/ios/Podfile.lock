@@ -1,0 +1,23 @@
+PODS:
+  - AgoraByteDanceEffectExtension (0.1.0)
+  - AgoraRtcEngine_Special_iOS (3.7.201)
+
+DEPENDENCIES:
+  - AgoraByteDanceEffectExtension (from `ExtensionExample`)
+  - AgoraRtcEngine_Special_iOS (= 3.7.201)
+
+SPEC REPOS:
+  trunk:
+    - AgoraRtcEngine_Special_iOS
+
+EXTERNAL SOURCES:
+  AgoraByteDanceEffectExtension:
+    :path: ExtensionExample
+
+SPEC CHECKSUMS:
+  AgoraByteDanceEffectExtension: 73b5a23762d9555bb459b80a82295fc3bf2348b3
+  AgoraRtcEngine_Special_iOS: cad11aa2d6d2aa6ee040c4e30a17ef0c3ead8711
+
+PODFILE CHECKSUM: d28931060b3bcbd3c08091bef7907a78fe7b26a2
+
+COCOAPODS: 1.11.2
