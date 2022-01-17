@@ -56,36 +56,50 @@
 }
 
 - (IBAction)bef_effect_ai_init:(id)sender {
-  [self.agoraKit
-      setExtensionPropertyWithVendor:@"ByteDance"
+    NSError *error;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:@{
+                            @"licensePath":
+                                [self.resourceHelper licensePath]
+                          }
+                        options:NSJSONWritingPrettyPrinted
+                        error:&error];
+    
+    [self.agoraKit
+        setExtensionPropertyWithVendor:@"ByteDance"
                            extension:@"Effect"
                                  key:@"bef_effect_ai_check_license"
-                               value:[self toJson:@{
-                                 @"licensePath":
-                                     [self.resourceHelper licensePath]
-                               }]];
-  [self.agoraKit
-      setExtensionPropertyWithVendor:@"ByteDance"
-                           extension:@"Effect"
-                                 key:@"bef_effect_ai_init"
-                               value:[self toJson:@{
-                                 @"strModelDir":
-                                     [self.resourceHelper modelDirPath],
-                                 @"deviceName": @""
-                               }]];
+                               value:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
+    
+    data = [NSJSONSerialization dataWithJSONObject:@{
+                            @"strModelDir":
+                                [self.resourceHelper modelDirPath],
+                            @"deviceName": @""
+                          }
+                        options:NSJSONWritingPrettyPrinted
+                        error:&error];
+    [self.agoraKit
+        setExtensionPropertyWithVendor:@"ByteDance"
+                       extension:@"Effect"
+                             key:@"bef_effect_ai_init"
+                           value:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
+    
+    
+    data = [NSJSONSerialization dataWithJSONObject:@{
+                            @"mode": @1,
+                            @"orderType": @0
+                          }
+                        options:NSJSONWritingPrettyPrinted
+                        error:&error];
+    
+    [self.agoraKit
+        setExtensionPropertyWithVendor:@"ByteDance"
+                             extension:@"Effect"
+                                   key:@"bef_effect_ai_composer_set_mode"
+                                 value:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
 }
 
 - (IBAction)bef_effect_ai_set_effect:(id)sender {
   [self performSegueWithIdentifier:@"PopSegue" sender:self];
-}
-
-- (NSString *)toJson:(NSDictionary *)dic {
-  NSError *error;
-  NSData *data =
-      [NSJSONSerialization dataWithJSONObject:dic
-                                      options:NSJSONWritingPrettyPrinted
-                                        error:&error];
-  return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
 - (void)onEvent:(NSString *__nullable)provider
@@ -105,14 +119,19 @@
     __weak typeof(self) weakSelf = self;
     controller.stickerBlock = ^(NSString *_Nonnull sticker) {
       if (!weakSelf) { return; }
+        NSError *error;
+        NSData *data = [NSJSONSerialization dataWithJSONObject:@{
+                                @"strPath": [self.resourceHelper
+                                    stickerPath:sticker]
+                              }
+                            options:NSJSONWritingPrettyPrinted
+                            error:&error];
+        
       [weakSelf.agoraKit
           setExtensionPropertyWithVendor:@"ByteDance"
                                extension:@"Effect"
                                      key:@"bef_effect_ai_set_effect"
-                                   value:[self toJson:@{
-                                     @"strPath": [self.resourceHelper
-                                         stickerPath:sticker]
-                                   }]];
+                                   value:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
     };
     // 设置箭头的“尖儿”所指向的位置
     popController.sourceRect = CGRectMake(0, 50, 100, 0);

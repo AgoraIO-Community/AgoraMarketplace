@@ -113,6 +113,16 @@ public class MainActivity
     } catch (JSONException var3) {
       Log.e(TAG, var3.toString());
     }
+
+    // Enable composer and sticker
+    try {
+      JSONObject jsonObject = new JSONObject();
+      jsonObject.put("mode", 1);
+      jsonObject.put("orderType", 0);
+      setExtensionProperty("bef_effect_ai_composer_set_mode", jsonObject.toString());
+    } catch (JSONException var3) {
+      Log.e(TAG, var3.toString());
+    }
   }
 
   private void setExtensionProperty(String key, String property) {
@@ -148,7 +158,7 @@ public class MainActivity
                                jsonArray.put(nodePath);
                              }
 
-                             setExtensionProperty("bef_effect_ai_composer_set_mode", jsonArray.toString());
+                             setExtensionProperty("bef_effect_ai_composer_set_nodes", jsonArray.toString());
 
                              dialogInterface.dismiss();
                            })
