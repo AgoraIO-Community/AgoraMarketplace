@@ -1,0 +1,6 @@
+Resource/*
+ExtensionExample/AgoraByteDanceEffectExtension.framework
+.plugin_dev
+**/Pods/
+xcuserdata/
+ExtensionExample/out
