@@ -55,50 +55,66 @@
   }
 }
 
-- (IBAction)bef_effect_ai_init:(id)sender {
-    NSError *error;
-    NSData *data = [NSJSONSerialization dataWithJSONObject:@{
-                            @"licensePath":
-                                [self.resourceHelper licensePath]
-                          }
-                        options:NSJSONWritingPrettyPrinted
-                        error:&error];
-    
-    [self.agoraKit
-        setExtensionPropertyWithVendor:@"ByteDance"
+- (IBAction)initExtension:(id)sender {
+  NSError *error;
+  NSData *data = [NSJSONSerialization
+      dataWithJSONObject:@{@"licensePath": [self.resourceHelper licensePath]}
+                 options:NSJSONWritingPrettyPrinted
+                   error:&error];
+  [self.agoraKit
+      setExtensionPropertyWithVendor:@"ByteDance"
                            extension:@"Effect"
                                  key:@"bef_effect_ai_check_license"
-                               value:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
-    
-    data = [NSJSONSerialization dataWithJSONObject:@{
-                            @"strModelDir":
-                                [self.resourceHelper modelDirPath],
-                            @"deviceName": @""
-                          }
-                        options:NSJSONWritingPrettyPrinted
-                        error:&error];
-    [self.agoraKit
-        setExtensionPropertyWithVendor:@"ByteDance"
-                       extension:@"Effect"
-                             key:@"bef_effect_ai_init"
-                           value:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
-    
-    
-    data = [NSJSONSerialization dataWithJSONObject:@{
-                            @"mode": @1,
-                            @"orderType": @0
-                          }
-                        options:NSJSONWritingPrettyPrinted
-                        error:&error];
-    
-    [self.agoraKit
-        setExtensionPropertyWithVendor:@"ByteDance"
-                             extension:@"Effect"
-                                   key:@"bef_effect_ai_composer_set_mode"
-                                 value:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
+                               value:[[NSString alloc]
+                                         initWithData:data
+                                             encoding:NSUTF8StringEncoding]];
+
+  data = [NSJSONSerialization dataWithJSONObject:@{
+    @"strModelDir": [self.resourceHelper modelDirPath],
+    @"deviceName": @""
+  }
+                                         options:NSJSONWritingPrettyPrinted
+                                           error:&error];
+  [self.agoraKit
+      setExtensionPropertyWithVendor:@"ByteDance"
+                           extension:@"Effect"
+                                 key:@"bef_effect_ai_init"
+                               value:[[NSString alloc]
+                                         initWithData:data
+                                             encoding:NSUTF8StringEncoding]];
+
+  data =
+      [NSJSONSerialization dataWithJSONObject:@{@"mode": @1, @"orderType": @0}
+                                      options:NSJSONWritingPrettyPrinted
+                                        error:&error];
+  [self.agoraKit
+      setExtensionPropertyWithVendor:@"ByteDance"
+                           extension:@"Effect"
+                                 key:@"bef_effect_ai_composer_set_mode"
+                               value:[[NSString alloc]
+                                         initWithData:data
+                                             encoding:NSUTF8StringEncoding]];
 }
 
-- (IBAction)bef_effect_ai_set_effect:(id)sender {
+- (IBAction)setComposer:(id)sender {
+  NSError *error;
+  NSData *data =
+      [NSJSONSerialization dataWithJSONObject:@[
+        [self.resourceHelper composerNodePath:@"beauty_IOS_lite"],
+        [self.resourceHelper composerNodePath:@"style_makeup/tianmei"],
+      ]
+                                      options:NSJSONWritingPrettyPrinted
+                                        error:&error];
+  [self.agoraKit
+      setExtensionPropertyWithVendor:@"ByteDance"
+                           extension:@"Effect"
+                                 key:@"bef_effect_ai_composer_set_nodes"
+                               value:[[NSString alloc]
+                                         initWithData:data
+                                             encoding:NSUTF8StringEncoding]];
+}
+
+- (IBAction)setSticker:(id)sender {
   [self performSegueWithIdentifier:@"PopSegue" sender:self];
 }
 
@@ -119,19 +135,22 @@
     __weak typeof(self) weakSelf = self;
     controller.stickerBlock = ^(NSString *_Nonnull sticker) {
       if (!weakSelf) { return; }
-        NSError *error;
-        NSData *data = [NSJSONSerialization dataWithJSONObject:@{
-                                @"strPath": [self.resourceHelper
-                                    stickerPath:sticker]
-                              }
-                            options:NSJSONWritingPrettyPrinted
-                            error:&error];
-        
+      NSError *error;
+      NSData *data =
+          [NSJSONSerialization dataWithJSONObject:@{
+            @"strPath": [self.resourceHelper stickerPath:sticker]
+          }
+                                          options:NSJSONWritingPrettyPrinted
+                                            error:&error];
+
       [weakSelf.agoraKit
           setExtensionPropertyWithVendor:@"ByteDance"
                                extension:@"Effect"
                                      key:@"bef_effect_ai_set_effect"
-                                   value:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
+                                   value:
+                                       [[NSString alloc]
+                                           initWithData:data
+                                               encoding:NSUTF8StringEncoding]];
     };
     // 设置箭头的“尖儿”所指向的位置
     popController.sourceRect = CGRectMake(0, 50, 100, 0);

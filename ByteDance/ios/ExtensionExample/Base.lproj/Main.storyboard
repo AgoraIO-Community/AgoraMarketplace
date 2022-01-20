@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOV-10-ixi">
-                                <rect key="frame" x="245" y="574" width="130" height="31"/>
+                                <rect key="frame" x="245" y="543" width="130" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="enableExtension"/>
                                 <connections>
@@ -30,22 +30,29 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJa-cP-qH4">
-                                <rect key="frame" x="238" y="605" width="137" height="31"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="bef_effect_ai_init"/>
-                                <buttonConfiguration key="configuration" style="plain" title="bef_effect_ai_init"/>
+                                <rect key="frame" x="268.5" y="574" width="106.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="initExtension"/>
                                 <connections>
-                                    <action selector="bef_effect_ai_init:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lro-yu-EzZ"/>
+                                    <action selector="initExtension:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rlB-Za-g1Y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzx-yO-Jid">
-                                <rect key="frame" x="192" y="636" width="183" height="31"/>
+                                <rect key="frame" x="264" y="605" width="111" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="bef_effect_ai_set_effect"/>
+                                <buttonConfiguration key="configuration" style="plain" title="setComposer"/>
                                 <connections>
-                                    <action selector="bef_effect_ai_set_effect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ule-mo-oaO"/>
-                                    <segue destination="Qk5-Fz-D0n" kind="popoverPresentation" identifier="PopSegue" popoverAnchorView="lzx-yO-Jid" id="38O-5h-nLl">
-                                        <popoverArrowDirection key="popoverArrowDirection" down="YES"/>
+                                    <action selector="setComposer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A0c-wH-qPz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQN-RK-1oV">
+                                <rect key="frame" x="286" y="636" width="89" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="setSticker"/>
+                                <connections>
+                                    <action selector="setSticker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lNk-iP-N8m"/>
+                                    <segue destination="Qk5-Fz-D0n" kind="popoverPresentation" identifier="PopSegue" popoverAnchorView="VQN-RK-1oV" id="aZK-Ax-kTV">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
                             </button>
@@ -53,17 +60,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fJa-cP-qH4" firstAttribute="top" secondItem="cOV-10-ixi" secondAttribute="bottom" id="6Kr-qz-KjF"/>
+                            <constraint firstItem="fJa-cP-qH4" firstAttribute="bottom" secondItem="lzx-yO-Jid" secondAttribute="top" id="6Kr-qz-KjF"/>
                             <constraint firstItem="lzx-yO-Jid" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9M3-Ri-mpl"/>
+                            <constraint firstItem="VQN-RK-1oV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Cwu-f5-xRo"/>
                             <constraint firstItem="xOW-bp-ymR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JRo-C3-xDN"/>
                             <constraint firstItem="xOW-bp-ymR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KQk-2h-u92"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fJa-cP-qH4" secondAttribute="trailing" id="Yk8-F3-4Xa"/>
+                            <constraint firstItem="fJa-cP-qH4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VUk-kP-sGE"/>
                             <constraint firstItem="xOW-bp-ymR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bb8-Oz-COf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cOV-10-ixi" secondAttribute="trailing" id="cx4-Ie-ZAM"/>
-                            <constraint firstItem="lzx-yO-Jid" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="eFr-Gj-gZ9"/>
+                            <constraint firstItem="cOV-10-ixi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dK2-qS-c60"/>
+                            <constraint firstItem="lzx-yO-Jid" firstAttribute="bottom" secondItem="VQN-RK-1oV" secondAttribute="top" id="eFr-Gj-gZ9"/>
                             <constraint firstItem="xOW-bp-ymR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="iWG-J3-SZC"/>
-                            <constraint firstItem="lzx-yO-Jid" firstAttribute="top" secondItem="fJa-cP-qH4" secondAttribute="bottom" id="tFi-Bk-tFt"/>
-                            <constraint firstItem="lzx-yO-Jid" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="v9P-EO-v0x"/>
+                            <constraint firstItem="VQN-RK-1oV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ike-61-Xzn"/>
+                            <constraint firstItem="cOV-10-ixi" firstAttribute="bottom" secondItem="fJa-cP-qH4" secondAttribute="top" id="oLU-SQ-EaF"/>
                         </constraints>
                     </view>
                     <connections>

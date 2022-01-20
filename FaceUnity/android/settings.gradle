@@ -1,0 +1,13 @@
+include ':app'
+rootProject.name = "FaceUnity"
+
+def localPropertiesFile = new File(rootProject.projectDir.absolutePath + File.separator + ".plugin_dev.properties")
+def localProperties = new Properties()
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+    def localPluginPath = localProperties.getProperty('local_plugin_path')
+    include ":plugin"
+    project(":plugin").projectDir = new File(localPluginPath)
+}

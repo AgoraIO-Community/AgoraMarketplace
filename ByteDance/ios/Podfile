@@ -16,14 +16,14 @@ def local_plugin_root
   raise "local_plugin_path not found in #{generated_xcode_build_settings_path}."
 end
 
-if local_plugin_root != nil 
-  abstract_target 'ByteDance' do
-    target 'byte-dance' do
-      inherit! :search_paths
-      project local_plugin_root
-    end 
-  end
-end 
+# if local_plugin_root != nil
+#   abstract_target 'ExtensionPods' do
+#     target 'ByteDance' do
+#       inherit! :search_paths
+#       project local_plugin_root
+#     end
+#   end
+# end
 
 target 'ExtensionExample' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -31,6 +31,5 @@ target 'ExtensionExample' do
   
   pod 'AgoraRtcEngine_Special_iOS', '3.7.201'
 
-pod 'AgoraByteDanceEffectExtension', :path => File.join('ExtensionExample')
-
+  pod 'Extensions', :path => File.join('ExtensionExample')
 end
