@@ -1,0 +1,10 @@
+Resource/*
+*.framework/
+.plugin_dev
+**/Pods/
+xcuserdata/
+ExtensionExample/out
+*.xcworkspace/
+ExtensionExample/resources
+ExtensionExample/libst_mobile.a
+ExtensionExample/st_mobile_sdk/

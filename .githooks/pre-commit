@@ -1,0 +1,20 @@
+#!/bin/bash
+
+case "${1}" in
+--about)
+  echo "Runs clang-format on source files"
+  ;;
+*)
+  for file in $(find . -name Constants.java); do
+    diff=$(git diff HEAD $file)
+    
+    if [[ -z $diff ]]; then 
+        exit 0
+    else
+        echo "diff: $diff"
+        echo "Make sure you not commit the test AppID or test Token!"
+        exit 1
+    fi
+  done
+  ;;
+esac
