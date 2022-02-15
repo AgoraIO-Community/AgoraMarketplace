@@ -1,4 +1,4 @@
-package io.agora.rte.extension.bytedance.example;
+package io.agora.rte.extension.sensetime.example;
 
 public interface Constants {
     String mAppId = "<YOUR_APP_ID>";
