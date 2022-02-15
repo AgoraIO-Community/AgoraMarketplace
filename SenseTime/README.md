@@ -13,7 +13,7 @@
 ### iOS
 1. Download the iOS latest framework from [AgoraMarketPlace release page](https://github.com/AgoraIO-Community/AgoraMarketPlace/releases?q=sensetime-effect-plugin&expanded=true), then copy the `AgoraSenseTimeExtension.framework` to `ios/ExtensionExample` directory;
 
-2. Download the assets from SenseTime, then copy to `ios/resource` directory.
+2. Download the assets from SenseTime, then copy to `ios/Resource` directory.
 
 3. Include the `st_mobile_sdk` header files by following SenseTime SDK integration guide.
 

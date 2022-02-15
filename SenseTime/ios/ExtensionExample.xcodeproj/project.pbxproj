@@ -7,14 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71572BD027A3254E008912A2 /* Makeup in Resources */ = {isa = PBXBuildFile; fileRef = 71572BC827A3254D008912A2 /* Makeup */; };
-		71572BD127A3254E008912A2 /* Color in Resources */ = {isa = PBXBuildFile; fileRef = 71572BC927A3254E008912A2 /* Color */; };
-		71572BD227A3254E008912A2 /* StickerZipAndIcons in Resources */ = {isa = PBXBuildFile; fileRef = 71572BCA27A3254E008912A2 /* StickerZipAndIcons */; };
-		71572BD327A3254E008912A2 /* Beauty in Resources */ = {isa = PBXBuildFile; fileRef = 71572BCB27A3254E008912A2 /* Beauty */; };
-		71572BD427A3254E008912A2 /* Filters in Resources */ = {isa = PBXBuildFile; fileRef = 71572BCC27A3254E008912A2 /* Filters */; };
-		71572BD527A3254E008912A2 /* license in Resources */ = {isa = PBXBuildFile; fileRef = 71572BCD27A3254E008912A2 /* license */; };
-		71572BD627A3254E008912A2 /* models in Resources */ = {isa = PBXBuildFile; fileRef = 71572BCE27A3254E008912A2 /* models */; };
-		71572BD727A3254E008912A2 /* WebView in Resources */ = {isa = PBXBuildFile; fileRef = 71572BCF27A3254E008912A2 /* WebView */; };
+		15B92DD65AD3A69E3E27B472 /* Pods_ExtensionExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A41256F1AA4199B02A14AB6 /* Pods_ExtensionExample.framework */; };
+		7144DA7227BB518C006CFC0D /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 7144DA7127BB518C006CFC0D /* Resource */; };
 		8B4E5C3A27689A0900206C16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E5C3927689A0900206C16 /* AppDelegate.m */; };
 		8B4E5C3D27689A0900206C16 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E5C3C27689A0900206C16 /* SceneDelegate.m */; };
 		8B4E5C4027689A0900206C16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E5C3F27689A0900206C16 /* ViewController.m */; };
@@ -28,6 +22,7 @@
 /* Begin PBXFileReference section */
 		4A41256F1AA4199B02A14AB6 /* Pods_ExtensionExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExtensionExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2B967ADA3600EBA1800AA4 /* Pods-ExtensionExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExtensionExample.release.xcconfig"; path = "Target Support Files/Pods-ExtensionExample/Pods-ExtensionExample.release.xcconfig"; sourceTree = "<group>"; };
+		7144DA7127BB518C006CFC0D /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = "<group>"; };
 		71572BB927A318AE008912A2 /* st_mobile_sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_sticker.h; sourceTree = "<group>"; };
 		71572BBA27A318AE008912A2 /* st_mobile_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_common.h; sourceTree = "<group>"; };
 		71572BBB27A318AE008912A2 /* st_mobile_license.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_license.h; sourceTree = "<group>"; };
@@ -43,14 +38,6 @@
 		71572BC527A318AF008912A2 /* st_mobile_avatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_avatar.h; sourceTree = "<group>"; };
 		71572BC627A318AF008912A2 /* st_mobile_sticker_module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_sticker_module.h; sourceTree = "<group>"; };
 		71572BC727A318AF008912A2 /* st_mobile_sticker_transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_sticker_transition.h; sourceTree = "<group>"; };
-		71572BC827A3254D008912A2 /* Makeup */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Makeup; sourceTree = "<group>"; };
-		71572BC927A3254E008912A2 /* Color */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Color; sourceTree = "<group>"; };
-		71572BCA27A3254E008912A2 /* StickerZipAndIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = StickerZipAndIcons; sourceTree = "<group>"; };
-		71572BCB27A3254E008912A2 /* Beauty */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Beauty; sourceTree = "<group>"; };
-		71572BCC27A3254E008912A2 /* Filters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Filters; sourceTree = "<group>"; };
-		71572BCD27A3254E008912A2 /* license */ = {isa = PBXFileReference; lastKnownFileType = folder; path = license; sourceTree = "<group>"; };
-		71572BCE27A3254E008912A2 /* models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = models; sourceTree = "<group>"; };
-		71572BCF27A3254E008912A2 /* WebView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WebView; sourceTree = "<group>"; };
 		8B4E5C3527689A0900206C16 /* ExtensionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtensionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B4E5C3827689A0900206C16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8B4E5C3927689A0900206C16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15B92DD65AD3A69E3E27B472 /* Pods_ExtensionExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +127,8 @@
 		8B4E5C3727689A0900206C16 /* ExtensionExample */ = {
 			isa = PBXGroup;
 			children = (
+				7144DA7127BB518C006CFC0D /* Resource */,
 				71572BB727A3187F008912A2 /* st_mobile_sdk */,
-				F58941FC278C8BBF005D98FC /* Resource */,
 				8B4E5C3827689A0900206C16 /* AppDelegate.h */,
 				8B4E5C3927689A0900206C16 /* AppDelegate.m */,
 				8B4E5C3B27689A0900206C16 /* SceneDelegate.h */,
@@ -165,21 +153,6 @@
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
-		};
-		F58941FC278C8BBF005D98FC /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				71572BCB27A3254E008912A2 /* Beauty */,
-				71572BC927A3254E008912A2 /* Color */,
-				71572BCC27A3254E008912A2 /* Filters */,
-				71572BCD27A3254E008912A2 /* license */,
-				71572BC827A3254D008912A2 /* Makeup */,
-				71572BCE27A3254E008912A2 /* models */,
-				71572BCA27A3254E008912A2 /* StickerZipAndIcons */,
-				71572BCF27A3254E008912A2 /* WebView */,
-			);
-			path = Resource;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -239,16 +212,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71572BD727A3254E008912A2 /* WebView in Resources */,
-				71572BD527A3254E008912A2 /* license in Resources */,
-				71572BD627A3254E008912A2 /* models in Resources */,
-				71572BD327A3254E008912A2 /* Beauty in Resources */,
-				71572BD127A3254E008912A2 /* Color in Resources */,
-				71572BD227A3254E008912A2 /* StickerZipAndIcons in Resources */,
-				71572BD027A3254E008912A2 /* Makeup in Resources */,
+				7144DA7227BB518C006CFC0D /* Resource in Resources */,
 				8B4E5C4827689A0900206C16 /* LaunchScreen.storyboard in Resources */,
 				8B4E5C4527689A0900206C16 /* Assets.xcassets in Resources */,
-				71572BD427A3254E008912A2 /* Filters in Resources */,
 				8B4E5C4327689A0900206C16 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,12 +416,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = Apple;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 3XRSP3Y99A;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = ExtensionExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -464,9 +430,9 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "--deep";
-				PRODUCT_BUNDLE_IDENTIFIER = io.agora.rte.extension.sensetime;
+				PRODUCT_BUNDLE_IDENTIFIER = "Apple Development";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = rte_team_ios_2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -478,12 +444,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = Apple;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 3XRSP3Y99A;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = ExtensionExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -491,9 +457,9 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = io.agora.rte.extension.sensetime;
+				PRODUCT_BUNDLE_IDENTIFIER = "Apple Development";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = rte_team_ios_2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
