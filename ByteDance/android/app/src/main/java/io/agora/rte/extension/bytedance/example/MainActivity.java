@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.HandlerThread;
 import android.os.Looper;
 import android.util.Log;
 import android.widget.Button;
@@ -19,6 +20,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import io.agora.rtc2.Constants;
 import io.agora.rtc2.IMediaExtensionObserver;
 import io.agora.rtc2.IRtcEngineEventHandler;
@@ -26,13 +35,6 @@ import io.agora.rtc2.RtcEngine;
 import io.agora.rtc2.RtcEngineConfig;
 import io.agora.rtc2.video.VideoCanvas;
 import io.agora.rte.extension.bytedance.ExtensionManager;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class MainActivity
         extends AppCompatActivity implements IMediaExtensionObserver {
@@ -44,13 +46,34 @@ public class MainActivity
     private Button button;
     private final ObservableBoolean enableExtension =
             new ObservableBoolean(false);
-    private final AtomicBoolean bundleLoaded = new AtomicBoolean(false);
+
     private final Handler handler = new Handler(Looper.getMainLooper());
+    private Handler mWorkHandler;
+    private Runnable mWorkHandlerRunnable;
+    private HandlerThread mHandlerThread;
+
+    // Only set some resources for demo purpose
+    private static final Map<String, String> mSticker = new HashMap<String, String>() {{
+        put("zhutouzhuer", "byte_dance/StickerResource.bundle/stickers/zhutouzhuer");
+        put("zhaocaimao", "byte_dance/StickerResource.bundle/stickers/zhaocaimao");
+        put("zisemeihuo", "byte_dance/StickerResource.bundle/stickers/zisemeihuo");
+        put("zhuluojimaoxian", "byte_dance/StickerResource.bundle/stickers/zhuluojimaoxian");
+        put("zhangshangyouxiji", "byte_dance/StickerResource.bundle/stickers/zhangshangyouxiji");
+    }};
+
+    private static final Map<String, String> mComposer = new HashMap<String, String>() {{
+        put("hanxi", "byte_dance/ComposeMakeup.bundle/ComposeMakeup/style_makeup/hanxi");
+        put("yuanqi", "byte_dance/ComposeMakeup.bundle/ComposeMakeup/style_makeup/yuanqi");
+        put("tianmei", "byte_dance/ComposeMakeup.bundle/ComposeMakeup/style_makeup/tianmei");
+        put("baicha", "byte_dance/ComposeMakeup.bundle/ComposeMakeup/style_makeup/baicha");
+        put("qise", "byte_dance/ComposeMakeup.bundle/ComposeMakeup/style_makeup/qise");
+    }};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         initUI();
         initData();
@@ -58,6 +81,10 @@ public class MainActivity
     }
 
     private void initData() {
+        mHandlerThread = new HandlerThread("LoadBundleHandlerThread");
+        mHandlerThread.start();
+        mWorkHandler = new Handler(mHandlerThread.getLooper());
+
         enableExtension.addOnPropertyChangedCallback(
                 new Observable.OnPropertyChangedCallback() {
                     @Override
@@ -73,7 +100,6 @@ public class MainActivity
                         }
                     }
                 });
-        initBundle();
     }
 
     private void initUI() {
@@ -88,39 +114,43 @@ public class MainActivity
     }
 
     private void initExtension() {
-        File licensePath = new File(
-                getExternalFilesDir("assets"),
-                "byte_dance/LicenseBag.bundle/" + io.agora.rte.extension.bytedance.example.Constants.mLicenseName);
-        // Check license
-        try {
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("licensePath", licensePath.getPath());
-            setExtensionProperty("bef_effect_ai_check_license", jsonObject.toString());
-        } catch (JSONException e) {
-            Log.e(TAG, e.toString());
-        }
+        String[] resources = new String[] {"byte_dance/LicenseBag.bundle", "byte_dance/ModelResource.bundle"};
+        loadBundle(resources, () -> {
+            File destFile = getExternalFilesDir(null);
 
-        File strModelDir = new File(getExternalFilesDir("assets"),
-                "byte_dance/ModelResource.bundle");
-        // Init
-        try {
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("strModelDir", strModelDir.getPath());
-            jsonObject.put("deviceName", "");
-            setExtensionProperty("bef_effect_ai_init", jsonObject.toString());
-        } catch (JSONException e) {
-            Log.e(TAG, e.toString());
-        }
+            File licensePath = new File(
+                    destFile,
+                    "byte_dance/LicenseBag.bundle/" + io.agora.rte.extension.bytedance.example.Constants.mLicenseName);
+            // Check license
+            try {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("licensePath", licensePath.getPath());
+                setExtensionProperty("bef_effect_ai_check_license", jsonObject.toString());
+            } catch (JSONException e) {
+                Log.e(TAG, e.toString());
+            }
 
-        // Enable composer and sticker
-        try {
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("mode", 1);
-            jsonObject.put("orderType", 0);
-            setExtensionProperty("bef_effect_ai_composer_set_mode", jsonObject.toString());
-        } catch (JSONException e) {
-            Log.e(TAG, e.toString());
-        }
+            File strModelDir = new File(destFile, "byte_dance/ModelResource.bundle");
+            // Init
+            try {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("strModelDir", strModelDir.getPath());
+                jsonObject.put("deviceName", "");
+                setExtensionProperty("bef_effect_ai_init", jsonObject.toString());
+            } catch (JSONException e) {
+                Log.e(TAG, e.toString());
+            }
+
+            // Enable composer and sticker
+            try {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("mode", 1);
+                jsonObject.put("orderType", 0);
+                setExtensionProperty("bef_effect_ai_composer_set_mode", jsonObject.toString());
+            } catch (JSONException e) {
+                Log.e(TAG, e.toString());
+            }
+        });
     }
 
     private void setExtensionProperty(String key, String property) {
@@ -128,37 +158,38 @@ public class MainActivity
     }
 
     private void choiceComposer() {
-        String[] composers =
-                ResourceUtils.COMPOSERS.keySet().toArray(new String[]{});
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        String[] items = new String[ResourceUtils.COMPOSERS.size()];
-        for (int i = 0; i < ResourceUtils.COMPOSERS.size(); i++) {
-            items[i] = composers[i].split(ResourceUtils.COMPOSE_MAKEUP_BUNDLE)[1];
-        }
+        String[] items = mComposer.keySet().toArray(new String[0]);
+
         List<String> nodePaths = new ArrayList<>();
         builder.setTitle(R.string.set_composer)
                 .setMultiChoiceItems(items, null,
                         (dialogInterface, i, b) -> {
+                            String path = mComposer.get(items[i]);
                             if (b) {
-                                nodePaths.add(composers[i]);
+                                nodePaths.add(path);
                             } else {
-                                nodePaths.remove(composers[i]);
+                                nodePaths.remove(path);
                             }
                         })
                 .setNegativeButton("Cancel",
                         (dialogInterface, i) -> dialogInterface.dismiss())
                 .setPositiveButton("Confirm",
                         (dialogInterface, i) -> {
-                            // Composer set nodes
-                            JSONArray jsonArray = new JSONArray();
-
-                            for (String nodePath : nodePaths) {
-                                jsonArray.put(nodePath);
-                            }
-
-                            setExtensionProperty("bef_effect_ai_composer_set_nodes", jsonArray.toString());
 
                             dialogInterface.dismiss();
+
+                            loadBundle(nodePaths.toArray(new String[0]), () -> {
+                                // Composer set nodes
+                                JSONArray jsonArray = new JSONArray();
+
+                                for (String nodePath : nodePaths) {
+                                    String path = getExternalFilesDir(null) + "/" + nodePath;
+                                    jsonArray.put(path);
+                                }
+
+                                setExtensionProperty("bef_effect_ai_composer_set_nodes", jsonArray.toString());
+                            });
                         })
                 .create()
                 .show();
@@ -166,24 +197,24 @@ public class MainActivity
 
     private void choiceSticker() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        String[] items = new String[ResourceUtils.STICKERS.size()];
-        for (int i = 0; i < ResourceUtils.STICKERS.size(); i++) {
-            items[i] = ResourceUtils.STICKERS.get(i).split(
-                    ResourceUtils.STICKER_RESOURCE_BUNDLE)[1];
-        }
+        String[] items = mSticker.keySet().toArray(new String[0]);
+
         builder.setTitle(R.string.set_sticker)
                 .setSingleChoiceItems(items, -1,
                         (dialogInterface, i) -> {
-                            // Set effect
-                            try {
-                                JSONObject jsonObject = new JSONObject();
-                                jsonObject.put("strPath", ResourceUtils.STICKERS.get(i));
-                                setExtensionProperty("bef_effect_ai_set_effect", jsonObject.toString());
-                            } catch (JSONException e) {
-                                Log.e(TAG, e.toString());
-                            }
-
                             dialogInterface.dismiss();
+
+                            loadBundle(new String[]{mSticker.get(items[i])}, () -> {
+                                // Set effect
+                                try {
+                                    final String path = getExternalFilesDir(null) + "/" + mSticker.get(items[i]);
+                                    JSONObject jsonObject = new JSONObject();
+                                    jsonObject.put("strPath", path);
+                                    setExtensionProperty("bef_effect_ai_set_effect", jsonObject.toString());
+                                } catch (JSONException e) {
+                                    Log.e(TAG, e.toString());
+                                }
+                            });
                         })
                 .setNegativeButton("Cancel",
                         (dialogInterface, i) -> dialogInterface.dismiss())
@@ -191,31 +222,13 @@ public class MainActivity
                 .show();
     }
 
-    private void initBundle() {
-        ProgressDialog dialog =
-                ProgressDialog.show(this, "", "Loading bundle. Please wait...", true);
-        new Thread() {
-            @Override
-            public void run() {
-                String assetsName = "byte_dance";
-                File destFile = getExternalFilesDir("assets");
-                try {
-                    ResourceUtils.initResources(getAssets(), assetsName,
-                            destFile.getAbsolutePath());
-                    bundleLoaded.set(true);
-                    handler.post(dialog::dismiss);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }.start();
-    }
-
     private void initPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(new String[]{Manifest.permission.CAMERA,
                             Manifest.permission.RECORD_AUDIO},
                     0);
+        } else {
+            initRtcEngine();
         }
     }
 
@@ -275,5 +288,34 @@ public class MainActivity
 
     @Override
     public void onEvent(String s, String s1, String s2, String s3) {
+    }
+
+    private void loadBundle(String[] assetNames, Runnable onCompleted) {
+        ProgressDialog dialog =
+                ProgressDialog.show(this, "", "Loading bundle. Please wait...", true);
+        mWorkHandler.removeCallbacks(mWorkHandlerRunnable);
+
+        mWorkHandlerRunnable = () -> {
+            try {
+                for (String assetName : assetNames) {
+                    ResourceUtils.copyFileOrDir(
+                            MainActivity.this.getAssets(),
+                            assetName,
+                            getExternalFilesDir(null).getAbsolutePath());
+                }
+
+                handler.post(dialog::dismiss);
+                onCompleted.run();
+            } catch (IOException e) {
+                Log.e(TAG, e.toString());
+            }
+        };
+        mWorkHandler.post(mWorkHandlerRunnable);
+    }
+
+    @Override
+    protected void onDestroy() {
+        mWorkHandler.removeCallbacks(mWorkHandlerRunnable);
+        super.onDestroy();
     }
 }

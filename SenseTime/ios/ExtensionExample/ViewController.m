@@ -53,12 +53,12 @@
     {
         NSString* fileName = [[license_name lastPathComponent] stringByDeletingPathExtension];
         NSString* extension = [license_name pathExtension];
-        NSString* filePath = [@"license" stringByAppendingFormat:@"/%@", fileName];
+//        NSString* filePath = [@"license" stringByAppendingFormat:@"/%@", fileName];
         
         NSError *error;
         NSData *data = [NSJSONSerialization dataWithJSONObject:@{
                                                             @"licensePath": [[NSBundle mainBundle]
-                                                                pathForResource:filePath
+                                                                pathForResource:fileName
                                                                          ofType:extension]
                                                         }
                                                        options:NSJSONWritingPrettyPrinted
@@ -74,7 +74,7 @@
     {
         
         NSString *model_path = [[[NSBundle mainBundle]
-                                 pathForResource:@"models/model"
+                                 pathForResource:@"model"
                                  ofType:@"bundle"] stringByAppendingFormat:@"/%@", @"M_SenseME_Face_Extra_Advanced_6.0.13.model"];
         NSError *error;
         NSData *data = [NSJSONSerialization dataWithJSONObject:@{
@@ -125,7 +125,7 @@
 
 - (IBAction)setSticker:(id)sender {
     NSString *path = [[[NSBundle mainBundle]
-                       pathForResource:@"Makeup/lips"
+                       pathForResource:@"lips"
                        ofType:@"bundle"] stringByAppendingFormat:@"/%@", @"12自然.zip"];
     NSError *error;
     NSData *data = [NSJSONSerialization dataWithJSONObject:@{
