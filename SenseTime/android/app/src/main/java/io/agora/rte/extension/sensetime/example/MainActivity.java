@@ -120,7 +120,7 @@ public class MainActivity
         // Check license
         try {
             JSONObject jsonObject = new JSONObject();
-            jsonObject.put("licensePath", licensePath.getPath());
+            jsonObject.put("license_path", licensePath.getPath());
             setExtensionProperty("st_mobile_check_activecode", jsonObject.toString());
         } catch (JSONException e) {
             Log.e(TAG, e.toString());
@@ -138,13 +138,7 @@ public class MainActivity
             Log.e(TAG, e.toString());
         }
 
-        try {
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("config", STMobileEffectNative.EFFECT_CONFIG_IMAGE_MODE);
-            setExtensionProperty("st_mobile_effect_create_handle", jsonObject.toString());
-        } catch (JSONException e) {
-            Log.e(TAG, e.toString());
-        }
+        setExtensionProperty("st_mobile_effect_create_handle", "{}");
     }
 
     private void setExtensionProperty(String key, String property) {
