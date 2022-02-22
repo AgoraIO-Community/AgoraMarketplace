@@ -57,7 +57,7 @@
         
         NSError *error;
         NSData *data = [NSJSONSerialization dataWithJSONObject:@{
-                                                            @"licensePath": [[NSBundle mainBundle]
+                                                            @"license_path": [[NSBundle mainBundle]
                                                                 pathForResource:fileName
                                                                          ofType:extension]
                                                         }
@@ -92,18 +92,11 @@
     }
     
     {
-        NSError *error;
-        NSData *data = [NSJSONSerialization dataWithJSONObject:@{
-                                                            @"config": @(ST_MOBILE_HUMAN_ACTION_DEFAULT_CONFIG_IMAGE)
-                                                        }
-                                                       options:NSJSONWritingPrettyPrinted
-                                                         error:&error];
-        
         [self.agoraKit
             setExtensionPropertyWithVendor:@"SenseTime"
                                  extension:@"Effect"
                                        key:@"st_mobile_effect_create_handle"
-                                     value:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
+                                     value:@"{}"];
     }
 }
 
