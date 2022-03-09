@@ -35,21 +35,6 @@
 /* Begin PBXFileReference section */
 		4A41256F1AA4199B02A14AB6 /* Pods_ExtensionExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExtensionExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2B967ADA3600EBA1800AA4 /* Pods-ExtensionExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExtensionExample.release.xcconfig"; path = "Target Support Files/Pods-ExtensionExample/Pods-ExtensionExample.release.xcconfig"; sourceTree = "<group>"; };
-		71572BB927A318AE008912A2 /* st_mobile_sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_sticker.h; sourceTree = "<group>"; };
-		71572BBA27A318AE008912A2 /* st_mobile_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_common.h; sourceTree = "<group>"; };
-		71572BBB27A318AE008912A2 /* st_mobile_license.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_license.h; sourceTree = "<group>"; };
-		71572BBC27A318AE008912A2 /* st_mobile_color_convert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_color_convert.h; sourceTree = "<group>"; };
-		71572BBD27A318AE008912A2 /* st_mobile_makeup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_makeup.h; sourceTree = "<group>"; };
-		71572BBE27A318AE008912A2 /* st_mobile_animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_animal.h; sourceTree = "<group>"; };
-		71572BBF27A318AE008912A2 /* st_mobile_beautify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_beautify.h; sourceTree = "<group>"; };
-		71572BC027A318AE008912A2 /* st_mobile_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_object.h; sourceTree = "<group>"; };
-		71572BC127A318AF008912A2 /* st_mobile_effect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_effect.h; sourceTree = "<group>"; };
-		71572BC227A318AF008912A2 /* st_mobile_filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_filter.h; sourceTree = "<group>"; };
-		71572BC327A318AF008912A2 /* st_mobile_face_attribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_face_attribute.h; sourceTree = "<group>"; };
-		71572BC427A318AF008912A2 /* st_mobile_human_action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_human_action.h; sourceTree = "<group>"; };
-		71572BC527A318AF008912A2 /* st_mobile_avatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_avatar.h; sourceTree = "<group>"; };
-		71572BC627A318AF008912A2 /* st_mobile_sticker_module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_sticker_module.h; sourceTree = "<group>"; };
-		71572BC727A318AF008912A2 /* st_mobile_sticker_transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st_mobile_sticker_transition.h; sourceTree = "<group>"; };
 		7196463827BBE47D00A2FF56 /* SenseME.lic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SenseME.lic; sourceTree = "<group>"; };
 		7196463A27BBE47D00A2FF56 /* M_SenseME_CatFace_3.0.0.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = M_SenseME_CatFace_3.0.0.model; sourceTree = "<group>"; };
 		7196463B27BBE47D00A2FF56 /* M_SenseME_DogFace_2.0.0.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = M_SenseME_DogFace_2.0.0.model; sourceTree = "<group>"; };
@@ -100,36 +85,6 @@
 				6A2B967ADA3600EBA1800AA4 /* Pods-ExtensionExample.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		71572BB727A3187F008912A2 /* st_mobile_sdk */ = {
-			isa = PBXGroup;
-			children = (
-				71572BB827A3188B008912A2 /* include */,
-			);
-			path = st_mobile_sdk;
-			sourceTree = "<group>";
-		};
-		71572BB827A3188B008912A2 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				71572BBE27A318AE008912A2 /* st_mobile_animal.h */,
-				71572BC527A318AF008912A2 /* st_mobile_avatar.h */,
-				71572BBF27A318AE008912A2 /* st_mobile_beautify.h */,
-				71572BBC27A318AE008912A2 /* st_mobile_color_convert.h */,
-				71572BBA27A318AE008912A2 /* st_mobile_common.h */,
-				71572BC127A318AF008912A2 /* st_mobile_effect.h */,
-				71572BC327A318AF008912A2 /* st_mobile_face_attribute.h */,
-				71572BC227A318AF008912A2 /* st_mobile_filter.h */,
-				71572BC427A318AF008912A2 /* st_mobile_human_action.h */,
-				71572BBB27A318AE008912A2 /* st_mobile_license.h */,
-				71572BBD27A318AE008912A2 /* st_mobile_makeup.h */,
-				71572BC027A318AE008912A2 /* st_mobile_object.h */,
-				71572BC627A318AF008912A2 /* st_mobile_sticker_module.h */,
-				71572BC727A318AF008912A2 /* st_mobile_sticker_transition.h */,
-				71572BB927A318AE008912A2 /* st_mobile_sticker.h */,
-			);
-			path = include;
 			sourceTree = "<group>";
 		};
 		7196463527BBE47D00A2FF56 /* Resource */ = {
@@ -215,7 +170,6 @@
 		8B4E5C3727689A0900206C16 /* ExtensionExample */ = {
 			isa = PBXGroup;
 			children = (
-				71572BB727A3187F008912A2 /* st_mobile_sdk */,
 				8B4E5C3827689A0900206C16 /* AppDelegate.h */,
 				8B4E5C3927689A0900206C16 /* AppDelegate.m */,
 				8B4E5C3B27689A0900206C16 /* SceneDelegate.h */,

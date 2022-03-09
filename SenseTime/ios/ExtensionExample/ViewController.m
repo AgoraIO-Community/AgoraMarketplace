@@ -1,8 +1,8 @@
 #import "ViewController.h"
 #import "AppID.h"
 #import <AgoraRtcKit/AgoraRtcEngineKit.h>
-#import "st_mobile_human_action.h"
-#import "st_mobile_effect.h"
+#import <AgoraSenseTimeExtension/st_mobile_human_action.h>
+#import <AgoraSenseTimeExtension/st_mobile_effect.h>
 
 @interface ViewController ()<AgoraRtcEngineDelegate,
                              UIPopoverPresentationControllerDelegate>
