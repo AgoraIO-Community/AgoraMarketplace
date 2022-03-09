@@ -225,4 +225,19 @@ public class MainActivity
     @Override
     public void onEvent(String s, String s1, String s2, String s3) {
     }
+
+    @Override
+    public void onStarted(String s, String s1) {
+
+    }
+
+    @Override
+    public void onStopped(String s, String s1) {
+
+    }
+
+    @Override
+    public void onError(String s, String s1, int i, String s2) {
+
+    }
 }

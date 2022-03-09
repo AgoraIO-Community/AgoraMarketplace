@@ -318,4 +318,19 @@ public class MainActivity
         mWorkHandler.removeCallbacks(mWorkHandlerRunnable);
         super.onDestroy();
     }
+
+    @Override
+    public void onStarted(String s, String s1) {
+
+    }
+
+    @Override
+    public void onStopped(String s, String s1) {
+
+    }
+
+    @Override
+    public void onError(String s, String s1, int i, String s2) {
+
+    }
 }

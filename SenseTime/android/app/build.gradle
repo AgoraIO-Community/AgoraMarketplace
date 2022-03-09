@@ -31,13 +31,16 @@ android {
     aaptOptions {
         ignoreAssetsPattern '!**'
     }
+
     packagingOptions {
         pickFirst '**/*.so'
     }
 }
 
 dependencies {
-    implementation 'com.github.agorabuilder:agora-special-full:3.7.201'
+
+
+    implementation 'io.agora.rtc:agora-full-preview:4.0.0.preview.6'
 
     if (getLocalPluginPath(project) != null) {
         implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
@@ -63,9 +66,6 @@ dependencies {
     androidTestImplementation "androidx.test:rules:1.4.0"
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
-repositories {
-    mavenCentral()
-}
 
 static String getLocalPluginPath(Project project) {
     def rootProject = project.rootProject
@@ -81,7 +81,7 @@ static String getLocalPluginPath(Project project) {
 
     def localPluginPath = localProperties.getProperty('local_plugin_path')
     if (localPluginPath == null) {
-        throw new GradleScriptException("local_plugin_path not found. Define location with local_plugin_path in the .plugin_dev.properties file.")
+        throw new GradleException("local_plugin_path not found. Define location with local_plugin_path in the .plugin_dev.properties file.")
     }
 
     return localPluginPath

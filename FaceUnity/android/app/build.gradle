@@ -35,7 +35,7 @@ android {
 dependencies {
 
 
-    implementation 'com.github.agorabuilder:agora-special-full:3.7.201'
+    implementation 'io.agora.rtc:agora-full-preview:4.0.0.preview.6'
 
     if (getLocalPluginPath(project) != null) {
         implementation project(':plugin')

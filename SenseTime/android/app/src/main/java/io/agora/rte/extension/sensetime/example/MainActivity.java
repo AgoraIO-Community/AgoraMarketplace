@@ -289,7 +289,7 @@ public class MainActivity
             @Override
             public void run() {
                 FileUtils.copyStickerFiles(getApplicationContext(), "license");
-                FileUtils.copyFileIfNeed(getApplicationContext(), "SenseME.lic", "license");
+                FileUtils.copyFileIfNeed(getApplicationContext(), io.agora.rte.extension.sensetime.example.Constants.mLicenseName, "license");
 
                 FileUtils.copyStickerFiles(getApplicationContext(), "license");
                 FileUtils.copyStickerFiles(getApplicationContext(), "newEngine");
@@ -382,5 +382,20 @@ public class MainActivity
 
     @Override
     public void onEvent(String s, String s1, String s2, String s3) {
+    }
+
+    @Override
+    public void onStarted(String s, String s1) {
+
+    }
+
+    @Override
+    public void onStopped(String s, String s1) {
+
+    }
+
+    @Override
+    public void onError(String s, String s1, int i, String s2) {
+
     }
 }
