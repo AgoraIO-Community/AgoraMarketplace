@@ -1,23 +1,23 @@
 PODS:
-  - AgoraRtcEngine_Special_iOS (3.7.201)
+  - AgoraRtcEngine_iOS_Preview (4.0.0.preview.6)
   - Extensions (0.1.0)
 
 DEPENDENCIES:
-  - AgoraRtcEngine_Special_iOS (= 3.7.201)
+  - AgoraRtcEngine_iOS_Preview (= 4.0.0.preview.6)
   - Extensions (from `ExtensionExample`)
 
 SPEC REPOS:
   trunk:
-    - AgoraRtcEngine_Special_iOS
+    - AgoraRtcEngine_iOS_Preview
 
 EXTERNAL SOURCES:
   Extensions:
     :path: ExtensionExample
 
 SPEC CHECKSUMS:
-  AgoraRtcEngine_Special_iOS: cad11aa2d6d2aa6ee040c4e30a17ef0c3ead8711
+  AgoraRtcEngine_iOS_Preview: a790a04ded9aac522480658abdf21bc2e599b93c
   Extensions: 00ee73c6fa9841505b8e1d934ce93f1bd4bfc784
 
-PODFILE CHECKSUM: d46148be1f3d6d34f656bb4376cfb56807cf8160
+PODFILE CHECKSUM: 80289539254e03ef6a86b5ec7c486322bb2f2abc
 
 COCOAPODS: 1.11.2
