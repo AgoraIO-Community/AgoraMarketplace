@@ -31,10 +31,6 @@ android {
     aaptOptions {
         ignoreAssetsPattern '!**'
     }
-
-    packagingOptions {
-        pickFirst '**/*.so'
-    }
 }
 
 dependencies {
@@ -43,7 +39,6 @@ dependencies {
     implementation 'io.agora.rtc:agora-full-preview:4.0.0.preview.6'
 
     if (getLocalPluginPath(project) != null) {
-        implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
         implementation project(':plugin')
     } else {
         // implement aar
