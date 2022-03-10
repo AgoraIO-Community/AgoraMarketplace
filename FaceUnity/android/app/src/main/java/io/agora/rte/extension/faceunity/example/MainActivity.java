@@ -165,6 +165,8 @@ public class MainActivity
             requestPermissions(new String[]{Manifest.permission.CAMERA,
                             Manifest.permission.RECORD_AUDIO},
                     0);
+        } else {
+            initRtcEngine();
         }
     }
 
