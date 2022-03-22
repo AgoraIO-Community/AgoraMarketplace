@@ -1,0 +1,8 @@
+.gradle/
+.cxx/
+local.properties
+.plugin_dev.properties
+app/libs/*
+app/src/main/assets/
+build/
+

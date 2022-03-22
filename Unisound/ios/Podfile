@@ -1,0 +1,35 @@
+# Uncomment the next line to define a global platform for your project
+workspace 'ExtensionExample.xcworkspace'
+platform :ios, '9.0'
+
+def local_plugin_root
+  generated_xcode_build_settings_path = File.join('.plugin_dev')
+
+  if not File.exist?(generated_xcode_build_settings_path)
+    return nil
+  end
+
+  File.foreach(generated_xcode_build_settings_path) do |line|
+    matches = line.match(/local_plugin_path\=(.*)/)
+    return matches[1].strip if matches
+  end
+  raise "local_plugin_path not found in #{generated_xcode_build_settings_path}."
+end
+
+# if local_plugin_root != nil
+#   abstract_target 'ExtensionPods' do
+#     target 'SenseTime' do
+#       inherit! :search_paths
+#       project local_plugin_root
+#     end
+#   end
+# end
+
+target 'ExtensionExample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+ use_frameworks!
+  
+  pod 'AgoraRtcEngine_iOS_Preview', '4.0.0.preview.6' 
+
+  pod 'Extensions', :path => File.join('ExtensionExample')
+end
