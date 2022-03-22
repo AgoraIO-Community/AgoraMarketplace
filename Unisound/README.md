@@ -9,10 +9,8 @@
 ### iOS
 1. Download the iOS latest framework from [AgoraMarketPlace download page](https://docs.agora.io/cn/extension_customer/downloads?platform=All%20Platforms), then copy the `AgoraSenseTimeExtension.framework` to `ios/ExtensionExample` directory;
 
-2. Get the `unisoundlibrary.framework` from Unisound and copy it to `ios/ExtensionExample`
+2. Update your `appID`(e.g., `ccb8b8f5a8cdxxxxxxxx`) and `appkey`(e.g., `ccb8b8f5a8cdxxxxxxxx`) etc, in `ios/ExtensionExample/Config.h` file
 
-3. Update your `appID`(e.g., `ccb8b8f5a8cdxxxxxxxx`) and `appkey`(e.g., `ccb8b8f5a8cdxxxxxxxx`) etc, in `ios/ExtensionExample/Config.h` file
+3. Go to `ios` directory and run `pod install`
 
-4. Go to `ios` directory and run `pod install`
-
-5. Run the example
+4. Run the example

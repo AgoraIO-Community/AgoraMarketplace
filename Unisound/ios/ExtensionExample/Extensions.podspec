@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.homepage         = 'https://github.com/AgoraIO-Community/AgoraMarketPlace'
     s.author           = { 'Agora' => 'developer@agora.io' }
     s.source           = { :path => '.' }
-    s.vendored_frameworks = 'AgoraUnisoundExtension.framework', 'unisoundlibrary.framework'
+    s.vendored_frameworks = 'AgoraUnisoundExtension.framework'
     s.platform = :ios, '9.0'
   end
   
