@@ -1,0 +1,7 @@
+<resources>
+    <string name="enable_extension">enableExtension</string>
+    <string name="disable_extension">disableExtension</string>
+    <string name="init_extension">initExtension</string>
+    <string name="set_composer">Start ASR</string>
+    <string name="set_sticker">Start EVAL</string>
+</resources>

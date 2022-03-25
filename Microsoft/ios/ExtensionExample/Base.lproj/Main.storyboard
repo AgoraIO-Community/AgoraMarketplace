@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzx-yO-Jid">
+                                <rect key="frame" x="288" y="605" width="87" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start ASR"/>
+                                <connections>
+                                    <action selector="setComposer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A0c-wH-qPz"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwM-bX-wcZ">
+                                <rect key="frame" x="16" y="20" width="289" height="375"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="oFU-fp-abq"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOV-10-ixi">
+                                <rect key="frame" x="245" y="562" width="130" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="zQs-Ru-Sef"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="enableExtension"/>
+                                <connections>
+                                    <action selector="enableExtension:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n6g-Bp-O7p"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lzx-yO-Jid" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9M3-Ri-mpl"/>
+                            <constraint firstItem="cOV-10-ixi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Gs4-hU-7or"/>
+                            <constraint firstItem="fwM-bX-wcZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="L59-O0-tae"/>
+                            <constraint firstItem="lzx-yO-Jid" firstAttribute="top" secondItem="cOV-10-ixi" secondAttribute="bottom" id="OEd-u2-6PM"/>
+                            <constraint firstItem="lzx-yO-Jid" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OoY-Sk-ZxJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fwM-bX-wcZ" secondAttribute="trailing" constant="70" id="XAQ-6m-jPg"/>
+                            <constraint firstItem="fwM-bX-wcZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="beM-HP-GW6"/>
+                            <constraint firstItem="cOV-10-ixi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dK2-qS-c60"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lzx-yO-Jid" secondAttribute="bottom" constant="31" id="dPD-6J-VgD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="asrBtn" destination="lzx-yO-Jid" id="lrX-AG-rKi"/>
+                        <outlet property="enableExtensionBtn" destination="cOV-10-ixi" id="F6a-id-LEs"/>
+                        <outlet property="resultTv" destination="fwM-bX-wcZ" id="Nc4-fn-iSS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="129.98500749625188"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
