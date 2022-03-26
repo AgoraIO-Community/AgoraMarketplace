@@ -8,3 +8,5 @@ ExtensionExample/out
 ExtensionExample/Resource
 ExtensionExample/libst_mobile.a
 ExtensionExample/st_mobile_sdk/
+ExtensionExample/libs/
+ExtensionExample/AgoraRtcEngine.podspec
