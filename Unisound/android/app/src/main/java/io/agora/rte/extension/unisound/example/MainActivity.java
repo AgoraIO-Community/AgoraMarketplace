@@ -31,8 +31,6 @@ import io.agora.rtc2.RtcEngineConfig;
 public class MainActivity
         extends AppCompatActivity implements IMediaExtensionObserver {
 
-    static { System.loadLibrary("AgoraUnisoundExtension"); }
-
     private static final String TAG = "MainActivity";
 
     private RtcEngine mRtcEngine;
@@ -179,6 +177,7 @@ public class MainActivity
         RtcEngineConfig config = new RtcEngineConfig();
         config.mContext = getApplicationContext();
         config.mAppId = Config.mAppId;
+        config.addExtension("AgoraUnisoundExtension");
         config.mExtensionObserver = this;
         config.mEventHandler = new IRtcEngineEventHandler() {
             @Override
