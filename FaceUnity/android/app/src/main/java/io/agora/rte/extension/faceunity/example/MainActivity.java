@@ -7,10 +7,15 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatSeekBar;
 import androidx.databinding.Observable;
 import androidx.databinding.ObservableBoolean;
 
@@ -39,10 +44,20 @@ public class MainActivity
     private RtcEngine mRtcEngine;
 
     private Button button;
+    private Button btnComposers;
+    private Button btnSticker;
+    private TextView tvAITracking;
+    private Button enableAITracking;
+    private AppCompatSeekBar colorLevelSeekBar;
+    private AppCompatSeekBar filterLevelSeekBar;
     private final ObservableBoolean enableExtension =
             new ObservableBoolean(false);
     private final AtomicBoolean bundleLoaded = new AtomicBoolean(false);
     private final Handler handler = new Handler(Looper.getMainLooper());
+
+    private int faces = 0;
+    private int hands = 0;
+    private int people = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,13 +90,115 @@ public class MainActivity
 
     private void initUI() {
         button = findViewById(R.id.button_enable);
+        tvAITracking = findViewById(R.id.tv_ai_tracking);
+        enableAITracking = findViewById(R.id.button_enable_ai);
         button.setOnClickListener(
                 view -> enableExtension.set(!enableExtension.get()));
-        findViewById(R.id.button_init).setOnClickListener(view -> initExtension());
-        findViewById(R.id.button_composers)
-                .setOnClickListener(view -> choiceComposer());
-        findViewById(R.id.button_stickers)
-                .setOnClickListener(view -> choiceSticker());
+
+        btnComposers = findViewById(R.id.button_composers);
+        btnComposers.setOnClickListener(view -> choiceComposer());
+
+        btnSticker = findViewById(R.id.button_stickers);
+        btnSticker.setOnClickListener(view -> choiceSticker());
+        enableAITracking.setOnClickListener(v -> {
+            boolean isEnableAITracking = enableAITracking.getTag() != null && (boolean) enableAITracking.getTag();
+            isEnableAITracking = !isEnableAITracking;
+            if (isEnableAITracking) {
+                enableAITracking();
+            } else {
+                disableAITracking();
+            }
+
+            enableAITracking.setTag(isEnableAITracking);
+        });
+
+        colorLevelSeekBar = findViewById(R.id.color_level);
+        filterLevelSeekBar = findViewById(R.id.filter_level);
+
+        btnComposers.setEnabled(false);
+        btnSticker.setEnabled(false);
+        enableAITracking.setEnabled(false);
+        colorLevelSeekBar.setEnabled(false);
+        filterLevelSeekBar.setEnabled(false);
+
+        colorLevelSeekBar.setMax(20);
+        colorLevelSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                try {
+                    File composerDir = new File(getExternalFilesDir("assets"),
+                "face_unity/graphics/face_beautification.bundle");
+
+                    {
+                        JSONObject jsonObject = new JSONObject();
+                        jsonObject.put("obj_handle", composerDir);
+                        jsonObject.put("name", "filter_name");
+                        jsonObject.put("value", "ziran2");
+                        setExtensionProperty("fuItemSetParam", jsonObject.toString());
+                    }
+
+                    {
+                        JSONObject jsonObject = new JSONObject();
+                        jsonObject.put("obj_handle", composerDir);
+                        jsonObject.put("name", "color_level");
+                        jsonObject.put("value", progress / 10.0);
+                        setExtensionProperty("fuItemSetParam", jsonObject.toString());
+                    }
+                } catch (JSONException e) {
+                    Log.e(TAG, e.toString());
+                }
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+
+        filterLevelSeekBar.setMax(10);
+        filterLevelSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                try {
+                    File composerDir = new File(getExternalFilesDir("assets"),
+                            "face_unity/graphics/face_beautification.bundle");
+
+                    {
+                        JSONObject jsonObject = new JSONObject();
+                        jsonObject.put("obj_handle", composerDir);
+                        jsonObject.put("name", "filter_name");
+                        jsonObject.put("value", "ziran2");
+                        setExtensionProperty("fuItemSetParam", jsonObject.toString());
+                    }
+
+                    {
+                        JSONObject jsonObject = new JSONObject();
+                        jsonObject.put("obj_handle", composerDir);
+                        jsonObject.put("name", "filter_level");
+                        jsonObject.put("value", progress / 10.0);
+                        setExtensionProperty("fuItemSetParam", jsonObject.toString());
+                    }
+                } catch (JSONException e) {
+                    Log.e(TAG, e.toString());
+                }
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 
     private void initExtension() {
@@ -97,18 +214,146 @@ public class MainActivity
         } catch (JSONException e) {
             Log.e(TAG, e.toString());
         }
+    }
 
-        // Load AI model
-        File modelDir = new File(getExternalFilesDir("assets"),
-                "face_unity/model/ai_face_processor.bundle");
+    private void disableAITracking() {
+        faces = 0;
+        hands = 0;
+        people = 0;
+        tvAITracking.setVisibility(View.GONE);
+        enableAITracking.setText("enableAITracking");
+        updateAITrackingResult(0, 0, 0);
+
         try {
+            {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("enable", false);
+                setExtensionProperty("fuIsTracking", jsonObject.toString());
+            }
+
+            {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("enable", false);
+                setExtensionProperty("fuHumanProcessorGetNumResults", jsonObject.toString());
+            }
+
+            {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("enable", false);
+                setExtensionProperty("fuHandDetectorGetResultNumHands", jsonObject.toString());
+            }
+        } catch (JSONException e) {
+            Log.e(TAG, e.toString());
+        }
+    }
+
+    private void loadAIModels() {
+        try {
+            // Load AI model
+            File modelDir = new File(getExternalFilesDir("assets"),
+                    "face_unity/model/ai_face_processor.bundle");
+
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", modelDir.getAbsolutePath());
             jsonObject.put("type", 1 << 10);
+
             setExtensionProperty("fuLoadAIModelFromPackage", jsonObject.toString());
         } catch (JSONException e) {
             Log.e(TAG, e.toString());
         }
+
+        try {
+            // Load AI model
+            File modelDir = new File(getExternalFilesDir("assets"),
+                    "face_unity/model/ai_hand_processor.bundle");
+
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("data", modelDir.getAbsolutePath());
+            jsonObject.put("type", 1 << 3);
+            setExtensionProperty("fuLoadAIModelFromPackage", jsonObject.toString());
+        } catch (JSONException e) {
+            Log.e(TAG, e.toString());
+        }
+
+        try {
+            // Load AI model
+            File modelDir = new File(getExternalFilesDir("assets"),
+                    "face_unity/model/ai_human_processor_pc.bundle");
+
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("data", modelDir.getAbsolutePath());
+            jsonObject.put("type", 1 << 19);
+            setExtensionProperty("fuLoadAIModelFromPackage", jsonObject.toString());
+        } catch (JSONException e) {
+            Log.e(TAG, e.toString());
+        }
+
+        try {
+            File modelDir = new File(getExternalFilesDir("assets"),
+                    "face_unity/graphics/aitype.bundle");
+
+            {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("data", modelDir.getAbsolutePath());
+                setExtensionProperty("fuCreateItemFromPackage", jsonObject.toString());
+            }
+
+            {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("obj_handle", modelDir);
+                jsonObject.put("name", "aitype");
+                jsonObject.put("value", 1 << 10 | 1 << 21 | 1 << 3);
+                setExtensionProperty("fuItemSetParam", jsonObject.toString());
+            }
+        } catch (JSONException e) {
+            Log.e(TAG, e.toString());
+        }
+    }
+
+    private void enableAITracking() {
+        tvAITracking.setVisibility(View.VISIBLE);
+        enableAITracking.setText("disableAITracking");
+
+        try {
+            {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("n", 5);
+                setExtensionProperty("fuSetMaxFaces", jsonObject.toString());
+            }
+
+            {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("enable", true);
+                setExtensionProperty("fuIsTracking", jsonObject.toString());
+            }
+
+            {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("enable", true);
+                setExtensionProperty("fuHumanProcessorGetNumResults", jsonObject.toString());
+            }
+
+            {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("max_humans", 5);
+                setExtensionProperty("fuHumanProcessorSetMaxHumans", jsonObject.toString());
+            }
+
+            {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("enable", true);
+                setExtensionProperty("fuHandDetectorGetResultNumHands", jsonObject.toString());
+            }
+        } catch (JSONException e) {
+            Log.e(TAG, e.toString());
+        }
+    }
+
+    private void updateAITrackingResult(int faces, int hands, int people) {
+        runOnUiThread(() -> {
+            String result = "faces: " + faces + "\nhands: " + hands + "\npeople: " + people;
+            tvAITracking.setText(result);
+        });
     }
 
     private void setExtensionProperty(String key, String property) {
@@ -122,6 +367,10 @@ public class MainActivity
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", composerDir.getAbsolutePath());
             setExtensionProperty("fuCreateItemFromPackage", jsonObject.toString());
+
+            btnComposers.setEnabled(false);
+            colorLevelSeekBar.setEnabled(true);
+            filterLevelSeekBar.setEnabled(true);
         } catch (JSONException e) {
             Log.e(TAG, e.toString());
         }
@@ -135,6 +384,8 @@ public class MainActivity
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", stickerDir.getAbsolutePath());
             setExtensionProperty("fuCreateItemFromPackage", jsonObject.toString());
+
+            btnSticker.setEnabled(false);
         } catch (JSONException e) {
             Log.e(TAG, e.toString());
         }
@@ -185,7 +436,8 @@ public class MainActivity
     private void initRtcEngine() {
         RtcEngineConfig config = new RtcEngineConfig();
         config.mContext = getApplicationContext();
-        config.mAppId = io.agora.rte.extension.faceunity.example.Constants.mAppId;
+        config.mAppId = Config.mAppId;
+        config.mExtensionObserver = this;
         config.mEventHandler = new IRtcEngineEventHandler() {
             @Override
             public void onWarning(int warn) {
@@ -215,8 +467,6 @@ public class MainActivity
         mRtcEngine.setChannelProfile(Constants.CHANNEL_PROFILE_LIVE_BROADCASTING);
         mRtcEngine.setClientRole(Constants.CLIENT_ROLE_BROADCASTER);
         mRtcEngine.startPreview();
-        VideoCanvas canvas = new VideoCanvas(findViewById(R.id.surfaceView));
-        mRtcEngine.setupLocalVideo(canvas);
     }
 
     private void enableExtension(boolean enabled) {
@@ -225,17 +475,41 @@ public class MainActivity
     }
 
     @Override
-    public void onEvent(String s, String s1, String s2, String s3) {
+    public void onEvent(String vendor, String extension, String key, String value) {
+        Log.d(TAG, "onEvent vendor: " + vendor + "  extension: " + extension + "  key: " + key + "  value: " + value);
+
+        try {
+            JSONObject jsonObject = new JSONObject(value);
+            if ("fuIsTracking".equals(key)) {
+                faces = jsonObject.getInt("faces");
+            } else if ("fuHandDetectorGetResultNumHands".equals(key)) {
+                hands = jsonObject.getInt("hands");
+            } else if ("fuHumanProcessorGetNumResults".equals(key)) {
+                people = jsonObject.getInt("people");
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        updateAITrackingResult(faces, hands, people);
     }
 
     @Override
     public void onStarted(String s, String s1) {
-
+        initExtension();
+        loadAIModels();
+        runOnUiThread(() -> {
+            btnSticker.setEnabled(true);
+            btnComposers.setEnabled(true);
+            enableAITracking.setEnabled(true);
+            VideoCanvas canvas = new VideoCanvas(findViewById(R.id.surfaceView));
+            mRtcEngine.setupLocalVideo(canvas);
+        });
     }
 
     @Override
     public void onStopped(String s, String s1) {
-
+        Log.e(TAG, "onStopped: " + s + ", s1: " + s1);
     }
 
     @Override

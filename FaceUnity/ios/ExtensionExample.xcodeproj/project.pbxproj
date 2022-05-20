@@ -8,6 +8,167 @@
 
 /* Begin PBXBuildFile section */
 		6CE64580AC042C72A6973EE8 /* Pods_ExtensionExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0452D4401025E75283078C6 /* Pods_ExtensionExample.framework */; };
+		713C8D5B2829515E00870B41 /* hand_rect.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CAA2829515E00870B41 /* hand_rect.bundle */; };
+		713C8D5C2829515E00870B41 /* bodyLandmarks_selife.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CAB2829515E00870B41 /* bodyLandmarks_selife.bundle */; };
+		713C8D5D2829515E00870B41 /* green_screen.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CAC2829515E00870B41 /* green_screen.bundle */; };
+		713C8D5E2829515E00870B41 /* halfBodyDetect.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CAD2829515E00870B41 /* halfBodyDetect.bundle */; };
+		713C8D5F2829515E00870B41 /* bodyLandmarks_dance.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CAE2829515E00870B41 /* bodyLandmarks_dance.bundle */; };
+		713C8D602829515E00870B41 /* fakeman.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CAF2829515E00870B41 /* fakeman.bundle */; };
+		713C8D612829515E00870B41 /* bodyRect.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CB02829515E00870B41 /* bodyRect.bundle */; };
+		713C8D622829515E00870B41 /* wholeBodyDetect.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CB12829515E00870B41 /* wholeBodyDetect.bundle */; };
+		713C8D632829515E00870B41 /* hand_type.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CB22829515E00870B41 /* hand_type.bundle */; };
+		713C8D642829515E00870B41 /* default_bg.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CB32829515E00870B41 /* default_bg.bundle */; };
+		713C8D652829515E00870B41 /* landmarks.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CB42829515E00870B41 /* landmarks.bundle */; };
+		713C8D662829515E00870B41 /* ai_human_processor_mb_fast.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CB62829515E00870B41 /* ai_human_processor_mb_fast.bundle */; };
+		713C8D672829515E00870B41 /* ai_face_recognizer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CB72829515E00870B41 /* ai_face_recognizer.bundle */; };
+		713C8D682829515E00870B41 /* ai_hand_processor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CB82829515E00870B41 /* ai_hand_processor.bundle */; };
+		713C8D692829515E00870B41 /* ai_face_processor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CB92829515E00870B41 /* ai_face_processor.bundle */; };
+		713C8D6A2829515E00870B41 /* ai_bgseg_green.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CBA2829515E00870B41 /* ai_bgseg_green.bundle */; };
+		713C8D6B2829515E00870B41 /* ai_face_processor_lite.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CBB2829515E00870B41 /* ai_face_processor_lite.bundle */; };
+		713C8D6C2829515E00870B41 /* ai_hairseg.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CBC2829515E00870B41 /* ai_hairseg.bundle */; };
+		713C8D6D2829515E00870B41 /* ai_human_processor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CBD2829515E00870B41 /* ai_human_processor.bundle */; };
+		713C8D6E2829515E00870B41 /* boyfriend2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CC02829515E00870B41 /* boyfriend2.bundle */; };
+		713C8D6F2829515E00870B41 /* gufeng_zh_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CC12829515E00870B41 /* gufeng_zh_fu.bundle */; };
+		713C8D702829515E00870B41 /* xiandai_ztt_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CC22829515E00870B41 /* xiandai_ztt_fu.bundle */; };
+		713C8D712829515E00870B41 /* ice_lm_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CC32829515E00870B41 /* ice_lm_fu.bundle */; };
+		713C8D722829515E00870B41 /* boyfriend3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CC42829515E00870B41 /* boyfriend3.bundle */; };
+		713C8D732829515E00870B41 /* hez_ztt_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CC52829515E00870B41 /* hez_ztt_fu.bundle */; };
+		713C8D742829515E00870B41 /* sea_lm_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CC62829515E00870B41 /* sea_lm_fu.bundle */; };
+		713C8D752829515E00870B41 /* boyfriend1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CC72829515E00870B41 /* boyfriend1.bundle */; };
+		713C8D762829515E00870B41 /* qgirl.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CC92829515E00870B41 /* qgirl.bundle */; };
+		713C8D772829515E00870B41 /* douniuquan_Animoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CCA2829515E00870B41 /* douniuquan_Animoji.bundle */; };
+		713C8D782829515E00870B41 /* kuloutou_Animoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CCB2829515E00870B41 /* kuloutou_Animoji.bundle */; };
+		713C8D792829515E00870B41 /* huangya_Animoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CCC2829515E00870B41 /* huangya_Animoji.bundle */; };
+		713C8D7A2829515F00870B41 /* baimao_Animoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CCD2829515E00870B41 /* baimao_Animoji.bundle */; };
+		713C8D7B2829515F00870B41 /* hashiqi_Animoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CCE2829515E00870B41 /* hashiqi_Animoji.bundle */; };
+		713C8D7C2829515F00870B41 /* hetun_Animoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CCF2829515E00870B41 /* hetun_Animoji.bundle */; };
+		713C8D7D2829515F00870B41 /* frog_Animoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CD02829515E00870B41 /* frog_Animoji.bundle */; };
+		713C8D7E2829515F00870B41 /* green_screen_bg_beach.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CD32829515E00870B41 /* green_screen_bg_beach.mp4 */; };
+		713C8D7F2829515F00870B41 /* green_screen_bg_ink painting.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CD42829515E00870B41 /* green_screen_bg_ink painting.mp4 */; };
+		713C8D802829515F00870B41 /* green_screen_bg_classroom.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CD52829515E00870B41 /* green_screen_bg_classroom.mp4 */; };
+		713C8D812829515F00870B41 /* green_screen_bg_atechnology.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CD62829515E00870B41 /* green_screen_bg_atechnology.mp4 */; };
+		713C8D822829515F00870B41 /* green_screen_bg_jforest.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CD72829515E00870B41 /* green_screen_bg_jforest.mp4 */; };
+		713C8D832829515F00870B41 /* picasso_e2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CD92829515E00870B41 /* picasso_e2.bundle */; };
+		713C8D842829515F00870B41 /* picasso_e3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CDA2829515E00870B41 /* picasso_e3.bundle */; };
+		713C8D852829515F00870B41 /* picasso_e1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CDB2829515E00870B41 /* picasso_e1.bundle */; };
+		713C8D862829515F00870B41 /* facewarp3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CDD2829515E00870B41 /* facewarp3.bundle */; };
+		713C8D872829515F00870B41 /* facewarp5.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CDE2829515E00870B41 /* facewarp5.bundle */; };
+		713C8D882829515F00870B41 /* facewarp2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CDF2829515E00870B41 /* facewarp2.bundle */; };
+		713C8D892829515F00870B41 /* facewarp4.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CE02829515E00870B41 /* facewarp4.bundle */; };
+		713C8D8A2829515F00870B41 /* facewarp6.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CE12829515E00870B41 /* facewarp6.bundle */; };
+		713C8D8B2829515F00870B41 /* douyin_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CE32829515E00870B41 /* douyin_02.bundle */; };
+		713C8D8C2829515F00870B41 /* douyin_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CE42829515E00870B41 /* douyin_02.mp3 */; };
+		713C8D8D2829515F00870B41 /* douyin_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CE52829515E00870B41 /* douyin_01.mp3 */; };
+		713C8D8E2829515F00870B41 /* douyin_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CE62829515E00870B41 /* douyin_01.bundle */; };
+		713C8D8F2829515F00870B41 /* big_head_smiling.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CE82829515E00870B41 /* big_head_smiling.bundle */; };
+		713C8D902829515F00870B41 /* big_head_sausage_mouth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CE92829515E00870B41 /* big_head_sausage_mouth.bundle */; };
+		713C8D912829515F00870B41 /* big_head.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CEA2829515E00870B41 /* big_head.bundle */; };
+		713C8D922829515F00870B41 /* big_head_husky_face.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CEB2829515E00870B41 /* big_head_husky_face.bundle */; };
+		713C8D932829515F00870B41 /* big_head_dark_circles.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CEC2829515E00870B41 /* big_head_dark_circles.bundle */; };
+		713C8D942829515F00870B41 /* big_head_blush.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CED2829515E00870B41 /* big_head_blush.bundle */; };
+		713C8D952829515F00870B41 /* makeup_icon_combination_bored_cat.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CEF2829515E00870B41 /* makeup_icon_combination_bored_cat.bundle */; };
+		713C8D962829515F00870B41 /* makeup_icon_combination_rose.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CF02829515E00870B41 /* makeup_icon_combination_rose.bundle */; };
+		713C8D972829515F00870B41 /* makeup_icon_combination_mermaid.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CF12829515E00870B41 /* makeup_icon_combination_mermaid.bundle */; };
+		713C8D982829515F00870B41 /* makeup_icon_combination_daisy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CF22829515E00870B41 /* makeup_icon_combination_daisy.bundle */; };
+		713C8D992829515F00870B41 /* subs_setup.json in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CF32829515E00870B41 /* subs_setup.json */; };
+		713C8D9A2829515F00870B41 /* makeup_icon_combination_age.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CF42829515E00870B41 /* makeup_icon_combination_age.bundle */; };
+		713C8D9B2829515F00870B41 /* mu_style_eyeshadow_04.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CF62829515E00870B41 /* mu_style_eyeshadow_04.bundle */; };
+		713C8D9C2829515F00870B41 /* mu_style_contour_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CF72829515E00870B41 /* mu_style_contour_01.bundle */; };
+		713C8D9D2829515F00870B41 /* mu_style_eyelash_04.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CF82829515E00870B41 /* mu_style_eyelash_04.bundle */; };
+		713C8D9E2829515F00870B41 /* mu_style_eyeliner_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CF92829515E00870B41 /* mu_style_eyeliner_01.bundle */; };
+		713C8D9F2829515F00870B41 /* mu_style_foundation_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CFA2829515E00870B41 /* mu_style_foundation_01.bundle */; };
+		713C8DA02829515F00870B41 /* mu_style_blush_04.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CFB2829515E00870B41 /* mu_style_blush_04.bundle */; };
+		713C8DA12829515F00870B41 /* mu_style_eyelash_06.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CFC2829515E00870B41 /* mu_style_eyelash_06.bundle */; };
+		713C8DA22829515F00870B41 /* mu_style_eyeliner_03.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CFD2829515E00870B41 /* mu_style_eyeliner_03.bundle */; };
+		713C8DA32829515F00870B41 /* mu_style_lip_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CFE2829515E00870B41 /* mu_style_lip_01.bundle */; };
+		713C8DA42829515F00870B41 /* mu_style_eyeshadow_06.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CFF2829515E00870B41 /* mu_style_eyeshadow_06.bundle */; };
+		713C8DA52829515F00870B41 /* mu_style_eyebrow_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D002829515E00870B41 /* mu_style_eyebrow_01.bundle */; };
+		713C8DA62829515F00870B41 /* mu_style_eyelash_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D012829515E00870B41 /* mu_style_eyelash_02.bundle */; };
+		713C8DA72829515F00870B41 /* mu_style_eyeshadow_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D022829515E00870B41 /* mu_style_eyeshadow_02.bundle */; };
+		713C8DA82829515F00870B41 /* mu_style_eyeliner_05.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D032829515E00870B41 /* mu_style_eyeliner_05.bundle */; };
+		713C8DA92829515F00870B41 /* mu_style_highlight_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D042829515E00870B41 /* mu_style_highlight_01.bundle */; };
+		713C8DAA2829515F00870B41 /* mu_style_blush_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D052829515E00870B41 /* mu_style_blush_02.bundle */; };
+		713C8DAB2829515F00870B41 /* mu_style_eyelash_05.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D062829515E00870B41 /* mu_style_eyelash_05.bundle */; };
+		713C8DAC2829515F00870B41 /* mu_style_eyeshadow_05.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D072829515E00870B41 /* mu_style_eyeshadow_05.bundle */; };
+		713C8DAD2829515F00870B41 /* mu_style_eyepupil_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D082829515E00870B41 /* mu_style_eyepupil_01.bundle */; };
+		713C8DAE2829515F00870B41 /* mu_style_eyeliner_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D092829515E00870B41 /* mu_style_eyeliner_02.bundle */; };
+		713C8DAF2829515F00870B41 /* mu_style_eyeshadow_03.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D0A2829515E00870B41 /* mu_style_eyeshadow_03.bundle */; };
+		713C8DB02829515F00870B41 /* mu_style_highlight_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D0B2829515E00870B41 /* mu_style_highlight_02.bundle */; };
+		713C8DB12829515F00870B41 /* mu_style_blush_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D0C2829515E00870B41 /* mu_style_blush_01.bundle */; };
+		713C8DB22829515F00870B41 /* mu_style_eyelash_03.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D0D2829515E00870B41 /* mu_style_eyelash_03.bundle */; };
+		713C8DB32829515F00870B41 /* mu_style_eyeliner_06.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D0E2829515E00870B41 /* mu_style_eyeliner_06.bundle */; };
+		713C8DB42829515F00870B41 /* mu_style_blush_03.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D0F2829515E00870B41 /* mu_style_blush_03.bundle */; };
+		713C8DB52829515F00870B41 /* mu_style_eyelash_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D102829515E00870B41 /* mu_style_eyelash_01.bundle */; };
+		713C8DB62829515F00870B41 /* mu_style_eyeliner_04.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D112829515E00870B41 /* mu_style_eyeliner_04.bundle */; };
+		713C8DB72829515F00870B41 /* mu_style_eyeshadow_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D122829515E00870B41 /* mu_style_eyeshadow_01.bundle */; };
+		713C8DB82829515F00870B41 /* makeup_icon_combination_warm_winter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D132829515E00870B41 /* makeup_icon_combination_warm_winter.bundle */; };
+		713C8DB92829515F00870B41 /* makeup_icon_combination_supermodel.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D142829515E00870B41 /* makeup_icon_combination_supermodel.bundle */; };
+		713C8DBA2829515F00870B41 /* makeup_icon_combination_girl.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D152829515E00870B41 /* makeup_icon_combination_girl.bundle */; };
+		713C8DBB2829515F00870B41 /* makeup_icon_combination_early_autumn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D162829515E00870B41 /* makeup_icon_combination_early_autumn.bundle */; };
+		713C8DBC2829515F00870B41 /* demo_icon_customize.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D172829515E00870B41 /* demo_icon_customize.bundle */; };
+		713C8DBD2829515F00870B41 /* makeup_icon_combination_purple_rhyme.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D182829515E00870B41 /* makeup_icon_combination_purple_rhyme.bundle */; };
+		713C8DBE2829515F00870B41 /* makeup_icon_combination_red_maple.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D192829515E00870B41 /* makeup_icon_combination_red_maple.bundle */; };
+		713C8DBF2829515F00870B41 /* makeup_icon_combination_paper_cranes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D1A2829515E00870B41 /* makeup_icon_combination_paper_cranes.bundle */; };
+		713C8DC02829515F00870B41 /* makeup_icon_combination_harbour_wind.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D1B2829515E00870B41 /* makeup_icon_combination_harbour_wind.bundle */; };
+		713C8DC12829515F00870B41 /* ssd_thread_cute.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D1D2829515E00870B41 /* ssd_thread_cute.bundle */; };
+		713C8DC22829515F00870B41 /* ctrl_snow.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D1E2829515E00870B41 /* ctrl_snow.bundle */; };
+		713C8DC32829515F00870B41 /* ssd_thread_thumb.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D1F2829515E00870B41 /* ssd_thread_thumb.bundle */; };
+		713C8DC42829515F00870B41 /* ctrl_flower.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D202829515E00870B41 /* ctrl_flower.bundle */; };
+		713C8DC52829515F00870B41 /* ssd_thread_korheart.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D212829515E00870B41 /* ssd_thread_korheart.bundle */; };
+		713C8DC62829515F00870B41 /* ctrl_rain.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D222829515E00870B41 /* ctrl_rain.bundle */; };
+		713C8DC72829515F00870B41 /* ssd_thread_six.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D232829515E00870B41 /* ssd_thread_six.bundle */; };
+		713C8DC82829515F00870B41 /* hair_normal_06.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D252829515E00870B41 /* hair_normal_06.bundle */; };
+		713C8DC92829515F00870B41 /* hair_normal_08.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D262829515E00870B41 /* hair_normal_08.bundle */; };
+		713C8DCA2829515F00870B41 /* hair_normal_04.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D272829515E00870B41 /* hair_normal_04.bundle */; };
+		713C8DCB2829515F00870B41 /* hair_gradient_05.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D282829515E00870B41 /* hair_gradient_05.bundle */; };
+		713C8DCC2829515F00870B41 /* hair_gradient_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D292829515E00870B41 /* hair_gradient_01.bundle */; };
+		713C8DCD2829515F00870B41 /* hair_gradient_03.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D2A2829515E00870B41 /* hair_gradient_03.bundle */; };
+		713C8DCE2829515F00870B41 /* hair_normal_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D2B2829515E00870B41 /* hair_normal_02.bundle */; };
+		713C8DCF2829515F00870B41 /* hair_normal_07.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D2C2829515E00870B41 /* hair_normal_07.bundle */; };
+		713C8DD02829515F00870B41 /* hair_gradient_04.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D2D2829515E00870B41 /* hair_gradient_04.bundle */; };
+		713C8DD12829515F00870B41 /* hair_normal_05.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D2E2829515E00870B41 /* hair_normal_05.bundle */; };
+		713C8DD22829515F00870B41 /* hair_normal_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D2F2829515E00870B41 /* hair_normal_01.bundle */; };
+		713C8DD32829515F00870B41 /* hair_normal_03.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D302829515E00870B41 /* hair_normal_03.bundle */; };
+		713C8DD42829515F00870B41 /* hair_gradient_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D312829515E00870B41 /* hair_gradient_02.bundle */; };
+		713C8DD52829515F00870B41 /* PortraitLighting_effect_1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D332829515E00870B41 /* PortraitLighting_effect_1.bundle */; };
+		713C8DD62829515F00870B41 /* PortraitLighting_effect_3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D342829515E00870B41 /* PortraitLighting_effect_3.bundle */; };
+		713C8DD72829515F00870B41 /* PortraitLighting_effect_0.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D352829515E00870B41 /* PortraitLighting_effect_0.bundle */; };
+		713C8DD82829515F00870B41 /* PortraitLighting_X_studio.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D362829515E00870B41 /* PortraitLighting_X_studio.bundle */; };
+		713C8DD92829515F00870B41 /* PortraitLighting_effect_2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D372829515E00870B41 /* PortraitLighting_effect_2.bundle */; };
+		713C8DDA2829515F00870B41 /* PortraitLighting_X_rim.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D382829515E00870B41 /* PortraitLighting_X_rim.bundle */; };
+		713C8DDB2829515F00870B41 /* redribbt.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D3A2829515E00870B41 /* redribbt.bundle */; };
+		713C8DDC2829515F00870B41 /* CatSparks.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D3B2829515E00870B41 /* CatSparks.bundle */; };
+		713C8DDD2829515F00870B41 /* sdlu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D3C2829515E00870B41 /* sdlu.bundle */; };
+		713C8DDE2829515F00870B41 /* nihongdeng.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D3D2829515E00870B41 /* nihongdeng.bundle */; };
+		713C8DDF2829515F00870B41 /* daisypig.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D3E2829515E00870B41 /* daisypig.bundle */; };
+		713C8DE02829515F00870B41 /* tiger_bai.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D402829515E00870B41 /* tiger_bai.bundle */; };
+		713C8DE12829515F00870B41 /* tiger.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D412829515E00870B41 /* tiger.bundle */; };
+		713C8DE22829515F00870B41 /* tiger_huang.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D422829515E00870B41 /* tiger_huang.bundle */; };
+		713C8DE32829515F00870B41 /* xiongmao.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D432829515E00870B41 /* xiongmao.bundle */; };
+		713C8DE42829515F00870B41 /* fenhudie.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D442829515E00870B41 /* fenhudie.bundle */; };
+		713C8DE52829515F00870B41 /* bluebird.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D452829515E00870B41 /* bluebird.bundle */; };
+		713C8DE62829515F00870B41 /* afd.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D462829515E00870B41 /* afd.bundle */; };
+		713C8DE72829515F00870B41 /* baozi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D472829515E00870B41 /* baozi.bundle */; };
+		713C8DE82829515F00870B41 /* lanhudie.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D482829515E00870B41 /* lanhudie.bundle */; };
+		713C8DE92829515F00870B41 /* emotion_type.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D4A2829515E00870B41 /* emotion_type.bundle */; };
+		713C8DEA2829515F00870B41 /* jet_mask.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D4B2829515E00870B41 /* jet_mask.bundle */; };
+		713C8DEB2829515F00870B41 /* xiaobianzi_zh_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D4C2829515E00870B41 /* xiaobianzi_zh_fu.bundle */; };
+		713C8DEC2829515F00870B41 /* qingqing_ztt_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D4D2829515E00870B41 /* qingqing_ztt_fu.bundle */; };
+		713C8DED2829515F00870B41 /* jet_mask1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D4E2829515E00870B41 /* jet_mask1.bundle */; };
+		713C8DEE2829515F00870B41 /* xiaoxueshen_ztt_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D4F2829515E00870B41 /* xiaoxueshen_ztt_fu.bundle */; };
+		713C8DEF2829515F00870B41 /* future_warrior.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D502829515E00870B41 /* future_warrior.bundle */; };
+		713C8DF02829515F00870B41 /* expression_type.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D512829515E00870B41 /* expression_type.bundle */; };
+		713C8DF12829515F00870B41 /* sdx2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D522829515E00870B41 /* sdx2.bundle */; };
+		713C8DF22829515F00870B41 /* tongue.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D542829515E00870B41 /* tongue.bundle */; };
+		713C8DF32829515F00870B41 /* fxaa.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D552829515E00870B41 /* fxaa.bundle */; };
+		713C8DF42829515F00870B41 /* face_makeup.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D562829515E00870B41 /* face_makeup.bundle */; };
+		713C8DF52829515F00870B41 /* controller_cpp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D572829515E00870B41 /* controller_cpp.bundle */; };
+		713C8DF62829515F00870B41 /* body_slim.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D582829515E00870B41 /* body_slim.bundle */; };
+		713C8DF72829515F00870B41 /* fuzzytoonfilter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D592829515E00870B41 /* fuzzytoonfilter.bundle */; };
+		713C8DF82829515F00870B41 /* face_beautification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D5A2829515E00870B41 /* face_beautification.bundle */; };
+		713C8DFA282951D000870B41 /* aitype.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8DF9282951D000870B41 /* aitype.bundle */; };
+		713C8DFC28297E8300870B41 /* aitype.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8DFB28297E8200870B41 /* aitype.bundle */; };
+		713C8DFE282A60DB00870B41 /* ai_human_processor_pc.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8DFD282A60DB00870B41 /* ai_human_processor_pc.bundle */; };
 		8B4E5C3A27689A0900206C16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E5C3927689A0900206C16 /* AppDelegate.m */; };
 		8B4E5C3D27689A0900206C16 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E5C3C27689A0900206C16 /* SceneDelegate.m */; };
 		8B4E5C4027689A0900206C16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E5C3F27689A0900206C16 /* ViewController.m */; };
@@ -15,165 +176,6 @@
 		8B4E5C4527689A0900206C16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B4E5C4427689A0900206C16 /* Assets.xcassets */; };
 		8B4E5C4827689A0900206C16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B4E5C4627689A0900206C16 /* LaunchScreen.storyboard */; };
 		8B4E5C4B27689A0900206C16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E5C4A27689A0900206C16 /* main.m */; };
-		8BB8153A2769EBE000BD242F /* AppID.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB815382769EBE000BD242F /* AppID.m */; };
-		F58942AF278C8BBF005D98FC /* hand_rect.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58941FE278C8BBF005D98FC /* hand_rect.bundle */; };
-		F58942B0278C8BBF005D98FC /* bodyLandmarks_selife.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58941FF278C8BBF005D98FC /* bodyLandmarks_selife.bundle */; };
-		F58942B1278C8BBF005D98FC /* green_screen.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894200278C8BBF005D98FC /* green_screen.bundle */; };
-		F58942B2278C8BBF005D98FC /* halfBodyDetect.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894201278C8BBF005D98FC /* halfBodyDetect.bundle */; };
-		F58942B3278C8BBF005D98FC /* bodyLandmarks_dance.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894202278C8BBF005D98FC /* bodyLandmarks_dance.bundle */; };
-		F58942B4278C8BBF005D98FC /* fakeman.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894203278C8BBF005D98FC /* fakeman.bundle */; };
-		F58942B5278C8BBF005D98FC /* bodyRect.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894204278C8BBF005D98FC /* bodyRect.bundle */; };
-		F58942B6278C8BBF005D98FC /* wholeBodyDetect.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894205278C8BBF005D98FC /* wholeBodyDetect.bundle */; };
-		F58942B7278C8BBF005D98FC /* hand_type.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894206278C8BBF005D98FC /* hand_type.bundle */; };
-		F58942B8278C8BBF005D98FC /* default_bg.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894207278C8BBF005D98FC /* default_bg.bundle */; };
-		F58942B9278C8BBF005D98FC /* landmarks.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894208278C8BBF005D98FC /* landmarks.bundle */; };
-		F58942BA278C8BBF005D98FC /* ai_human_processor_mb_fast.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589420A278C8BBF005D98FC /* ai_human_processor_mb_fast.bundle */; };
-		F58942BB278C8BBF005D98FC /* ai_face_recognizer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589420B278C8BBF005D98FC /* ai_face_recognizer.bundle */; };
-		F58942BC278C8BBF005D98FC /* ai_hand_processor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589420C278C8BBF005D98FC /* ai_hand_processor.bundle */; };
-		F58942BD278C8BBF005D98FC /* ai_face_processor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589420D278C8BBF005D98FC /* ai_face_processor.bundle */; };
-		F58942BE278C8BBF005D98FC /* ai_bgseg_green.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589420E278C8BBF005D98FC /* ai_bgseg_green.bundle */; };
-		F58942BF278C8BBF005D98FC /* ai_face_processor_lite.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589420F278C8BBF005D98FC /* ai_face_processor_lite.bundle */; };
-		F58942C0278C8BBF005D98FC /* ai_hairseg.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894210278C8BBF005D98FC /* ai_hairseg.bundle */; };
-		F58942C1278C8BBF005D98FC /* ai_human_processor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894211278C8BBF005D98FC /* ai_human_processor.bundle */; };
-		F58942C2278C8BBF005D98FC /* boyfriend2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894214278C8BBF005D98FC /* boyfriend2.bundle */; };
-		F58942C3278C8BBF005D98FC /* gufeng_zh_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894215278C8BBF005D98FC /* gufeng_zh_fu.bundle */; };
-		F58942C4278C8BBF005D98FC /* xiandai_ztt_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894216278C8BBF005D98FC /* xiandai_ztt_fu.bundle */; };
-		F58942C5278C8BBF005D98FC /* ice_lm_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894217278C8BBF005D98FC /* ice_lm_fu.bundle */; };
-		F58942C6278C8BBF005D98FC /* boyfriend3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894218278C8BBF005D98FC /* boyfriend3.bundle */; };
-		F58942C7278C8BBF005D98FC /* hez_ztt_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894219278C8BBF005D98FC /* hez_ztt_fu.bundle */; };
-		F58942C8278C8BBF005D98FC /* sea_lm_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589421A278C8BBF005D98FC /* sea_lm_fu.bundle */; };
-		F58942C9278C8BBF005D98FC /* boyfriend1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589421B278C8BBF005D98FC /* boyfriend1.bundle */; };
-		F58942CA278C8BBF005D98FC /* qgirl.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589421D278C8BBF005D98FC /* qgirl.bundle */; };
-		F58942CB278C8BBF005D98FC /* douniuquan_Animoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589421E278C8BBF005D98FC /* douniuquan_Animoji.bundle */; };
-		F58942CC278C8BBF005D98FC /* kuloutou_Animoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589421F278C8BBF005D98FC /* kuloutou_Animoji.bundle */; };
-		F58942CD278C8BBF005D98FC /* huangya_Animoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894220278C8BBF005D98FC /* huangya_Animoji.bundle */; };
-		F58942CE278C8BBF005D98FC /* baimao_Animoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894221278C8BBF005D98FC /* baimao_Animoji.bundle */; };
-		F58942CF278C8BBF005D98FC /* hashiqi_Animoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894222278C8BBF005D98FC /* hashiqi_Animoji.bundle */; };
-		F58942D0278C8BBF005D98FC /* hetun_Animoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894223278C8BBF005D98FC /* hetun_Animoji.bundle */; };
-		F58942D1278C8BC0005D98FC /* frog_Animoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894224278C8BBF005D98FC /* frog_Animoji.bundle */; };
-		F58942D2278C8BC0005D98FC /* green_screen_bg_beach.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F5894227278C8BBF005D98FC /* green_screen_bg_beach.mp4 */; };
-		F58942D3278C8BC0005D98FC /* green_screen_bg_ink painting.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F5894228278C8BBF005D98FC /* green_screen_bg_ink painting.mp4 */; };
-		F58942D4278C8BC0005D98FC /* green_screen_bg_classroom.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F5894229278C8BBF005D98FC /* green_screen_bg_classroom.mp4 */; };
-		F58942D5278C8BC0005D98FC /* green_screen_bg_atechnology.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F589422A278C8BBF005D98FC /* green_screen_bg_atechnology.mp4 */; };
-		F58942D6278C8BC0005D98FC /* green_screen_bg_jforest.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F589422B278C8BBF005D98FC /* green_screen_bg_jforest.mp4 */; };
-		F58942D7278C8BC0005D98FC /* picasso_e2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589422D278C8BBF005D98FC /* picasso_e2.bundle */; };
-		F58942D8278C8BC0005D98FC /* picasso_e3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589422E278C8BBF005D98FC /* picasso_e3.bundle */; };
-		F58942D9278C8BC0005D98FC /* picasso_e1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589422F278C8BBF005D98FC /* picasso_e1.bundle */; };
-		F58942DA278C8BC0005D98FC /* facewarp3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894231278C8BBF005D98FC /* facewarp3.bundle */; };
-		F58942DB278C8BC0005D98FC /* facewarp5.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894232278C8BBF005D98FC /* facewarp5.bundle */; };
-		F58942DC278C8BC0005D98FC /* facewarp2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894233278C8BBF005D98FC /* facewarp2.bundle */; };
-		F58942DD278C8BC0005D98FC /* facewarp4.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894234278C8BBF005D98FC /* facewarp4.bundle */; };
-		F58942DE278C8BC0005D98FC /* facewarp6.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894235278C8BBF005D98FC /* facewarp6.bundle */; };
-		F58942DF278C8BC0005D98FC /* douyin_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894237278C8BBF005D98FC /* douyin_02.bundle */; };
-		F58942E0278C8BC0005D98FC /* douyin_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5894238278C8BBF005D98FC /* douyin_02.mp3 */; };
-		F58942E1278C8BC0005D98FC /* douyin_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5894239278C8BBF005D98FC /* douyin_01.mp3 */; };
-		F58942E2278C8BC0005D98FC /* douyin_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589423A278C8BBF005D98FC /* douyin_01.bundle */; };
-		F58942E3278C8BC0005D98FC /* big_head_smiling.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589423C278C8BBF005D98FC /* big_head_smiling.bundle */; };
-		F58942E4278C8BC0005D98FC /* big_head_sausage_mouth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589423D278C8BBF005D98FC /* big_head_sausage_mouth.bundle */; };
-		F58942E5278C8BC0005D98FC /* big_head.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589423E278C8BBF005D98FC /* big_head.bundle */; };
-		F58942E6278C8BC0005D98FC /* big_head_husky_face.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589423F278C8BBF005D98FC /* big_head_husky_face.bundle */; };
-		F58942E7278C8BC0005D98FC /* big_head_dark_circles.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894240278C8BBF005D98FC /* big_head_dark_circles.bundle */; };
-		F58942E8278C8BC0005D98FC /* big_head_blush.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894241278C8BBF005D98FC /* big_head_blush.bundle */; };
-		F58942E9278C8BC0005D98FC /* makeup_icon_combination_bored_cat.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894243278C8BBF005D98FC /* makeup_icon_combination_bored_cat.bundle */; };
-		F58942EA278C8BC0005D98FC /* makeup_icon_combination_rose.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894244278C8BBF005D98FC /* makeup_icon_combination_rose.bundle */; };
-		F58942EB278C8BC0005D98FC /* makeup_icon_combination_mermaid.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894245278C8BBF005D98FC /* makeup_icon_combination_mermaid.bundle */; };
-		F58942EC278C8BC0005D98FC /* makeup_icon_combination_daisy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894246278C8BBF005D98FC /* makeup_icon_combination_daisy.bundle */; };
-		F58942ED278C8BC0005D98FC /* subs_setup.json in Resources */ = {isa = PBXBuildFile; fileRef = F5894247278C8BBF005D98FC /* subs_setup.json */; };
-		F58942EE278C8BC0005D98FC /* makeup_icon_combination_age.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894248278C8BBF005D98FC /* makeup_icon_combination_age.bundle */; };
-		F58942EF278C8BC0005D98FC /* mu_style_eyeshadow_04.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589424A278C8BBF005D98FC /* mu_style_eyeshadow_04.bundle */; };
-		F58942F0278C8BC0005D98FC /* mu_style_contour_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589424B278C8BBF005D98FC /* mu_style_contour_01.bundle */; };
-		F58942F1278C8BC0005D98FC /* mu_style_eyelash_04.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589424C278C8BBF005D98FC /* mu_style_eyelash_04.bundle */; };
-		F58942F2278C8BC0005D98FC /* mu_style_eyeliner_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589424D278C8BBF005D98FC /* mu_style_eyeliner_01.bundle */; };
-		F58942F3278C8BC0005D98FC /* mu_style_foundation_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589424E278C8BBF005D98FC /* mu_style_foundation_01.bundle */; };
-		F58942F4278C8BC0005D98FC /* mu_style_blush_04.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589424F278C8BBF005D98FC /* mu_style_blush_04.bundle */; };
-		F58942F5278C8BC0005D98FC /* mu_style_eyelash_06.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894250278C8BBF005D98FC /* mu_style_eyelash_06.bundle */; };
-		F58942F6278C8BC0005D98FC /* mu_style_eyeliner_03.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894251278C8BBF005D98FC /* mu_style_eyeliner_03.bundle */; };
-		F58942F7278C8BC0005D98FC /* mu_style_lip_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894252278C8BBF005D98FC /* mu_style_lip_01.bundle */; };
-		F58942F8278C8BC0005D98FC /* mu_style_eyeshadow_06.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894253278C8BBF005D98FC /* mu_style_eyeshadow_06.bundle */; };
-		F58942F9278C8BC0005D98FC /* mu_style_eyebrow_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894254278C8BBF005D98FC /* mu_style_eyebrow_01.bundle */; };
-		F58942FA278C8BC0005D98FC /* mu_style_eyelash_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894255278C8BBF005D98FC /* mu_style_eyelash_02.bundle */; };
-		F58942FB278C8BC0005D98FC /* mu_style_eyeshadow_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894256278C8BBF005D98FC /* mu_style_eyeshadow_02.bundle */; };
-		F58942FC278C8BC0005D98FC /* mu_style_eyeliner_05.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894257278C8BBF005D98FC /* mu_style_eyeliner_05.bundle */; };
-		F58942FD278C8BC0005D98FC /* mu_style_highlight_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894258278C8BBF005D98FC /* mu_style_highlight_01.bundle */; };
-		F58942FE278C8BC0005D98FC /* mu_style_blush_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894259278C8BBF005D98FC /* mu_style_blush_02.bundle */; };
-		F58942FF278C8BC0005D98FC /* mu_style_eyelash_05.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589425A278C8BBF005D98FC /* mu_style_eyelash_05.bundle */; };
-		F5894300278C8BC0005D98FC /* mu_style_eyeshadow_05.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589425B278C8BBF005D98FC /* mu_style_eyeshadow_05.bundle */; };
-		F5894301278C8BC0005D98FC /* mu_style_eyepupil_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589425C278C8BBF005D98FC /* mu_style_eyepupil_01.bundle */; };
-		F5894302278C8BC0005D98FC /* mu_style_eyeliner_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589425D278C8BBF005D98FC /* mu_style_eyeliner_02.bundle */; };
-		F5894303278C8BC0005D98FC /* mu_style_eyeshadow_03.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589425E278C8BBF005D98FC /* mu_style_eyeshadow_03.bundle */; };
-		F5894304278C8BC0005D98FC /* mu_style_highlight_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589425F278C8BBF005D98FC /* mu_style_highlight_02.bundle */; };
-		F5894305278C8BC0005D98FC /* mu_style_blush_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894260278C8BBF005D98FC /* mu_style_blush_01.bundle */; };
-		F5894306278C8BC0005D98FC /* mu_style_eyelash_03.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894261278C8BBF005D98FC /* mu_style_eyelash_03.bundle */; };
-		F5894307278C8BC0005D98FC /* mu_style_eyeliner_06.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894262278C8BBF005D98FC /* mu_style_eyeliner_06.bundle */; };
-		F5894308278C8BC0005D98FC /* mu_style_blush_03.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894263278C8BBF005D98FC /* mu_style_blush_03.bundle */; };
-		F5894309278C8BC0005D98FC /* mu_style_eyelash_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894264278C8BBF005D98FC /* mu_style_eyelash_01.bundle */; };
-		F589430A278C8BC0005D98FC /* mu_style_eyeliner_04.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894265278C8BBF005D98FC /* mu_style_eyeliner_04.bundle */; };
-		F589430B278C8BC0005D98FC /* mu_style_eyeshadow_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894266278C8BBF005D98FC /* mu_style_eyeshadow_01.bundle */; };
-		F589430C278C8BC0005D98FC /* makeup_icon_combination_warm_winter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894267278C8BBF005D98FC /* makeup_icon_combination_warm_winter.bundle */; };
-		F589430D278C8BC0005D98FC /* makeup_icon_combination_supermodel.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894268278C8BBF005D98FC /* makeup_icon_combination_supermodel.bundle */; };
-		F589430E278C8BC0005D98FC /* makeup_icon_combination_girl.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894269278C8BBF005D98FC /* makeup_icon_combination_girl.bundle */; };
-		F589430F278C8BC0005D98FC /* makeup_icon_combination_early_autumn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589426A278C8BBF005D98FC /* makeup_icon_combination_early_autumn.bundle */; };
-		F5894310278C8BC0005D98FC /* demo_icon_customize.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589426B278C8BBF005D98FC /* demo_icon_customize.bundle */; };
-		F5894311278C8BC0005D98FC /* makeup_icon_combination_purple_rhyme.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589426C278C8BBF005D98FC /* makeup_icon_combination_purple_rhyme.bundle */; };
-		F5894312278C8BC0005D98FC /* makeup_icon_combination_red_maple.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589426D278C8BBF005D98FC /* makeup_icon_combination_red_maple.bundle */; };
-		F5894313278C8BC0005D98FC /* makeup_icon_combination_paper_cranes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589426E278C8BBF005D98FC /* makeup_icon_combination_paper_cranes.bundle */; };
-		F5894314278C8BC0005D98FC /* makeup_icon_combination_harbour_wind.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589426F278C8BBF005D98FC /* makeup_icon_combination_harbour_wind.bundle */; };
-		F5894315278C8BC0005D98FC /* ssd_thread_cute.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894271278C8BBF005D98FC /* ssd_thread_cute.bundle */; };
-		F5894316278C8BC0005D98FC /* ctrl_snow.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894272278C8BBF005D98FC /* ctrl_snow.bundle */; };
-		F5894317278C8BC0005D98FC /* ssd_thread_thumb.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894273278C8BBF005D98FC /* ssd_thread_thumb.bundle */; };
-		F5894318278C8BC0005D98FC /* ctrl_flower.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894274278C8BBF005D98FC /* ctrl_flower.bundle */; };
-		F5894319278C8BC0005D98FC /* ssd_thread_korheart.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894275278C8BBF005D98FC /* ssd_thread_korheart.bundle */; };
-		F589431A278C8BC0005D98FC /* ctrl_rain.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894276278C8BBF005D98FC /* ctrl_rain.bundle */; };
-		F589431B278C8BC0005D98FC /* ssd_thread_six.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894277278C8BBF005D98FC /* ssd_thread_six.bundle */; };
-		F589431C278C8BC0005D98FC /* hair_normal_06.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894279278C8BBF005D98FC /* hair_normal_06.bundle */; };
-		F589431D278C8BC0005D98FC /* hair_normal_08.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589427A278C8BBF005D98FC /* hair_normal_08.bundle */; };
-		F589431E278C8BC0005D98FC /* hair_normal_04.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589427B278C8BBF005D98FC /* hair_normal_04.bundle */; };
-		F589431F278C8BC0005D98FC /* hair_gradient_05.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589427C278C8BBF005D98FC /* hair_gradient_05.bundle */; };
-		F5894320278C8BC0005D98FC /* hair_gradient_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589427D278C8BBF005D98FC /* hair_gradient_01.bundle */; };
-		F5894321278C8BC0005D98FC /* hair_gradient_03.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589427E278C8BBF005D98FC /* hair_gradient_03.bundle */; };
-		F5894322278C8BC0005D98FC /* hair_normal_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589427F278C8BBF005D98FC /* hair_normal_02.bundle */; };
-		F5894323278C8BC0005D98FC /* hair_normal_07.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894280278C8BBF005D98FC /* hair_normal_07.bundle */; };
-		F5894324278C8BC0005D98FC /* hair_gradient_04.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894281278C8BBF005D98FC /* hair_gradient_04.bundle */; };
-		F5894325278C8BC0005D98FC /* hair_normal_05.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894282278C8BBF005D98FC /* hair_normal_05.bundle */; };
-		F5894326278C8BC0005D98FC /* hair_normal_01.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894283278C8BBF005D98FC /* hair_normal_01.bundle */; };
-		F5894327278C8BC0005D98FC /* hair_normal_03.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894284278C8BBF005D98FC /* hair_normal_03.bundle */; };
-		F5894328278C8BC0005D98FC /* hair_gradient_02.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894285278C8BBF005D98FC /* hair_gradient_02.bundle */; };
-		F5894329278C8BC0005D98FC /* PortraitLighting_effect_1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894287278C8BBF005D98FC /* PortraitLighting_effect_1.bundle */; };
-		F589432A278C8BC0005D98FC /* PortraitLighting_effect_3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894288278C8BBF005D98FC /* PortraitLighting_effect_3.bundle */; };
-		F589432B278C8BC0005D98FC /* PortraitLighting_effect_0.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894289278C8BBF005D98FC /* PortraitLighting_effect_0.bundle */; };
-		F589432C278C8BC0005D98FC /* PortraitLighting_X_studio.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589428A278C8BBF005D98FC /* PortraitLighting_X_studio.bundle */; };
-		F589432D278C8BC0005D98FC /* PortraitLighting_effect_2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589428B278C8BBF005D98FC /* PortraitLighting_effect_2.bundle */; };
-		F589432E278C8BC0005D98FC /* PortraitLighting_X_rim.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589428C278C8BBF005D98FC /* PortraitLighting_X_rim.bundle */; };
-		F589432F278C8BC0005D98FC /* redribbt.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589428E278C8BBF005D98FC /* redribbt.bundle */; };
-		F5894330278C8BC0005D98FC /* CatSparks.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589428F278C8BBF005D98FC /* CatSparks.bundle */; };
-		F5894331278C8BC0005D98FC /* sdlu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894290278C8BBF005D98FC /* sdlu.bundle */; };
-		F5894332278C8BC0005D98FC /* nihongdeng.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894291278C8BBF005D98FC /* nihongdeng.bundle */; };
-		F5894333278C8BC0005D98FC /* daisypig.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894292278C8BBF005D98FC /* daisypig.bundle */; };
-		F5894334278C8BC0005D98FC /* tiger_bai.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894294278C8BBF005D98FC /* tiger_bai.bundle */; };
-		F5894335278C8BC0005D98FC /* tiger.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894295278C8BBF005D98FC /* tiger.bundle */; };
-		F5894336278C8BC0005D98FC /* tiger_huang.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894296278C8BBF005D98FC /* tiger_huang.bundle */; };
-		F5894337278C8BC0005D98FC /* xiongmao.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894297278C8BBF005D98FC /* xiongmao.bundle */; };
-		F5894338278C8BC0005D98FC /* fenhudie.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894298278C8BBF005D98FC /* fenhudie.bundle */; };
-		F5894339278C8BC0005D98FC /* bluebird.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5894299278C8BBF005D98FC /* bluebird.bundle */; };
-		F589433A278C8BC0005D98FC /* afd.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589429A278C8BBF005D98FC /* afd.bundle */; };
-		F589433B278C8BC0005D98FC /* baozi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589429B278C8BBF005D98FC /* baozi.bundle */; };
-		F589433C278C8BC0005D98FC /* lanhudie.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589429C278C8BBF005D98FC /* lanhudie.bundle */; };
-		F589433D278C8BC0005D98FC /* emotion_type.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589429E278C8BBF005D98FC /* emotion_type.bundle */; };
-		F589433E278C8BC0005D98FC /* jet_mask.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F589429F278C8BBF005D98FC /* jet_mask.bundle */; };
-		F589433F278C8BC0005D98FC /* xiaobianzi_zh_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58942A0278C8BBF005D98FC /* xiaobianzi_zh_fu.bundle */; };
-		F5894340278C8BC0005D98FC /* qingqing_ztt_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58942A1278C8BBF005D98FC /* qingqing_ztt_fu.bundle */; };
-		F5894341278C8BC0005D98FC /* jet_mask1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58942A2278C8BBF005D98FC /* jet_mask1.bundle */; };
-		F5894342278C8BC0005D98FC /* xiaoxueshen_ztt_fu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58942A3278C8BBF005D98FC /* xiaoxueshen_ztt_fu.bundle */; };
-		F5894343278C8BC0005D98FC /* future_warrior.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58942A4278C8BBF005D98FC /* future_warrior.bundle */; };
-		F5894344278C8BC0005D98FC /* expression_type.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58942A5278C8BBF005D98FC /* expression_type.bundle */; };
-		F5894345278C8BC0005D98FC /* sdx2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58942A6278C8BBF005D98FC /* sdx2.bundle */; };
-		F5894346278C8BC0005D98FC /* tongue.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58942A8278C8BBF005D98FC /* tongue.bundle */; };
-		F5894347278C8BC0005D98FC /* fxaa.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58942A9278C8BBF005D98FC /* fxaa.bundle */; };
-		F5894348278C8BC0005D98FC /* face_makeup.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58942AA278C8BBF005D98FC /* face_makeup.bundle */; };
-		F5894349278C8BC0005D98FC /* controller_cpp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58942AB278C8BBF005D98FC /* controller_cpp.bundle */; };
-		F589434A278C8BC0005D98FC /* body_slim.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58942AC278C8BBF005D98FC /* body_slim.bundle */; };
-		F589434B278C8BC0005D98FC /* fuzzytoonfilter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58942AD278C8BBF005D98FC /* fuzzytoonfilter.bundle */; };
-		F589434C278C8BC0005D98FC /* face_beautification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F58942AE278C8BBF005D98FC /* face_beautification.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -191,6 +193,167 @@
 
 /* Begin PBXFileReference section */
 		6A2B967ADA3600EBA1800AA4 /* Pods-ExtensionExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExtensionExample.release.xcconfig"; path = "Target Support Files/Pods-ExtensionExample/Pods-ExtensionExample.release.xcconfig"; sourceTree = "<group>"; };
+		713C8CAA2829515E00870B41 /* hand_rect.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hand_rect.bundle; sourceTree = "<group>"; };
+		713C8CAB2829515E00870B41 /* bodyLandmarks_selife.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = bodyLandmarks_selife.bundle; sourceTree = "<group>"; };
+		713C8CAC2829515E00870B41 /* green_screen.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = green_screen.bundle; sourceTree = "<group>"; };
+		713C8CAD2829515E00870B41 /* halfBodyDetect.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = halfBodyDetect.bundle; sourceTree = "<group>"; };
+		713C8CAE2829515E00870B41 /* bodyLandmarks_dance.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = bodyLandmarks_dance.bundle; sourceTree = "<group>"; };
+		713C8CAF2829515E00870B41 /* fakeman.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = fakeman.bundle; sourceTree = "<group>"; };
+		713C8CB02829515E00870B41 /* bodyRect.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = bodyRect.bundle; sourceTree = "<group>"; };
+		713C8CB12829515E00870B41 /* wholeBodyDetect.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = wholeBodyDetect.bundle; sourceTree = "<group>"; };
+		713C8CB22829515E00870B41 /* hand_type.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hand_type.bundle; sourceTree = "<group>"; };
+		713C8CB32829515E00870B41 /* default_bg.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = default_bg.bundle; sourceTree = "<group>"; };
+		713C8CB42829515E00870B41 /* landmarks.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = landmarks.bundle; sourceTree = "<group>"; };
+		713C8CB62829515E00870B41 /* ai_human_processor_mb_fast.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_human_processor_mb_fast.bundle; sourceTree = "<group>"; };
+		713C8CB72829515E00870B41 /* ai_face_recognizer.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_face_recognizer.bundle; sourceTree = "<group>"; };
+		713C8CB82829515E00870B41 /* ai_hand_processor.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_hand_processor.bundle; sourceTree = "<group>"; };
+		713C8CB92829515E00870B41 /* ai_face_processor.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_face_processor.bundle; sourceTree = "<group>"; };
+		713C8CBA2829515E00870B41 /* ai_bgseg_green.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_bgseg_green.bundle; sourceTree = "<group>"; };
+		713C8CBB2829515E00870B41 /* ai_face_processor_lite.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_face_processor_lite.bundle; sourceTree = "<group>"; };
+		713C8CBC2829515E00870B41 /* ai_hairseg.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_hairseg.bundle; sourceTree = "<group>"; };
+		713C8CBD2829515E00870B41 /* ai_human_processor.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_human_processor.bundle; sourceTree = "<group>"; };
+		713C8CC02829515E00870B41 /* boyfriend2.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = boyfriend2.bundle; sourceTree = "<group>"; };
+		713C8CC12829515E00870B41 /* gufeng_zh_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = gufeng_zh_fu.bundle; sourceTree = "<group>"; };
+		713C8CC22829515E00870B41 /* xiandai_ztt_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = xiandai_ztt_fu.bundle; sourceTree = "<group>"; };
+		713C8CC32829515E00870B41 /* ice_lm_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ice_lm_fu.bundle; sourceTree = "<group>"; };
+		713C8CC42829515E00870B41 /* boyfriend3.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = boyfriend3.bundle; sourceTree = "<group>"; };
+		713C8CC52829515E00870B41 /* hez_ztt_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hez_ztt_fu.bundle; sourceTree = "<group>"; };
+		713C8CC62829515E00870B41 /* sea_lm_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = sea_lm_fu.bundle; sourceTree = "<group>"; };
+		713C8CC72829515E00870B41 /* boyfriend1.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = boyfriend1.bundle; sourceTree = "<group>"; };
+		713C8CC92829515E00870B41 /* qgirl.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = qgirl.bundle; sourceTree = "<group>"; };
+		713C8CCA2829515E00870B41 /* douniuquan_Animoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = douniuquan_Animoji.bundle; sourceTree = "<group>"; };
+		713C8CCB2829515E00870B41 /* kuloutou_Animoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = kuloutou_Animoji.bundle; sourceTree = "<group>"; };
+		713C8CCC2829515E00870B41 /* huangya_Animoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = huangya_Animoji.bundle; sourceTree = "<group>"; };
+		713C8CCD2829515E00870B41 /* baimao_Animoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = baimao_Animoji.bundle; sourceTree = "<group>"; };
+		713C8CCE2829515E00870B41 /* hashiqi_Animoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hashiqi_Animoji.bundle; sourceTree = "<group>"; };
+		713C8CCF2829515E00870B41 /* hetun_Animoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hetun_Animoji.bundle; sourceTree = "<group>"; };
+		713C8CD02829515E00870B41 /* frog_Animoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = frog_Animoji.bundle; sourceTree = "<group>"; };
+		713C8CD32829515E00870B41 /* green_screen_bg_beach.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = green_screen_bg_beach.mp4; sourceTree = "<group>"; };
+		713C8CD42829515E00870B41 /* green_screen_bg_ink painting.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "green_screen_bg_ink painting.mp4"; sourceTree = "<group>"; };
+		713C8CD52829515E00870B41 /* green_screen_bg_classroom.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = green_screen_bg_classroom.mp4; sourceTree = "<group>"; };
+		713C8CD62829515E00870B41 /* green_screen_bg_atechnology.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = green_screen_bg_atechnology.mp4; sourceTree = "<group>"; };
+		713C8CD72829515E00870B41 /* green_screen_bg_jforest.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = green_screen_bg_jforest.mp4; sourceTree = "<group>"; };
+		713C8CD92829515E00870B41 /* picasso_e2.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = picasso_e2.bundle; sourceTree = "<group>"; };
+		713C8CDA2829515E00870B41 /* picasso_e3.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = picasso_e3.bundle; sourceTree = "<group>"; };
+		713C8CDB2829515E00870B41 /* picasso_e1.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = picasso_e1.bundle; sourceTree = "<group>"; };
+		713C8CDD2829515E00870B41 /* facewarp3.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = facewarp3.bundle; sourceTree = "<group>"; };
+		713C8CDE2829515E00870B41 /* facewarp5.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = facewarp5.bundle; sourceTree = "<group>"; };
+		713C8CDF2829515E00870B41 /* facewarp2.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = facewarp2.bundle; sourceTree = "<group>"; };
+		713C8CE02829515E00870B41 /* facewarp4.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = facewarp4.bundle; sourceTree = "<group>"; };
+		713C8CE12829515E00870B41 /* facewarp6.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = facewarp6.bundle; sourceTree = "<group>"; };
+		713C8CE32829515E00870B41 /* douyin_02.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = douyin_02.bundle; sourceTree = "<group>"; };
+		713C8CE42829515E00870B41 /* douyin_02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = douyin_02.mp3; sourceTree = "<group>"; };
+		713C8CE52829515E00870B41 /* douyin_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = douyin_01.mp3; sourceTree = "<group>"; };
+		713C8CE62829515E00870B41 /* douyin_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = douyin_01.bundle; sourceTree = "<group>"; };
+		713C8CE82829515E00870B41 /* big_head_smiling.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_head_smiling.bundle; sourceTree = "<group>"; };
+		713C8CE92829515E00870B41 /* big_head_sausage_mouth.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_head_sausage_mouth.bundle; sourceTree = "<group>"; };
+		713C8CEA2829515E00870B41 /* big_head.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_head.bundle; sourceTree = "<group>"; };
+		713C8CEB2829515E00870B41 /* big_head_husky_face.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_head_husky_face.bundle; sourceTree = "<group>"; };
+		713C8CEC2829515E00870B41 /* big_head_dark_circles.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_head_dark_circles.bundle; sourceTree = "<group>"; };
+		713C8CED2829515E00870B41 /* big_head_blush.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_head_blush.bundle; sourceTree = "<group>"; };
+		713C8CEF2829515E00870B41 /* makeup_icon_combination_bored_cat.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_bored_cat.bundle; sourceTree = "<group>"; };
+		713C8CF02829515E00870B41 /* makeup_icon_combination_rose.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_rose.bundle; sourceTree = "<group>"; };
+		713C8CF12829515E00870B41 /* makeup_icon_combination_mermaid.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_mermaid.bundle; sourceTree = "<group>"; };
+		713C8CF22829515E00870B41 /* makeup_icon_combination_daisy.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_daisy.bundle; sourceTree = "<group>"; };
+		713C8CF32829515E00870B41 /* subs_setup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subs_setup.json; sourceTree = "<group>"; };
+		713C8CF42829515E00870B41 /* makeup_icon_combination_age.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_age.bundle; sourceTree = "<group>"; };
+		713C8CF62829515E00870B41 /* mu_style_eyeshadow_04.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeshadow_04.bundle; sourceTree = "<group>"; };
+		713C8CF72829515E00870B41 /* mu_style_contour_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_contour_01.bundle; sourceTree = "<group>"; };
+		713C8CF82829515E00870B41 /* mu_style_eyelash_04.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyelash_04.bundle; sourceTree = "<group>"; };
+		713C8CF92829515E00870B41 /* mu_style_eyeliner_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeliner_01.bundle; sourceTree = "<group>"; };
+		713C8CFA2829515E00870B41 /* mu_style_foundation_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_foundation_01.bundle; sourceTree = "<group>"; };
+		713C8CFB2829515E00870B41 /* mu_style_blush_04.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_blush_04.bundle; sourceTree = "<group>"; };
+		713C8CFC2829515E00870B41 /* mu_style_eyelash_06.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyelash_06.bundle; sourceTree = "<group>"; };
+		713C8CFD2829515E00870B41 /* mu_style_eyeliner_03.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeliner_03.bundle; sourceTree = "<group>"; };
+		713C8CFE2829515E00870B41 /* mu_style_lip_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_lip_01.bundle; sourceTree = "<group>"; };
+		713C8CFF2829515E00870B41 /* mu_style_eyeshadow_06.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeshadow_06.bundle; sourceTree = "<group>"; };
+		713C8D002829515E00870B41 /* mu_style_eyebrow_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyebrow_01.bundle; sourceTree = "<group>"; };
+		713C8D012829515E00870B41 /* mu_style_eyelash_02.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyelash_02.bundle; sourceTree = "<group>"; };
+		713C8D022829515E00870B41 /* mu_style_eyeshadow_02.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeshadow_02.bundle; sourceTree = "<group>"; };
+		713C8D032829515E00870B41 /* mu_style_eyeliner_05.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeliner_05.bundle; sourceTree = "<group>"; };
+		713C8D042829515E00870B41 /* mu_style_highlight_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_highlight_01.bundle; sourceTree = "<group>"; };
+		713C8D052829515E00870B41 /* mu_style_blush_02.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_blush_02.bundle; sourceTree = "<group>"; };
+		713C8D062829515E00870B41 /* mu_style_eyelash_05.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyelash_05.bundle; sourceTree = "<group>"; };
+		713C8D072829515E00870B41 /* mu_style_eyeshadow_05.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeshadow_05.bundle; sourceTree = "<group>"; };
+		713C8D082829515E00870B41 /* mu_style_eyepupil_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyepupil_01.bundle; sourceTree = "<group>"; };
+		713C8D092829515E00870B41 /* mu_style_eyeliner_02.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeliner_02.bundle; sourceTree = "<group>"; };
+		713C8D0A2829515E00870B41 /* mu_style_eyeshadow_03.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeshadow_03.bundle; sourceTree = "<group>"; };
+		713C8D0B2829515E00870B41 /* mu_style_highlight_02.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_highlight_02.bundle; sourceTree = "<group>"; };
+		713C8D0C2829515E00870B41 /* mu_style_blush_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_blush_01.bundle; sourceTree = "<group>"; };
+		713C8D0D2829515E00870B41 /* mu_style_eyelash_03.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyelash_03.bundle; sourceTree = "<group>"; };
+		713C8D0E2829515E00870B41 /* mu_style_eyeliner_06.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeliner_06.bundle; sourceTree = "<group>"; };
+		713C8D0F2829515E00870B41 /* mu_style_blush_03.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_blush_03.bundle; sourceTree = "<group>"; };
+		713C8D102829515E00870B41 /* mu_style_eyelash_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyelash_01.bundle; sourceTree = "<group>"; };
+		713C8D112829515E00870B41 /* mu_style_eyeliner_04.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeliner_04.bundle; sourceTree = "<group>"; };
+		713C8D122829515E00870B41 /* mu_style_eyeshadow_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeshadow_01.bundle; sourceTree = "<group>"; };
+		713C8D132829515E00870B41 /* makeup_icon_combination_warm_winter.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_warm_winter.bundle; sourceTree = "<group>"; };
+		713C8D142829515E00870B41 /* makeup_icon_combination_supermodel.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_supermodel.bundle; sourceTree = "<group>"; };
+		713C8D152829515E00870B41 /* makeup_icon_combination_girl.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_girl.bundle; sourceTree = "<group>"; };
+		713C8D162829515E00870B41 /* makeup_icon_combination_early_autumn.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_early_autumn.bundle; sourceTree = "<group>"; };
+		713C8D172829515E00870B41 /* demo_icon_customize.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demo_icon_customize.bundle; sourceTree = "<group>"; };
+		713C8D182829515E00870B41 /* makeup_icon_combination_purple_rhyme.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_purple_rhyme.bundle; sourceTree = "<group>"; };
+		713C8D192829515E00870B41 /* makeup_icon_combination_red_maple.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_red_maple.bundle; sourceTree = "<group>"; };
+		713C8D1A2829515E00870B41 /* makeup_icon_combination_paper_cranes.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_paper_cranes.bundle; sourceTree = "<group>"; };
+		713C8D1B2829515E00870B41 /* makeup_icon_combination_harbour_wind.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_harbour_wind.bundle; sourceTree = "<group>"; };
+		713C8D1D2829515E00870B41 /* ssd_thread_cute.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ssd_thread_cute.bundle; sourceTree = "<group>"; };
+		713C8D1E2829515E00870B41 /* ctrl_snow.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ctrl_snow.bundle; sourceTree = "<group>"; };
+		713C8D1F2829515E00870B41 /* ssd_thread_thumb.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ssd_thread_thumb.bundle; sourceTree = "<group>"; };
+		713C8D202829515E00870B41 /* ctrl_flower.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ctrl_flower.bundle; sourceTree = "<group>"; };
+		713C8D212829515E00870B41 /* ssd_thread_korheart.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ssd_thread_korheart.bundle; sourceTree = "<group>"; };
+		713C8D222829515E00870B41 /* ctrl_rain.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ctrl_rain.bundle; sourceTree = "<group>"; };
+		713C8D232829515E00870B41 /* ssd_thread_six.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ssd_thread_six.bundle; sourceTree = "<group>"; };
+		713C8D252829515E00870B41 /* hair_normal_06.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_06.bundle; sourceTree = "<group>"; };
+		713C8D262829515E00870B41 /* hair_normal_08.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_08.bundle; sourceTree = "<group>"; };
+		713C8D272829515E00870B41 /* hair_normal_04.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_04.bundle; sourceTree = "<group>"; };
+		713C8D282829515E00870B41 /* hair_gradient_05.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hair_gradient_05.bundle; sourceTree = "<group>"; };
+		713C8D292829515E00870B41 /* hair_gradient_01.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hair_gradient_01.bundle; sourceTree = "<group>"; };
+		713C8D2A2829515E00870B41 /* hair_gradient_03.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hair_gradient_03.bundle; sourceTree = "<group>"; };
+		713C8D2B2829515E00870B41 /* hair_normal_02.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_02.bundle; sourceTree = "<group>"; };
+		713C8D2C2829515E00870B41 /* hair_normal_07.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_07.bundle; sourceTree = "<group>"; };
+		713C8D2D2829515E00870B41 /* hair_gradient_04.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hair_gradient_04.bundle; sourceTree = "<group>"; };
+		713C8D2E2829515E00870B41 /* hair_normal_05.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_05.bundle; sourceTree = "<group>"; };
+		713C8D2F2829515E00870B41 /* hair_normal_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_01.bundle; sourceTree = "<group>"; };
+		713C8D302829515E00870B41 /* hair_normal_03.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_03.bundle; sourceTree = "<group>"; };
+		713C8D312829515E00870B41 /* hair_gradient_02.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hair_gradient_02.bundle; sourceTree = "<group>"; };
+		713C8D332829515E00870B41 /* PortraitLighting_effect_1.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = PortraitLighting_effect_1.bundle; sourceTree = "<group>"; };
+		713C8D342829515E00870B41 /* PortraitLighting_effect_3.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = PortraitLighting_effect_3.bundle; sourceTree = "<group>"; };
+		713C8D352829515E00870B41 /* PortraitLighting_effect_0.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = PortraitLighting_effect_0.bundle; sourceTree = "<group>"; };
+		713C8D362829515E00870B41 /* PortraitLighting_X_studio.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = PortraitLighting_X_studio.bundle; sourceTree = "<group>"; };
+		713C8D372829515E00870B41 /* PortraitLighting_effect_2.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = PortraitLighting_effect_2.bundle; sourceTree = "<group>"; };
+		713C8D382829515E00870B41 /* PortraitLighting_X_rim.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = PortraitLighting_X_rim.bundle; sourceTree = "<group>"; };
+		713C8D3A2829515E00870B41 /* redribbt.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = redribbt.bundle; sourceTree = "<group>"; };
+		713C8D3B2829515E00870B41 /* CatSparks.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = CatSparks.bundle; sourceTree = "<group>"; };
+		713C8D3C2829515E00870B41 /* sdlu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = sdlu.bundle; sourceTree = "<group>"; };
+		713C8D3D2829515E00870B41 /* nihongdeng.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = nihongdeng.bundle; sourceTree = "<group>"; };
+		713C8D3E2829515E00870B41 /* daisypig.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = daisypig.bundle; sourceTree = "<group>"; };
+		713C8D402829515E00870B41 /* tiger_bai.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tiger_bai.bundle; sourceTree = "<group>"; };
+		713C8D412829515E00870B41 /* tiger.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = tiger.bundle; sourceTree = "<group>"; };
+		713C8D422829515E00870B41 /* tiger_huang.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = tiger_huang.bundle; sourceTree = "<group>"; };
+		713C8D432829515E00870B41 /* xiongmao.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = xiongmao.bundle; sourceTree = "<group>"; };
+		713C8D442829515E00870B41 /* fenhudie.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = fenhudie.bundle; sourceTree = "<group>"; };
+		713C8D452829515E00870B41 /* bluebird.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = bluebird.bundle; sourceTree = "<group>"; };
+		713C8D462829515E00870B41 /* afd.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = afd.bundle; sourceTree = "<group>"; };
+		713C8D472829515E00870B41 /* baozi.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = baozi.bundle; sourceTree = "<group>"; };
+		713C8D482829515E00870B41 /* lanhudie.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = lanhudie.bundle; sourceTree = "<group>"; };
+		713C8D4A2829515E00870B41 /* emotion_type.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = emotion_type.bundle; sourceTree = "<group>"; };
+		713C8D4B2829515E00870B41 /* jet_mask.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = jet_mask.bundle; sourceTree = "<group>"; };
+		713C8D4C2829515E00870B41 /* xiaobianzi_zh_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = xiaobianzi_zh_fu.bundle; sourceTree = "<group>"; };
+		713C8D4D2829515E00870B41 /* qingqing_ztt_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = qingqing_ztt_fu.bundle; sourceTree = "<group>"; };
+		713C8D4E2829515E00870B41 /* jet_mask1.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = jet_mask1.bundle; sourceTree = "<group>"; };
+		713C8D4F2829515E00870B41 /* xiaoxueshen_ztt_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = xiaoxueshen_ztt_fu.bundle; sourceTree = "<group>"; };
+		713C8D502829515E00870B41 /* future_warrior.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = future_warrior.bundle; sourceTree = "<group>"; };
+		713C8D512829515E00870B41 /* expression_type.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = expression_type.bundle; sourceTree = "<group>"; };
+		713C8D522829515E00870B41 /* sdx2.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = sdx2.bundle; sourceTree = "<group>"; };
+		713C8D542829515E00870B41 /* tongue.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = tongue.bundle; sourceTree = "<group>"; };
+		713C8D552829515E00870B41 /* fxaa.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = fxaa.bundle; sourceTree = "<group>"; };
+		713C8D562829515E00870B41 /* face_makeup.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = face_makeup.bundle; sourceTree = "<group>"; };
+		713C8D572829515E00870B41 /* controller_cpp.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = controller_cpp.bundle; sourceTree = "<group>"; };
+		713C8D582829515E00870B41 /* body_slim.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = body_slim.bundle; sourceTree = "<group>"; };
+		713C8D592829515E00870B41 /* fuzzytoonfilter.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = fuzzytoonfilter.bundle; sourceTree = "<group>"; };
+		713C8D5A2829515E00870B41 /* face_beautification.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = face_beautification.bundle; sourceTree = "<group>"; };
+		713C8DF9282951D000870B41 /* aitype.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = aitype.bundle; sourceTree = "<group>"; };
+		713C8DFB28297E8200870B41 /* aitype.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = aitype.bundle; sourceTree = "<group>"; };
+		713C8DFD282A60DB00870B41 /* ai_human_processor_pc.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_human_processor_pc.bundle; sourceTree = "<group>"; };
 		8B4E5C3527689A0900206C16 /* ExtensionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtensionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B4E5C3827689A0900206C16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8B4E5C3927689A0900206C16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -203,8 +366,6 @@
 		8B4E5C4727689A0900206C16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B4E5C4927689A0900206C16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B4E5C4A27689A0900206C16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8BB815382769EBE000BD242F /* AppID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppID.m; sourceTree = "<group>"; };
-		8BB815392769EBE000BD242F /* AppID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppID.h; sourceTree = "<group>"; };
 		D0452D4401025E75283078C6 /* Pods_ExtensionExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExtensionExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58941DE278C8904005D98FC /* AgoraVideoSegmentationExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraVideoSegmentationExtension.framework; path = ../../third_party/agora/libs/Agora_Native_SDK_for_iOS_rel.v3.7.200_44758_full_20211221_0115/libs/ALL_ARCHITECTURE/AgoraVideoSegmentationExtension.framework; sourceTree = "<group>"; };
 		F58941DF278C8904005D98FC /* AgoraRtcCryptoLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraRtcCryptoLoader.framework; path = ../../third_party/agora/libs/Agora_Native_SDK_for_iOS_rel.v3.7.200_44758_full_20211221_0115/libs/ALL_ARCHITECTURE/AgoraRtcCryptoLoader.framework; sourceTree = "<group>"; };
@@ -213,164 +374,6 @@
 		F58941E2278C8904005D98FC /* AgoraVideoProcessExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraVideoProcessExtension.framework; path = ../../third_party/agora/libs/Agora_Native_SDK_for_iOS_rel.v3.7.200_44758_full_20211221_0115/libs/ALL_ARCHITECTURE/AgoraVideoProcessExtension.framework; sourceTree = "<group>"; };
 		F58941E3278C8904005D98FC /* BeQuic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BeQuic.framework; path = ../../third_party/agora/libs/Agora_Native_SDK_for_iOS_rel.v3.7.200_44758_full_20211221_0115/libs/ALL_ARCHITECTURE/BeQuic.framework; sourceTree = "<group>"; };
 		F58941E4278C8904005D98FC /* AgoraRtcKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraRtcKit.framework; path = ../../third_party/agora/libs/Agora_Native_SDK_for_iOS_rel.v3.7.200_44758_full_20211221_0115/libs/ALL_ARCHITECTURE/AgoraRtcKit.framework; sourceTree = "<group>"; };
-		F58941FE278C8BBF005D98FC /* hand_rect.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hand_rect.bundle; sourceTree = "<group>"; };
-		F58941FF278C8BBF005D98FC /* bodyLandmarks_selife.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = bodyLandmarks_selife.bundle; sourceTree = "<group>"; };
-		F5894200278C8BBF005D98FC /* green_screen.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = green_screen.bundle; sourceTree = "<group>"; };
-		F5894201278C8BBF005D98FC /* halfBodyDetect.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = halfBodyDetect.bundle; sourceTree = "<group>"; };
-		F5894202278C8BBF005D98FC /* bodyLandmarks_dance.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = bodyLandmarks_dance.bundle; sourceTree = "<group>"; };
-		F5894203278C8BBF005D98FC /* fakeman.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = fakeman.bundle; sourceTree = "<group>"; };
-		F5894204278C8BBF005D98FC /* bodyRect.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = bodyRect.bundle; sourceTree = "<group>"; };
-		F5894205278C8BBF005D98FC /* wholeBodyDetect.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = wholeBodyDetect.bundle; sourceTree = "<group>"; };
-		F5894206278C8BBF005D98FC /* hand_type.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hand_type.bundle; sourceTree = "<group>"; };
-		F5894207278C8BBF005D98FC /* default_bg.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = default_bg.bundle; sourceTree = "<group>"; };
-		F5894208278C8BBF005D98FC /* landmarks.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = landmarks.bundle; sourceTree = "<group>"; };
-		F589420A278C8BBF005D98FC /* ai_human_processor_mb_fast.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_human_processor_mb_fast.bundle; sourceTree = "<group>"; };
-		F589420B278C8BBF005D98FC /* ai_face_recognizer.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_face_recognizer.bundle; sourceTree = "<group>"; };
-		F589420C278C8BBF005D98FC /* ai_hand_processor.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_hand_processor.bundle; sourceTree = "<group>"; };
-		F589420D278C8BBF005D98FC /* ai_face_processor.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_face_processor.bundle; sourceTree = "<group>"; };
-		F589420E278C8BBF005D98FC /* ai_bgseg_green.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_bgseg_green.bundle; sourceTree = "<group>"; };
-		F589420F278C8BBF005D98FC /* ai_face_processor_lite.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_face_processor_lite.bundle; sourceTree = "<group>"; };
-		F5894210278C8BBF005D98FC /* ai_hairseg.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_hairseg.bundle; sourceTree = "<group>"; };
-		F5894211278C8BBF005D98FC /* ai_human_processor.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_human_processor.bundle; sourceTree = "<group>"; };
-		F5894214278C8BBF005D98FC /* boyfriend2.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = boyfriend2.bundle; sourceTree = "<group>"; };
-		F5894215278C8BBF005D98FC /* gufeng_zh_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = gufeng_zh_fu.bundle; sourceTree = "<group>"; };
-		F5894216278C8BBF005D98FC /* xiandai_ztt_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = xiandai_ztt_fu.bundle; sourceTree = "<group>"; };
-		F5894217278C8BBF005D98FC /* ice_lm_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ice_lm_fu.bundle; sourceTree = "<group>"; };
-		F5894218278C8BBF005D98FC /* boyfriend3.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = boyfriend3.bundle; sourceTree = "<group>"; };
-		F5894219278C8BBF005D98FC /* hez_ztt_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hez_ztt_fu.bundle; sourceTree = "<group>"; };
-		F589421A278C8BBF005D98FC /* sea_lm_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = sea_lm_fu.bundle; sourceTree = "<group>"; };
-		F589421B278C8BBF005D98FC /* boyfriend1.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = boyfriend1.bundle; sourceTree = "<group>"; };
-		F589421D278C8BBF005D98FC /* qgirl.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = qgirl.bundle; sourceTree = "<group>"; };
-		F589421E278C8BBF005D98FC /* douniuquan_Animoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = douniuquan_Animoji.bundle; sourceTree = "<group>"; };
-		F589421F278C8BBF005D98FC /* kuloutou_Animoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = kuloutou_Animoji.bundle; sourceTree = "<group>"; };
-		F5894220278C8BBF005D98FC /* huangya_Animoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = huangya_Animoji.bundle; sourceTree = "<group>"; };
-		F5894221278C8BBF005D98FC /* baimao_Animoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = baimao_Animoji.bundle; sourceTree = "<group>"; };
-		F5894222278C8BBF005D98FC /* hashiqi_Animoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hashiqi_Animoji.bundle; sourceTree = "<group>"; };
-		F5894223278C8BBF005D98FC /* hetun_Animoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hetun_Animoji.bundle; sourceTree = "<group>"; };
-		F5894224278C8BBF005D98FC /* frog_Animoji.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = frog_Animoji.bundle; sourceTree = "<group>"; };
-		F5894227278C8BBF005D98FC /* green_screen_bg_beach.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = green_screen_bg_beach.mp4; sourceTree = "<group>"; };
-		F5894228278C8BBF005D98FC /* green_screen_bg_ink painting.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "green_screen_bg_ink painting.mp4"; sourceTree = "<group>"; };
-		F5894229278C8BBF005D98FC /* green_screen_bg_classroom.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = green_screen_bg_classroom.mp4; sourceTree = "<group>"; };
-		F589422A278C8BBF005D98FC /* green_screen_bg_atechnology.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = green_screen_bg_atechnology.mp4; sourceTree = "<group>"; };
-		F589422B278C8BBF005D98FC /* green_screen_bg_jforest.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = green_screen_bg_jforest.mp4; sourceTree = "<group>"; };
-		F589422D278C8BBF005D98FC /* picasso_e2.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = picasso_e2.bundle; sourceTree = "<group>"; };
-		F589422E278C8BBF005D98FC /* picasso_e3.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = picasso_e3.bundle; sourceTree = "<group>"; };
-		F589422F278C8BBF005D98FC /* picasso_e1.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = picasso_e1.bundle; sourceTree = "<group>"; };
-		F5894231278C8BBF005D98FC /* facewarp3.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = facewarp3.bundle; sourceTree = "<group>"; };
-		F5894232278C8BBF005D98FC /* facewarp5.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = facewarp5.bundle; sourceTree = "<group>"; };
-		F5894233278C8BBF005D98FC /* facewarp2.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = facewarp2.bundle; sourceTree = "<group>"; };
-		F5894234278C8BBF005D98FC /* facewarp4.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = facewarp4.bundle; sourceTree = "<group>"; };
-		F5894235278C8BBF005D98FC /* facewarp6.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = facewarp6.bundle; sourceTree = "<group>"; };
-		F5894237278C8BBF005D98FC /* douyin_02.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = douyin_02.bundle; sourceTree = "<group>"; };
-		F5894238278C8BBF005D98FC /* douyin_02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = douyin_02.mp3; sourceTree = "<group>"; };
-		F5894239278C8BBF005D98FC /* douyin_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = douyin_01.mp3; sourceTree = "<group>"; };
-		F589423A278C8BBF005D98FC /* douyin_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = douyin_01.bundle; sourceTree = "<group>"; };
-		F589423C278C8BBF005D98FC /* big_head_smiling.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_head_smiling.bundle; sourceTree = "<group>"; };
-		F589423D278C8BBF005D98FC /* big_head_sausage_mouth.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_head_sausage_mouth.bundle; sourceTree = "<group>"; };
-		F589423E278C8BBF005D98FC /* big_head.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_head.bundle; sourceTree = "<group>"; };
-		F589423F278C8BBF005D98FC /* big_head_husky_face.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_head_husky_face.bundle; sourceTree = "<group>"; };
-		F5894240278C8BBF005D98FC /* big_head_dark_circles.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_head_dark_circles.bundle; sourceTree = "<group>"; };
-		F5894241278C8BBF005D98FC /* big_head_blush.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_head_blush.bundle; sourceTree = "<group>"; };
-		F5894243278C8BBF005D98FC /* makeup_icon_combination_bored_cat.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_bored_cat.bundle; sourceTree = "<group>"; };
-		F5894244278C8BBF005D98FC /* makeup_icon_combination_rose.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_rose.bundle; sourceTree = "<group>"; };
-		F5894245278C8BBF005D98FC /* makeup_icon_combination_mermaid.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_mermaid.bundle; sourceTree = "<group>"; };
-		F5894246278C8BBF005D98FC /* makeup_icon_combination_daisy.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_daisy.bundle; sourceTree = "<group>"; };
-		F5894247278C8BBF005D98FC /* subs_setup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subs_setup.json; sourceTree = "<group>"; };
-		F5894248278C8BBF005D98FC /* makeup_icon_combination_age.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_age.bundle; sourceTree = "<group>"; };
-		F589424A278C8BBF005D98FC /* mu_style_eyeshadow_04.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeshadow_04.bundle; sourceTree = "<group>"; };
-		F589424B278C8BBF005D98FC /* mu_style_contour_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_contour_01.bundle; sourceTree = "<group>"; };
-		F589424C278C8BBF005D98FC /* mu_style_eyelash_04.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyelash_04.bundle; sourceTree = "<group>"; };
-		F589424D278C8BBF005D98FC /* mu_style_eyeliner_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeliner_01.bundle; sourceTree = "<group>"; };
-		F589424E278C8BBF005D98FC /* mu_style_foundation_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_foundation_01.bundle; sourceTree = "<group>"; };
-		F589424F278C8BBF005D98FC /* mu_style_blush_04.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_blush_04.bundle; sourceTree = "<group>"; };
-		F5894250278C8BBF005D98FC /* mu_style_eyelash_06.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyelash_06.bundle; sourceTree = "<group>"; };
-		F5894251278C8BBF005D98FC /* mu_style_eyeliner_03.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeliner_03.bundle; sourceTree = "<group>"; };
-		F5894252278C8BBF005D98FC /* mu_style_lip_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_lip_01.bundle; sourceTree = "<group>"; };
-		F5894253278C8BBF005D98FC /* mu_style_eyeshadow_06.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeshadow_06.bundle; sourceTree = "<group>"; };
-		F5894254278C8BBF005D98FC /* mu_style_eyebrow_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyebrow_01.bundle; sourceTree = "<group>"; };
-		F5894255278C8BBF005D98FC /* mu_style_eyelash_02.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyelash_02.bundle; sourceTree = "<group>"; };
-		F5894256278C8BBF005D98FC /* mu_style_eyeshadow_02.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeshadow_02.bundle; sourceTree = "<group>"; };
-		F5894257278C8BBF005D98FC /* mu_style_eyeliner_05.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeliner_05.bundle; sourceTree = "<group>"; };
-		F5894258278C8BBF005D98FC /* mu_style_highlight_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_highlight_01.bundle; sourceTree = "<group>"; };
-		F5894259278C8BBF005D98FC /* mu_style_blush_02.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_blush_02.bundle; sourceTree = "<group>"; };
-		F589425A278C8BBF005D98FC /* mu_style_eyelash_05.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyelash_05.bundle; sourceTree = "<group>"; };
-		F589425B278C8BBF005D98FC /* mu_style_eyeshadow_05.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeshadow_05.bundle; sourceTree = "<group>"; };
-		F589425C278C8BBF005D98FC /* mu_style_eyepupil_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyepupil_01.bundle; sourceTree = "<group>"; };
-		F589425D278C8BBF005D98FC /* mu_style_eyeliner_02.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeliner_02.bundle; sourceTree = "<group>"; };
-		F589425E278C8BBF005D98FC /* mu_style_eyeshadow_03.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeshadow_03.bundle; sourceTree = "<group>"; };
-		F589425F278C8BBF005D98FC /* mu_style_highlight_02.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_highlight_02.bundle; sourceTree = "<group>"; };
-		F5894260278C8BBF005D98FC /* mu_style_blush_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_blush_01.bundle; sourceTree = "<group>"; };
-		F5894261278C8BBF005D98FC /* mu_style_eyelash_03.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyelash_03.bundle; sourceTree = "<group>"; };
-		F5894262278C8BBF005D98FC /* mu_style_eyeliner_06.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeliner_06.bundle; sourceTree = "<group>"; };
-		F5894263278C8BBF005D98FC /* mu_style_blush_03.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_blush_03.bundle; sourceTree = "<group>"; };
-		F5894264278C8BBF005D98FC /* mu_style_eyelash_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyelash_01.bundle; sourceTree = "<group>"; };
-		F5894265278C8BBF005D98FC /* mu_style_eyeliner_04.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeliner_04.bundle; sourceTree = "<group>"; };
-		F5894266278C8BBF005D98FC /* mu_style_eyeshadow_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu_style_eyeshadow_01.bundle; sourceTree = "<group>"; };
-		F5894267278C8BBF005D98FC /* makeup_icon_combination_warm_winter.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_warm_winter.bundle; sourceTree = "<group>"; };
-		F5894268278C8BBF005D98FC /* makeup_icon_combination_supermodel.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_supermodel.bundle; sourceTree = "<group>"; };
-		F5894269278C8BBF005D98FC /* makeup_icon_combination_girl.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_girl.bundle; sourceTree = "<group>"; };
-		F589426A278C8BBF005D98FC /* makeup_icon_combination_early_autumn.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_early_autumn.bundle; sourceTree = "<group>"; };
-		F589426B278C8BBF005D98FC /* demo_icon_customize.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demo_icon_customize.bundle; sourceTree = "<group>"; };
-		F589426C278C8BBF005D98FC /* makeup_icon_combination_purple_rhyme.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_purple_rhyme.bundle; sourceTree = "<group>"; };
-		F589426D278C8BBF005D98FC /* makeup_icon_combination_red_maple.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_red_maple.bundle; sourceTree = "<group>"; };
-		F589426E278C8BBF005D98FC /* makeup_icon_combination_paper_cranes.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_paper_cranes.bundle; sourceTree = "<group>"; };
-		F589426F278C8BBF005D98FC /* makeup_icon_combination_harbour_wind.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = makeup_icon_combination_harbour_wind.bundle; sourceTree = "<group>"; };
-		F5894271278C8BBF005D98FC /* ssd_thread_cute.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ssd_thread_cute.bundle; sourceTree = "<group>"; };
-		F5894272278C8BBF005D98FC /* ctrl_snow.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ctrl_snow.bundle; sourceTree = "<group>"; };
-		F5894273278C8BBF005D98FC /* ssd_thread_thumb.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ssd_thread_thumb.bundle; sourceTree = "<group>"; };
-		F5894274278C8BBF005D98FC /* ctrl_flower.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ctrl_flower.bundle; sourceTree = "<group>"; };
-		F5894275278C8BBF005D98FC /* ssd_thread_korheart.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ssd_thread_korheart.bundle; sourceTree = "<group>"; };
-		F5894276278C8BBF005D98FC /* ctrl_rain.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ctrl_rain.bundle; sourceTree = "<group>"; };
-		F5894277278C8BBF005D98FC /* ssd_thread_six.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ssd_thread_six.bundle; sourceTree = "<group>"; };
-		F5894279278C8BBF005D98FC /* hair_normal_06.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_06.bundle; sourceTree = "<group>"; };
-		F589427A278C8BBF005D98FC /* hair_normal_08.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_08.bundle; sourceTree = "<group>"; };
-		F589427B278C8BBF005D98FC /* hair_normal_04.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_04.bundle; sourceTree = "<group>"; };
-		F589427C278C8BBF005D98FC /* hair_gradient_05.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hair_gradient_05.bundle; sourceTree = "<group>"; };
-		F589427D278C8BBF005D98FC /* hair_gradient_01.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hair_gradient_01.bundle; sourceTree = "<group>"; };
-		F589427E278C8BBF005D98FC /* hair_gradient_03.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hair_gradient_03.bundle; sourceTree = "<group>"; };
-		F589427F278C8BBF005D98FC /* hair_normal_02.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_02.bundle; sourceTree = "<group>"; };
-		F5894280278C8BBF005D98FC /* hair_normal_07.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_07.bundle; sourceTree = "<group>"; };
-		F5894281278C8BBF005D98FC /* hair_gradient_04.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hair_gradient_04.bundle; sourceTree = "<group>"; };
-		F5894282278C8BBF005D98FC /* hair_normal_05.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_05.bundle; sourceTree = "<group>"; };
-		F5894283278C8BBF005D98FC /* hair_normal_01.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_01.bundle; sourceTree = "<group>"; };
-		F5894284278C8BBF005D98FC /* hair_normal_03.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hair_normal_03.bundle; sourceTree = "<group>"; };
-		F5894285278C8BBF005D98FC /* hair_gradient_02.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hair_gradient_02.bundle; sourceTree = "<group>"; };
-		F5894287278C8BBF005D98FC /* PortraitLighting_effect_1.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = PortraitLighting_effect_1.bundle; sourceTree = "<group>"; };
-		F5894288278C8BBF005D98FC /* PortraitLighting_effect_3.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = PortraitLighting_effect_3.bundle; sourceTree = "<group>"; };
-		F5894289278C8BBF005D98FC /* PortraitLighting_effect_0.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = PortraitLighting_effect_0.bundle; sourceTree = "<group>"; };
-		F589428A278C8BBF005D98FC /* PortraitLighting_X_studio.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = PortraitLighting_X_studio.bundle; sourceTree = "<group>"; };
-		F589428B278C8BBF005D98FC /* PortraitLighting_effect_2.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = PortraitLighting_effect_2.bundle; sourceTree = "<group>"; };
-		F589428C278C8BBF005D98FC /* PortraitLighting_X_rim.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = PortraitLighting_X_rim.bundle; sourceTree = "<group>"; };
-		F589428E278C8BBF005D98FC /* redribbt.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = redribbt.bundle; sourceTree = "<group>"; };
-		F589428F278C8BBF005D98FC /* CatSparks.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = CatSparks.bundle; sourceTree = "<group>"; };
-		F5894290278C8BBF005D98FC /* sdlu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = sdlu.bundle; sourceTree = "<group>"; };
-		F5894291278C8BBF005D98FC /* nihongdeng.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = nihongdeng.bundle; sourceTree = "<group>"; };
-		F5894292278C8BBF005D98FC /* daisypig.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = daisypig.bundle; sourceTree = "<group>"; };
-		F5894294278C8BBF005D98FC /* tiger_bai.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tiger_bai.bundle; sourceTree = "<group>"; };
-		F5894295278C8BBF005D98FC /* tiger.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = tiger.bundle; sourceTree = "<group>"; };
-		F5894296278C8BBF005D98FC /* tiger_huang.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = tiger_huang.bundle; sourceTree = "<group>"; };
-		F5894297278C8BBF005D98FC /* xiongmao.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = xiongmao.bundle; sourceTree = "<group>"; };
-		F5894298278C8BBF005D98FC /* fenhudie.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = fenhudie.bundle; sourceTree = "<group>"; };
-		F5894299278C8BBF005D98FC /* bluebird.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = bluebird.bundle; sourceTree = "<group>"; };
-		F589429A278C8BBF005D98FC /* afd.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = afd.bundle; sourceTree = "<group>"; };
-		F589429B278C8BBF005D98FC /* baozi.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = baozi.bundle; sourceTree = "<group>"; };
-		F589429C278C8BBF005D98FC /* lanhudie.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = lanhudie.bundle; sourceTree = "<group>"; };
-		F589429E278C8BBF005D98FC /* emotion_type.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = emotion_type.bundle; sourceTree = "<group>"; };
-		F589429F278C8BBF005D98FC /* jet_mask.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = jet_mask.bundle; sourceTree = "<group>"; };
-		F58942A0278C8BBF005D98FC /* xiaobianzi_zh_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = xiaobianzi_zh_fu.bundle; sourceTree = "<group>"; };
-		F58942A1278C8BBF005D98FC /* qingqing_ztt_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = qingqing_ztt_fu.bundle; sourceTree = "<group>"; };
-		F58942A2278C8BBF005D98FC /* jet_mask1.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = jet_mask1.bundle; sourceTree = "<group>"; };
-		F58942A3278C8BBF005D98FC /* xiaoxueshen_ztt_fu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = xiaoxueshen_ztt_fu.bundle; sourceTree = "<group>"; };
-		F58942A4278C8BBF005D98FC /* future_warrior.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = future_warrior.bundle; sourceTree = "<group>"; };
-		F58942A5278C8BBF005D98FC /* expression_type.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = expression_type.bundle; sourceTree = "<group>"; };
-		F58942A6278C8BBF005D98FC /* sdx2.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = sdx2.bundle; sourceTree = "<group>"; };
-		F58942A8278C8BBF005D98FC /* tongue.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = tongue.bundle; sourceTree = "<group>"; };
-		F58942A9278C8BBF005D98FC /* fxaa.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = fxaa.bundle; sourceTree = "<group>"; };
-		F58942AA278C8BBF005D98FC /* face_makeup.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = face_makeup.bundle; sourceTree = "<group>"; };
-		F58942AB278C8BBF005D98FC /* controller_cpp.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = controller_cpp.bundle; sourceTree = "<group>"; };
-		F58942AC278C8BBF005D98FC /* body_slim.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = body_slim.bundle; sourceTree = "<group>"; };
-		F58942AD278C8BBF005D98FC /* fuzzytoonfilter.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = fuzzytoonfilter.bundle; sourceTree = "<group>"; };
-		F58942AE278C8BBF005D98FC /* face_beautification.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = face_beautification.bundle; sourceTree = "<group>"; };
 		F5894352278C8CA1005D98FC /* libCNamaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libCNamaSDK.framework; path = "../../third_party/face-unity/libs/ios/libCNamaSDK.framework"; sourceTree = "<group>"; };
 		F589435A278C8D9D005D98FC /* authpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = authpack.h; sourceTree = "<group>"; };
 		FBFC1FE7BFF8FD0CBEDDB39C /* Pods-ExtensionExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExtensionExample.debug.xcconfig"; path = "Target Support Files/Pods-ExtensionExample/Pods-ExtensionExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -397,6 +400,334 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		713C8CA82829515E00870B41 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				713C8CA92829515E00870B41 /* others */,
+				713C8CB52829515E00870B41 /* model */,
+				713C8CBE2829515E00870B41 /* items */,
+				713C8D532829515E00870B41 /* graphics */,
+			);
+			path = Resource;
+			sourceTree = SOURCE_ROOT;
+		};
+		713C8CA92829515E00870B41 /* others */ = {
+			isa = PBXGroup;
+			children = (
+				713C8CAA2829515E00870B41 /* hand_rect.bundle */,
+				713C8CAB2829515E00870B41 /* bodyLandmarks_selife.bundle */,
+				713C8CAC2829515E00870B41 /* green_screen.bundle */,
+				713C8CAD2829515E00870B41 /* halfBodyDetect.bundle */,
+				713C8CAE2829515E00870B41 /* bodyLandmarks_dance.bundle */,
+				713C8CAF2829515E00870B41 /* fakeman.bundle */,
+				713C8CB02829515E00870B41 /* bodyRect.bundle */,
+				713C8CB12829515E00870B41 /* wholeBodyDetect.bundle */,
+				713C8CB22829515E00870B41 /* hand_type.bundle */,
+				713C8CB32829515E00870B41 /* default_bg.bundle */,
+				713C8CB42829515E00870B41 /* landmarks.bundle */,
+			);
+			path = others;
+			sourceTree = "<group>";
+		};
+		713C8CB52829515E00870B41 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				713C8DFD282A60DB00870B41 /* ai_human_processor_pc.bundle */,
+				713C8CB62829515E00870B41 /* ai_human_processor_mb_fast.bundle */,
+				713C8CB72829515E00870B41 /* ai_face_recognizer.bundle */,
+				713C8CB82829515E00870B41 /* ai_hand_processor.bundle */,
+				713C8CB92829515E00870B41 /* ai_face_processor.bundle */,
+				713C8CBA2829515E00870B41 /* ai_bgseg_green.bundle */,
+				713C8CBB2829515E00870B41 /* ai_face_processor_lite.bundle */,
+				713C8CBC2829515E00870B41 /* ai_hairseg.bundle */,
+				713C8CBD2829515E00870B41 /* ai_human_processor.bundle */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		713C8CBE2829515E00870B41 /* items */ = {
+			isa = PBXGroup;
+			children = (
+				713C8CBF2829515E00870B41 /* BackgroundSegmentation */,
+				713C8CC82829515E00870B41 /* Animoji */,
+				713C8CD12829515E00870B41 /* GreenScreen */,
+				713C8CD22829515E00870B41 /* GreenScreenBg */,
+				713C8CD82829515E00870B41 /* PortraitDrive */,
+				713C8CDC2829515E00870B41 /* MagicMirror */,
+				713C8CE22829515E00870B41 /* MusicFilter */,
+				713C8CE72829515E00870B41 /* BigHead */,
+				713C8CEE2829515E00870B41 /* Makeup */,
+				713C8D1C2829515E00870B41 /* GestureRecognition */,
+				713C8D242829515E00870B41 /* BeautyHair */,
+				713C8D322829515E00870B41 /* PortraitLightEffect */,
+				713C8D392829515E00870B41 /* ItemSticker */,
+				713C8D3F2829515E00870B41 /* ARMask */,
+				713C8D492829515E00870B41 /* ExpressionRecognition */,
+			);
+			path = items;
+			sourceTree = "<group>";
+		};
+		713C8CBF2829515E00870B41 /* BackgroundSegmentation */ = {
+			isa = PBXGroup;
+			children = (
+				713C8CC02829515E00870B41 /* boyfriend2.bundle */,
+				713C8CC12829515E00870B41 /* gufeng_zh_fu.bundle */,
+				713C8CC22829515E00870B41 /* xiandai_ztt_fu.bundle */,
+				713C8CC32829515E00870B41 /* ice_lm_fu.bundle */,
+				713C8CC42829515E00870B41 /* boyfriend3.bundle */,
+				713C8CC52829515E00870B41 /* hez_ztt_fu.bundle */,
+				713C8CC62829515E00870B41 /* sea_lm_fu.bundle */,
+				713C8CC72829515E00870B41 /* boyfriend1.bundle */,
+			);
+			path = BackgroundSegmentation;
+			sourceTree = "<group>";
+		};
+		713C8CC82829515E00870B41 /* Animoji */ = {
+			isa = PBXGroup;
+			children = (
+				713C8CC92829515E00870B41 /* qgirl.bundle */,
+				713C8CCA2829515E00870B41 /* douniuquan_Animoji.bundle */,
+				713C8CCB2829515E00870B41 /* kuloutou_Animoji.bundle */,
+				713C8CCC2829515E00870B41 /* huangya_Animoji.bundle */,
+				713C8CCD2829515E00870B41 /* baimao_Animoji.bundle */,
+				713C8CCE2829515E00870B41 /* hashiqi_Animoji.bundle */,
+				713C8CCF2829515E00870B41 /* hetun_Animoji.bundle */,
+				713C8CD02829515E00870B41 /* frog_Animoji.bundle */,
+			);
+			path = Animoji;
+			sourceTree = "<group>";
+		};
+		713C8CD12829515E00870B41 /* GreenScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GreenScreen;
+			sourceTree = "<group>";
+		};
+		713C8CD22829515E00870B41 /* GreenScreenBg */ = {
+			isa = PBXGroup;
+			children = (
+				713C8CD32829515E00870B41 /* green_screen_bg_beach.mp4 */,
+				713C8CD42829515E00870B41 /* green_screen_bg_ink painting.mp4 */,
+				713C8CD52829515E00870B41 /* green_screen_bg_classroom.mp4 */,
+				713C8CD62829515E00870B41 /* green_screen_bg_atechnology.mp4 */,
+				713C8CD72829515E00870B41 /* green_screen_bg_jforest.mp4 */,
+			);
+			path = GreenScreenBg;
+			sourceTree = "<group>";
+		};
+		713C8CD82829515E00870B41 /* PortraitDrive */ = {
+			isa = PBXGroup;
+			children = (
+				713C8CD92829515E00870B41 /* picasso_e2.bundle */,
+				713C8CDA2829515E00870B41 /* picasso_e3.bundle */,
+				713C8CDB2829515E00870B41 /* picasso_e1.bundle */,
+			);
+			path = PortraitDrive;
+			sourceTree = "<group>";
+		};
+		713C8CDC2829515E00870B41 /* MagicMirror */ = {
+			isa = PBXGroup;
+			children = (
+				713C8CDD2829515E00870B41 /* facewarp3.bundle */,
+				713C8CDE2829515E00870B41 /* facewarp5.bundle */,
+				713C8CDF2829515E00870B41 /* facewarp2.bundle */,
+				713C8CE02829515E00870B41 /* facewarp4.bundle */,
+				713C8CE12829515E00870B41 /* facewarp6.bundle */,
+			);
+			path = MagicMirror;
+			sourceTree = "<group>";
+		};
+		713C8CE22829515E00870B41 /* MusicFilter */ = {
+			isa = PBXGroup;
+			children = (
+				713C8CE32829515E00870B41 /* douyin_02.bundle */,
+				713C8CE42829515E00870B41 /* douyin_02.mp3 */,
+				713C8CE52829515E00870B41 /* douyin_01.mp3 */,
+				713C8CE62829515E00870B41 /* douyin_01.bundle */,
+			);
+			path = MusicFilter;
+			sourceTree = "<group>";
+		};
+		713C8CE72829515E00870B41 /* BigHead */ = {
+			isa = PBXGroup;
+			children = (
+				713C8CE82829515E00870B41 /* big_head_smiling.bundle */,
+				713C8CE92829515E00870B41 /* big_head_sausage_mouth.bundle */,
+				713C8CEA2829515E00870B41 /* big_head.bundle */,
+				713C8CEB2829515E00870B41 /* big_head_husky_face.bundle */,
+				713C8CEC2829515E00870B41 /* big_head_dark_circles.bundle */,
+				713C8CED2829515E00870B41 /* big_head_blush.bundle */,
+			);
+			path = BigHead;
+			sourceTree = "<group>";
+		};
+		713C8CEE2829515E00870B41 /* Makeup */ = {
+			isa = PBXGroup;
+			children = (
+				713C8CEF2829515E00870B41 /* makeup_icon_combination_bored_cat.bundle */,
+				713C8CF02829515E00870B41 /* makeup_icon_combination_rose.bundle */,
+				713C8CF12829515E00870B41 /* makeup_icon_combination_mermaid.bundle */,
+				713C8CF22829515E00870B41 /* makeup_icon_combination_daisy.bundle */,
+				713C8CF32829515E00870B41 /* subs_setup.json */,
+				713C8CF42829515E00870B41 /* makeup_icon_combination_age.bundle */,
+				713C8CF52829515E00870B41 /* subs */,
+				713C8D132829515E00870B41 /* makeup_icon_combination_warm_winter.bundle */,
+				713C8D142829515E00870B41 /* makeup_icon_combination_supermodel.bundle */,
+				713C8D152829515E00870B41 /* makeup_icon_combination_girl.bundle */,
+				713C8D162829515E00870B41 /* makeup_icon_combination_early_autumn.bundle */,
+				713C8D172829515E00870B41 /* demo_icon_customize.bundle */,
+				713C8D182829515E00870B41 /* makeup_icon_combination_purple_rhyme.bundle */,
+				713C8D192829515E00870B41 /* makeup_icon_combination_red_maple.bundle */,
+				713C8D1A2829515E00870B41 /* makeup_icon_combination_paper_cranes.bundle */,
+				713C8D1B2829515E00870B41 /* makeup_icon_combination_harbour_wind.bundle */,
+			);
+			path = Makeup;
+			sourceTree = "<group>";
+		};
+		713C8CF52829515E00870B41 /* subs */ = {
+			isa = PBXGroup;
+			children = (
+				713C8CF62829515E00870B41 /* mu_style_eyeshadow_04.bundle */,
+				713C8CF72829515E00870B41 /* mu_style_contour_01.bundle */,
+				713C8CF82829515E00870B41 /* mu_style_eyelash_04.bundle */,
+				713C8CF92829515E00870B41 /* mu_style_eyeliner_01.bundle */,
+				713C8CFA2829515E00870B41 /* mu_style_foundation_01.bundle */,
+				713C8CFB2829515E00870B41 /* mu_style_blush_04.bundle */,
+				713C8CFC2829515E00870B41 /* mu_style_eyelash_06.bundle */,
+				713C8CFD2829515E00870B41 /* mu_style_eyeliner_03.bundle */,
+				713C8CFE2829515E00870B41 /* mu_style_lip_01.bundle */,
+				713C8CFF2829515E00870B41 /* mu_style_eyeshadow_06.bundle */,
+				713C8D002829515E00870B41 /* mu_style_eyebrow_01.bundle */,
+				713C8D012829515E00870B41 /* mu_style_eyelash_02.bundle */,
+				713C8D022829515E00870B41 /* mu_style_eyeshadow_02.bundle */,
+				713C8D032829515E00870B41 /* mu_style_eyeliner_05.bundle */,
+				713C8D042829515E00870B41 /* mu_style_highlight_01.bundle */,
+				713C8D052829515E00870B41 /* mu_style_blush_02.bundle */,
+				713C8D062829515E00870B41 /* mu_style_eyelash_05.bundle */,
+				713C8D072829515E00870B41 /* mu_style_eyeshadow_05.bundle */,
+				713C8D082829515E00870B41 /* mu_style_eyepupil_01.bundle */,
+				713C8D092829515E00870B41 /* mu_style_eyeliner_02.bundle */,
+				713C8D0A2829515E00870B41 /* mu_style_eyeshadow_03.bundle */,
+				713C8D0B2829515E00870B41 /* mu_style_highlight_02.bundle */,
+				713C8D0C2829515E00870B41 /* mu_style_blush_01.bundle */,
+				713C8D0D2829515E00870B41 /* mu_style_eyelash_03.bundle */,
+				713C8D0E2829515E00870B41 /* mu_style_eyeliner_06.bundle */,
+				713C8D0F2829515E00870B41 /* mu_style_blush_03.bundle */,
+				713C8D102829515E00870B41 /* mu_style_eyelash_01.bundle */,
+				713C8D112829515E00870B41 /* mu_style_eyeliner_04.bundle */,
+				713C8D122829515E00870B41 /* mu_style_eyeshadow_01.bundle */,
+			);
+			path = subs;
+			sourceTree = "<group>";
+		};
+		713C8D1C2829515E00870B41 /* GestureRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				713C8D1D2829515E00870B41 /* ssd_thread_cute.bundle */,
+				713C8D1E2829515E00870B41 /* ctrl_snow.bundle */,
+				713C8D1F2829515E00870B41 /* ssd_thread_thumb.bundle */,
+				713C8D202829515E00870B41 /* ctrl_flower.bundle */,
+				713C8D212829515E00870B41 /* ssd_thread_korheart.bundle */,
+				713C8D222829515E00870B41 /* ctrl_rain.bundle */,
+				713C8D232829515E00870B41 /* ssd_thread_six.bundle */,
+			);
+			path = GestureRecognition;
+			sourceTree = "<group>";
+		};
+		713C8D242829515E00870B41 /* BeautyHair */ = {
+			isa = PBXGroup;
+			children = (
+				713C8D252829515E00870B41 /* hair_normal_06.bundle */,
+				713C8D262829515E00870B41 /* hair_normal_08.bundle */,
+				713C8D272829515E00870B41 /* hair_normal_04.bundle */,
+				713C8D282829515E00870B41 /* hair_gradient_05.bundle */,
+				713C8D292829515E00870B41 /* hair_gradient_01.bundle */,
+				713C8D2A2829515E00870B41 /* hair_gradient_03.bundle */,
+				713C8D2B2829515E00870B41 /* hair_normal_02.bundle */,
+				713C8D2C2829515E00870B41 /* hair_normal_07.bundle */,
+				713C8D2D2829515E00870B41 /* hair_gradient_04.bundle */,
+				713C8D2E2829515E00870B41 /* hair_normal_05.bundle */,
+				713C8D2F2829515E00870B41 /* hair_normal_01.bundle */,
+				713C8D302829515E00870B41 /* hair_normal_03.bundle */,
+				713C8D312829515E00870B41 /* hair_gradient_02.bundle */,
+			);
+			path = BeautyHair;
+			sourceTree = "<group>";
+		};
+		713C8D322829515E00870B41 /* PortraitLightEffect */ = {
+			isa = PBXGroup;
+			children = (
+				713C8D332829515E00870B41 /* PortraitLighting_effect_1.bundle */,
+				713C8D342829515E00870B41 /* PortraitLighting_effect_3.bundle */,
+				713C8D352829515E00870B41 /* PortraitLighting_effect_0.bundle */,
+				713C8D362829515E00870B41 /* PortraitLighting_X_studio.bundle */,
+				713C8D372829515E00870B41 /* PortraitLighting_effect_2.bundle */,
+				713C8D382829515E00870B41 /* PortraitLighting_X_rim.bundle */,
+			);
+			path = PortraitLightEffect;
+			sourceTree = "<group>";
+		};
+		713C8D392829515E00870B41 /* ItemSticker */ = {
+			isa = PBXGroup;
+			children = (
+				713C8D3A2829515E00870B41 /* redribbt.bundle */,
+				713C8D3B2829515E00870B41 /* CatSparks.bundle */,
+				713C8D3C2829515E00870B41 /* sdlu.bundle */,
+				713C8D3D2829515E00870B41 /* nihongdeng.bundle */,
+				713C8D3E2829515E00870B41 /* daisypig.bundle */,
+			);
+			path = ItemSticker;
+			sourceTree = "<group>";
+		};
+		713C8D3F2829515E00870B41 /* ARMask */ = {
+			isa = PBXGroup;
+			children = (
+				713C8D402829515E00870B41 /* tiger_bai.bundle */,
+				713C8D412829515E00870B41 /* tiger.bundle */,
+				713C8D422829515E00870B41 /* tiger_huang.bundle */,
+				713C8D432829515E00870B41 /* xiongmao.bundle */,
+				713C8D442829515E00870B41 /* fenhudie.bundle */,
+				713C8D452829515E00870B41 /* bluebird.bundle */,
+				713C8D462829515E00870B41 /* afd.bundle */,
+				713C8D472829515E00870B41 /* baozi.bundle */,
+				713C8D482829515E00870B41 /* lanhudie.bundle */,
+			);
+			path = ARMask;
+			sourceTree = "<group>";
+		};
+		713C8D492829515E00870B41 /* ExpressionRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				713C8D4A2829515E00870B41 /* emotion_type.bundle */,
+				713C8D4B2829515E00870B41 /* jet_mask.bundle */,
+				713C8D4C2829515E00870B41 /* xiaobianzi_zh_fu.bundle */,
+				713C8D4D2829515E00870B41 /* qingqing_ztt_fu.bundle */,
+				713C8D4E2829515E00870B41 /* jet_mask1.bundle */,
+				713C8D4F2829515E00870B41 /* xiaoxueshen_ztt_fu.bundle */,
+				713C8D502829515E00870B41 /* future_warrior.bundle */,
+				713C8D512829515E00870B41 /* expression_type.bundle */,
+				713C8D522829515E00870B41 /* sdx2.bundle */,
+			);
+			path = ExpressionRecognition;
+			sourceTree = "<group>";
+		};
+		713C8D532829515E00870B41 /* graphics */ = {
+			isa = PBXGroup;
+			children = (
+				713C8DF9282951D000870B41 /* aitype.bundle */,
+				713C8DFB28297E8200870B41 /* aitype.bundle */,
+				713C8D542829515E00870B41 /* tongue.bundle */,
+				713C8D552829515E00870B41 /* fxaa.bundle */,
+				713C8D562829515E00870B41 /* face_makeup.bundle */,
+				713C8D572829515E00870B41 /* controller_cpp.bundle */,
+				713C8D582829515E00870B41 /* body_slim.bundle */,
+				713C8D592829515E00870B41 /* fuzzytoonfilter.bundle */,
+				713C8D5A2829515E00870B41 /* face_beautification.bundle */,
+			);
+			path = graphics;
+			sourceTree = "<group>";
+		};
 		8B4E5C2C27689A0900206C16 = {
 			isa = PBXGroup;
 			children = (
@@ -418,16 +749,14 @@
 		8B4E5C3727689A0900206C16 /* ExtensionExample */ = {
 			isa = PBXGroup;
 			children = (
+				713C8CA82829515E00870B41 /* Resource */,
 				F589435A278C8D9D005D98FC /* authpack.h */,
-				F58941FC278C8BBF005D98FC /* Resource */,
 				8B4E5C3827689A0900206C16 /* AppDelegate.h */,
 				8B4E5C3927689A0900206C16 /* AppDelegate.m */,
 				8B4E5C3B27689A0900206C16 /* SceneDelegate.h */,
 				8B4E5C3C27689A0900206C16 /* SceneDelegate.m */,
 				8B4E5C3E27689A0900206C16 /* ViewController.h */,
 				8B4E5C3F27689A0900206C16 /* ViewController.m */,
-				8BB815392769EBE000BD242F /* AppID.h */,
-				8BB815382769EBE000BD242F /* AppID.m */,
 				8B4E5C4127689A0900206C16 /* Main.storyboard */,
 				8B4E5C4427689A0900206C16 /* Assets.xcassets */,
 				8B4E5C4627689A0900206C16 /* LaunchScreen.storyboard */,
@@ -451,331 +780,6 @@
 				D0452D4401025E75283078C6 /* Pods_ExtensionExample.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F58941FC278C8BBF005D98FC /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				F58941FD278C8BBF005D98FC /* others */,
-				F5894209278C8BBF005D98FC /* model */,
-				F5894212278C8BBF005D98FC /* items */,
-				F58942A7278C8BBF005D98FC /* graphics */,
-			);
-			path = Resource;
-			sourceTree = SOURCE_ROOT;
-		};
-		F58941FD278C8BBF005D98FC /* others */ = {
-			isa = PBXGroup;
-			children = (
-				F58941FE278C8BBF005D98FC /* hand_rect.bundle */,
-				F58941FF278C8BBF005D98FC /* bodyLandmarks_selife.bundle */,
-				F5894200278C8BBF005D98FC /* green_screen.bundle */,
-				F5894201278C8BBF005D98FC /* halfBodyDetect.bundle */,
-				F5894202278C8BBF005D98FC /* bodyLandmarks_dance.bundle */,
-				F5894203278C8BBF005D98FC /* fakeman.bundle */,
-				F5894204278C8BBF005D98FC /* bodyRect.bundle */,
-				F5894205278C8BBF005D98FC /* wholeBodyDetect.bundle */,
-				F5894206278C8BBF005D98FC /* hand_type.bundle */,
-				F5894207278C8BBF005D98FC /* default_bg.bundle */,
-				F5894208278C8BBF005D98FC /* landmarks.bundle */,
-			);
-			path = others;
-			sourceTree = "<group>";
-		};
-		F5894209278C8BBF005D98FC /* model */ = {
-			isa = PBXGroup;
-			children = (
-				F589420A278C8BBF005D98FC /* ai_human_processor_mb_fast.bundle */,
-				F589420B278C8BBF005D98FC /* ai_face_recognizer.bundle */,
-				F589420C278C8BBF005D98FC /* ai_hand_processor.bundle */,
-				F589420D278C8BBF005D98FC /* ai_face_processor.bundle */,
-				F589420E278C8BBF005D98FC /* ai_bgseg_green.bundle */,
-				F589420F278C8BBF005D98FC /* ai_face_processor_lite.bundle */,
-				F5894210278C8BBF005D98FC /* ai_hairseg.bundle */,
-				F5894211278C8BBF005D98FC /* ai_human_processor.bundle */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		F5894212278C8BBF005D98FC /* items */ = {
-			isa = PBXGroup;
-			children = (
-				F5894213278C8BBF005D98FC /* BackgroundSegmentation */,
-				F589421C278C8BBF005D98FC /* Animoji */,
-				F5894225278C8BBF005D98FC /* GreenScreen */,
-				F5894226278C8BBF005D98FC /* GreenScreenBg */,
-				F589422C278C8BBF005D98FC /* PortraitDrive */,
-				F5894230278C8BBF005D98FC /* MagicMirror */,
-				F5894236278C8BBF005D98FC /* MusicFilter */,
-				F589423B278C8BBF005D98FC /* BigHead */,
-				F5894242278C8BBF005D98FC /* Makeup */,
-				F5894270278C8BBF005D98FC /* GestureRecognition */,
-				F5894278278C8BBF005D98FC /* BeautyHair */,
-				F5894286278C8BBF005D98FC /* PortraitLightEffect */,
-				F589428D278C8BBF005D98FC /* ItemSticker */,
-				F5894293278C8BBF005D98FC /* ARMask */,
-				F589429D278C8BBF005D98FC /* ExpressionRecognition */,
-			);
-			path = items;
-			sourceTree = "<group>";
-		};
-		F5894213278C8BBF005D98FC /* BackgroundSegmentation */ = {
-			isa = PBXGroup;
-			children = (
-				F5894214278C8BBF005D98FC /* boyfriend2.bundle */,
-				F5894215278C8BBF005D98FC /* gufeng_zh_fu.bundle */,
-				F5894216278C8BBF005D98FC /* xiandai_ztt_fu.bundle */,
-				F5894217278C8BBF005D98FC /* ice_lm_fu.bundle */,
-				F5894218278C8BBF005D98FC /* boyfriend3.bundle */,
-				F5894219278C8BBF005D98FC /* hez_ztt_fu.bundle */,
-				F589421A278C8BBF005D98FC /* sea_lm_fu.bundle */,
-				F589421B278C8BBF005D98FC /* boyfriend1.bundle */,
-			);
-			path = BackgroundSegmentation;
-			sourceTree = "<group>";
-		};
-		F589421C278C8BBF005D98FC /* Animoji */ = {
-			isa = PBXGroup;
-			children = (
-				F589421D278C8BBF005D98FC /* qgirl.bundle */,
-				F589421E278C8BBF005D98FC /* douniuquan_Animoji.bundle */,
-				F589421F278C8BBF005D98FC /* kuloutou_Animoji.bundle */,
-				F5894220278C8BBF005D98FC /* huangya_Animoji.bundle */,
-				F5894221278C8BBF005D98FC /* baimao_Animoji.bundle */,
-				F5894222278C8BBF005D98FC /* hashiqi_Animoji.bundle */,
-				F5894223278C8BBF005D98FC /* hetun_Animoji.bundle */,
-				F5894224278C8BBF005D98FC /* frog_Animoji.bundle */,
-			);
-			path = Animoji;
-			sourceTree = "<group>";
-		};
-		F5894225278C8BBF005D98FC /* GreenScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GreenScreen;
-			sourceTree = "<group>";
-		};
-		F5894226278C8BBF005D98FC /* GreenScreenBg */ = {
-			isa = PBXGroup;
-			children = (
-				F5894227278C8BBF005D98FC /* green_screen_bg_beach.mp4 */,
-				F5894228278C8BBF005D98FC /* green_screen_bg_ink painting.mp4 */,
-				F5894229278C8BBF005D98FC /* green_screen_bg_classroom.mp4 */,
-				F589422A278C8BBF005D98FC /* green_screen_bg_atechnology.mp4 */,
-				F589422B278C8BBF005D98FC /* green_screen_bg_jforest.mp4 */,
-			);
-			path = GreenScreenBg;
-			sourceTree = "<group>";
-		};
-		F589422C278C8BBF005D98FC /* PortraitDrive */ = {
-			isa = PBXGroup;
-			children = (
-				F589422D278C8BBF005D98FC /* picasso_e2.bundle */,
-				F589422E278C8BBF005D98FC /* picasso_e3.bundle */,
-				F589422F278C8BBF005D98FC /* picasso_e1.bundle */,
-			);
-			path = PortraitDrive;
-			sourceTree = "<group>";
-		};
-		F5894230278C8BBF005D98FC /* MagicMirror */ = {
-			isa = PBXGroup;
-			children = (
-				F5894231278C8BBF005D98FC /* facewarp3.bundle */,
-				F5894232278C8BBF005D98FC /* facewarp5.bundle */,
-				F5894233278C8BBF005D98FC /* facewarp2.bundle */,
-				F5894234278C8BBF005D98FC /* facewarp4.bundle */,
-				F5894235278C8BBF005D98FC /* facewarp6.bundle */,
-			);
-			path = MagicMirror;
-			sourceTree = "<group>";
-		};
-		F5894236278C8BBF005D98FC /* MusicFilter */ = {
-			isa = PBXGroup;
-			children = (
-				F5894237278C8BBF005D98FC /* douyin_02.bundle */,
-				F5894238278C8BBF005D98FC /* douyin_02.mp3 */,
-				F5894239278C8BBF005D98FC /* douyin_01.mp3 */,
-				F589423A278C8BBF005D98FC /* douyin_01.bundle */,
-			);
-			path = MusicFilter;
-			sourceTree = "<group>";
-		};
-		F589423B278C8BBF005D98FC /* BigHead */ = {
-			isa = PBXGroup;
-			children = (
-				F589423C278C8BBF005D98FC /* big_head_smiling.bundle */,
-				F589423D278C8BBF005D98FC /* big_head_sausage_mouth.bundle */,
-				F589423E278C8BBF005D98FC /* big_head.bundle */,
-				F589423F278C8BBF005D98FC /* big_head_husky_face.bundle */,
-				F5894240278C8BBF005D98FC /* big_head_dark_circles.bundle */,
-				F5894241278C8BBF005D98FC /* big_head_blush.bundle */,
-			);
-			path = BigHead;
-			sourceTree = "<group>";
-		};
-		F5894242278C8BBF005D98FC /* Makeup */ = {
-			isa = PBXGroup;
-			children = (
-				F5894243278C8BBF005D98FC /* makeup_icon_combination_bored_cat.bundle */,
-				F5894244278C8BBF005D98FC /* makeup_icon_combination_rose.bundle */,
-				F5894245278C8BBF005D98FC /* makeup_icon_combination_mermaid.bundle */,
-				F5894246278C8BBF005D98FC /* makeup_icon_combination_daisy.bundle */,
-				F5894247278C8BBF005D98FC /* subs_setup.json */,
-				F5894248278C8BBF005D98FC /* makeup_icon_combination_age.bundle */,
-				F5894249278C8BBF005D98FC /* subs */,
-				F5894267278C8BBF005D98FC /* makeup_icon_combination_warm_winter.bundle */,
-				F5894268278C8BBF005D98FC /* makeup_icon_combination_supermodel.bundle */,
-				F5894269278C8BBF005D98FC /* makeup_icon_combination_girl.bundle */,
-				F589426A278C8BBF005D98FC /* makeup_icon_combination_early_autumn.bundle */,
-				F589426B278C8BBF005D98FC /* demo_icon_customize.bundle */,
-				F589426C278C8BBF005D98FC /* makeup_icon_combination_purple_rhyme.bundle */,
-				F589426D278C8BBF005D98FC /* makeup_icon_combination_red_maple.bundle */,
-				F589426E278C8BBF005D98FC /* makeup_icon_combination_paper_cranes.bundle */,
-				F589426F278C8BBF005D98FC /* makeup_icon_combination_harbour_wind.bundle */,
-			);
-			path = Makeup;
-			sourceTree = "<group>";
-		};
-		F5894249278C8BBF005D98FC /* subs */ = {
-			isa = PBXGroup;
-			children = (
-				F589424A278C8BBF005D98FC /* mu_style_eyeshadow_04.bundle */,
-				F589424B278C8BBF005D98FC /* mu_style_contour_01.bundle */,
-				F589424C278C8BBF005D98FC /* mu_style_eyelash_04.bundle */,
-				F589424D278C8BBF005D98FC /* mu_style_eyeliner_01.bundle */,
-				F589424E278C8BBF005D98FC /* mu_style_foundation_01.bundle */,
-				F589424F278C8BBF005D98FC /* mu_style_blush_04.bundle */,
-				F5894250278C8BBF005D98FC /* mu_style_eyelash_06.bundle */,
-				F5894251278C8BBF005D98FC /* mu_style_eyeliner_03.bundle */,
-				F5894252278C8BBF005D98FC /* mu_style_lip_01.bundle */,
-				F5894253278C8BBF005D98FC /* mu_style_eyeshadow_06.bundle */,
-				F5894254278C8BBF005D98FC /* mu_style_eyebrow_01.bundle */,
-				F5894255278C8BBF005D98FC /* mu_style_eyelash_02.bundle */,
-				F5894256278C8BBF005D98FC /* mu_style_eyeshadow_02.bundle */,
-				F5894257278C8BBF005D98FC /* mu_style_eyeliner_05.bundle */,
-				F5894258278C8BBF005D98FC /* mu_style_highlight_01.bundle */,
-				F5894259278C8BBF005D98FC /* mu_style_blush_02.bundle */,
-				F589425A278C8BBF005D98FC /* mu_style_eyelash_05.bundle */,
-				F589425B278C8BBF005D98FC /* mu_style_eyeshadow_05.bundle */,
-				F589425C278C8BBF005D98FC /* mu_style_eyepupil_01.bundle */,
-				F589425D278C8BBF005D98FC /* mu_style_eyeliner_02.bundle */,
-				F589425E278C8BBF005D98FC /* mu_style_eyeshadow_03.bundle */,
-				F589425F278C8BBF005D98FC /* mu_style_highlight_02.bundle */,
-				F5894260278C8BBF005D98FC /* mu_style_blush_01.bundle */,
-				F5894261278C8BBF005D98FC /* mu_style_eyelash_03.bundle */,
-				F5894262278C8BBF005D98FC /* mu_style_eyeliner_06.bundle */,
-				F5894263278C8BBF005D98FC /* mu_style_blush_03.bundle */,
-				F5894264278C8BBF005D98FC /* mu_style_eyelash_01.bundle */,
-				F5894265278C8BBF005D98FC /* mu_style_eyeliner_04.bundle */,
-				F5894266278C8BBF005D98FC /* mu_style_eyeshadow_01.bundle */,
-			);
-			path = subs;
-			sourceTree = "<group>";
-		};
-		F5894270278C8BBF005D98FC /* GestureRecognition */ = {
-			isa = PBXGroup;
-			children = (
-				F5894271278C8BBF005D98FC /* ssd_thread_cute.bundle */,
-				F5894272278C8BBF005D98FC /* ctrl_snow.bundle */,
-				F5894273278C8BBF005D98FC /* ssd_thread_thumb.bundle */,
-				F5894274278C8BBF005D98FC /* ctrl_flower.bundle */,
-				F5894275278C8BBF005D98FC /* ssd_thread_korheart.bundle */,
-				F5894276278C8BBF005D98FC /* ctrl_rain.bundle */,
-				F5894277278C8BBF005D98FC /* ssd_thread_six.bundle */,
-			);
-			path = GestureRecognition;
-			sourceTree = "<group>";
-		};
-		F5894278278C8BBF005D98FC /* BeautyHair */ = {
-			isa = PBXGroup;
-			children = (
-				F5894279278C8BBF005D98FC /* hair_normal_06.bundle */,
-				F589427A278C8BBF005D98FC /* hair_normal_08.bundle */,
-				F589427B278C8BBF005D98FC /* hair_normal_04.bundle */,
-				F589427C278C8BBF005D98FC /* hair_gradient_05.bundle */,
-				F589427D278C8BBF005D98FC /* hair_gradient_01.bundle */,
-				F589427E278C8BBF005D98FC /* hair_gradient_03.bundle */,
-				F589427F278C8BBF005D98FC /* hair_normal_02.bundle */,
-				F5894280278C8BBF005D98FC /* hair_normal_07.bundle */,
-				F5894281278C8BBF005D98FC /* hair_gradient_04.bundle */,
-				F5894282278C8BBF005D98FC /* hair_normal_05.bundle */,
-				F5894283278C8BBF005D98FC /* hair_normal_01.bundle */,
-				F5894284278C8BBF005D98FC /* hair_normal_03.bundle */,
-				F5894285278C8BBF005D98FC /* hair_gradient_02.bundle */,
-			);
-			path = BeautyHair;
-			sourceTree = "<group>";
-		};
-		F5894286278C8BBF005D98FC /* PortraitLightEffect */ = {
-			isa = PBXGroup;
-			children = (
-				F5894287278C8BBF005D98FC /* PortraitLighting_effect_1.bundle */,
-				F5894288278C8BBF005D98FC /* PortraitLighting_effect_3.bundle */,
-				F5894289278C8BBF005D98FC /* PortraitLighting_effect_0.bundle */,
-				F589428A278C8BBF005D98FC /* PortraitLighting_X_studio.bundle */,
-				F589428B278C8BBF005D98FC /* PortraitLighting_effect_2.bundle */,
-				F589428C278C8BBF005D98FC /* PortraitLighting_X_rim.bundle */,
-			);
-			path = PortraitLightEffect;
-			sourceTree = "<group>";
-		};
-		F589428D278C8BBF005D98FC /* ItemSticker */ = {
-			isa = PBXGroup;
-			children = (
-				F589428E278C8BBF005D98FC /* redribbt.bundle */,
-				F589428F278C8BBF005D98FC /* CatSparks.bundle */,
-				F5894290278C8BBF005D98FC /* sdlu.bundle */,
-				F5894291278C8BBF005D98FC /* nihongdeng.bundle */,
-				F5894292278C8BBF005D98FC /* daisypig.bundle */,
-			);
-			path = ItemSticker;
-			sourceTree = "<group>";
-		};
-		F5894293278C8BBF005D98FC /* ARMask */ = {
-			isa = PBXGroup;
-			children = (
-				F5894294278C8BBF005D98FC /* tiger_bai.bundle */,
-				F5894295278C8BBF005D98FC /* tiger.bundle */,
-				F5894296278C8BBF005D98FC /* tiger_huang.bundle */,
-				F5894297278C8BBF005D98FC /* xiongmao.bundle */,
-				F5894298278C8BBF005D98FC /* fenhudie.bundle */,
-				F5894299278C8BBF005D98FC /* bluebird.bundle */,
-				F589429A278C8BBF005D98FC /* afd.bundle */,
-				F589429B278C8BBF005D98FC /* baozi.bundle */,
-				F589429C278C8BBF005D98FC /* lanhudie.bundle */,
-			);
-			path = ARMask;
-			sourceTree = "<group>";
-		};
-		F589429D278C8BBF005D98FC /* ExpressionRecognition */ = {
-			isa = PBXGroup;
-			children = (
-				F589429E278C8BBF005D98FC /* emotion_type.bundle */,
-				F589429F278C8BBF005D98FC /* jet_mask.bundle */,
-				F58942A0278C8BBF005D98FC /* xiaobianzi_zh_fu.bundle */,
-				F58942A1278C8BBF005D98FC /* qingqing_ztt_fu.bundle */,
-				F58942A2278C8BBF005D98FC /* jet_mask1.bundle */,
-				F58942A3278C8BBF005D98FC /* xiaoxueshen_ztt_fu.bundle */,
-				F58942A4278C8BBF005D98FC /* future_warrior.bundle */,
-				F58942A5278C8BBF005D98FC /* expression_type.bundle */,
-				F58942A6278C8BBF005D98FC /* sdx2.bundle */,
-			);
-			path = ExpressionRecognition;
-			sourceTree = "<group>";
-		};
-		F58942A7278C8BBF005D98FC /* graphics */ = {
-			isa = PBXGroup;
-			children = (
-				F58942A8278C8BBF005D98FC /* tongue.bundle */,
-				F58942A9278C8BBF005D98FC /* fxaa.bundle */,
-				F58942AA278C8BBF005D98FC /* face_makeup.bundle */,
-				F58942AB278C8BBF005D98FC /* controller_cpp.bundle */,
-				F58942AC278C8BBF005D98FC /* body_slim.bundle */,
-				F58942AD278C8BBF005D98FC /* fuzzytoonfilter.bundle */,
-				F58942AE278C8BBF005D98FC /* face_beautification.bundle */,
-			);
-			path = graphics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -837,167 +841,170 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5894336278C8BC0005D98FC /* tiger_huang.bundle in Resources */,
-				F58942E8278C8BC0005D98FC /* big_head_blush.bundle in Resources */,
-				F58942EF278C8BC0005D98FC /* mu_style_eyeshadow_04.bundle in Resources */,
-				F5894304278C8BC0005D98FC /* mu_style_highlight_02.bundle in Resources */,
-				F5894322278C8BC0005D98FC /* hair_normal_02.bundle in Resources */,
-				F58942BB278C8BBF005D98FC /* ai_face_recognizer.bundle in Resources */,
-				F589430E278C8BC0005D98FC /* makeup_icon_combination_girl.bundle in Resources */,
-				F58942BF278C8BBF005D98FC /* ai_face_processor_lite.bundle in Resources */,
-				F58942F6278C8BC0005D98FC /* mu_style_eyeliner_03.bundle in Resources */,
-				F5894342278C8BC0005D98FC /* xiaoxueshen_ztt_fu.bundle in Resources */,
-				F5894306278C8BC0005D98FC /* mu_style_eyelash_03.bundle in Resources */,
-				F5894349278C8BC0005D98FC /* controller_cpp.bundle in Resources */,
-				F589434B278C8BC0005D98FC /* fuzzytoonfilter.bundle in Resources */,
-				F58942BA278C8BBF005D98FC /* ai_human_processor_mb_fast.bundle in Resources */,
-				F58942F9278C8BC0005D98FC /* mu_style_eyebrow_01.bundle in Resources */,
-				F5894320278C8BC0005D98FC /* hair_gradient_01.bundle in Resources */,
-				F58942DC278C8BC0005D98FC /* facewarp2.bundle in Resources */,
-				F58942E7278C8BC0005D98FC /* big_head_dark_circles.bundle in Resources */,
-				F58942FA278C8BC0005D98FC /* mu_style_eyelash_02.bundle in Resources */,
-				F5894315278C8BC0005D98FC /* ssd_thread_cute.bundle in Resources */,
-				F589431E278C8BC0005D98FC /* hair_normal_04.bundle in Resources */,
-				F58942D1278C8BC0005D98FC /* frog_Animoji.bundle in Resources */,
-				F58942C7278C8BBF005D98FC /* hez_ztt_fu.bundle in Resources */,
-				F58942B7278C8BBF005D98FC /* hand_type.bundle in Resources */,
-				F58942EB278C8BC0005D98FC /* makeup_icon_combination_mermaid.bundle in Resources */,
-				F58942DB278C8BC0005D98FC /* facewarp5.bundle in Resources */,
-				F58942F4278C8BC0005D98FC /* mu_style_blush_04.bundle in Resources */,
-				F5894323278C8BC0005D98FC /* hair_normal_07.bundle in Resources */,
-				F58942D8278C8BC0005D98FC /* picasso_e3.bundle in Resources */,
-				F58942BD278C8BBF005D98FC /* ai_face_processor.bundle in Resources */,
-				F58942AF278C8BBF005D98FC /* hand_rect.bundle in Resources */,
-				F5894302278C8BC0005D98FC /* mu_style_eyeliner_02.bundle in Resources */,
-				F589433E278C8BC0005D98FC /* jet_mask.bundle in Resources */,
-				F589434A278C8BC0005D98FC /* body_slim.bundle in Resources */,
-				F5894347278C8BC0005D98FC /* fxaa.bundle in Resources */,
-				F5894307278C8BC0005D98FC /* mu_style_eyeliner_06.bundle in Resources */,
-				F58942F1278C8BC0005D98FC /* mu_style_eyelash_04.bundle in Resources */,
-				F58942E1278C8BC0005D98FC /* douyin_01.mp3 in Resources */,
-				F5894300278C8BC0005D98FC /* mu_style_eyeshadow_05.bundle in Resources */,
-				F58942CA278C8BBF005D98FC /* qgirl.bundle in Resources */,
-				F58942D7278C8BC0005D98FC /* picasso_e2.bundle in Resources */,
-				F589430F278C8BC0005D98FC /* makeup_icon_combination_early_autumn.bundle in Resources */,
-				F58942BC278C8BBF005D98FC /* ai_hand_processor.bundle in Resources */,
-				F5894324278C8BC0005D98FC /* hair_gradient_04.bundle in Resources */,
-				F5894312278C8BC0005D98FC /* makeup_icon_combination_red_maple.bundle in Resources */,
-				F58942F5278C8BC0005D98FC /* mu_style_eyelash_06.bundle in Resources */,
-				F58942F2278C8BC0005D98FC /* mu_style_eyeliner_01.bundle in Resources */,
-				F58942FE278C8BC0005D98FC /* mu_style_blush_02.bundle in Resources */,
-				F589432E278C8BC0005D98FC /* PortraitLighting_X_rim.bundle in Resources */,
-				F58942B0278C8BBF005D98FC /* bodyLandmarks_selife.bundle in Resources */,
-				F5894308278C8BC0005D98FC /* mu_style_blush_03.bundle in Resources */,
+				713C8DE22829515F00870B41 /* tiger_huang.bundle in Resources */,
+				713C8D942829515F00870B41 /* big_head_blush.bundle in Resources */,
+				713C8D9B2829515F00870B41 /* mu_style_eyeshadow_04.bundle in Resources */,
+				713C8DFA282951D000870B41 /* aitype.bundle in Resources */,
+				713C8DB02829515F00870B41 /* mu_style_highlight_02.bundle in Resources */,
+				713C8DCE2829515F00870B41 /* hair_normal_02.bundle in Resources */,
+				713C8D672829515E00870B41 /* ai_face_recognizer.bundle in Resources */,
+				713C8DBA2829515F00870B41 /* makeup_icon_combination_girl.bundle in Resources */,
+				713C8D6B2829515E00870B41 /* ai_face_processor_lite.bundle in Resources */,
+				713C8DFC28297E8300870B41 /* aitype.bundle in Resources */,
+				713C8DA22829515F00870B41 /* mu_style_eyeliner_03.bundle in Resources */,
+				713C8DEE2829515F00870B41 /* xiaoxueshen_ztt_fu.bundle in Resources */,
+				713C8DB22829515F00870B41 /* mu_style_eyelash_03.bundle in Resources */,
+				713C8DF52829515F00870B41 /* controller_cpp.bundle in Resources */,
+				713C8DF72829515F00870B41 /* fuzzytoonfilter.bundle in Resources */,
+				713C8D662829515E00870B41 /* ai_human_processor_mb_fast.bundle in Resources */,
+				713C8DA52829515F00870B41 /* mu_style_eyebrow_01.bundle in Resources */,
+				713C8DCC2829515F00870B41 /* hair_gradient_01.bundle in Resources */,
+				713C8D882829515F00870B41 /* facewarp2.bundle in Resources */,
+				713C8D932829515F00870B41 /* big_head_dark_circles.bundle in Resources */,
+				713C8DA62829515F00870B41 /* mu_style_eyelash_02.bundle in Resources */,
+				713C8DC12829515F00870B41 /* ssd_thread_cute.bundle in Resources */,
+				713C8DCA2829515F00870B41 /* hair_normal_04.bundle in Resources */,
+				713C8D7D2829515F00870B41 /* frog_Animoji.bundle in Resources */,
+				713C8D732829515E00870B41 /* hez_ztt_fu.bundle in Resources */,
+				713C8D632829515E00870B41 /* hand_type.bundle in Resources */,
+				713C8D972829515F00870B41 /* makeup_icon_combination_mermaid.bundle in Resources */,
+				713C8D872829515F00870B41 /* facewarp5.bundle in Resources */,
+				713C8DA02829515F00870B41 /* mu_style_blush_04.bundle in Resources */,
+				713C8DCF2829515F00870B41 /* hair_normal_07.bundle in Resources */,
+				713C8D842829515F00870B41 /* picasso_e3.bundle in Resources */,
+				713C8D692829515E00870B41 /* ai_face_processor.bundle in Resources */,
+				713C8D5B2829515E00870B41 /* hand_rect.bundle in Resources */,
+				713C8DAE2829515F00870B41 /* mu_style_eyeliner_02.bundle in Resources */,
+				713C8DEA2829515F00870B41 /* jet_mask.bundle in Resources */,
+				713C8DF62829515F00870B41 /* body_slim.bundle in Resources */,
+				713C8DF32829515F00870B41 /* fxaa.bundle in Resources */,
+				713C8DB32829515F00870B41 /* mu_style_eyeliner_06.bundle in Resources */,
+				713C8D9D2829515F00870B41 /* mu_style_eyelash_04.bundle in Resources */,
+				713C8D8D2829515F00870B41 /* douyin_01.mp3 in Resources */,
+				713C8DAC2829515F00870B41 /* mu_style_eyeshadow_05.bundle in Resources */,
+				713C8D762829515E00870B41 /* qgirl.bundle in Resources */,
+				713C8D832829515F00870B41 /* picasso_e2.bundle in Resources */,
+				713C8DBB2829515F00870B41 /* makeup_icon_combination_early_autumn.bundle in Resources */,
+				713C8D682829515E00870B41 /* ai_hand_processor.bundle in Resources */,
+				713C8DD02829515F00870B41 /* hair_gradient_04.bundle in Resources */,
+				713C8DBE2829515F00870B41 /* makeup_icon_combination_red_maple.bundle in Resources */,
+				713C8DFE282A60DB00870B41 /* ai_human_processor_pc.bundle in Resources */,
+				713C8DA12829515F00870B41 /* mu_style_eyelash_06.bundle in Resources */,
+				713C8D9E2829515F00870B41 /* mu_style_eyeliner_01.bundle in Resources */,
+				713C8DAA2829515F00870B41 /* mu_style_blush_02.bundle in Resources */,
+				713C8DDA2829515F00870B41 /* PortraitLighting_X_rim.bundle in Resources */,
+				713C8D5C2829515E00870B41 /* bodyLandmarks_selife.bundle in Resources */,
+				713C8DB42829515F00870B41 /* mu_style_blush_03.bundle in Resources */,
 				8B4E5C4827689A0900206C16 /* LaunchScreen.storyboard in Resources */,
-				F5894344278C8BC0005D98FC /* expression_type.bundle in Resources */,
-				F5894331278C8BC0005D98FC /* sdlu.bundle in Resources */,
-				F589432D278C8BC0005D98FC /* PortraitLighting_effect_2.bundle in Resources */,
-				F58942C9278C8BBF005D98FC /* boyfriend1.bundle in Resources */,
-				F5894340278C8BC0005D98FC /* qingqing_ztt_fu.bundle in Resources */,
-				F589430C278C8BC0005D98FC /* makeup_icon_combination_warm_winter.bundle in Resources */,
-				F5894346278C8BC0005D98FC /* tongue.bundle in Resources */,
-				F58942DF278C8BC0005D98FC /* douyin_02.bundle in Resources */,
-				F58942D4278C8BC0005D98FC /* green_screen_bg_classroom.mp4 in Resources */,
-				F5894339278C8BC0005D98FC /* bluebird.bundle in Resources */,
-				F58942C6278C8BBF005D98FC /* boyfriend3.bundle in Resources */,
-				F58942E9278C8BC0005D98FC /* makeup_icon_combination_bored_cat.bundle in Resources */,
-				F589433D278C8BC0005D98FC /* emotion_type.bundle in Resources */,
-				F5894311278C8BC0005D98FC /* makeup_icon_combination_purple_rhyme.bundle in Resources */,
-				F5894327278C8BC0005D98FC /* hair_normal_03.bundle in Resources */,
-				F5894318278C8BC0005D98FC /* ctrl_flower.bundle in Resources */,
-				F5894337278C8BC0005D98FC /* xiongmao.bundle in Resources */,
-				F58942B6278C8BBF005D98FC /* wholeBodyDetect.bundle in Resources */,
-				F5894333278C8BC0005D98FC /* daisypig.bundle in Resources */,
-				F58942F7278C8BC0005D98FC /* mu_style_lip_01.bundle in Resources */,
-				F58942C3278C8BBF005D98FC /* gufeng_zh_fu.bundle in Resources */,
-				F58942C8278C8BBF005D98FC /* sea_lm_fu.bundle in Resources */,
-				F58942CB278C8BBF005D98FC /* douniuquan_Animoji.bundle in Resources */,
-				F5894313278C8BC0005D98FC /* makeup_icon_combination_paper_cranes.bundle in Resources */,
-				F58942C0278C8BBF005D98FC /* ai_hairseg.bundle in Resources */,
-				F5894325278C8BC0005D98FC /* hair_normal_05.bundle in Resources */,
-				F58942E5278C8BC0005D98FC /* big_head.bundle in Resources */,
-				F58942E4278C8BC0005D98FC /* big_head_sausage_mouth.bundle in Resources */,
-				F5894332278C8BC0005D98FC /* nihongdeng.bundle in Resources */,
-				F5894305278C8BC0005D98FC /* mu_style_blush_01.bundle in Resources */,
-				F58942EA278C8BC0005D98FC /* makeup_icon_combination_rose.bundle in Resources */,
-				F589433C278C8BC0005D98FC /* lanhudie.bundle in Resources */,
-				F589433B278C8BC0005D98FC /* baozi.bundle in Resources */,
-				F58942B9278C8BBF005D98FC /* landmarks.bundle in Resources */,
-				F5894301278C8BC0005D98FC /* mu_style_eyepupil_01.bundle in Resources */,
-				F589432C278C8BC0005D98FC /* PortraitLighting_X_studio.bundle in Resources */,
-				F58942CD278C8BBF005D98FC /* huangya_Animoji.bundle in Resources */,
-				F5894345278C8BC0005D98FC /* sdx2.bundle in Resources */,
-				F58942D5278C8BC0005D98FC /* green_screen_bg_atechnology.mp4 in Resources */,
-				F58942E2278C8BC0005D98FC /* douyin_01.bundle in Resources */,
-				F5894338278C8BC0005D98FC /* fenhudie.bundle in Resources */,
-				F58942E0278C8BC0005D98FC /* douyin_02.mp3 in Resources */,
-				F58942DD278C8BC0005D98FC /* facewarp4.bundle in Resources */,
-				F58942D6278C8BC0005D98FC /* green_screen_bg_jforest.mp4 in Resources */,
-				F58942C1278C8BBF005D98FC /* ai_human_processor.bundle in Resources */,
-				F58942CE278C8BBF005D98FC /* baimao_Animoji.bundle in Resources */,
-				F5894310278C8BC0005D98FC /* demo_icon_customize.bundle in Resources */,
-				F58942F8278C8BC0005D98FC /* mu_style_eyeshadow_06.bundle in Resources */,
-				F58942D2278C8BC0005D98FC /* green_screen_bg_beach.mp4 in Resources */,
-				F589430D278C8BC0005D98FC /* makeup_icon_combination_supermodel.bundle in Resources */,
-				F58942E3278C8BC0005D98FC /* big_head_smiling.bundle in Resources */,
-				F589434C278C8BC0005D98FC /* face_beautification.bundle in Resources */,
-				F58942B2278C8BBF005D98FC /* halfBodyDetect.bundle in Resources */,
-				F5894321278C8BC0005D98FC /* hair_gradient_03.bundle in Resources */,
-				F5894329278C8BC0005D98FC /* PortraitLighting_effect_1.bundle in Resources */,
-				F58942C5278C8BBF005D98FC /* ice_lm_fu.bundle in Resources */,
-				F58942B4278C8BBF005D98FC /* fakeman.bundle in Resources */,
-				F58942BE278C8BBF005D98FC /* ai_bgseg_green.bundle in Resources */,
-				F5894341278C8BC0005D98FC /* jet_mask1.bundle in Resources */,
-				F58942C2278C8BBF005D98FC /* boyfriend2.bundle in Resources */,
-				F58942B1278C8BBF005D98FC /* green_screen.bundle in Resources */,
-				F58942ED278C8BC0005D98FC /* subs_setup.json in Resources */,
+				713C8DF02829515F00870B41 /* expression_type.bundle in Resources */,
+				713C8DDD2829515F00870B41 /* sdlu.bundle in Resources */,
+				713C8DD92829515F00870B41 /* PortraitLighting_effect_2.bundle in Resources */,
+				713C8D752829515E00870B41 /* boyfriend1.bundle in Resources */,
+				713C8DEC2829515F00870B41 /* qingqing_ztt_fu.bundle in Resources */,
+				713C8DB82829515F00870B41 /* makeup_icon_combination_warm_winter.bundle in Resources */,
+				713C8DF22829515F00870B41 /* tongue.bundle in Resources */,
+				713C8D8B2829515F00870B41 /* douyin_02.bundle in Resources */,
+				713C8D802829515F00870B41 /* green_screen_bg_classroom.mp4 in Resources */,
+				713C8DE52829515F00870B41 /* bluebird.bundle in Resources */,
+				713C8D722829515E00870B41 /* boyfriend3.bundle in Resources */,
+				713C8D952829515F00870B41 /* makeup_icon_combination_bored_cat.bundle in Resources */,
+				713C8DE92829515F00870B41 /* emotion_type.bundle in Resources */,
+				713C8DBD2829515F00870B41 /* makeup_icon_combination_purple_rhyme.bundle in Resources */,
+				713C8DD32829515F00870B41 /* hair_normal_03.bundle in Resources */,
+				713C8DC42829515F00870B41 /* ctrl_flower.bundle in Resources */,
+				713C8DE32829515F00870B41 /* xiongmao.bundle in Resources */,
+				713C8D622829515E00870B41 /* wholeBodyDetect.bundle in Resources */,
+				713C8DDF2829515F00870B41 /* daisypig.bundle in Resources */,
+				713C8DA32829515F00870B41 /* mu_style_lip_01.bundle in Resources */,
+				713C8D6F2829515E00870B41 /* gufeng_zh_fu.bundle in Resources */,
+				713C8D742829515E00870B41 /* sea_lm_fu.bundle in Resources */,
+				713C8D772829515E00870B41 /* douniuquan_Animoji.bundle in Resources */,
+				713C8DBF2829515F00870B41 /* makeup_icon_combination_paper_cranes.bundle in Resources */,
+				713C8D6C2829515E00870B41 /* ai_hairseg.bundle in Resources */,
+				713C8DD12829515F00870B41 /* hair_normal_05.bundle in Resources */,
+				713C8D912829515F00870B41 /* big_head.bundle in Resources */,
+				713C8D902829515F00870B41 /* big_head_sausage_mouth.bundle in Resources */,
+				713C8DDE2829515F00870B41 /* nihongdeng.bundle in Resources */,
+				713C8DB12829515F00870B41 /* mu_style_blush_01.bundle in Resources */,
+				713C8D962829515F00870B41 /* makeup_icon_combination_rose.bundle in Resources */,
+				713C8DE82829515F00870B41 /* lanhudie.bundle in Resources */,
+				713C8DE72829515F00870B41 /* baozi.bundle in Resources */,
+				713C8D652829515E00870B41 /* landmarks.bundle in Resources */,
+				713C8DAD2829515F00870B41 /* mu_style_eyepupil_01.bundle in Resources */,
+				713C8DD82829515F00870B41 /* PortraitLighting_X_studio.bundle in Resources */,
+				713C8D792829515E00870B41 /* huangya_Animoji.bundle in Resources */,
+				713C8DF12829515F00870B41 /* sdx2.bundle in Resources */,
+				713C8D812829515F00870B41 /* green_screen_bg_atechnology.mp4 in Resources */,
+				713C8D8E2829515F00870B41 /* douyin_01.bundle in Resources */,
+				713C8DE42829515F00870B41 /* fenhudie.bundle in Resources */,
+				713C8D8C2829515F00870B41 /* douyin_02.mp3 in Resources */,
+				713C8D892829515F00870B41 /* facewarp4.bundle in Resources */,
+				713C8D822829515F00870B41 /* green_screen_bg_jforest.mp4 in Resources */,
+				713C8D6D2829515E00870B41 /* ai_human_processor.bundle in Resources */,
+				713C8D7A2829515F00870B41 /* baimao_Animoji.bundle in Resources */,
+				713C8DBC2829515F00870B41 /* demo_icon_customize.bundle in Resources */,
+				713C8DA42829515F00870B41 /* mu_style_eyeshadow_06.bundle in Resources */,
+				713C8D7E2829515F00870B41 /* green_screen_bg_beach.mp4 in Resources */,
+				713C8DB92829515F00870B41 /* makeup_icon_combination_supermodel.bundle in Resources */,
+				713C8D8F2829515F00870B41 /* big_head_smiling.bundle in Resources */,
+				713C8DF82829515F00870B41 /* face_beautification.bundle in Resources */,
+				713C8D5E2829515E00870B41 /* halfBodyDetect.bundle in Resources */,
+				713C8DCD2829515F00870B41 /* hair_gradient_03.bundle in Resources */,
+				713C8DD52829515F00870B41 /* PortraitLighting_effect_1.bundle in Resources */,
+				713C8D712829515E00870B41 /* ice_lm_fu.bundle in Resources */,
+				713C8D602829515E00870B41 /* fakeman.bundle in Resources */,
+				713C8D6A2829515E00870B41 /* ai_bgseg_green.bundle in Resources */,
+				713C8DED2829515F00870B41 /* jet_mask1.bundle in Resources */,
+				713C8D6E2829515E00870B41 /* boyfriend2.bundle in Resources */,
+				713C8D5D2829515E00870B41 /* green_screen.bundle in Resources */,
+				713C8D992829515F00870B41 /* subs_setup.json in Resources */,
 				8B4E5C4527689A0900206C16 /* Assets.xcassets in Resources */,
-				F5894330278C8BC0005D98FC /* CatSparks.bundle in Resources */,
-				F58942CC278C8BBF005D98FC /* kuloutou_Animoji.bundle in Resources */,
-				F589433A278C8BC0005D98FC /* afd.bundle in Resources */,
-				F5894314278C8BC0005D98FC /* makeup_icon_combination_harbour_wind.bundle in Resources */,
-				F5894348278C8BC0005D98FC /* face_makeup.bundle in Resources */,
-				F589433F278C8BC0005D98FC /* xiaobianzi_zh_fu.bundle in Resources */,
-				F589432B278C8BC0005D98FC /* PortraitLighting_effect_0.bundle in Resources */,
-				F58942FD278C8BC0005D98FC /* mu_style_highlight_01.bundle in Resources */,
-				F589432F278C8BC0005D98FC /* redribbt.bundle in Resources */,
-				F5894317278C8BC0005D98FC /* ssd_thread_thumb.bundle in Resources */,
-				F58942FC278C8BC0005D98FC /* mu_style_eyeliner_05.bundle in Resources */,
-				F58942FB278C8BC0005D98FC /* mu_style_eyeshadow_02.bundle in Resources */,
+				713C8DDC2829515F00870B41 /* CatSparks.bundle in Resources */,
+				713C8D782829515E00870B41 /* kuloutou_Animoji.bundle in Resources */,
+				713C8DE62829515F00870B41 /* afd.bundle in Resources */,
+				713C8DC02829515F00870B41 /* makeup_icon_combination_harbour_wind.bundle in Resources */,
+				713C8DF42829515F00870B41 /* face_makeup.bundle in Resources */,
+				713C8DEB2829515F00870B41 /* xiaobianzi_zh_fu.bundle in Resources */,
+				713C8DD72829515F00870B41 /* PortraitLighting_effect_0.bundle in Resources */,
+				713C8DA92829515F00870B41 /* mu_style_highlight_01.bundle in Resources */,
+				713C8DDB2829515F00870B41 /* redribbt.bundle in Resources */,
+				713C8DC32829515F00870B41 /* ssd_thread_thumb.bundle in Resources */,
+				713C8DA82829515F00870B41 /* mu_style_eyeliner_05.bundle in Resources */,
+				713C8DA72829515F00870B41 /* mu_style_eyeshadow_02.bundle in Resources */,
 				8B4E5C4327689A0900206C16 /* Main.storyboard in Resources */,
-				F58942F0278C8BC0005D98FC /* mu_style_contour_01.bundle in Resources */,
-				F5894303278C8BC0005D98FC /* mu_style_eyeshadow_03.bundle in Resources */,
-				F5894326278C8BC0005D98FC /* hair_normal_01.bundle in Resources */,
-				F5894335278C8BC0005D98FC /* tiger.bundle in Resources */,
-				F5894316278C8BC0005D98FC /* ctrl_snow.bundle in Resources */,
-				F58942CF278C8BBF005D98FC /* hashiqi_Animoji.bundle in Resources */,
-				F5894343278C8BC0005D98FC /* future_warrior.bundle in Resources */,
-				F5894319278C8BC0005D98FC /* ssd_thread_korheart.bundle in Resources */,
-				F58942E6278C8BC0005D98FC /* big_head_husky_face.bundle in Resources */,
-				F5894334278C8BC0005D98FC /* tiger_bai.bundle in Resources */,
-				F58942DA278C8BC0005D98FC /* facewarp3.bundle in Resources */,
-				F58942B8278C8BBF005D98FC /* default_bg.bundle in Resources */,
-				F5894309278C8BC0005D98FC /* mu_style_eyelash_01.bundle in Resources */,
-				F589431B278C8BC0005D98FC /* ssd_thread_six.bundle in Resources */,
-				F589431C278C8BC0005D98FC /* hair_normal_06.bundle in Resources */,
-				F58942B3278C8BBF005D98FC /* bodyLandmarks_dance.bundle in Resources */,
-				F58942D3278C8BC0005D98FC /* green_screen_bg_ink painting.mp4 in Resources */,
-				F58942D9278C8BC0005D98FC /* picasso_e1.bundle in Resources */,
-				F589430A278C8BC0005D98FC /* mu_style_eyeliner_04.bundle in Resources */,
-				F589431A278C8BC0005D98FC /* ctrl_rain.bundle in Resources */,
-				F589432A278C8BC0005D98FC /* PortraitLighting_effect_3.bundle in Resources */,
-				F58942DE278C8BC0005D98FC /* facewarp6.bundle in Resources */,
-				F58942C4278C8BBF005D98FC /* xiandai_ztt_fu.bundle in Resources */,
-				F589431D278C8BC0005D98FC /* hair_normal_08.bundle in Resources */,
-				F589431F278C8BC0005D98FC /* hair_gradient_05.bundle in Resources */,
-				F58942EC278C8BC0005D98FC /* makeup_icon_combination_daisy.bundle in Resources */,
-				F58942D0278C8BBF005D98FC /* hetun_Animoji.bundle in Resources */,
-				F58942F3278C8BC0005D98FC /* mu_style_foundation_01.bundle in Resources */,
-				F58942B5278C8BBF005D98FC /* bodyRect.bundle in Resources */,
-				F58942FF278C8BC0005D98FC /* mu_style_eyelash_05.bundle in Resources */,
-				F5894328278C8BC0005D98FC /* hair_gradient_02.bundle in Resources */,
-				F589430B278C8BC0005D98FC /* mu_style_eyeshadow_01.bundle in Resources */,
-				F58942EE278C8BC0005D98FC /* makeup_icon_combination_age.bundle in Resources */,
+				713C8D9C2829515F00870B41 /* mu_style_contour_01.bundle in Resources */,
+				713C8DAF2829515F00870B41 /* mu_style_eyeshadow_03.bundle in Resources */,
+				713C8DD22829515F00870B41 /* hair_normal_01.bundle in Resources */,
+				713C8DE12829515F00870B41 /* tiger.bundle in Resources */,
+				713C8DC22829515F00870B41 /* ctrl_snow.bundle in Resources */,
+				713C8D7B2829515F00870B41 /* hashiqi_Animoji.bundle in Resources */,
+				713C8DEF2829515F00870B41 /* future_warrior.bundle in Resources */,
+				713C8DC52829515F00870B41 /* ssd_thread_korheart.bundle in Resources */,
+				713C8D922829515F00870B41 /* big_head_husky_face.bundle in Resources */,
+				713C8DE02829515F00870B41 /* tiger_bai.bundle in Resources */,
+				713C8D862829515F00870B41 /* facewarp3.bundle in Resources */,
+				713C8D642829515E00870B41 /* default_bg.bundle in Resources */,
+				713C8DB52829515F00870B41 /* mu_style_eyelash_01.bundle in Resources */,
+				713C8DC72829515F00870B41 /* ssd_thread_six.bundle in Resources */,
+				713C8DC82829515F00870B41 /* hair_normal_06.bundle in Resources */,
+				713C8D5F2829515E00870B41 /* bodyLandmarks_dance.bundle in Resources */,
+				713C8D7F2829515F00870B41 /* green_screen_bg_ink painting.mp4 in Resources */,
+				713C8D852829515F00870B41 /* picasso_e1.bundle in Resources */,
+				713C8DB62829515F00870B41 /* mu_style_eyeliner_04.bundle in Resources */,
+				713C8DC62829515F00870B41 /* ctrl_rain.bundle in Resources */,
+				713C8DD62829515F00870B41 /* PortraitLighting_effect_3.bundle in Resources */,
+				713C8D8A2829515F00870B41 /* facewarp6.bundle in Resources */,
+				713C8D702829515E00870B41 /* xiandai_ztt_fu.bundle in Resources */,
+				713C8DC92829515F00870B41 /* hair_normal_08.bundle in Resources */,
+				713C8DCB2829515F00870B41 /* hair_gradient_05.bundle in Resources */,
+				713C8D982829515F00870B41 /* makeup_icon_combination_daisy.bundle in Resources */,
+				713C8D7C2829515F00870B41 /* hetun_Animoji.bundle in Resources */,
+				713C8D9F2829515F00870B41 /* mu_style_foundation_01.bundle in Resources */,
+				713C8D612829515E00870B41 /* bodyRect.bundle in Resources */,
+				713C8DAB2829515F00870B41 /* mu_style_eyelash_05.bundle in Resources */,
+				713C8DD42829515F00870B41 /* hair_gradient_02.bundle in Resources */,
+				713C8DB72829515F00870B41 /* mu_style_eyeshadow_01.bundle in Resources */,
+				713C8D9A2829515F00870B41 /* makeup_icon_combination_age.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1050,7 +1057,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB8153A2769EBE000BD242F /* AppID.m in Sources */,
 				8B4E5C4027689A0900206C16 /* ViewController.m in Sources */,
 				8B4E5C3A27689A0900206C16 /* AppDelegate.m in Sources */,
 				8B4E5C4B27689A0900206C16 /* main.m in Sources */,
@@ -1198,9 +1204,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 3XRSP3Y99A;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -1213,7 +1219,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.rte.extension.faceunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = rte_team_ios_2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1225,9 +1231,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 3XRSP3Y99A;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -1240,7 +1246,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.rte.extension.faceunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = rte_team_ios_2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
