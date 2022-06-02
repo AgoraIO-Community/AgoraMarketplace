@@ -5,4 +5,5 @@ local.properties
 app/libs/*
 app/src/main/assets/
 build/
+app/src/main/java/io/agora/rte/extension/faceunity/example/authpack.java
 
