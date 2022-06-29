@@ -1,7 +1,11 @@
 Resource/*
+*.a
 *.framework/
+*.xcframework/
+*.dSYM/
+*.ipa
 .plugin_dev
 **/Pods/
 xcuserdata/
 ExtensionExample/out
-*.xcworkspace/
+ExtensionExample/libs/

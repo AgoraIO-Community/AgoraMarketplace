@@ -1,10 +1,12 @@
 Resource/*
+*.a
 *.framework/
+*.xcframework/
+*.dSYM/
+*.ipa
 .plugin_dev
 **/Pods/
 xcuserdata/
 ExtensionExample/out
-*.xcworkspace/
-*.dSYM/
 ExtensionExample/libs/
 ExtensionExample/authpack.h
