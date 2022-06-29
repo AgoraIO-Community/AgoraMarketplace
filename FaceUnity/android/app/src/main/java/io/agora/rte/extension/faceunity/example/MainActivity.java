@@ -127,7 +127,7 @@ public class MainActivity
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 try {
                     File composerDir = new File(getExternalFilesDir("assets"),
-                "face_unity/graphics/face_beautification.bundle");
+                "graphics/face_beautification.bundle");
 
                     {
                         JSONObject jsonObject = new JSONObject();
@@ -167,7 +167,7 @@ public class MainActivity
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 try {
                     File composerDir = new File(getExternalFilesDir("assets"),
-                            "face_unity/graphics/face_beautification.bundle");
+                            "graphics/face_beautification.bundle");
 
                     {
                         JSONObject jsonObject = new JSONObject();
@@ -251,7 +251,7 @@ public class MainActivity
         try {
             // Load AI model
             File modelDir = new File(getExternalFilesDir("assets"),
-                    "face_unity/model/ai_face_processor.bundle");
+                    "model/ai_face_processor.bundle");
 
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", modelDir.getAbsolutePath());
@@ -265,7 +265,7 @@ public class MainActivity
         try {
             // Load AI model
             File modelDir = new File(getExternalFilesDir("assets"),
-                    "face_unity/model/ai_hand_processor.bundle");
+                    "model/ai_hand_processor.bundle");
 
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", modelDir.getAbsolutePath());
@@ -278,7 +278,7 @@ public class MainActivity
         try {
             // Load AI model
             File modelDir = new File(getExternalFilesDir("assets"),
-                    "face_unity/model/ai_human_processor_pc.bundle");
+                    "model/ai_human_processor_pc.bundle");
 
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", modelDir.getAbsolutePath());
@@ -290,7 +290,7 @@ public class MainActivity
 
         try {
             File modelDir = new File(getExternalFilesDir("assets"),
-                    "face_unity/graphics/aitype.bundle");
+                    "graphics/aitype.bundle");
 
             {
                 JSONObject jsonObject = new JSONObject();
@@ -362,7 +362,7 @@ public class MainActivity
 
     private void choiceComposer() {
         File composerDir = new File(getExternalFilesDir("assets"),
-                "face_unity/graphics/face_beautification.bundle");
+                "graphics/face_beautification.bundle");
         try {
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", composerDir.getAbsolutePath());
@@ -379,7 +379,7 @@ public class MainActivity
     private void choiceSticker() {
         File stickerDir =
                 new File(getExternalFilesDir("assets"),
-                        "face_unity/items/ItemSticker/CatSparks.bundle");
+                        "items/ItemSticker/CatSparks.bundle");
         try {
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", stickerDir.getAbsolutePath());
@@ -397,7 +397,7 @@ public class MainActivity
         new Thread() {
             @Override
             public void run() {
-                String assetsName = "face_unity";
+                String assetsName = "";
                 File destFile = getExternalFilesDir("assets");
                 try {
                     ResourceUtils.initResources(getAssets(), assetsName,

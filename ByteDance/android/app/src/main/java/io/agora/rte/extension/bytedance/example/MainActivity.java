@@ -54,19 +54,19 @@ public class MainActivity
 
     // Only set some resources for demo purpose
     private static final Map<String, String> mSticker = new HashMap<String, String>() {{
-        put("zhutouzhuer", "byte_dance/StickerResource.bundle/stickers/zhutouzhuer");
-        put("zhaocaimao", "byte_dance/StickerResource.bundle/stickers/zhaocaimao");
-        put("zisemeihuo", "byte_dance/StickerResource.bundle/stickers/zisemeihuo");
-        put("zhuluojimaoxian", "byte_dance/StickerResource.bundle/stickers/zhuluojimaoxian");
-        put("zhangshangyouxiji", "byte_dance/StickerResource.bundle/stickers/zhangshangyouxiji");
+        put("zhutouzhuer", "StickerResource.bundle/stickers/zhutouzhuer");
+        put("zhaocaimao", "StickerResource.bundle/stickers/zhaocaimao");
+        put("zisemeihuo", "StickerResource.bundle/stickers/zisemeihuo");
+        put("zhuluojimaoxian", "StickerResource.bundle/stickers/zhuluojimaoxian");
+        put("zhangshangyouxiji", "StickerResource.bundle/stickers/zhangshangyouxiji");
     }};
 
     private static final Map<String, String> mComposer = new HashMap<String, String>() {{
-        put("hanxi", "byte_dance/ComposeMakeup.bundle/ComposeMakeup/style_makeup/hanxi");
-        put("yuanqi", "byte_dance/ComposeMakeup.bundle/ComposeMakeup/style_makeup/yuanqi");
-        put("tianmei", "byte_dance/ComposeMakeup.bundle/ComposeMakeup/style_makeup/tianmei");
-        put("baicha", "byte_dance/ComposeMakeup.bundle/ComposeMakeup/style_makeup/baicha");
-        put("qise", "byte_dance/ComposeMakeup.bundle/ComposeMakeup/style_makeup/qise");
+        put("hanxi", "ComposeMakeup.bundle/ComposeMakeup/style_makeup/hanxi");
+        put("yuanqi", "ComposeMakeup.bundle/ComposeMakeup/style_makeup/yuanqi");
+        put("tianmei", "ComposeMakeup.bundle/ComposeMakeup/style_makeup/tianmei");
+        put("baicha", "ComposeMakeup.bundle/ComposeMakeup/style_makeup/baicha");
+        put("qise", "ComposeMakeup.bundle/ComposeMakeup/style_makeup/qise");
     }};
 
     @Override
@@ -114,13 +114,13 @@ public class MainActivity
     }
 
     private void initExtension() {
-        String[] resources = new String[] {"byte_dance/LicenseBag.bundle", "byte_dance/ModelResource.bundle"};
+        String[] resources = new String[] {"LicenseBag.bundle", "ModelResource.bundle"};
         loadBundle(resources, () -> {
             File destFile = getExternalFilesDir(null);
 
             File licensePath = new File(
                     destFile,
-                    "byte_dance/LicenseBag.bundle/" + io.agora.rte.extension.bytedance.example.Constants.mLicenseName);
+                    "LicenseBag.bundle/" + io.agora.rte.extension.bytedance.example.Constants.mLicenseName);
             // Check license
             try {
                 JSONObject jsonObject = new JSONObject();
@@ -130,7 +130,7 @@ public class MainActivity
                 Log.e(TAG, e.toString());
             }
 
-            File strModelDir = new File(destFile, "byte_dance/ModelResource.bundle");
+            File strModelDir = new File(destFile, "ModelResource.bundle");
             // Init
             try {
                 JSONObject jsonObject = new JSONObject();
