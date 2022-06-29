@@ -5,3 +5,6 @@ Resource/*
 xcuserdata/
 ExtensionExample/out
 *.xcworkspace/
+*.dSYM/
+ExtensionExample/libs/
+ExtensionExample/authpack.h

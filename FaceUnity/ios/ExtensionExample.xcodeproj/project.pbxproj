@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6CE64580AC042C72A6973EE8 /* Pods_ExtensionExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0452D4401025E75283078C6 /* Pods_ExtensionExample.framework */; };
 		713C8D5B2829515E00870B41 /* hand_rect.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CAA2829515E00870B41 /* hand_rect.bundle */; };
 		713C8D5C2829515E00870B41 /* bodyLandmarks_selife.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CAB2829515E00870B41 /* bodyLandmarks_selife.bundle */; };
 		713C8D5D2829515E00870B41 /* green_screen.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CAC2829515E00870B41 /* green_screen.bundle */; };
@@ -176,6 +175,7 @@
 		8B4E5C4527689A0900206C16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B4E5C4427689A0900206C16 /* Assets.xcassets */; };
 		8B4E5C4827689A0900206C16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B4E5C4627689A0900206C16 /* LaunchScreen.storyboard */; };
 		8B4E5C4B27689A0900206C16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E5C4A27689A0900206C16 /* main.m */; };
+		C0CA23C5276F2C8A55D407C6 /* Pods_ExtensionExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A731D194608A801BF3655CD /* Pods_ExtensionExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -192,6 +192,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A731D194608A801BF3655CD /* Pods_ExtensionExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExtensionExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2B967ADA3600EBA1800AA4 /* Pods-ExtensionExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExtensionExample.release.xcconfig"; path = "Target Support Files/Pods-ExtensionExample/Pods-ExtensionExample.release.xcconfig"; sourceTree = "<group>"; };
 		713C8CAA2829515E00870B41 /* hand_rect.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = hand_rect.bundle; sourceTree = "<group>"; };
 		713C8CAB2829515E00870B41 /* bodyLandmarks_selife.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = bodyLandmarks_selife.bundle; sourceTree = "<group>"; };
@@ -366,15 +367,6 @@
 		8B4E5C4727689A0900206C16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B4E5C4927689A0900206C16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B4E5C4A27689A0900206C16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D0452D4401025E75283078C6 /* Pods_ExtensionExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExtensionExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F58941DE278C8904005D98FC /* AgoraVideoSegmentationExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraVideoSegmentationExtension.framework; path = ../../third_party/agora/libs/Agora_Native_SDK_for_iOS_rel.v3.7.200_44758_full_20211221_0115/libs/ALL_ARCHITECTURE/AgoraVideoSegmentationExtension.framework; sourceTree = "<group>"; };
-		F58941DF278C8904005D98FC /* AgoraRtcCryptoLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraRtcCryptoLoader.framework; path = ../../third_party/agora/libs/Agora_Native_SDK_for_iOS_rel.v3.7.200_44758_full_20211221_0115/libs/ALL_ARCHITECTURE/AgoraRtcCryptoLoader.framework; sourceTree = "<group>"; };
-		F58941E0278C8904005D98FC /* Agoraffmpeg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Agoraffmpeg.framework; path = ../../third_party/agora/libs/Agora_Native_SDK_for_iOS_rel.v3.7.200_44758_full_20211221_0115/libs/ALL_ARCHITECTURE/Agoraffmpeg.framework; sourceTree = "<group>"; };
-		F58941E1278C8904005D98FC /* AgoraPvcExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraPvcExtension.framework; path = ../../third_party/agora/libs/Agora_Native_SDK_for_iOS_rel.v3.7.200_44758_full_20211221_0115/libs/ALL_ARCHITECTURE/AgoraPvcExtension.framework; sourceTree = "<group>"; };
-		F58941E2278C8904005D98FC /* AgoraVideoProcessExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraVideoProcessExtension.framework; path = ../../third_party/agora/libs/Agora_Native_SDK_for_iOS_rel.v3.7.200_44758_full_20211221_0115/libs/ALL_ARCHITECTURE/AgoraVideoProcessExtension.framework; sourceTree = "<group>"; };
-		F58941E3278C8904005D98FC /* BeQuic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BeQuic.framework; path = ../../third_party/agora/libs/Agora_Native_SDK_for_iOS_rel.v3.7.200_44758_full_20211221_0115/libs/ALL_ARCHITECTURE/BeQuic.framework; sourceTree = "<group>"; };
-		F58941E4278C8904005D98FC /* AgoraRtcKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraRtcKit.framework; path = ../../third_party/agora/libs/Agora_Native_SDK_for_iOS_rel.v3.7.200_44758_full_20211221_0115/libs/ALL_ARCHITECTURE/AgoraRtcKit.framework; sourceTree = "<group>"; };
-		F5894352278C8CA1005D98FC /* libCNamaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libCNamaSDK.framework; path = "../../third_party/face-unity/libs/ios/libCNamaSDK.framework"; sourceTree = "<group>"; };
 		F589435A278C8D9D005D98FC /* authpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = authpack.h; sourceTree = "<group>"; };
 		FBFC1FE7BFF8FD0CBEDDB39C /* Pods-ExtensionExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExtensionExample.debug.xcconfig"; path = "Target Support Files/Pods-ExtensionExample/Pods-ExtensionExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -384,7 +376,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CE64580AC042C72A6973EE8 /* Pods_ExtensionExample.framework in Frameworks */,
+				C0CA23C5276F2C8A55D407C6 /* Pods_ExtensionExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,15 +761,7 @@
 		8BB8AC96276B5CEA004F13BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F5894352278C8CA1005D98FC /* libCNamaSDK.framework */,
-				F58941E0278C8904005D98FC /* Agoraffmpeg.framework */,
-				F58941E1278C8904005D98FC /* AgoraPvcExtension.framework */,
-				F58941DF278C8904005D98FC /* AgoraRtcCryptoLoader.framework */,
-				F58941E4278C8904005D98FC /* AgoraRtcKit.framework */,
-				F58941E2278C8904005D98FC /* AgoraVideoProcessExtension.framework */,
-				F58941DE278C8904005D98FC /* AgoraVideoSegmentationExtension.framework */,
-				F58941E3278C8904005D98FC /* BeQuic.framework */,
-				D0452D4401025E75283078C6 /* Pods_ExtensionExample.framework */,
+				1A731D194608A801BF3655CD /* Pods_ExtensionExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1204,9 +1188,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 4G288PA4VS;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -1219,7 +1203,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.rte.extension.faceunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = rte_team_ios;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1231,9 +1215,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 4G288PA4VS;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -1246,7 +1230,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.rte.extension.faceunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = rte_team_ios;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

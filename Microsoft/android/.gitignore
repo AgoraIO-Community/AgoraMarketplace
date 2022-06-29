@@ -4,5 +4,5 @@ local.properties
 .plugin_dev.properties
 app/libs/*
 app/src/main/assets/
+app/src/main/jniLibs/
 build/
-
