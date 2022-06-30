@@ -116,7 +116,7 @@ public class MainActivity
     private void initExtension() {
         File licensePath = new File(
                 getExternalFilesDir(null),
-                "license/" + io.agora.rte.extension.sensetime.example.Constants.mLicenseName);
+                "Resource/license/" + io.agora.rte.extension.sensetime.example.Constants.mLicenseName);
         // Check license
         try {
             JSONObject jsonObject = new JSONObject();
@@ -129,7 +129,7 @@ public class MainActivity
         try {
             File modelsPath = new File(
                     getExternalFilesDir(null),
-                    "models/M_SenseME_Face_Extra_Advanced_6.0.13.model");
+                    "Resource/models/M_SenseME_Face_Extra_Advanced_6.0.13.model");
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("model_path", modelsPath.getPath());
             jsonObject.put("config", STMobileHumanActionNative.ST_MOBILE_HUMAN_ACTION_DEFAULT_CONFIG_IMAGE);
@@ -288,27 +288,27 @@ public class MainActivity
         new Thread() {
             @Override
             public void run() {
-                FileUtils.copyStickerFiles(getApplicationContext(), "license");
-                FileUtils.copyFileIfNeed(getApplicationContext(), io.agora.rte.extension.sensetime.example.Constants.mLicenseName, "license");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/license");
+                FileUtils.copyFileIfNeed(getApplicationContext(), io.agora.rte.extension.sensetime.example.Constants.mLicenseName, "Resource/license");
 
-                FileUtils.copyStickerFiles(getApplicationContext(), "license");
-                FileUtils.copyStickerFiles(getApplicationContext(), "newEngine");
-                FileUtils.copyStickerFiles(getApplicationContext(), "makeup_eyeshadow");
-                FileUtils.copyStickerFiles(getApplicationContext(), "makeup_brow");
-                FileUtils.copyStickerFiles(getApplicationContext(), "makeup_blush");
-                FileUtils.copyStickerFiles(getApplicationContext(), "makeup_highlight");
-                FileUtils.copyStickerFiles(getApplicationContext(), "makeup_lip");
-                FileUtils.copyStickerFiles(getApplicationContext(), "makeup_eyeliner");
-                FileUtils.copyStickerFiles(getApplicationContext(), "makeup_eyelash");
-                FileUtils.copyStickerFiles(getApplicationContext(), "makeup_eyeball");
-                FileUtils.copyStickerFiles(getApplicationContext(), "makeup_hairdye");
-                FileUtils.copyStickerFiles(getApplicationContext(), "style_nature");
-                FileUtils.copyStickerFiles(getApplicationContext(), "style_lightly");
-                FileUtils.copyStickerFiles(getApplicationContext(), "style_fashion");
-                FileUtils.copyStickerFiles(getApplicationContext(), "tryon_lip");
-                FileUtils.copyStickerFiles(getApplicationContext(), "tryon_hair");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/license");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/newEngine");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/makeup_eyeshadow");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/makeup_brow");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/makeup_blush");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/makeup_highlight");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/makeup_lip");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/makeup_eyeliner");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/makeup_eyelash");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/makeup_eyeball");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/makeup_hairdye");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/style_nature");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/style_lightly");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/style_fashion");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/tryon_lip");
+                FileUtils.copyStickerFiles(getApplicationContext(), "Resource/tryon_hair");
 
-                FileUtils.copyModelsFiles(getApplicationContext(), "models");
+                FileUtils.copyModelsFiles(getApplicationContext(), "Resource/models");
 
                 bundleLoaded.set(true);
                 handler.post(dialog::dismiss);

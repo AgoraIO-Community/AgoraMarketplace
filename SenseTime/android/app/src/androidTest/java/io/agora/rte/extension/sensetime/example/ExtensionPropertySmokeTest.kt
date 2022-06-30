@@ -32,10 +32,10 @@ class ExtensionPropertySmokeTest {
             appContext = ApplicationProvider.getApplicationContext()
 
             // Ensure the makeup_lip/license/models directories been copied
-            FileUtils.copyStickerFiles(appContext, "makeup_lip")
-            FileUtils.copyStickerFiles(appContext, "license")
-            FileUtils.copyFileIfNeed(appContext, "SenseME.lic", "license")
-            FileUtils.copyModelsFiles(appContext, "models")
+            FileUtils.copyStickerFiles(appContext, "Resource/makeup_lip")
+            FileUtils.copyStickerFiles(appContext, "Resource/license")
+            FileUtils.copyFileIfNeed(appContext, Constants.mLicenseName, "Resource/license")
+            FileUtils.copyModelsFiles(appContext, "Resource/models")
 
             val config = RtcEngineConfig()
             config.mContext = appContext
@@ -68,7 +68,7 @@ class ExtensionPropertySmokeTest {
     fun st_mobile_check_activecode_success() {
         val licensePath: File = File(
             appContext.getExternalFilesDir(null),
-            "license/" + Constants.mLicenseName
+            "Resource/license/" + Constants.mLicenseName
         )
         val jsonObject = JSONObject()
         jsonObject.put("licensePath", licensePath.path)
@@ -80,7 +80,7 @@ class ExtensionPropertySmokeTest {
     fun st_mobile_human_action_create_success() {
         val licensePath: File = File(
             appContext.getExternalFilesDir(null),
-            "license/" + Constants.mLicenseName
+            "Resource/license/" + Constants.mLicenseName
         )
         val jsonObject = JSONObject()
         jsonObject.put("licensePath", licensePath.path)
@@ -88,7 +88,7 @@ class ExtensionPropertySmokeTest {
 
         val modelsPath: File = File(
             appContext.getExternalFilesDir(null),
-            "models/M_SenseME_Face_Extra_Advanced_6.0.13.model"
+            "Resource/models/M_SenseME_Face_Extra_Advanced_6.0.13.model"
         )
         val humanActionCreateJson = JSONObject()
         humanActionCreateJson.put("model_path", modelsPath.path)
@@ -104,7 +104,7 @@ class ExtensionPropertySmokeTest {
     fun st_mobile_effect_create_handle_success() {
         val licensePath: File = File(
             appContext.getExternalFilesDir(null),
-            "license/" + Constants.mLicenseName
+            "Resource/license/" + Constants.mLicenseName
         )
         val jsonObject = JSONObject()
         jsonObject.put("licensePath", licensePath.path)
@@ -112,7 +112,7 @@ class ExtensionPropertySmokeTest {
 
         val modelsPath: File = File(
             appContext.getExternalFilesDir(null),
-            "models/M_SenseME_Face_Extra_Advanced_6.0.13.model"
+            "Resource/models/M_SenseME_Face_Extra_Advanced_6.0.13.model"
         )
         val humanActionCreateJson = JSONObject()
         humanActionCreateJson.put("model_path", modelsPath.path)
@@ -141,7 +141,7 @@ class ExtensionPropertySmokeTest {
     fun st_mobile_effect_set_beauty_success() {
         val makeupLipPath: File = File(
             appContext.getExternalFilesDir(null),
-            "makeup_lip/12自然.zip"
+            "Resource/makeup_lip/12自然.zip"
         )
         val jsonObject = JSONObject()
         jsonObject.put("param", STEffectBeautyType.EFFECT_BEAUTY_MAKEUP_LIP)

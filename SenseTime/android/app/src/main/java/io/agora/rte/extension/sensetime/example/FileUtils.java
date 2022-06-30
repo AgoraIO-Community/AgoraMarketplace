@@ -43,23 +43,23 @@ import io.agora.rte.extension.sensetime.R;
  */
 
 public class FileUtils {
-    public static final String MODEL_NAME_FACE_ATTRIBUTE = "models/M_SenseME_Attribute_1.0.1.model";
-    public static final String MODEL_NAME_AVATAR_HELP = "models/M_SenseME_Avatar_Help_2.2.0.model";
-    public static final String MODEL_NAME_CATFACE_CORE = "models/M_SenseME_CatFace_3.0.0.model";
-    public static final String MODEL_NAME_FACE_EXTRA = "models/M_SenseME_Face_Extra_Advanced_6.0.13.model";// 282
-    public static final String MODEL_NAME_LIPS_PARSING = "models/M_SenseME_Segment_MouthOcclusion_FastV1_1.1.3.model";//嘴唇分割
+    public static final String MODEL_NAME_FACE_ATTRIBUTE = "Resource/models/M_SenseME_Attribute_1.0.1.model";
+    public static final String MODEL_NAME_AVATAR_HELP = "Resource/models/M_SenseME_Avatar_Help_2.2.0.model";
+    public static final String MODEL_NAME_CATFACE_CORE = "Resource/models/M_SenseME_CatFace_3.0.0.model";
+    public static final String MODEL_NAME_FACE_EXTRA = "Resource/models/M_SenseME_Face_Extra_Advanced_6.0.13.model";// 282
+    public static final String MODEL_NAME_LIPS_PARSING = "Resource/models/M_SenseME_Segment_MouthOcclusion_FastV1_1.1.3.model";//嘴唇分割
 
-    public static final String MODEL_NAME_ACTION = "models/M_SenseME_Face_Video_7.0.0.model";
-    public static final String MODEL_NAME_HAND = "models/M_SenseME_Hand_5.4.0.model";
-    public static final String MODEL_NAME_SEGMENT = "models/M_SenseME_Segment_4.14.1.model";// 前后背景
-    public static final String MODEL_NAME_HAIR = "models/M_SenseME_Segment_Hair_1.3.4.model";
-    public static final String HEAD_SEGMENT_MODEL_NAME = "models/M_SenseME_Segment_Head_1.0.3.model";
+    public static final String MODEL_NAME_ACTION = "Resource/models/M_SenseME_Face_Video_7.0.0.model";
+    public static final String MODEL_NAME_HAND = "Resource/models/M_SenseME_Hand_5.4.0.model";
+    public static final String MODEL_NAME_SEGMENT = "Resource/models/M_SenseME_Segment_4.14.1.model";// 前后背景
+    public static final String MODEL_NAME_HAIR = "Resource/models/M_SenseME_Segment_Hair_1.3.4.model";
+    public static final String HEAD_SEGMENT_MODEL_NAME = "Resource/models/M_SenseME_Segment_Head_1.0.3.model";
 
-    public static final String HEAD_SEGMENT_DBL = "models/M_SenseME_Segment_DBL_Face_1.0.7.model";// 妆容遮挡
-    public static final String MODEL_SEGMENT_SKY = "models/M_SenseME_Segment_Sky_1.0.3.model";// 天空分割
-    public static final String MODEL_NAME_DOG = "models/M_SenseME_DogFace_2.0.0.model";// 狗脸关键点
-    public static final String MODEL_SEGMENT_SKIN = "models/M_SenseME_Segment_Skin_1.1.1.model";// 皮肤分割
-    public static final String MODEL_3DMESH = "models/M_SenseME_3DMesh_Face_2.0.2.model";// 3DMesh
+    public static final String HEAD_SEGMENT_DBL = "Resource/models/M_SenseME_Segment_DBL_Face_1.0.7.model";// 妆容遮挡
+    public static final String MODEL_SEGMENT_SKY = "Resource/models/M_SenseME_Segment_Sky_1.0.3.model";// 天空分割
+    public static final String MODEL_NAME_DOG = "Resource/models/M_SenseME_DogFace_2.0.0.model";// 狗脸关键点
+    public static final String MODEL_SEGMENT_SKIN = "Resource/models/M_SenseME_Segment_Skin_1.1.1.model";// 皮肤分割
+    public static final String MODEL_3DMESH = "Resource/models/M_SenseME_3DMesh_Face_2.0.2.model";// 3DMesh
 
     public static String getActionModelName() {
         return MODEL_NAME_ACTION;
@@ -134,6 +134,7 @@ public class FileUtils {
                     in.close();
                     out.close();
                 } catch (IOException e) {
+                    e.printStackTrace();
                     file.delete();
                     return false;
                 }
@@ -168,6 +169,7 @@ public class FileUtils {
                     in.close();
                     out.close();
                 } catch (IOException e) {
+                    e.printStackTrace();
                     file.delete();
                     return false;
                 }
@@ -1116,16 +1118,16 @@ public class FileUtils {
 
     public static EnumMap<EffectType, List<MakeupItem>> getMakeupListsLocal2(Context context) {
         EnumMap<EffectType, List<MakeupItem>> mMakeupLists = new EnumMap<>(EffectType.class);
-        mMakeupLists.put(EffectType.TYPE_HAIR, FileUtils.getMakeupFiles(context.getApplicationContext(), "makeup_hairdye"));
-        mMakeupLists.put(EffectType.TYPE_LIP, FileUtils.getMakeupFiles(context.getApplicationContext(), "makeup_lip"));
-        mMakeupLists.put(EffectType.TYPE_BLUSH, FileUtils.getMakeupFiles(context.getApplicationContext(), "makeup_blush"));
-        mMakeupLists.put(EffectType.TYPE_XR, FileUtils.getMakeupFiles(context.getApplicationContext(), "makeup_highlight"));
-        mMakeupLists.put(EffectType.TYPE_EYE_BROW, FileUtils.getMakeupFiles(context.getApplicationContext(), "makeup_brow"));
+        mMakeupLists.put(EffectType.TYPE_HAIR, FileUtils.getMakeupFiles(context.getApplicationContext(), "Resource/makeup_hairdye"));
+        mMakeupLists.put(EffectType.TYPE_LIP, FileUtils.getMakeupFiles(context.getApplicationContext(), "Resource/makeup_lip"));
+        mMakeupLists.put(EffectType.TYPE_BLUSH, FileUtils.getMakeupFiles(context.getApplicationContext(), "Resource/makeup_blush"));
+        mMakeupLists.put(EffectType.TYPE_XR, FileUtils.getMakeupFiles(context.getApplicationContext(), "Resource/makeup_highlight"));
+        mMakeupLists.put(EffectType.TYPE_EYE_BROW, FileUtils.getMakeupFiles(context.getApplicationContext(), "Resource/makeup_brow"));
 
-        mMakeupLists.put(EffectType.TYPE_EYE_SHADOW, FileUtils.getMakeupFiles(context.getApplicationContext(), "makeup_eyeshadow"));
-        mMakeupLists.put(EffectType.TYPE_EYE_LINER, FileUtils.getMakeupFiles(context.getApplicationContext(), "makeup_eyeliner"));
-        mMakeupLists.put(EffectType.TYPE_EYELASH, FileUtils.getMakeupFiles(context.getApplicationContext(), "makeup_eyelash"));
-        mMakeupLists.put(EffectType.TYPE_EYEBALL, FileUtils.getMakeupFiles(context.getApplicationContext(), "makeup_eyeball"));
+        mMakeupLists.put(EffectType.TYPE_EYE_SHADOW, FileUtils.getMakeupFiles(context.getApplicationContext(), "Resource/makeup_eyeshadow"));
+        mMakeupLists.put(EffectType.TYPE_EYE_LINER, FileUtils.getMakeupFiles(context.getApplicationContext(), "Resource/makeup_eyeliner"));
+        mMakeupLists.put(EffectType.TYPE_EYELASH, FileUtils.getMakeupFiles(context.getApplicationContext(), "Resource/makeup_eyelash"));
+        mMakeupLists.put(EffectType.TYPE_EYEBALL, FileUtils.getMakeupFiles(context.getApplicationContext(), "Resource/makeup_eyeball"));
         return mMakeupLists;
     }
 }
