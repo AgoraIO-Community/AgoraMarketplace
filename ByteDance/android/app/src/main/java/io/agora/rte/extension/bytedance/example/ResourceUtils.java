@@ -22,41 +22,37 @@ public class ResourceUtils {
         String[] files = assets.list(assetsName);
         if (files != null && files.length > 0) {
             if (!destFile.exists()) {
-                destFile.mkdirs();
+                if (!destFile.mkdirs()) {
+                    throw new IOException("failed to create dir: " + destFile);
+                }
             }
             for (String name : files) {
                 copyFileOrDir(assets, assetsName + File.separator + name, destPath);
             }
         } else {
-            copyFile(assets.open(assetsName), destFile);
+            try (InputStream is = assets.open(assetsName)) {
+                copyFile(is, destFile);
+            }
         }
     }
 
-    private static void copyFile(InputStream is, File destFile)
-            throws IOException {
+    private static void copyFile(InputStream is, File destFile) throws IOException {
         if (destFile.exists()) {
             return;
         }
         File parentFile = destFile.getParentFile();
         if (parentFile != null && !parentFile.exists()) {
-            parentFile.mkdirs();
+            if (!parentFile.mkdirs()) {
+                throw new IOException("failed to create dir: " + parentFile);
+            }
         }
-        FileOutputStream fos = new FileOutputStream(destFile);
-        try {
+        try (FileOutputStream fos = new FileOutputStream(destFile)) {
             byte[] buffer = new byte[4096];
             int bytesRead;
             while ((bytesRead = is.read(buffer)) >= 0) {
                 fos.write(buffer, 0, bytesRead);
             }
-        } finally {
-            is.close();
             fos.flush();
-            try {
-                fos.getFD().sync();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            fos.close();
         }
     }
 }
