@@ -12,16 +12,7 @@
 		7196464A27BBE47D00A2FF56 /* M_SenseME_CatFace_3.0.0.model in Resources */ = {isa = PBXBuildFile; fileRef = 7196463A27BBE47D00A2FF56 /* M_SenseME_CatFace_3.0.0.model */; };
 		7196464B27BBE47D00A2FF56 /* M_SenseME_DogFace_2.0.0.model in Resources */ = {isa = PBXBuildFile; fileRef = 7196463B27BBE47D00A2FF56 /* M_SenseME_DogFace_2.0.0.model */; };
 		7196464C27BBE47D00A2FF56 /* model.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7196463C27BBE47D00A2FF56 /* model.bundle */; };
-		7196464D27BBE47D00A2FF56 /* SenseAR_v8.6.0(Effects)_Model_Usage_Instructions的.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7196463D27BBE47D00A2FF56 /* SenseAR_v8.6.0(Effects)_Model_Usage_Instructions的.pdf */; };
 		7196464E27BBE47D00A2FF56 /* M_SenseME_Attribute_1.0.1.model in Resources */ = {isa = PBXBuildFile; fileRef = 7196463E27BBE47D00A2FF56 /* M_SenseME_Attribute_1.0.1.model */; };
-		7196464F27BBE47D00A2FF56 /* 3DMicroPlasticDefault.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7196464027BBE47D00A2FF56 /* 3DMicroPlasticDefault.zip */; };
-		7196465027BBE47D00A2FF56 /* eyelash.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7196464227BBE47D00A2FF56 /* eyelash.bundle */; };
-		7196465127BBE47D00A2FF56 /* lips.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7196464327BBE47D00A2FF56 /* lips.bundle */; };
-		7196465227BBE47D00A2FF56 /* brow.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7196464427BBE47D00A2FF56 /* brow.bundle */; };
-		7196465327BBE47D00A2FF56 /* qingzhuang.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7196464527BBE47D00A2FF56 /* qingzhuang.bundle */; };
-		7196465427BBE47D00A2FF56 /* face.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7196464627BBE47D00A2FF56 /* face.bundle */; };
-		7196465527BBE47D00A2FF56 /* eyeshadow.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7196464727BBE47D00A2FF56 /* eyeshadow.bundle */; };
-		7196465627BBE47D00A2FF56 /* blush.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7196464827BBE47D00A2FF56 /* blush.bundle */; };
 		8B4E5C3A27689A0900206C16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E5C3927689A0900206C16 /* AppDelegate.m */; };
 		8B4E5C3D27689A0900206C16 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E5C3C27689A0900206C16 /* SceneDelegate.m */; };
 		8B4E5C4027689A0900206C16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E5C3F27689A0900206C16 /* ViewController.m */; };
@@ -39,16 +30,7 @@
 		7196463A27BBE47D00A2FF56 /* M_SenseME_CatFace_3.0.0.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = M_SenseME_CatFace_3.0.0.model; sourceTree = "<group>"; };
 		7196463B27BBE47D00A2FF56 /* M_SenseME_DogFace_2.0.0.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = M_SenseME_DogFace_2.0.0.model; sourceTree = "<group>"; };
 		7196463C27BBE47D00A2FF56 /* model.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = model.bundle; sourceTree = "<group>"; };
-		7196463D27BBE47D00A2FF56 /* SenseAR_v8.6.0(Effects)_Model_Usage_Instructions的.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "SenseAR_v8.6.0(Effects)_Model_Usage_Instructions的.pdf"; sourceTree = "<group>"; };
 		7196463E27BBE47D00A2FF56 /* M_SenseME_Attribute_1.0.1.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = M_SenseME_Attribute_1.0.1.model; sourceTree = "<group>"; };
-		7196464027BBE47D00A2FF56 /* 3DMicroPlasticDefault.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = 3DMicroPlasticDefault.zip; sourceTree = "<group>"; };
-		7196464227BBE47D00A2FF56 /* eyelash.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyelash.bundle; sourceTree = "<group>"; };
-		7196464327BBE47D00A2FF56 /* lips.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = lips.bundle; sourceTree = "<group>"; };
-		7196464427BBE47D00A2FF56 /* brow.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = brow.bundle; sourceTree = "<group>"; };
-		7196464527BBE47D00A2FF56 /* qingzhuang.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = qingzhuang.bundle; sourceTree = "<group>"; };
-		7196464627BBE47D00A2FF56 /* face.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = face.bundle; sourceTree = "<group>"; };
-		7196464727BBE47D00A2FF56 /* eyeshadow.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyeshadow.bundle; sourceTree = "<group>"; };
-		7196464827BBE47D00A2FF56 /* blush.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = blush.bundle; sourceTree = "<group>"; };
 		8B4E5C3527689A0900206C16 /* ExtensionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtensionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B4E5C3827689A0900206C16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8B4E5C3927689A0900206C16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,20 +72,10 @@
 		7196463527BBE47D00A2FF56 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				7196463627BBE47D00A2FF56 /* Filters */,
 				7196463727BBE47D00A2FF56 /* license */,
 				7196463927BBE47D00A2FF56 /* models */,
-				7196463F27BBE47D00A2FF56 /* Beauty */,
-				7196464127BBE47D00A2FF56 /* Makeup */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		7196463627BBE47D00A2FF56 /* Filters */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Filters;
 			sourceTree = "<group>";
 		};
 		7196463727BBE47D00A2FF56 /* license */ = {
@@ -120,32 +92,9 @@
 				7196463A27BBE47D00A2FF56 /* M_SenseME_CatFace_3.0.0.model */,
 				7196463B27BBE47D00A2FF56 /* M_SenseME_DogFace_2.0.0.model */,
 				7196463C27BBE47D00A2FF56 /* model.bundle */,
-				7196463D27BBE47D00A2FF56 /* SenseAR_v8.6.0(Effects)_Model_Usage_Instructions的.pdf */,
 				7196463E27BBE47D00A2FF56 /* M_SenseME_Attribute_1.0.1.model */,
 			);
 			path = models;
-			sourceTree = "<group>";
-		};
-		7196463F27BBE47D00A2FF56 /* Beauty */ = {
-			isa = PBXGroup;
-			children = (
-				7196464027BBE47D00A2FF56 /* 3DMicroPlasticDefault.zip */,
-			);
-			path = Beauty;
-			sourceTree = "<group>";
-		};
-		7196464127BBE47D00A2FF56 /* Makeup */ = {
-			isa = PBXGroup;
-			children = (
-				7196464227BBE47D00A2FF56 /* eyelash.bundle */,
-				7196464327BBE47D00A2FF56 /* lips.bundle */,
-				7196464427BBE47D00A2FF56 /* brow.bundle */,
-				7196464527BBE47D00A2FF56 /* qingzhuang.bundle */,
-				7196464627BBE47D00A2FF56 /* face.bundle */,
-				7196464727BBE47D00A2FF56 /* eyeshadow.bundle */,
-				7196464827BBE47D00A2FF56 /* blush.bundle */,
-			);
-			path = Makeup;
 			sourceTree = "<group>";
 		};
 		8B4E5C2C27689A0900206C16 = {
@@ -254,22 +203,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7196464E27BBE47D00A2FF56 /* M_SenseME_Attribute_1.0.1.model in Resources */,
-				7196465527BBE47D00A2FF56 /* eyeshadow.bundle in Resources */,
 				8B4E5C4827689A0900206C16 /* LaunchScreen.storyboard in Resources */,
-				7196465227BBE47D00A2FF56 /* brow.bundle in Resources */,
-				7196465327BBE47D00A2FF56 /* qingzhuang.bundle in Resources */,
 				7196464C27BBE47D00A2FF56 /* model.bundle in Resources */,
-				7196464D27BBE47D00A2FF56 /* SenseAR_v8.6.0(Effects)_Model_Usage_Instructions的.pdf in Resources */,
-				7196464F27BBE47D00A2FF56 /* 3DMicroPlasticDefault.zip in Resources */,
-				7196465627BBE47D00A2FF56 /* blush.bundle in Resources */,
 				7196464927BBE47D00A2FF56 /* SenseME.lic in Resources */,
 				8B4E5C4527689A0900206C16 /* Assets.xcassets in Resources */,
-				7196465127BBE47D00A2FF56 /* lips.bundle in Resources */,
 				7196464A27BBE47D00A2FF56 /* M_SenseME_CatFace_3.0.0.model in Resources */,
 				8B4E5C4327689A0900206C16 /* Main.storyboard in Resources */,
 				7196464B27BBE47D00A2FF56 /* M_SenseME_DogFace_2.0.0.model in Resources */,
-				7196465027BBE47D00A2FF56 /* eyelash.bundle in Resources */,
-				7196465427BBE47D00A2FF56 /* face.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,23 +1,43 @@
 PODS:
-  - AgoraRtcEngine_iOS_Beta (4.0.0-beta.2)
+  - AgoraRtcEngine_iOS (4.0.0-rc.1):
+    - AgoraRtcEngine_iOS/AINS (= 4.0.0-rc.1)
+    - AgoraRtcEngine_iOS/AudioBeauty (= 4.0.0-rc.1)
+    - AgoraRtcEngine_iOS/ClearVision (= 4.0.0-rc.1)
+    - AgoraRtcEngine_iOS/ContentInspect (= 4.0.0-rc.1)
+    - AgoraRtcEngine_iOS/PVC (= 4.0.0-rc.1)
+    - AgoraRtcEngine_iOS/ReplayKit (= 4.0.0-rc.1)
+    - AgoraRtcEngine_iOS/RtcBasic (= 4.0.0-rc.1)
+    - AgoraRtcEngine_iOS/SpatialAudio (= 4.0.0-rc.1)
+    - AgoraRtcEngine_iOS/SuperResolution (= 4.0.0-rc.1)
+    - AgoraRtcEngine_iOS/VirtualBackground (= 4.0.0-rc.1)
+  - AgoraRtcEngine_iOS/AINS (4.0.0-rc.1)
+  - AgoraRtcEngine_iOS/AudioBeauty (4.0.0-rc.1)
+  - AgoraRtcEngine_iOS/ClearVision (4.0.0-rc.1)
+  - AgoraRtcEngine_iOS/ContentInspect (4.0.0-rc.1)
+  - AgoraRtcEngine_iOS/PVC (4.0.0-rc.1)
+  - AgoraRtcEngine_iOS/ReplayKit (4.0.0-rc.1)
+  - AgoraRtcEngine_iOS/RtcBasic (4.0.0-rc.1)
+  - AgoraRtcEngine_iOS/SpatialAudio (4.0.0-rc.1)
+  - AgoraRtcEngine_iOS/SuperResolution (4.0.0-rc.1)
+  - AgoraRtcEngine_iOS/VirtualBackground (4.0.0-rc.1)
   - Extensions (0.1.0)
 
 DEPENDENCIES:
-  - AgoraRtcEngine_iOS_Beta (= 4.0.0-beta.2)
+  - AgoraRtcEngine_iOS (= 4.0.0-rc.1)
   - Extensions (from `ExtensionExample`)
 
 SPEC REPOS:
   trunk:
-    - AgoraRtcEngine_iOS_Beta
+    - AgoraRtcEngine_iOS
 
 EXTERNAL SOURCES:
   Extensions:
     :path: ExtensionExample
 
 SPEC CHECKSUMS:
-  AgoraRtcEngine_iOS_Beta: b03946a1b4e9df5a2ead9561ad82b12dd925cac8
+  AgoraRtcEngine_iOS: 1b78af79120066c230cf9281d8587813ce6a8323
   Extensions: 00ee73c6fa9841505b8e1d934ce93f1bd4bfc784
 
-PODFILE CHECKSUM: 96c78d2f5a320f6f624f76e3f6015fb5c35cdbaf
+PODFILE CHECKSUM: 384053750613b9a07da274551bba61c404e1db22
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.10.1

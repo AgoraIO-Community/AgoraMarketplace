@@ -117,22 +117,22 @@
 }
 
 - (IBAction)setSticker:(id)sender {
-    NSString *path = [[[NSBundle mainBundle]
-                       pathForResource:@"lips"
-                       ofType:@"bundle"] stringByAppendingFormat:@"/%@", @"12自然.zip"];
-    NSError *error;
-    NSData *data = [NSJSONSerialization dataWithJSONObject:@{
-                                                        @"param": @(EFFECT_BEAUTY_MAKEUP_LIP),
-                                                        @"path": path
-                                                    }
-                                                   options:NSJSONWritingPrettyPrinted
-                                                     error:&error];
-    
-    [self.agoraKit
-        setExtensionPropertyWithVendor:@"SenseTime"
-                             extension:@"Effect"
-                                   key:@"st_mobile_effect_set_beauty"
-                                 value:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
+//    NSString *path = [[[NSBundle mainBundle]
+//                       pathForResource:@"lips"
+//                       ofType:@"bundle"] stringByAppendingFormat:@"/%@", @"12自然.zip"];
+//    NSError *error;
+//    NSData *data = [NSJSONSerialization dataWithJSONObject:@{
+//                                                        @"param": @(EFFECT_BEAUTY_MAKEUP_LIP),
+//                                                        @"path": path
+//                                                    }
+//                                                   options:NSJSONWritingPrettyPrinted
+//                                                     error:&error];
+//
+//    [self.agoraKit
+//        setExtensionPropertyWithVendor:@"SenseTime"
+//                             extension:@"Effect"
+//                                   key:@"st_mobile_effect_set_beauty"
+//                                 value:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
 }
 
 - (NSString *)toJson:(NSDictionary *)dic {
