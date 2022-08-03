@@ -19,7 +19,6 @@
 		713C8D642829515E00870B41 /* default_bg.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CB32829515E00870B41 /* default_bg.bundle */; };
 		713C8D652829515E00870B41 /* landmarks.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CB42829515E00870B41 /* landmarks.bundle */; };
 		713C8D662829515E00870B41 /* ai_human_processor_mb_fast.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CB62829515E00870B41 /* ai_human_processor_mb_fast.bundle */; };
-		713C8D672829515E00870B41 /* ai_face_recognizer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CB72829515E00870B41 /* ai_face_recognizer.bundle */; };
 		713C8D682829515E00870B41 /* ai_hand_processor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CB82829515E00870B41 /* ai_hand_processor.bundle */; };
 		713C8D692829515E00870B41 /* ai_face_processor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CB92829515E00870B41 /* ai_face_processor.bundle */; };
 		713C8D6A2829515E00870B41 /* ai_bgseg_green.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8CBA2829515E00870B41 /* ai_bgseg_green.bundle */; };
@@ -165,9 +164,6 @@
 		713C8DF62829515F00870B41 /* body_slim.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D582829515E00870B41 /* body_slim.bundle */; };
 		713C8DF72829515F00870B41 /* fuzzytoonfilter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D592829515E00870B41 /* fuzzytoonfilter.bundle */; };
 		713C8DF82829515F00870B41 /* face_beautification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8D5A2829515E00870B41 /* face_beautification.bundle */; };
-		713C8DFA282951D000870B41 /* aitype.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8DF9282951D000870B41 /* aitype.bundle */; };
-		713C8DFC28297E8300870B41 /* aitype.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8DFB28297E8200870B41 /* aitype.bundle */; };
-		713C8DFE282A60DB00870B41 /* ai_human_processor_pc.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 713C8DFD282A60DB00870B41 /* ai_human_processor_pc.bundle */; };
 		8B4E5C3A27689A0900206C16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E5C3927689A0900206C16 /* AppDelegate.m */; };
 		8B4E5C3D27689A0900206C16 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E5C3C27689A0900206C16 /* SceneDelegate.m */; };
 		8B4E5C4027689A0900206C16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E5C3F27689A0900206C16 /* ViewController.m */; };
@@ -206,7 +202,6 @@
 		713C8CB32829515E00870B41 /* default_bg.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = default_bg.bundle; sourceTree = "<group>"; };
 		713C8CB42829515E00870B41 /* landmarks.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = landmarks.bundle; sourceTree = "<group>"; };
 		713C8CB62829515E00870B41 /* ai_human_processor_mb_fast.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_human_processor_mb_fast.bundle; sourceTree = "<group>"; };
-		713C8CB72829515E00870B41 /* ai_face_recognizer.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_face_recognizer.bundle; sourceTree = "<group>"; };
 		713C8CB82829515E00870B41 /* ai_hand_processor.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_hand_processor.bundle; sourceTree = "<group>"; };
 		713C8CB92829515E00870B41 /* ai_face_processor.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_face_processor.bundle; sourceTree = "<group>"; };
 		713C8CBA2829515E00870B41 /* ai_bgseg_green.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_bgseg_green.bundle; sourceTree = "<group>"; };
@@ -352,9 +347,6 @@
 		713C8D582829515E00870B41 /* body_slim.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = body_slim.bundle; sourceTree = "<group>"; };
 		713C8D592829515E00870B41 /* fuzzytoonfilter.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = fuzzytoonfilter.bundle; sourceTree = "<group>"; };
 		713C8D5A2829515E00870B41 /* face_beautification.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = face_beautification.bundle; sourceTree = "<group>"; };
-		713C8DF9282951D000870B41 /* aitype.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = aitype.bundle; sourceTree = "<group>"; };
-		713C8DFB28297E8200870B41 /* aitype.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = aitype.bundle; sourceTree = "<group>"; };
-		713C8DFD282A60DB00870B41 /* ai_human_processor_pc.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = ai_human_processor_pc.bundle; sourceTree = "<group>"; };
 		8B4E5C3527689A0900206C16 /* ExtensionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtensionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B4E5C3827689A0900206C16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8B4E5C3927689A0900206C16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -424,9 +416,7 @@
 		713C8CB52829515E00870B41 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				713C8DFD282A60DB00870B41 /* ai_human_processor_pc.bundle */,
 				713C8CB62829515E00870B41 /* ai_human_processor_mb_fast.bundle */,
-				713C8CB72829515E00870B41 /* ai_face_recognizer.bundle */,
 				713C8CB82829515E00870B41 /* ai_hand_processor.bundle */,
 				713C8CB92829515E00870B41 /* ai_face_processor.bundle */,
 				713C8CBA2829515E00870B41 /* ai_bgseg_green.bundle */,
@@ -707,8 +697,6 @@
 		713C8D532829515E00870B41 /* graphics */ = {
 			isa = PBXGroup;
 			children = (
-				713C8DF9282951D000870B41 /* aitype.bundle */,
-				713C8DFB28297E8200870B41 /* aitype.bundle */,
 				713C8D542829515E00870B41 /* tongue.bundle */,
 				713C8D552829515E00870B41 /* fxaa.bundle */,
 				713C8D562829515E00870B41 /* face_makeup.bundle */,
@@ -828,13 +816,10 @@
 				713C8DE22829515F00870B41 /* tiger_huang.bundle in Resources */,
 				713C8D942829515F00870B41 /* big_head_blush.bundle in Resources */,
 				713C8D9B2829515F00870B41 /* mu_style_eyeshadow_04.bundle in Resources */,
-				713C8DFA282951D000870B41 /* aitype.bundle in Resources */,
 				713C8DB02829515F00870B41 /* mu_style_highlight_02.bundle in Resources */,
 				713C8DCE2829515F00870B41 /* hair_normal_02.bundle in Resources */,
-				713C8D672829515E00870B41 /* ai_face_recognizer.bundle in Resources */,
 				713C8DBA2829515F00870B41 /* makeup_icon_combination_girl.bundle in Resources */,
 				713C8D6B2829515E00870B41 /* ai_face_processor_lite.bundle in Resources */,
-				713C8DFC28297E8300870B41 /* aitype.bundle in Resources */,
 				713C8DA22829515F00870B41 /* mu_style_eyeliner_03.bundle in Resources */,
 				713C8DEE2829515F00870B41 /* xiaoxueshen_ztt_fu.bundle in Resources */,
 				713C8DB22829515F00870B41 /* mu_style_eyelash_03.bundle in Resources */,
@@ -872,7 +857,6 @@
 				713C8D682829515E00870B41 /* ai_hand_processor.bundle in Resources */,
 				713C8DD02829515F00870B41 /* hair_gradient_04.bundle in Resources */,
 				713C8DBE2829515F00870B41 /* makeup_icon_combination_red_maple.bundle in Resources */,
-				713C8DFE282A60DB00870B41 /* ai_human_processor_pc.bundle in Resources */,
 				713C8DA12829515F00870B41 /* mu_style_eyelash_06.bundle in Resources */,
 				713C8D9E2829515F00870B41 /* mu_style_eyeliner_01.bundle in Resources */,
 				713C8DAA2829515F00870B41 /* mu_style_blush_02.bundle in Resources */,
@@ -1188,9 +1172,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 4G288PA4VS;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8XYDBD32JW;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -1203,9 +1187,10 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.rte.extension.faceunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = rte_team_ios;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -1215,9 +1200,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 4G288PA4VS;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8XYDBD32JW;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
@@ -1230,9 +1215,10 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.rte.extension.faceunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = rte_team_ios;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
