@@ -232,7 +232,38 @@
                                                 ofType:@"bundle"],
                                    @"type": @(1 << 3)
                                  }]];
-    
+    [self.agoraKit
+            setExtensionPropertyWithVendor:@"FaceUnity"
+                                 extension:@"Effect"
+                                       key:@"fuLoadAIModelFromPackage"
+                                     value:[self toJson:@{
+                                       @"data": [[NSBundle mainBundle]
+                                           pathForResource:@"ai_human_processor_pc"
+                                                    ofType:@"bundle"],
+                                       @"type": @(1 << 18)
+                                     }]];
+
+    [self.agoraKit
+        setExtensionPropertyWithVendor:@"FaceUnity"
+                             extension:@"Effect"
+                                   key:@"fuCreateItemFromPackage"
+                                 value:[self toJson:@{
+                                   @"data": [[NSBundle mainBundle]
+                                       pathForResource:@"aitype"
+                                                ofType:@"bundle"]
+                                 }]];
+
+    [self.agoraKit
+        setExtensionPropertyWithVendor:@"FaceUnity"
+                             extension:@"Effect"
+                                   key:@"fuItemSetParam"
+                                 value:[self toJson:@{
+                                   @"obj_handle": [[NSBundle mainBundle]
+                                       pathForResource:@"aitype"
+                                                ofType:@"bundle"],
+                                   @"name": @"aitype",
+                                   @"value": @(1 << 10 | 1 << 20 | 1 << 3),
+                                 }]];
 }
 
 - (void)initExtension {

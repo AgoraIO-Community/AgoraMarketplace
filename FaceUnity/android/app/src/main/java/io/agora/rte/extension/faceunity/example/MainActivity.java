@@ -274,6 +274,40 @@ public class MainActivity
         } catch (JSONException e) {
             Log.e(TAG, e.toString());
         }
+
+        try {
+            // Load AI model
+            File modelDir = new File(getExternalFilesDir("assets"),
+                    "Resource/model/ai_human_processor_pc.bundle");
+
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("data", modelDir.getAbsolutePath());
+            jsonObject.put("type", 1 << 18);
+            setExtensionProperty("fuLoadAIModelFromPackage", jsonObject.toString());
+        } catch (JSONException e) {
+            Log.e(TAG, e.toString());
+        }
+
+        try {
+            File modelDir = new File(getExternalFilesDir("assets"),
+                    "Resource/graphics/aitype.bundle");
+
+            {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("data", modelDir.getAbsolutePath());
+                setExtensionProperty("fuCreateItemFromPackage", jsonObject.toString());
+            }
+
+            {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("obj_handle", modelDir);
+                jsonObject.put("name", "aitype");
+                jsonObject.put("value", 1 << 10 | 1 << 20 | 1 << 3);
+                setExtensionProperty("fuItemSetParam", jsonObject.toString());
+            }
+        } catch (JSONException e) {
+            Log.e(TAG, e.toString());
+        }
     }
 
     private void enableAITracking() {
