@@ -1,21 +1,21 @@
 PODS:
-  - AgoraRtcEngine_iOS_Beta (4.0.0-beta.2)
+  - AgoraRtcEngine_iOS (4.0.0-rc.1)
   - Extensions (0.1.0)
 
 DEPENDENCIES:
-  - AgoraRtcEngine_iOS_Beta (= 4.0.0-beta.2)
+  - AgoraRtcEngine_iOS (= 4.0.0-rc.1)
   - Extensions (from `ExtensionExample`)
 
 SPEC REPOS:
   trunk:
-    - AgoraRtcEngine_iOS_Beta
+    - AgoraRtcEngine_iOS
 
 EXTERNAL SOURCES:
   Extensions:
     :path: ExtensionExample
 
 SPEC CHECKSUMS:
-  AgoraRtcEngine_iOS_Beta: b03946a1b4e9df5a2ead9561ad82b12dd925cac8
+  AgoraRtcEngine_iOS: b03946a1b4e9df5a2ead9561ad82b12dd925cac8
   Extensions: 77390a90b6ab0eab43eb05a17453aad78666d05c
 
 PODFILE CHECKSUM: 3a7b9293d9485e1c0e0ebc48278787348e96e1d1
