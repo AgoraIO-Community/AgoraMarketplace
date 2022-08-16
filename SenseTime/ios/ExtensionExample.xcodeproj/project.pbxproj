@@ -12,7 +12,6 @@
 		7196464A27BBE47D00A2FF56 /* M_SenseME_CatFace_3.0.0.model in Resources */ = {isa = PBXBuildFile; fileRef = 7196463A27BBE47D00A2FF56 /* M_SenseME_CatFace_3.0.0.model */; };
 		7196464B27BBE47D00A2FF56 /* M_SenseME_DogFace_2.0.0.model in Resources */ = {isa = PBXBuildFile; fileRef = 7196463B27BBE47D00A2FF56 /* M_SenseME_DogFace_2.0.0.model */; };
 		7196464C27BBE47D00A2FF56 /* model.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7196463C27BBE47D00A2FF56 /* model.bundle */; };
-		7196464D27BBE47D00A2FF56 /* SenseAR_v8.6.0(Effects)_Model_Usage_Instructions的.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7196463D27BBE47D00A2FF56 /* SenseAR_v8.6.0(Effects)_Model_Usage_Instructions的.pdf */; };
 		7196464E27BBE47D00A2FF56 /* M_SenseME_Attribute_1.0.1.model in Resources */ = {isa = PBXBuildFile; fileRef = 7196463E27BBE47D00A2FF56 /* M_SenseME_Attribute_1.0.1.model */; };
 		7196464F27BBE47D00A2FF56 /* 3DMicroPlasticDefault.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7196464027BBE47D00A2FF56 /* 3DMicroPlasticDefault.zip */; };
 		7196465027BBE47D00A2FF56 /* eyelash.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7196464227BBE47D00A2FF56 /* eyelash.bundle */; };
@@ -39,7 +38,6 @@
 		7196463A27BBE47D00A2FF56 /* M_SenseME_CatFace_3.0.0.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = M_SenseME_CatFace_3.0.0.model; sourceTree = "<group>"; };
 		7196463B27BBE47D00A2FF56 /* M_SenseME_DogFace_2.0.0.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = M_SenseME_DogFace_2.0.0.model; sourceTree = "<group>"; };
 		7196463C27BBE47D00A2FF56 /* model.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = model.bundle; sourceTree = "<group>"; };
-		7196463D27BBE47D00A2FF56 /* SenseAR_v8.6.0(Effects)_Model_Usage_Instructions的.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "SenseAR_v8.6.0(Effects)_Model_Usage_Instructions的.pdf"; sourceTree = "<group>"; };
 		7196463E27BBE47D00A2FF56 /* M_SenseME_Attribute_1.0.1.model */ = {isa = PBXFileReference; lastKnownFileType = file; path = M_SenseME_Attribute_1.0.1.model; sourceTree = "<group>"; };
 		7196464027BBE47D00A2FF56 /* 3DMicroPlasticDefault.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = 3DMicroPlasticDefault.zip; sourceTree = "<group>"; };
 		7196464227BBE47D00A2FF56 /* eyelash.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = eyelash.bundle; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 				7196463A27BBE47D00A2FF56 /* M_SenseME_CatFace_3.0.0.model */,
 				7196463B27BBE47D00A2FF56 /* M_SenseME_DogFace_2.0.0.model */,
 				7196463C27BBE47D00A2FF56 /* model.bundle */,
-				7196463D27BBE47D00A2FF56 /* SenseAR_v8.6.0(Effects)_Model_Usage_Instructions的.pdf */,
 				7196463E27BBE47D00A2FF56 /* M_SenseME_Attribute_1.0.1.model */,
 			);
 			path = models;
@@ -259,7 +256,6 @@
 				7196465227BBE47D00A2FF56 /* brow.bundle in Resources */,
 				7196465327BBE47D00A2FF56 /* qingzhuang.bundle in Resources */,
 				7196464C27BBE47D00A2FF56 /* model.bundle in Resources */,
-				7196464D27BBE47D00A2FF56 /* SenseAR_v8.6.0(Effects)_Model_Usage_Instructions的.pdf in Resources */,
 				7196464F27BBE47D00A2FF56 /* 3DMicroPlasticDefault.zip in Resources */,
 				7196465627BBE47D00A2FF56 /* blush.bundle in Resources */,
 				7196464927BBE47D00A2FF56 /* SenseME.lic in Resources */,
