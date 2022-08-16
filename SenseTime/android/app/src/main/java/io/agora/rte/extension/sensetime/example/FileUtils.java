@@ -153,7 +153,9 @@ public class FileUtils {
                     if (file.exists())
                         file.delete();
 
-                    file.getParentFile().mkdirs();
+                    if (!file.getParentFile().exists()) {
+                        file.getParentFile().mkdirs();
+                    }
                     file.createNewFile();
 
                     InputStream in = context.getAssets().open(className + File.separator + fileName);
