@@ -38,7 +38,6 @@ public class MainActivity
     private final ObservableBoolean enableExtension =
             new ObservableBoolean(false);
 
-    private String preResultStr = "";
     private String resultStr = "";
 
     private boolean isStartedAsr = false;
@@ -220,8 +219,6 @@ public class MainActivity
     @Override
     public void onEvent(String vendor, String extension, String key, String value) {
         Log.i(TAG, "onEvent vendor: " + vendor + "  extension: " + extension + "  key: " + key + "  value: " + value);
-        final StringBuilder sb = new StringBuilder(preResultStr);
-        final StringBuilder sb_end = new StringBuilder(resultStr);
         if ("speech_recognizing".equals(key)) {
             try {
                 JSONObject asrJSONObject = new JSONObject(value);
