@@ -209,7 +209,7 @@ public class MainActivity
         mRtcEngine.enableAudio();
         mRtcEngine.setChannelProfile(Constants.CHANNEL_PROFILE_LIVE_BROADCASTING);
         mRtcEngine.setClientRole(Constants.CLIENT_ROLE_BROADCASTER);
-        mRtcEngine.joinChannel("", "hideonbush", null, 0);
+        mRtcEngine.joinChannel("", "test_extension", null, 0);
     }
 
     private void enableExtension(boolean enabled) {
@@ -264,7 +264,6 @@ public class MainActivity
             }
         } else {
             resultStr += key + " : " + value + "\n";
-            this.runOnUiThread(() -> mAsrResultTv.setText(key + " : " + value));
             this.runOnUiThread(() -> mRecognizedResultTv.setText(resultStr));
         }
     }

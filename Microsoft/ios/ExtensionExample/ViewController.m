@@ -198,16 +198,18 @@
     } else if ([key isEqualToString:@"translation_recognized"]) {
         NSData *data = [value dataUsingEncoding:NSUTF8StringEncoding];
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        result = [result stringByAppendingString:@"translation: \n"];
-        result = [result stringByAppendingString:@"en: "];
-        result = [result stringByAppendingString:json[@"translation"][@"en"]];
-        result = [result stringByAppendingString:@"\n"];
-        result = [result stringByAppendingString:@"ja: "];
-        result = [result stringByAppendingString:json[@"translation"][@"ja"]];
-        result = [result stringByAppendingString:@"\n"];
-        result = [result stringByAppendingString:@"zh-Hant: "];
-        result = [result stringByAppendingString:json[@"translation"][@"zh-Hant"]];
-        result = [result stringByAppendingString:@"\n"];
+        result = [result stringByAppendingString:@"Recognized Translation Text: \n"];
+        if (![json[@"text"] isEqualToString:@""]) {
+            result = [result stringByAppendingString:@"en: "];
+            result = [result stringByAppendingString:json[@"translation"][@"en"]];
+            result = [result stringByAppendingString:@"\n"];
+            result = [result stringByAppendingString:@"ja: "];
+            result = [result stringByAppendingString:json[@"translation"][@"ja"]];
+            result = [result stringByAppendingString:@"\n"];
+            result = [result stringByAppendingString:@"zh-Hant: "];
+            result = [result stringByAppendingString:json[@"translation"][@"zh-Hant"]];
+            result = [result stringByAppendingString:@"\n"];
+        }
         [self.pre_result setString:result];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.resultTv setText:result];
