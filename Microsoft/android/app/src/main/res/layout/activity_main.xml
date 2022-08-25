@@ -10,34 +10,62 @@
         android:id="@+id/button_enable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/enable_extension"
+        android:text="Enable Extension"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@id/button_composers"
+        app:layout_constraintBottom_toTopOf="@id/button_stt"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button_composers"
+        android:id="@+id/button_stt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/set_composer"
+        android:text="Start STT"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/button_translate"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Translating"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <ScrollView
+    <TextView
+        android:id="@+id/recognizing_result"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/cardview_dark_background"
+        app:layout_constraintTop_toBottomOf="@+id/recognizing_result"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ScrollView
+        android:id="@+id/ScrollViewDown"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        >
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recognizing_result"
+        app:layout_constraintVertical_bias="0.0">
+
         <TextView
-            android:id="@+id/asr_result"
+            android:id="@+id/recognized_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scrollbars = "vertical"
-            />
+            android:scrollbars="vertical" />
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

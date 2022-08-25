@@ -32,7 +32,9 @@ public class MainActivity
 
     private Button button;
     private TextView mAsrResultTv;
+    private TextView mRecognizedResultTv;
     private Button buttonComposers;
+    private Button buttonTranslate;
     private final ObservableBoolean enableExtension =
             new ObservableBoolean(false);
 
@@ -61,9 +63,11 @@ public class MainActivity
                             if (enabled) {
                                 button.setText(R.string.disable_extension);
                                 buttonComposers.setEnabled(true);
+                                buttonTranslate.setEnabled(true);
                             } else {
                                 button.setText(R.string.enable_extension);
                                 buttonComposers.setEnabled(false);
+                                buttonTranslate.setEnabled(false);
                             }
                         }
                     }
@@ -71,13 +75,15 @@ public class MainActivity
     }
 
     private void initUI() {
-        mAsrResultTv = findViewById(R.id.asr_result);
+        mAsrResultTv = findViewById(R.id.recognizing_result);
+        mRecognizedResultTv = findViewById(R.id.recognized_result);
         button = findViewById(R.id.button_enable);
         button.setOnClickListener(
                 view -> enableExtension.set(!enableExtension.get()));
-        buttonComposers = findViewById(R.id.button_composers);
-
+        buttonComposers = findViewById(R.id.button_stt);
         buttonComposers.setOnClickListener(view -> choiceComposer());
+        buttonTranslate = findViewById(R.id.button_translate);
+        buttonTranslate.setOnClickListener(view -> translatorSwitch());
     }
 
     private void setExtensionProperty(String key, String property) {
@@ -90,11 +96,14 @@ public class MainActivity
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.put("subscription", Config.mSubscription);
                 jsonObject.put("region", Config.mRegion);
+
                 JSONArray jsonArray = new JSONArray();
                 // "en-US", "de-DE", "zh-CN"
                 jsonArray.put("en-US");
                 jsonArray.put("zh-CN");
-                jsonObject.put("auto_detect_source_languages", jsonArray);
+                jsonObject.put("source_languages", jsonArray);
+
+                jsonObject.put("enable_auto_detect", true);
                 setExtensionProperty("init_speech_recognition", jsonObject.toString());
             } catch (JSONException e) {
                 Log.e(TAG, e.toString());
@@ -106,7 +115,42 @@ public class MainActivity
         }
 
         isStartedAsr = !isStartedAsr;
-        buttonComposers.setText(isStartedAsr ? "Stop ASR" : "Start ASR");
+        buttonComposers.setText(isStartedAsr ? "Stop STT" : "Start STT");
+    }
+
+    private void translatorSwitch() {
+        if (!isStartedAsr) {
+            try {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("subscription", Config.mSubscription);
+                jsonObject.put("region", Config.mRegion);
+
+                JSONArray jsonArray = new JSONArray();
+                // "en-US", "de-DE", "zh-CN"
+                //jsonArray.put("en-US");
+                jsonArray.put("zh-CN");
+                jsonObject.put("source_languages", jsonArray);
+
+                JSONArray jsonArray_target = new JSONArray();
+                // "ja-JP"
+                jsonArray_target.put("ja-JP");
+                jsonArray_target.put("en-US");
+                jsonArray_target.put("zh-Hant");
+                jsonObject.put("target_languages", jsonArray_target);
+
+                jsonObject.put("enable_auto_detect", false);
+                setExtensionProperty("init_translate_recognition", jsonObject.toString());
+            } catch (JSONException e) {
+                Log.e(TAG, e.toString());
+            }
+
+            setExtensionProperty("start_continuous_translate_async", "{}");
+        } else {
+            setExtensionProperty("stop_continuous_translate_async", "{}");
+        }
+
+        isStartedAsr = !isStartedAsr;
+        buttonTranslate.setText(isStartedAsr ? "Stop Translating" : "Start Translating");
     }
 
     private void initPermission() {
@@ -165,7 +209,7 @@ public class MainActivity
         mRtcEngine.enableAudio();
         mRtcEngine.setChannelProfile(Constants.CHANNEL_PROFILE_LIVE_BROADCASTING);
         mRtcEngine.setClientRole(Constants.CLIENT_ROLE_BROADCASTER);
-        mRtcEngine.joinChannel("", "hideonbush", null, 0);
+        mRtcEngine.joinChannel("", "test_extension", null, 0);
     }
 
     private void enableExtension(boolean enabled) {
@@ -175,25 +219,53 @@ public class MainActivity
     @Override
     public void onEvent(String vendor, String extension, String key, String value) {
         Log.i(TAG, "onEvent vendor: " + vendor + "  extension: " + extension + "  key: " + key + "  value: " + value);
-        final StringBuilder sb = new StringBuilder(resultStr);
-
-        if ("recognizing_speech".equals(key) || "recognized_speech".equals(key)) {
+        if ("speech_recognizing".equals(key)) {
             try {
                 JSONObject asrJSONObject = new JSONObject(value);
-                String text = asrJSONObject.getString("text");
-                sb.append(text);
-                if ("recognized_speech".equals(key)) {
-                    resultStr += text;
-                }
+                String text = "Recognizing STT Text：" + asrJSONObject.getString("text")+ "\n";
+                this.runOnUiThread(() -> mAsrResultTv.setText(text));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        } else if("speech_recognized".equals(key)) {
+            try {
+                JSONObject asrJSONObject = new JSONObject(value);
+                String text = "STT Text：" + asrJSONObject.getString("text")+ "\n";
+                resultStr += text;
+                this.runOnUiThread(() -> mRecognizedResultTv.setText(resultStr));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        } else if("translation_recognizing".equals(key)) {
+            try {
+                JSONObject asrJSONObject = new JSONObject(value);
+                String text = "Recognizing Translation Origin Text：" + asrJSONObject.getString("text") + "\n";
+                this.runOnUiThread(() -> mAsrResultTv.setText(text));
+                return;
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        } else if ("translation_recognized".equals(key)) {
+            try {
+                JSONObject asrJSONObject = new JSONObject(value);
+                String text = "Recognizing Translation Text：" + asrJSONObject.getString("translation") + "\n";
+                resultStr += text;
+                this.runOnUiThread(() -> mRecognizedResultTv.setText(resultStr));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        } else if ("translation_speech_start_detected".equals(key) || "translation_speech_end_detected".equals(key) || "speech_start_detected".equals(key) || "speech_end_detected".equals(key) ) {
+            try {
+                JSONObject asrJSONObject = new JSONObject(value);
+                resultStr += key + "\n";
+                this.runOnUiThread(() -> mRecognizedResultTv.setText(resultStr));
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         } else {
-            sb.append(value);
-            resultStr += value;
+            resultStr += key + " : " + value + "\n";
+            this.runOnUiThread(() -> mRecognizedResultTv.setText(resultStr));
         }
-
-        this.runOnUiThread(() -> mAsrResultTv.setText(sb.toString()));
     }
 
     @Override
