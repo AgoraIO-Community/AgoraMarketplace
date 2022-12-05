@@ -219,7 +219,7 @@
                                    @"data": [[NSBundle mainBundle]
                                        pathForResource:@"ai_face_processor"
                                                 ofType:@"bundle"],
-                                   @"type": @(1 << 10)
+                                   @"type": @(1 << 8)
                                  }]];
     
     [self.agoraKit
@@ -239,9 +239,9 @@
                                    key:@"fuLoadAIModelFromPackage"
                                  value:[self toJson:@{
                                    @"data": [[NSBundle mainBundle]
-                                       pathForResource:@"ai_human_processor_pc"
+                                       pathForResource:@"ai_human_processor_gpu"
                                                 ofType:@"bundle"],
-                                   @"type": @(1 << 19)
+                                   @"type": @(1 << 9)
                                  }]];
     
     [self.agoraKit
@@ -263,7 +263,7 @@
                                        pathForResource:@"aitype"
                                                 ofType:@"bundle"],
                                    @"name": @"aitype",
-                                   @"value": @(1 << 10 | 1 << 21 | 1 << 3),
+                                   @"value": @(1 << 8 | 1 << 30 | 1 << 3),
                                  }]];
 }
 
@@ -357,11 +357,14 @@
 }
 
 - (void)onExtensionStarted:(NSString *)provider extension:(NSString *)extension {
-    [self initExtension];
-    [self loadAIModels];
-    AgoraRtcVideoCanvas *canvas = [AgoraRtcVideoCanvas new];
-    canvas.view = self.localVideoView;
-    [self.agoraKit setupLocalVideo:canvas];
+    NSLog(@"onExtensionStarted: %@ extension: %@ ", provider, extension);
+    if ([provider isEqualToString:@"FaceUnity"]) {
+        [self initExtension];
+        [self loadAIModels];
+        AgoraRtcVideoCanvas *canvas = [AgoraRtcVideoCanvas new];
+        canvas.view = self.localVideoView;
+        [self.agoraKit setupLocalVideo:canvas];
+    }
 }
 
 
