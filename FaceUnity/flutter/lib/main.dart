@@ -112,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     // On Android, you should load libAgoraFaceUnityExtension.so explicitly
     if (Platform.isAndroid) {
-      DynamicLibrary.open('libAgoraFaceUnityExtension.so');
+      await _rtcEngine.loadExtensionProvider(path: 'AgoraFaceUnityExtension');
     }
     await _rtcEngine.enableExtension(
         provider: "FaceUnity", extension: "Effect", enable: true);
