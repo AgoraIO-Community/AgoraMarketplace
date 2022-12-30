@@ -255,7 +255,7 @@ public class MainActivity
 
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", modelDir.getAbsolutePath());
-            jsonObject.put("type", 1 << 10);
+            jsonObject.put("type", 1 << 8);
 
             setExtensionProperty("fuLoadAIModelFromPackage", jsonObject.toString());
         } catch (JSONException e) {
@@ -278,11 +278,11 @@ public class MainActivity
         try {
             // Load AI model
             File modelDir = new File(getExternalFilesDir("assets"),
-                    "Resource/model/ai_human_processor_pc.bundle");
+                    "Resource/model/ai_human_processor_gpu.bundle");
 
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", modelDir.getAbsolutePath());
-            jsonObject.put("type", 1 << 19);
+            jsonObject.put("type", 1 << 9);
             setExtensionProperty("fuLoadAIModelFromPackage", jsonObject.toString());
         } catch (JSONException e) {
             Log.e(TAG, e.toString());
@@ -302,7 +302,7 @@ public class MainActivity
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.put("obj_handle", modelDir);
                 jsonObject.put("name", "aitype");
-                jsonObject.put("value", 1 << 10 | 1 << 21 | 1 << 3);
+                jsonObject.put("value", 1 << 8 | 1 << 30 | 1 << 3);
                 setExtensionProperty("fuItemSetParam", jsonObject.toString());
             }
         } catch (JSONException e) {
