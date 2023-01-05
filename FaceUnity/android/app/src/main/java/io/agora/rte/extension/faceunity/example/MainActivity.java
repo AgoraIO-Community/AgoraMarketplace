@@ -1,5 +1,8 @@
 package io.agora.rte.extension.faceunity.example;
 
+import static io.agora.rtc2.Constants.LOCAL_VIDEO_STREAM_STATE_FAILED;
+import static io.agora.rtc2.Constants.VIDEO_SOURCE_CAMERA_PRIMARY;
+
 import android.Manifest;
 import android.app.ProgressDialog;
 import android.os.Build;
@@ -59,6 +62,8 @@ public class MainActivity
     private int hands = 0;
     private int people = 0;
 
+    private boolean needReload = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +72,16 @@ public class MainActivity
         initUI();
         initData();
         initPermission();
+
+//        if(needReload) {
+//            runOnUiThread(() -> {
+//                loadAIModels();
+//                enableExtension(enableExtension.get());
+//                needReload = false;
+//            });
+//        }
+
+//        needReload = false;
     }
 
     private void initData() {
@@ -255,7 +270,7 @@ public class MainActivity
 
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", modelDir.getAbsolutePath());
-            jsonObject.put("type", 1 << 10);
+            jsonObject.put("type", 1 << 8);
 
             setExtensionProperty("fuLoadAIModelFromPackage", jsonObject.toString());
         } catch (JSONException e) {
@@ -278,11 +293,11 @@ public class MainActivity
         try {
             // Load AI model
             File modelDir = new File(getExternalFilesDir("assets"),
-                    "Resource/model/ai_human_processor_pc.bundle");
+                    "Resource/model/ai_human_processor_gpu.bundle");
 
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", modelDir.getAbsolutePath());
-            jsonObject.put("type", 1 << 19);
+            jsonObject.put("type", 1 << 9);
             setExtensionProperty("fuLoadAIModelFromPackage", jsonObject.toString());
         } catch (JSONException e) {
             Log.e(TAG, e.toString());
@@ -302,7 +317,7 @@ public class MainActivity
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.put("obj_handle", modelDir);
                 jsonObject.put("name", "aitype");
-                jsonObject.put("value", 1 << 10 | 1 << 21 | 1 << 3);
+                jsonObject.put("value", 1 << 8 | 1 << 30 | 1 << 3);
                 setExtensionProperty("fuItemSetParam", jsonObject.toString());
             }
         } catch (JSONException e) {
@@ -453,6 +468,26 @@ public class MainActivity
             public void onJoinChannelSuccess(String channel, int uid, int elapsed) {
                 Log.i(TAG, String.format("onJoinChannelSuccess %s %d %d", channel, uid, elapsed));
             }
+
+            @Override
+            public void onLocalVideoStateChanged(Constants.VideoSourceType source, int state, int error) {
+                super.onLocalVideoStateChanged(source, state, error);
+                Log.i(TAG, String.format("onLocalVideoStateChanged %s %d %d", source.toString(), state, error));
+
+                if(source.getValue() == VIDEO_SOURCE_CAMERA_PRIMARY && state == 3 && error == 4) {
+                    needReload = true;
+                }
+
+                if(source.getValue() == VIDEO_SOURCE_CAMERA_PRIMARY && state == 1 && error == 0) {
+                    if(needReload) {
+                        runOnUiThread(() -> {
+                            loadAIModels();
+                            enableExtension(enableExtension.get());
+                            needReload = false;
+                        });
+                    }
+                }
+            }
         };
         try {
             mRtcEngine = RtcEngine.create(config);
@@ -467,6 +502,16 @@ public class MainActivity
         mRtcEngine.setChannelProfile(Constants.CHANNEL_PROFILE_LIVE_BROADCASTING);
         mRtcEngine.setClientRole(Constants.CLIENT_ROLE_BROADCASTER);
         mRtcEngine.startPreview();
+
+        initExtension();
+        loadAIModels();
+        runOnUiThread(() -> {
+            btnSticker.setEnabled(true);
+            btnComposers.setEnabled(true);
+            enableAITracking.setEnabled(true);
+            VideoCanvas canvas = new VideoCanvas(findViewById(R.id.surfaceView));
+            mRtcEngine.setupLocalVideo(canvas);
+        });
     }
 
     private void enableExtension(boolean enabled) {
@@ -496,15 +541,7 @@ public class MainActivity
 
     @Override
     public void onStarted(String s, String s1) {
-        initExtension();
-        loadAIModels();
-        runOnUiThread(() -> {
-            btnSticker.setEnabled(true);
-            btnComposers.setEnabled(true);
-            enableAITracking.setEnabled(true);
-            VideoCanvas canvas = new VideoCanvas(findViewById(R.id.surfaceView));
-            mRtcEngine.setupLocalVideo(canvas);
-        });
+
     }
 
     @Override
@@ -516,4 +553,13 @@ public class MainActivity
     public void onError(String s, String s1, int i, String s2) {
 
     }
+
+    @Override
+    public void onBackPressed() {
+       //disable
+    }
 }
+
+
+
+
