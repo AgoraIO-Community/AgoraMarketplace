@@ -18,6 +18,7 @@ import org.json.JSONObject;
 
 import java.util.Arrays;
 import io.agora.rtc2.Constants;
+import io.agora.rtc2.ExtensionInfo;
 import io.agora.rtc2.IMediaExtensionObserver;
 import io.agora.rtc2.IRtcEngineEventHandler;
 import io.agora.rtc2.RtcEngine;
@@ -41,6 +42,9 @@ public class MainActivity
     private String resultStr = "";
 
     private boolean isStartedAsr = false;
+
+    private int id = 0;
+    private int remoteId = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +91,12 @@ public class MainActivity
     }
 
     private void setExtensionProperty(String key, String property) {
-        mRtcEngine.setExtensionProperty("Microsoft", "Speech_Recognition", key, property);
+        ExtensionInfo extensionInfo = new ExtensionInfo();
+        extensionInfo.remoteUid = remoteId;
+        extensionInfo.channelId = "test_extension";
+        extensionInfo.localUid = id;
+        mRtcEngine.setExtensionProperty("Microsoft", "Speech_Recognition", extensionInfo, key, property);
+        //mRtcEngine.setExtensionProperty("Microsoft", "Speech_Recognition", key, property);
     }
 
     private void choiceComposer() {
@@ -194,7 +203,13 @@ public class MainActivity
 
             @Override
             public void onJoinChannelSuccess(String channel, int uid, int elapsed) {
+                id = uid;
                 Log.i(TAG, String.format("onJoinChannelSuccess %s %d %d", channel, uid, elapsed));
+            }
+
+            @Override
+            public void onUserJoined(int uid, int elapsed) {
+                remoteId = uid;
             }
         };
         try {
@@ -208,7 +223,8 @@ public class MainActivity
         enableExtension.set(true);
         mRtcEngine.enableAudio();
         mRtcEngine.setChannelProfile(Constants.CHANNEL_PROFILE_LIVE_BROADCASTING);
-        mRtcEngine.setClientRole(Constants.CLIENT_ROLE_BROADCASTER);
+        mRtcEngine.setClientRole(Constants.CLIENT_ROLE_AUDIENCE);
+        //mRtcEngine.setClientRole(Constants.CLIENT_ROLE_BROADCASTER);
         mRtcEngine.joinChannel("", "test_extension", null, 0);
     }
 
