@@ -2,8 +2,7 @@
 .cxx/
 local.properties
 .plugin_dev.properties
-app/libs/*
-app/src/main/assets/
+app/libs/android-release.aar
 app/src/main/jniLibs/
 build/
 app/src/main/java/io/agora/rte/extension/faceunity/example/authpack.java
