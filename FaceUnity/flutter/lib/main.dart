@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:ffi';
 import 'dart:io';
 
 import 'package:agora_rtc_engine/agora_rtc_engine.dart';
@@ -12,6 +11,9 @@ import 'package:path/path.dart' as path;
 import 'package:permission_handler/permission_handler.dart';
 
 const rtcAppId = '<YOUR_APP_ID>';
+
+// REMINDER: Update this value for ai_face_processor.bundle if the FaceUnity sdk be updated.
+const aiFaceProcessorType = 1 << 8;
 
 void main() {
   runApp(const MyApp());
@@ -138,7 +140,8 @@ class _MyHomePageState extends State<MyHomePage> {
         provider: 'FaceUnity',
         extension: 'Effect',
         key: 'fuLoadAIModelFromPackage',
-        value: jsonEncode({'data': aiFaceProcessorPath, 'type': 1 << 10}));
+        value: jsonEncode(
+            {'data': aiFaceProcessorPath, 'type': aiFaceProcessorType}));
 
     final catSparksPath =
         await _copyAsset('Resource/items/ItemSticker/CatSparks.bundle');
