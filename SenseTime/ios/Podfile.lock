@@ -1,9 +1,33 @@
 PODS:
-  - AgoraRtcEngine_iOS (4.0.0-rc.1)
+  - AgoraRtcEngine_iOS (4.1.1):
+    - AgoraRtcEngine_iOS/AIAEC (= 4.1.1)
+    - AgoraRtcEngine_iOS/AINS (= 4.1.1)
+    - AgoraRtcEngine_iOS/AudioBeauty (= 4.1.1)
+    - AgoraRtcEngine_iOS/ClearVision (= 4.1.1)
+    - AgoraRtcEngine_iOS/ContentInspect (= 4.1.1)
+    - AgoraRtcEngine_iOS/DRM (= 4.1.1)
+    - AgoraRtcEngine_iOS/FaceDetection (= 4.1.1)
+    - AgoraRtcEngine_iOS/ReplayKit (= 4.1.1)
+    - AgoraRtcEngine_iOS/RtcBasic (= 4.1.1)
+    - AgoraRtcEngine_iOS/SpatialAudio (= 4.1.1)
+    - AgoraRtcEngine_iOS/VirtualBackground (= 4.1.1)
+    - AgoraRtcEngine_iOS/VQA (= 4.1.1)
+  - AgoraRtcEngine_iOS/AIAEC (4.1.1)
+  - AgoraRtcEngine_iOS/AINS (4.1.1)
+  - AgoraRtcEngine_iOS/AudioBeauty (4.1.1)
+  - AgoraRtcEngine_iOS/ClearVision (4.1.1)
+  - AgoraRtcEngine_iOS/ContentInspect (4.1.1)
+  - AgoraRtcEngine_iOS/DRM (4.1.1)
+  - AgoraRtcEngine_iOS/FaceDetection (4.1.1)
+  - AgoraRtcEngine_iOS/ReplayKit (4.1.1)
+  - AgoraRtcEngine_iOS/RtcBasic (4.1.1)
+  - AgoraRtcEngine_iOS/SpatialAudio (4.1.1)
+  - AgoraRtcEngine_iOS/VirtualBackground (4.1.1)
+  - AgoraRtcEngine_iOS/VQA (4.1.1)
   - Extensions (0.1.0)
 
 DEPENDENCIES:
-  - AgoraRtcEngine_iOS (= 4.0.0-rc.1)
+  - AgoraRtcEngine_iOS (= 4.1.1)
   - Extensions (from `ExtensionExample`)
 
 SPEC REPOS:
@@ -15,9 +39,9 @@ EXTERNAL SOURCES:
     :path: ExtensionExample
 
 SPEC CHECKSUMS:
-  AgoraRtcEngine_iOS: b03946a1b4e9df5a2ead9561ad82b12dd925cac8
+  AgoraRtcEngine_iOS: df216a18a01c30fba926565d889c9542319252ac
   Extensions: 00ee73c6fa9841505b8e1d934ce93f1bd4bfc784
 
-PODFILE CHECKSUM: 96c78d2f5a320f6f624f76e3f6015fb5c35cdbaf
+PODFILE CHECKSUM: b7b2b5a4b62a240bc605fa95fcf5423129936f14
 
 COCOAPODS: 1.11.3
