@@ -453,6 +453,7 @@ public class MainActivity
         config.mContext = getApplicationContext();
         config.mAppId = Config.mAppId;
         config.mExtensionObserver = this;
+        config.addExtension("AgoraFaceUnityExtension");
         config.mEventHandler = new IRtcEngineEventHandler() {
             @Override
             public void onWarning(int warn) {
@@ -515,7 +516,6 @@ public class MainActivity
     }
 
     private void enableExtension(boolean enabled) {
-        ExtensionManager.getInstance(mRtcEngine).initialize();
         mRtcEngine.enableExtension("FaceUnity", "Effect", enabled);
     }
 
