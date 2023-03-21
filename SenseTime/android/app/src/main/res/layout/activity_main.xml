@@ -15,6 +15,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/text_face_detect_result"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:text="@string/face_num"
+        android:gravity="left"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </TextView>
+
     <Button
         android:id="@+id/button_enable"
         android:layout_width="wrap_content"
@@ -48,6 +60,16 @@
         android:layout_height="wrap_content"
         android:text="@string/set_sticker"
         android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/button_face_num_result"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button_face_num_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/face_num_result_btn"
+        android:textAllCaps="false"
+        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
