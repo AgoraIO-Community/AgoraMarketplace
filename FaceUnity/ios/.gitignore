@@ -1,6 +1,4 @@
-Resource/*
 *.a
-*.framework/
 *.xcframework/
 *.dSYM/
 *.ipa
