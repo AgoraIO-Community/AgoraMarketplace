@@ -1,4 +1,4 @@
-# 商汤美颜插件
+# 商汤美颜插件快速开始
 
 > 本文档主要介绍如何快速跑通 <mark>商汤美颜插件</mark> iOS 示例工程
 >
@@ -36,7 +36,7 @@
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-iOS-5.png)
 
-##### 2.3 在项目的  [**AppID.m**](ExtensionExample/AppID.m) 里填写需要的声网 App ID 、token 、商汤证书文件名, 注意⚠️:
+##### 2.3 在项目的 [**AppID.m**](ExtensionExample/AppID.m) 里填写需要的声网 App ID 、token 、商汤证书文件名, 注意⚠️:
 
 * 若 appid 未开通 token 可不填写 mToken
 * **license_name** 需要和本地商汤证书文件名一致

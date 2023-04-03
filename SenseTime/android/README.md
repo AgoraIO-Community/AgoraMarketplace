@@ -1,6 +1,6 @@
 # SenseTime Beauty Extension Get Started
 
-> How to Quickly Set Up SenseTime Beauty Plugin iOS Sample Project
+> How to Quickly Set Up SenseTime Beauty Extension iOS Sample Project
 >
 > Other Language: [**简体中文**](README.zh.md)
 
@@ -61,9 +61,9 @@ mLisenseName: SenseTime certificate
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-Android-3.png)
 
-##### 2.5 Download the plugin android-release.aar file and copy it to the [**app/libs/**](app/libs/) directory of the project.
+##### 2.5 Download the extension android-release.aar file and copy it to the [**app/libs/**](app/libs/) directory of the project.
 
-* [点击此处下载demo需要的插件aar](https://download.agora.io/marketplace/release/Agora_Marketplace_SenseTime_v8.9.3_Extension_for_Android_v4.1.1-2.zip)
+* [Click here to download the extension aar required for the demo](https://download.agora.io/marketplace/release/Agora_Marketplace_SenseTime_v8.9.3_Extension_for_Android_v4.1.1-2.zip)
 
 <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-Android-4.png" alt="xxx" style="zoom:50%;" />
 
@@ -77,7 +77,7 @@ mLisenseName: SenseTime certificate
 
 ### 3.1 Overview
 
-> This project shows how to quickly integrate Agora Marketplace SenseTime beauty plugin through simple API calls.
+> This project shows how to quickly integrate Agora Marketplace SenseTime beauty extension through simple API calls.
 
 ### 3.2 Project File Structure
 
@@ -91,7 +91,7 @@ mLisenseName: SenseTime certificate
 │   │       │   ├── io/agora/rte/extension/sensetime/example //Contains all the configuration needed to be filled.
 │   │       │   └── ...
 │   │       └── res //Contains all resource files.
-│   │           └── libs //Contains the plugin aar.
+│   │           └── libs //Contains the extension aar.
 │   └── build.gradle //Gradle build script
 ├── gradle //Gradle file directory.
 ├── .gitignore //Git ignore file.
@@ -126,7 +126,7 @@ mLisenseName: SenseTime certificate
 
 > Refer to documentation: https://docs.agora.io/cn/extension_customer/api_sensetime
 
-### Want to Learn about Other Agora Marketplace Plugins?
+### Want to Learn about Other Agora Marketplace Extensions?
 
 > Agora Marketplace Homepage: https://www.shengwang.cn/cn/marketplace/
 
