@@ -59,6 +59,8 @@ public class MainActivity
 
     private int preSelectedBeauty = -1;
 
+    private Handler mainHandler = new Handler(Looper.getMainLooper());
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -410,7 +412,7 @@ public class MainActivity
     public void onEvent(String s, String s1, String s2, String s3) {
         try {
             JSONObject faceResultOjb = new JSONObject(s3);
-            faceResult.setText("face num: " + faceResultOjb.optString("face_count"));
+            mainHandler.post(() -> faceResult.setText("face num: " + faceResultOjb.optString("face_count")));
         } catch (JSONException e) {
             e.printStackTrace();
         }
