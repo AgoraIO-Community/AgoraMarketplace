@@ -57,7 +57,9 @@ mLisenseName: 声网Certificate
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-Android-3.png)
 
-##### 2.5 下载插件 .aar 文件, 并拷贝到项目   [**app/libs/**](app/libs/) 目录下
+##### 2.5 下载插件 android-release.aar 文件, 并拷贝到项目  [**app/libs/**](app/libs/) 目录下
+
+* [点击此处下载demo需要的插件aar](https://download.agora.io/marketplace/release/Agora_Marketplace_SenseTime_v8.9.3_Extension_for_Android_v4.1.1-2.zip)
 
 <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-Android-4.png" alt="xxx" style="zoom:50%;" />
 
@@ -69,17 +71,37 @@ mLisenseName: 声网Certificate
 
 ### 3.1 概述
 
-> 
+> 该项目展示了如何通过简单的 API 调用快速集成声网云市场商汤美颜插件
 
 ### 3.2 项目文件结构简介
 
 ```
-
+├── app
+│   ├── src
+│   │   ├── androidTest //包含针对 Android 设备的测试代码
+│   │   └── main
+│   │       ├── assets //包含美颜需要的所有资源文件
+│   │       ├── java //包含主要的 Java 代码
+│   │       │   ├── io/agora/rte/extension/sensetime/example
+│   │       │   │   ├── Constants //包含所有需要填写的配置
+│   │       │   │   └── ......
+│   │       │   └── androidManifest.xml //应用程序清单文件
+│   │       └── res //包含所有的资源文件
+│   │   
+│   └── libs //放置插件 aar
+│   └── build.gradle //Gradle 构建脚本
+├── gradle //Gradle 的文件目录
+├── .gitignore //Git 忽略文件
+├── build.gradle //项目构建脚本
+├── gradlew //Unix 系统的 Gradle Wrapper
+├── gradlew.bat //Windows 系统的 Gradle Wrapper
+├── settings.gradle //Gradle 的设置文件
+└── local.properties //本地 Android SDK 目录的配置文件
 ```
 
 ### 3.3 Demo效果
 
-> 
+> // TODO
 >
 > ---
 >
@@ -95,11 +117,11 @@ mLisenseName: 声网Certificate
 
 ### 程序运行后，没有美颜效果
 
-> 
+> 文档参考: https://docs.agora.io/cn/extension_customer/api_sensetime
 
 ### 想了解声网的其他云市场插件
 
-> 
+> 声网云市场官网入口: https://www.shengwang.cn/cn/marketplace/
 
 ### 集成遇到困难，该如何联系声网获取协助
 
