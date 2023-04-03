@@ -1,138 +1,139 @@
-# 商汤美颜插件
+# SenseTime Beauty Extension Get Started
 
-> 本文档主要介绍如何快速跑通 <mark>商汤美颜插件</mark> Android 示例工程
-
----
-
-## 1. 环境准备
-
-- <mark>最低兼容 Android 5.0</mark>（SDK API Level 21）
-- Android Studio 4.1及以上版本。
-- Android 5.0 及以上的真机设备。
+> How to Quickly Set Up SenseTime Beauty Plugin iOS Sample Project
+>
+> Other Language: [**简体中文**](README.zh.md)
 
 ---
 
-## 2. 运行示例
+## 1. Environment Preparation
 
-##### 2.1 获取声网 App ID -------- [声网Agora - 文档中心 - 如何获取 App ID](https://docs.agora.io/cn/Agora%20Platform/get_appid_token?platform=All%20Platforms#%E8%8E%B7%E5%8F%96-app-id)
+- Minimum compatibility with Android 5.0 (SDK API Level 21)
+- Android Studio 4.1 or above
+- Real Android devices of 5.0 or above
 
-> - 点击创建应用
+---
+
+## 2. Running Examples
+
+##### 2.1 Obtain Agora App ID -------- [Obtain Agora App ID](https://docs.agora.io/cn/Agora%20Platform/get_appid_token?platform=All%20Platforms#%E8%8E%B7%E5%8F%96-app-id)
+
+> - Click "Create Application"
 >
 >   ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/create_app_1.jpg)
 >
-> - 选择你要创建的应用类型
+> - Choose the application type to create
 >
 >   ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/create_app_2.jpg)
 >
-> - 得到 App ID 与 App 证书
+> - Obtain App ID and App certificate
 >
 >   ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/get_app_id.jpg)
 
-##### 2.2 进入 [声网控制台 > 云市场 > 商汤高级美颜/特效系列](https://console.agora.io/marketplace/license/introduce?serviceName=sensetime-ar) 页面，点击**联系我们**获取专属的证书文件
+##### 2.2 Enter [SenseTime Beauty](https://console.agora.io/marketplace/license/introduce?serviceName=sensetime-ar) and click "Contact Us" to obtain an exclusive certificate file
 
 ![xxx](https://web-cdn.agora.io/docs-files/1677137763250)
 
-- 申请时请提供绑定 License 的包名, 并将项目 [**build.gradle**](app/build.gradle) 文件中的applicaitionId 改为您自己 License 绑定的包名
+- Provide the package name bound to the license during the application and change "applicationId" in the "build.gradle" file of the project to your own bound package name.
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-Android-5.png)
 
-##### 2.3 在项目的 [**Constants.java**](app/src/main/java/io/agora/rte/extension/sensetime/example/Constants.java) 里填写需要的声网 App ID 、token 、商汤证书文件名, 注意⚠️:
+##### 2.3 Fill in the required Agora App ID, token, and SenseTime certificate file name in [**Constants.java**](app/src/main/java/io/agora/rte/extension/sensetime/example/Constants.java) of the project. Note⚠️:
 
-* 若 appid 未开通 token 可不填写 mToken
-* **mLicenseName** 需要和本地商汤证书文件名一致
+* If token is not activated for appid, mToken can be left blank.
+* "mLicenseName" needs to be consistent with the local SenseTime certificate file name.
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-Android-1.png)
 
 ```texag-0-1gpap96h0ag-1-1gpap96h0ag-0-1gpap96h0ag-1-1gpap96h0ag-0-1gpap96h0ag-1-1gpap96h0ag-0-1gpap96h0ag-1-1gpap96h0ag-0-1gpap96h0ag-1-1gpap96h0
-mAppid: 声网appid
-mToken: 声网appid对应的token, 若appid未开通token可不填写
-mLisenseName: 商汤证书
+mAppid: Agora App ID
+mToken: Token corresponding to Agora App ID. If token is not activated for appid, it can be left blank. 
+mLisenseName: SenseTime certificate
 ```
 
-##### 2.4 将商汤美颜需要的资源文件和申请的商汤美颜 License 拷贝到项目的 [**app/src/main/assets/**](app/src/main/assets/) 目录下
+##### 2.4 Copy SenseTime beauty required resource files and the applied SenseTime beauty license to [**app/src/main/assets/**](app/src/main/assets/) directory of the project.
 
-* [点击此处下载demo需要的资源文件包](https://download.agora.io/marketplace/release/SenseTime_v8.9.3_Resources.zip)
+* [Download the resource file package needed by the demo by clicking here.](https://download.agora.io/marketplace/release/SenseTime_v8.9.3_Resources.zip)
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-Android-2.png)
 
-* 商汤美颜 License 文件拷贝到项目 [**app/src/main/assets/Resource/license/**](app/src/main/assets/Resource/license/) 目录下, 请确保本地 Lisence文件名与 [**Constants.java**](app/src/main/java/io/agora/rte/extension/sensetime/example/Constants.java) 内填写的一致
+* The SenseTime beauty license file is copied to the [**app/src/main/assets/Resource/license/**](app/src/main/assets/Resource/license/) directory of the project, ensuring that the local file name is consistent with the one filled in [**Constants.java**](app/src/main/java/io/agora/rte/extension/sensetime/example/Constants.java)
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-Android-3.png)
 
-##### 2.5 下载插件 android-release.aar 文件, 并拷贝到项目 [**app/libs/**](app/libs/) 目录下
+##### 2.5 Download the plugin android-release.aar file and copy it to the [**app/libs/**](app/libs/) directory of the project.
 
 * [点击此处下载demo需要的插件aar](https://download.agora.io/marketplace/release/Agora_Marketplace_SenseTime_v8.9.3_Extension_for_Android_v4.1.1-2.zip)
 
 <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-Android-4.png" alt="xxx" style="zoom:50%;" />
 
-##### 2.6 用 Android Studio 打开项目、将项目与 Gradle 文件同步, 连接一台 Android 真机（非模拟器），运行项目
+##### 2.6 Open the project with Android Studio, synchronize the project with Gradle files, connect to an Android device (not emulator), and run the project.
+
+
 
 ---
 
-## 3. 项目介绍
+## 3. Project Introduction
 
-### 3.1 概述
+### 3.1 Overview
 
-> 该项目展示了如何通过简单的 API 调用快速集成声网云市场商汤美颜插件
+> This project shows how to quickly integrate Agora Marketplace SenseTime beauty plugin through simple API calls.
 
-### 3.2 项目文件结构简介
+### 3.2 Project File Structure
 
 ```
 ├── app
 │   ├── src
-│   │   ├── androidTest //包含针对 Android 设备的测试代码
+│   │   ├── androidTest //Contains testing code for Android devices.
 │   │   └── main
-│   │       ├── assets //包含美颜需要的所有资源文件
-│   │       ├── java //包含主要的 Java 代码
-│   │       │   ├── io/agora/rte/extension/sensetime/example
-│   │       │   │   ├── Constants //包含所有需要填写的配置
-│   │       │   │   └── ......
-│   │       │   └── androidManifest.xml //应用程序清单文件
-│   │       └── res //包含所有的资源文件
-│   │   
-│   └── libs //放置插件 aar
-│   └── build.gradle //Gradle 构建脚本
-├── gradle //Gradle 的文件目录
-├── .gitignore //Git 忽略文件
-├── build.gradle //项目构建脚本
-├── gradlew //Unix 系统的 Gradle Wrapper
-├── gradlew.bat //Windows 系统的 Gradle Wrapper
-├── settings.gradle //Gradle 的设置文件
-└── local.properties //本地 Android SDK 目录的配置文件
+│   │       ├── assets //Contains all resource files required for beauty.
+│   │       ├── java //Contains the main Java code.
+│   │       │   ├── io/agora/rte/extension/sensetime/example //Contains all the configuration needed to be filled.
+│   │       │   └── ...
+│   │       └── res //Contains all resource files.
+│   │           └── libs //Contains the plugin aar.
+│   └── build.gradle //Gradle build script
+├── gradle //Gradle file directory.
+├── .gitignore //Git ignore file.
+├── build.gradle //Project build script.
+├── gradlew //Gradle Wrapper for Unix systems.
+├── gradlew.bat //Gradle Wrapper for Windows systems.
+├── settings.gradle //Settings for Gradle.
+└── local.properties //Configuration file for local Android SDK directory.
 ```
 
-### 3.3 Demo效果
+### 3.3 Demo Effect
 
 > // TODO
 >
 > ---
 >
-> * enableExtension: 开启/关闭插件
-> * initExtension: 初始化插件/鉴权
-> * setBeautyMode: 设置美颜模式
-> * setBeauty: 设置美颜效果
-> * enableFaceDetect: 开启人脸检测结果显示
+> * enableExtension: Enable/Disable Extension
+> * initExtension: Initialize Extension/Authenticate
+> * setBeautyMode: Set Beauty Mode
+> * setBeauty: Set Beauty Effect
+> * enableFaceDetect: Enable Face Detection Display Results
 
 ---
 
 ## 4. FAQ
 
-### 如何获取声网 APPID
+### How to Obtain Agora App ID?
 
-> 声网 APPID 申请：[https://www.agora.io/cn/](https://www.agora.io/cn/)
+> Obtain Agora App ID at：[https://www.agora.io/cn/](https://www.agora.io/cn/)
 
-### 程序运行后，没有美颜效果
+### No Beauty Effect Appeared After Program Running?
 
-> 文档参考: https://docs.agora.io/cn/extension_customer/api_sensetime
+> Refer to documentation: https://docs.agora.io/cn/extension_customer/api_sensetime
 
-### 想了解声网的其他云市场插件
+### Want to Learn about Other Agora Marketplace Plugins?
 
-> 声网云市场官网入口: https://www.shengwang.cn/cn/marketplace/
+> Agora Marketplace Homepage: https://www.shengwang.cn/cn/marketplace/
 
-### 集成遇到困难，该如何联系声网获取协助
+### Encounter Problems During Integration, How to Contact Agora for Assistance?
 
-> 方案1：如果您已经在使用声网服务或者在对接中，可以直接联系对接的销售或服务；
+> Solution 1: If you are already using Agora service or in contact with Agora sales or service, you can contact them directly.
 >
-> 方案2：发送邮件给 [support@agora.io](mailto:support@agora.io) 咨询
+> 方案2：Solution 2: Email [support@agora.io](mailto:support@agora.io) for consultation.
 
 ---
