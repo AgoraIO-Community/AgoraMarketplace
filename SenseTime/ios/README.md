@@ -113,6 +113,6 @@ license_name: SenseTime certificate
 
 > Solution 1: If you are already using Agora service or in contact with Agora sales or service, you can contact them directly.
 >
-> 方案2：Solution 2: Email [support@agora.io](mailto:support@agora.io) for consultation.
+> Solution 2: Email [support@agora.io](mailto:support@agora.io) for consultation.
 
 ---
