@@ -121,8 +121,11 @@ mLisenseName: 商汤证书
 > 声网 APPID 申请：[https://www.agora.io/cn/](https://www.agora.io/cn/)
 
 ### 程序运行后，没有美颜效果
+> 通常有以下几个原因：
 
-> 文档参考: https://docs.agora.io/cn/extension_customer/api_sensetime
+> 1、插件动态库没有保存在正确位置，或者没有导入；
+> 2、相芯资源包中的文件没有保存在正确位置，或者缺少部分文件；
+> 3、证书文件与 app 包名不一致，导致鉴权失败。
 
 ### 想了解声网的其他云市场插件
 
