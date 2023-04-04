@@ -81,7 +81,7 @@ license_name: 商汤证书
 
 ### 3.2 Demo效果
 
-> <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-effect-1.jpg" alt="xxx" style="zoom:25%;" /><img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-effect-2.jpg" alt="xxx" style="zoom:25%;" />
+> ![image](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-effect-2.jpg =100x)
 >
 > ---
 >
