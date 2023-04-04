@@ -7,9 +7,9 @@
 
 ## 1. 环境准备
 
-- <mark>最低兼容 Android 5.0</mark>（SDK API Level 21）
-- Android Studio 4.1及以上版本。
-- Android 5.0 及以上的真机设备。
+- Minimum compatibility with Android 5.0 (SDK API Level 21) 
+- Android Studio 4.1 or higher.
+- Real devices running Android 5.0 or higher.
 
 ---
 
@@ -29,7 +29,7 @@
 >
 >   ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/get_app_id.jpg)
 
-##### 2.2 在声网控制台 [购买和激活](https://docs.agora.io/cn/extension_customer/get_extension?platform=All Platforms) 相芯美颜道具高级版插件，点击**联系我们**获取专属的证书文件
+##### 2.2 在声网控制台 [购买和激活](https://docs.agora.io/cn/extension_customer/get_extension?platform=All%20Platforms) 相芯美颜道具高级版插件，点击**联系我们**获取专属的证书文件
 
 - 申请时请提供绑定 License 的包名, 并将项目 [**build.gradle**](app/build.gradle) 文件中的applicaitionId 改为您自己 License 绑定的包名
 

@@ -30,7 +30,7 @@
 
 ![xxx](https://web-cdn.agora.io/docs-files/1677137763250)
 
-- 申请时请提供绑定 License 的包名, 并将项目 [**AppID.m**](ExtensionExample/AppID.m) 文件中的applicaitionId 改为您自己 License 绑定的包名
+- 申请时请提供绑定 License 的包名, 并将项目中的 bundle Id 改为您自己 License 绑定的包名
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-iOS-5.png)
 

@@ -28,7 +28,7 @@
 >
 >   ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/get_app_id.jpg)
 
-##### 2.2  在声网控制台 [**购买和激活**](https://docs.agora.io/cn/extension_customer/get_extension?platform=All Platforms) 相芯美颜道具高级版插件，点击联系我们获取专属的证书文件
+##### 2.2  在声网控制台 [**购买和激活**](https://docs.agora.io/cn/extension_customer/get_extension?platform=All%20Platforms) 相芯美颜道具高级版插件，点击联系我们获取专属的证书文件
 
 - 申请时请提供绑定 License 的包名, 并将项目 Bundle Id 改为您自己 License 绑定的包名
 
