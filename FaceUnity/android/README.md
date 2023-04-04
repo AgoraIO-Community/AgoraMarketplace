@@ -7,9 +7,9 @@
 
 ## 1. Environment Preparation
 
-- Xcode 9.0 or later version.
-- A real iOS device running on iOS 9.0 or later version, not a simulator.
-
+- Minimum compatibility with Android 5.0 (SDK API Level 21).
+- Android Studio 4.1 or higher.
+- Real devices running Android 5.0 or higher.
 ---
 
 ## 2. Running Examples
