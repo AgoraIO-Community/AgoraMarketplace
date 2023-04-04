@@ -2,7 +2,7 @@
 .cxx/
 local.properties
 .plugin_dev.properties
-app/libs/*
-app/src/main/assets/
+app/libs/android-release.aar
+app/src/main/assets/Resource
 app/src/main/jniLibs/
 build/
