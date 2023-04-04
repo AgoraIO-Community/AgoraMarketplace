@@ -7,9 +7,9 @@
 
 ## 1. 环境准备
 
-- Minimum compatibility with Android 5.0 (SDK API Level 21) 
-- Android Studio 4.1 or higher.
-- Real devices running Android 5.0 or higher.
+- <mark>最低兼容 Android 5.0</mark>（SDK API Level 21）
+- Android Studio 4.1及以上版本。
+- Android 5.0 及以上的真机设备。
 
 ---
 

@@ -3,6 +3,7 @@
 > How to Quickly Set Up FaceUnity Beauty Extension Android Sample Project
 >
 > Other Language: [**简体中文**](README.zh.md)
+
 ---
 
 ## 1. Environment Preparation
@@ -10,27 +11,20 @@
 - Minimum compatibility with Android 5.0 (SDK API Level 21).
 - Android Studio 4.1 or higher.
 - Real devices running Android 5.0 or higher.
+
 ---
 
 ## 2. Running Examples
 
-##### 2.1 Obtain Agora App ID -------- [Obtain Agora App ID](https://docs.agora.io/cn/Agora%20Platform/get_appid_token?platform=All%20Platforms#%E8%8E%B7%E5%8F%96-app-id)
+##### 2.1 Obtain Agora App ID -------- [Obtain Agora App ID](https://docs.agora.io/en/video-calling/reference/manage-agora-account?platform=ios#get-the-app-id)
 
-> - Click "Create Application"
->
->   ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/create_app_1.jpg)
->
-> - Choose the application type to create
->
->   ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/create_app_2.jpg)
->
 > - Obtain App ID and App certificate
 >
->   ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/get_app_id.jpg)
+>   ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/Market-Place-1.png)
 
-##### 2.2 Enter [FaceUnity Beauty](https://console.agora.io/marketplace/license/introduce?serviceName=faceunity-ar) and click "Contact Us" to obtain an exclusive certificate file
+##### 2.2 Enter [FaceUnity Beauty]() and click "Contact Us" to obtain an exclusive certificate file
 
-![xxx](https://web-cdn.agora.io/docs-files/1677137763250)
+![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-EN-1.png)
 
 - Provide the package name bound to the license during the application and change "applicationId" in the "build.gradle" file of the project to your own bound package name.
 
@@ -115,7 +109,7 @@ token: Token corresponding to Agora App ID. If token is not activated for appid,
 
 ### How to Obtain Agora App ID?
 
-> Obtain Agora App ID at：[https://www.agora.io/cn/](https://www.agora.io/cn/)
+> Obtain Agora App ID at：[Obtain Agora App ID](https://docs.agora.io/en/video-calling/reference/manage-agora-account?platform=ios#get-the-app-id)
 
 ### No Beauty Effect Appeared After Program Running?
 
@@ -125,7 +119,7 @@ token: Token corresponding to Agora App ID. If token is not activated for appid,
 
 ### Want to Learn about Other Agora Marketplace Extensions?
 
-> Agora Marketplace Homepage: https://www.shengwang.cn/cn/marketplace/
+> Agora Marketplace Homepage: https://docs.agora.io/en/extensions-marketplace/overview/product-overview
 
 ### Encounter Problems During Integration, How to Contact Agora for Assistance?
 
