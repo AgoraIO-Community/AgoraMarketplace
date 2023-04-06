@@ -39,23 +39,23 @@ appID: Agora App ID
 token: Token corresponding to Agora App ID. If token is not activated for appid, it can be left blank. 
 ```
 
-##### 2.4 Copy the necessary resource files and acquired FaceUnity Beauty License to the [**ExtensionExample/Resource/**](ExtensionExample/Resource) directory of the project.
+##### 2.4 Copy the necessary resource files to the [**/Resource**](/Resource) directory of the project.
 
 * [Click here to download the resource file package required for the demo](https://download.agora.io/marketplace/release/FaceUnity_v8.4.1_Resources.zip)
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-iOS-1.png)
 
-* Copy the FaceUnity Beauty License authpack.h file to the project's [**ExtensionExample/**](ExtensionExample/) directory.
+##### 2.5 Copy the FaceUnity Beauty License authpack.h file to the project's [**ExtensionExample/**](ExtensionExample/) directory.
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-iOS-3.png)
 
-##### 2.5 Download the .framework file of the extension and copy it to the [**ExtensionExample/**](ExtensionExample/) directory of the project.
+##### 2.6 Download the .framework file of the extension and copy it to the [**ExtensionExample/**](ExtensionExample/) directory of the project.
 
 * [Click here to download the extension framework required for the demo](https://download.agora.io/marketplace/release/Agora_Marketplace_FaceUnity_v8.4.1_Extension_for_iOS_v4.1.1.zip)
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-iOS-2.png)
 
-##### 2.6 In the terminal, enter the project root directory and run the following command to install dependencies using CocoaPods.
+##### 2.7 In the terminal, enter the project root directory and run the following command to install dependencies using CocoaPods.
 
 ~~~shell
  pod install

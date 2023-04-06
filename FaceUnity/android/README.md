@@ -41,7 +41,7 @@ appID: Agora App ID
 token: Token corresponding to Agora App ID. If token is not activated for appid, it can be left blank. 
 ```
 
-##### 2.4 Copy the necessary resource files and acquired FaceUnity Beauty License to the [**app/src/main/assets/**](app/src/main/assets/) directory of the project.
+##### 2.4 Copy the necessary resource files to the [**app/src/main/assets/**](app/src/main/assets/) directory of the project.
 
 * [Click here to download the resource file package required for the demo](https://download.agora.io/marketplace/release/FaceUnity_v8.4.1_Resources.zip)
 
