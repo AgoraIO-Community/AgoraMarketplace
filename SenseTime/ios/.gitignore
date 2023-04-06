@@ -1,4 +1,8 @@
-Resource/*
+Resource/Beauty
+Resource/Filters
+Resource/license/SenseME*
+Resource/Makeup
+Resource/models
 *.a
 *.framework/
 *.xcframework/
