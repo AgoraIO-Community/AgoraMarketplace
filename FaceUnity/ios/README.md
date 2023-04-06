@@ -73,7 +73,7 @@ token: Token corresponding to Agora App ID. If token is not activated for appid,
 
 ### 3.2 Demo Effect
 
-> // TODO
+> <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-effect-1.jpg" width="300" height="640"><img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-effect-2.jpg" width="300" height="640">
 >
 > ---
 >
