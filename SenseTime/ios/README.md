@@ -47,13 +47,13 @@ token: 声网appid对应的token, 若appid未开通token可不填写
 license_name: 商汤证书
 ```
 
-##### 2.4 将商汤美颜需要的资源文件和申请的商汤美颜 License 拷贝到项目的 [**Resource/**](/Resource) 目录下
+##### 2.4 将商汤美颜需要的资源文件和申请的商汤美颜 License 拷贝到项目的 [**Resource**](Resource) 目录下
 
 * [点击此处下载demo需要的资源文件包](https://download.agora.io/marketplace/release/SenseTime_v8.9.3_Resources.zip)
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-iOS-1.png)
 
-* 商汤美颜 License 文件拷贝到项目 [**ExtensionExample/Resource/license/**](ExtensionExample/Resource/license/) 目录下, 请确保本地 Lisence文件名与 [**AppID.m**](ExtensionExample/AppID.m) 内填写的一致
+* 商汤美颜 License 文件拷贝到项目 [**Resource/license/**](Resource/license/) 目录下, 请确保本地 Lisence文件名与 [**AppID.m**](ExtensionExample/AppID.m) 内填写的一致
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/SenseTime/SenseTime-iOS-3.png)
 
