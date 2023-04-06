@@ -118,7 +118,7 @@ mLisenseName: 商汤证书
 
 ### 如何获取声网 APPID
 
-> 声网 APPID 申请：[https://www.agora.io/cn/](https://www.agora.io/cn/)
+> 声网 APPID 申请：[声网Agora - 文档中心 - 如何获取 App ID](https://docs.agora.io/cn/Agora%20Platform/get_appid_token?platform=All%20Platforms#%E8%8E%B7%E5%8F%96-app-id)
 
 ### 程序运行后，没有美颜效果
 > 通常有以下几个原因：
