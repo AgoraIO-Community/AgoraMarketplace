@@ -1,4 +1,5 @@
 # Agora Marketplace Sample Projects
+> Other Language: [**简体中文**](README.zh.md)
 # 1.Project Overview
 ## 1.1 Introduction
 This repository contains sample projects for the Agora Marketplace extesnions, which include the following examples:
