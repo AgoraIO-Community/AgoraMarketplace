@@ -2,7 +2,7 @@
 > Other Language: [**简体中文**](README.zh.md)
 # 1. Project Overview
 ## 1.1 Introduction
-This repository contains sample projects for the Agora Marketplace extesnions, which include the following examples:
+This repository contains sample projects for the Agora Marketplace Extensions, which include the following examples:
 
 * BytePlus Beauty Extension
     * [Android](ByteDance/android/)
