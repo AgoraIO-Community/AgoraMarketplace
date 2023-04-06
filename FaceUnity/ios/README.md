@@ -98,7 +98,7 @@ token: Token corresponding to Agora App ID. If token is not activated for appid,
 
 ### Want to Learn about Other Agora Marketplace Extensions?
 
-> Agora Marketplace Homepage: https://docs.agora.io/en/extensions-marketplace/overview/product-overview
+> Agora Marketplace Homepage: https://www.agora.io/en/agora-extensions-marketplace/
 
 ### Encounter Problems During Integration, How to Contact Agora for Assistance?
 
