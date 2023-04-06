@@ -10,6 +10,7 @@ This repository contains sample projects for the Agora Marketplace extesnions, w
 * FaceUnity Beauty Extension
     * [Android](FaceUnity/android/)
     * [iOS](FaceUnity/ios/)
+    * [flutter](FaceUnity/flutter/)
 * Microsoft Speech-to-Text and Translation Extension
     * [Android](Microsoft/android/)
     * [iOS](Microsoft/ios/)
@@ -24,6 +25,7 @@ This repository contains sample projects for the Agora Marketplace extesnions, w
 * To run the FaceUnity Beauty sample project, please refer to the following process:
     * [Android](FaceUnity/android/)
     * [iOS](FaceUnity/ios/)
+    * [flutter](FaceUnity/flutter/)
     * For more information, please visit: https://docs.agora.io/en/extensions-marketplace/overview/product-overview
 * To run the SenseTime Beauty sample project, please refer to the following process:
     * [Android](SenseTime/android/)

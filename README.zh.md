@@ -11,6 +11,7 @@
 * 相芯美颜插件
     * [Android](FaceUnity/android/)
     * [iOS](FaceUnity/ios/)
+    * [flutter](FaceUnity/flutter/)
 * 微软语音转写、翻译插件
     * [Android](Microsoft/android/)
     * [iOS](Microsoft/ios/)
@@ -25,6 +26,7 @@
 * 运行相芯美颜插件示例项目, 请参考以下流程
     * [Android](FaceUnity/android/)
     * [iOS](FaceUnity/ios/)
+    * [flutter](FaceUnity/flutter/)
     * 更多参考: https://docs.agora.io/cn/extension_customer/landing-page?platform=Android
 * 运行商汤美颜插件示例项目, 请参考以下流程
     * [Android](SenseTime/android/)
