@@ -4,4 +4,6 @@
     <string name="init_extension">initExtension</string>
     <string name="set_composer">setBeautyMode</string>
     <string name="set_sticker">setBeauty</string>
+    <string name="face_num">face num: </string>
+    <string name="face_num_result_btn">enableFaceDetect</string>
 </resources>

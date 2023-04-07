@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -48,12 +50,16 @@ public class MainActivity
     private Button buttonInit;
     private Button buttonComposers;
     private Button buttonStickers;
+    private Button buttonFaceDetect;
+    private TextView faceResult;
     private final ObservableBoolean enableExtension =
             new ObservableBoolean(false);
     private final AtomicBoolean bundleLoaded = new AtomicBoolean(false);
     private final Handler handler = new Handler(Looper.getMainLooper());
 
     private int preSelectedBeauty = -1;
+
+    private Handler mainHandler = new Handler(Looper.getMainLooper());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,14 +84,17 @@ public class MainActivity
                                 if (buttonInit.isEnabled()) {
                                     buttonComposers.setEnabled(false);
                                     buttonStickers.setEnabled(false);
+                                    faceResult.setVisibility(View.INVISIBLE);
                                 } else {
                                     buttonComposers.setEnabled(true);
                                     buttonStickers.setEnabled(true);
+                                    faceResult.setVisibility(View.VISIBLE);
                                 }
                             } else {
                                 button.setText(R.string.enable_extension);
                                 buttonComposers.setEnabled(false);
                                 buttonStickers.setEnabled(false);
+                                faceResult.setVisibility(View.INVISIBLE);
                             }
                         }
                     }
@@ -104,6 +113,7 @@ public class MainActivity
 
             buttonComposers.setEnabled(true);
             buttonStickers.setEnabled(true);
+            buttonFaceDetect.setEnabled(true);
         });
         buttonComposers = findViewById(R.id.button_composers);
 
@@ -111,6 +121,13 @@ public class MainActivity
         buttonStickers = findViewById(R.id.button_stickers);
         buttonStickers
                 .setOnClickListener(view -> choiceSticker());
+        buttonFaceDetect = findViewById(R.id.button_face_num_result);
+        faceResult = findViewById(R.id.text_face_detect_result);
+        buttonFaceDetect.setOnClickListener(view -> {
+            faceResult.setVisibility(View.VISIBLE);
+            enableFaceDetectResult(true);
+            buttonFaceDetect.setEnabled(false);
+        });
     }
 
     private void initExtension() {
@@ -129,7 +146,7 @@ public class MainActivity
         try {
             File modelsPath = new File(
                     getExternalFilesDir(null),
-                    "Resource/models/M_SenseME_Face_Extra_Advanced_6.0.13.model");
+                    "Resource/models/M_SenseME_Face_Video_7.0.0.model");
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("model_path", modelsPath.getPath());
             jsonObject.put("config", STMobileHumanActionNative.ST_MOBILE_HUMAN_ACTION_DEFAULT_CONFIG_IMAGE);
@@ -139,6 +156,16 @@ public class MainActivity
         }
 
         setExtensionProperty("st_mobile_effect_create_handle", "{}");
+    }
+
+    private void enableFaceDetectResult(boolean enable) {
+        try {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("enable", enable);
+            setExtensionProperty("st_mobile_human_action_detect_enable", jsonObject.toString());
+        } catch (JSONException e) {
+            Log.e(TAG, e.toString());
+        }
     }
 
     private void setExtensionProperty(String key, String property) {
@@ -342,6 +369,7 @@ public class MainActivity
         RtcEngineConfig config = new RtcEngineConfig();
         config.mContext = getApplicationContext();
         config.mAppId = io.agora.rte.extension.sensetime.example.Constants.mAppId;
+        config.mExtensionObserver = this;
         config.mEventHandler = new IRtcEngineEventHandler() {
             @Override
             public void onWarning(int warn) {
@@ -382,6 +410,12 @@ public class MainActivity
 
     @Override
     public void onEvent(String s, String s1, String s2, String s3) {
+        try {
+            JSONObject faceResultOjb = new JSONObject(s3);
+            mainHandler.post(() -> faceResult.setText("face num: " + faceResultOjb.optString("face_count")));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

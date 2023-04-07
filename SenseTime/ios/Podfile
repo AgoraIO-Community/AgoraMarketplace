@@ -29,7 +29,7 @@ target 'ExtensionExample' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   
-  pod 'AgoraRtcEngine_iOS', '4.0.0-rc.1'
+  pod 'AgoraRtcEngine_iOS', '4.1.1'
 
   pod 'Extensions', :path => File.join('ExtensionExample')
 end
