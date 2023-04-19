@@ -32,7 +32,7 @@
 
 ##### 2.3 Fill in the required Agora App ID, token, and FaceUnity certificate file name in [**lib/main.dart**](lib/main.dart) of the project.
 
-![xxx](https://web-cdn.agora.io/docs-files/1681456048918)
+![xxx](screenshot/replace_main_appid.png)
 
 
 ##### 2.4 Copy the necessary resource files to the [**Resource/**](Resource/) directory of the project.
