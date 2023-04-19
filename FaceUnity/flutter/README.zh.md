@@ -37,7 +37,7 @@
 
 ##### 2.3 在项目的 [**lib/main.dart**](lib/main.dart) 里填写需要的声网 App ID:
 
-![xxx](https://web-cdn.agora.io/docs-files/1681456048918)
+![xxx](screenshot/replace_main_appid.png)
 
 
 ##### 2.4 将相芯美颜需要的资源文件拷贝到项目的 [**Resource/**](Resource/) 目录下
