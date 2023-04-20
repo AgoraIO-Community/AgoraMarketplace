@@ -32,7 +32,7 @@
 
 ##### 2.3 Fill in the required Agora App ID, token, and FaceUnity certificate file name in [**lib/main.dart**](lib/main.dart) of the project.
 
-![xxx](screenshot/replace_main_appid.png)
+![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity_flutter_3.png)
 
 
 ##### 2.4 Copy the necessary resource files to the [**Resource/**](Resource/) directory of the project.
@@ -43,7 +43,7 @@
 
 ##### 2.5 Copy the iOS FaceUnity Beauty License `authpack.h` file content to the project's [lib/authpack.dart](lib/authpack.dart) `gAuthPackage`.
 
-![xxx](screenshot/replace_auth_package.png)
+![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity_flutter_2.png)
 
 ##### 2.6 Download the **android-release.aar** file of the extension and copy it to the [**android/libs/**](android/libs/)directory of the project.
 
