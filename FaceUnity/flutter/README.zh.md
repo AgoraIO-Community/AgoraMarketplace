@@ -33,11 +33,11 @@
 
 - 申请时请提供绑定 License 的包名, 并将项目 [**android/app/build.gradle**](android/app/build.gradle) 文件中的applicaitionId 改为您自己 License 绑定的包名
 
-![xxx](screenshot/replace_application_id.png)
+![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity_flutter_1.png)
 
 ##### 2.3 在项目的 [**lib/main.dart**](lib/main.dart) 里填写需要的声网 App ID:
 
-![xxx](screenshot/replace_main_appid.png)
+![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity_flutter_3.png)
 
 
 ##### 2.4 将相芯美颜需要的资源文件拷贝到项目的 [**Resource/**](Resource/) 目录下
@@ -48,7 +48,7 @@
 
 ##### 2.5 将相芯美颜ios authpack.h 内容拷贝到[lib/authpack.dart](lib/authpack.dart) `gAuthPackage`中。
 
-![xxx](screenshot/replace_auth_package.png)
+![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity_flutter_2.png)
 
 ##### 2.6 下载插件 android-release.aar 文件, 并拷贝到项目 [**android/libs/**](android/libs/) 目录下
 
