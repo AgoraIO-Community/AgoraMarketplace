@@ -51,7 +51,7 @@ token: Token corresponding to Agora App ID. If token is not activated for appid,
 
 ##### 2.6 Download the .framework file of the extension and copy it to the [**ExtensionExample/**](ExtensionExample/) directory of the project.
 
-* [Click here to download the extension framework required for the demo](https://download.agora.io/marketplace/release/Agora_Marketplace_FaceUnity_v8.4.1_Extension_for_iOS_v4.1.1.zip)
+* [Click here to download the extension framework required for the demo](https://download.agora.io/marketplace/release/Agora_Marketplace_FaceUnity_v8.6.0_Extension_for_iOS_v4.1.1.zip)
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-iOS-2.png)
 

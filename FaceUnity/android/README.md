@@ -53,7 +53,7 @@ token: Token corresponding to Agora App ID. If token is not activated for appid,
 
 ##### 2.6 Download the **android-release.aar** file of the extension and copy it to the [**app/libs/**](app/libs/) directory of the project.
 
-* [Click here to download the extension aar required for the demo](https://download.agora.io/marketplace/release/Agora_Marketplace_FaceUnity_v8.4.1_Extension_for_Android_v4.1.1.zip)
+* [Click here to download the extension aar required for the demo](https://download.agora.io/marketplace/release/Agora_Marketplace_FaceUnity_v8.6.0_Extension_for_Android_v4.1.1.zip)
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-Android-3.png)
 

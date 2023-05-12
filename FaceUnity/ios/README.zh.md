@@ -57,7 +57,7 @@ token: 声网appid对应的token, 若appid未开通token可不填写
 
 ##### 2.6 下载插件 .framework 文件, 并拷贝到项目 [**ExtensionExample/**](ExtensionExample/) 目录下
 
-* [点击此处下载demo需要的插件framework](https://download.agora.io/marketplace/release/Agora_Marketplace_FaceUnity_v8.4.1_Extension_for_iOS_v4.1.1.zip)
+* [点击此处下载demo需要的插件framework](https://download.agora.io/marketplace/release/Agora_Marketplace_FaceUnity_v8.6.0_Extension_for_iOS_v4.1.1.zip)
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-iOS-2.png)
 

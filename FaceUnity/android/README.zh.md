@@ -58,7 +58,7 @@ mToken: 声网appid对应的token, 若appid未开通token可不填写
 
 ##### 2.6 下载插件 android-release.aar 文件, 并拷贝到项目 [**app/libs/**](app/libs/) 目录下
 
-* [点击此处下载demo需要的插件aar](https://download.agora.io/marketplace/release/Agora_Marketplace_FaceUnity_v8.4.1_Extension_for_Android_v4.1.1.zip)
+* [点击此处下载demo需要的插件aar](https://download.agora.io/marketplace/release/Agora_Marketplace_FaceUnity_v8.6.0_Extension_for_Android_v4.1.1.zip)
 
 <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-Android-3.png" alt="xxx" style="zoom:50%;" />
 
