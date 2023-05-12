@@ -1,30 +1,45 @@
 package io.agora.rte.extension.faceunity.example;
 
-import static io.agora.rtc2.Constants.LOCAL_VIDEO_STREAM_STATE_FAILED;
 import static io.agora.rtc2.Constants.VIDEO_SOURCE_CAMERA_PRIMARY;
 
 import android.Manifest;
 import android.app.ProgressDialog;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.JsonReader;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.util.Base64;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatSeekBar;
 import androidx.databinding.Observable;
 import androidx.databinding.ObservableBoolean;
 
+import org.apache.commons.lang3.tuple.ImmutableTriple;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import io.agora.rtc2.Constants;
 import io.agora.rtc2.IMediaExtensionObserver;
@@ -34,18 +49,18 @@ import io.agora.rtc2.RtcEngineConfig;
 import io.agora.rtc2.video.VideoCanvas;
 import io.agora.rte.extension.faceunity.ExtensionManager;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.concurrent.atomic.AtomicBoolean;
+import org.apache.commons.lang3.tuple.Triple;
 
 public class MainActivity
         extends AppCompatActivity implements IMediaExtensionObserver {
 
     private static final String TAG = "MainActivity";
 
+    private boolean enableLightMarkup = false;
+
     private RtcEngine mRtcEngine;
 
+    private Button btnLightMarkup;
     private Button button;
     private Button btnComposers;
     private Button btnSticker;
@@ -72,16 +87,6 @@ public class MainActivity
         initUI();
         initData();
         initPermission();
-
-//        if(needReload) {
-//            runOnUiThread(() -> {
-//                loadAIModels();
-//                enableExtension(enableExtension.get());
-//                needReload = false;
-//            });
-//        }
-
-//        needReload = false;
     }
 
     private void initData() {
@@ -112,6 +117,9 @@ public class MainActivity
 
         btnComposers = findViewById(R.id.button_composers);
         btnComposers.setOnClickListener(view -> choiceComposer());
+
+        btnLightMarkup = findViewById(R.id.btn_lightmarkup);
+        btnLightMarkup.setOnClickListener(view -> lightMarkup());
 
         btnSticker = findViewById(R.id.button_stickers);
         btnSticker.setOnClickListener(view -> choiceSticker());
@@ -375,6 +383,238 @@ public class MainActivity
         mRtcEngine.setExtensionProperty("FaceUnity", "Effect", key, property);
     }
 
+    private JSONArray loadLipstickJSON(File file) {
+        try {
+            JSONArray ret = new JSONArray();
+            JsonReader reader = new JsonReader(new InputStreamReader(new FileInputStream(file)));
+            reader.beginObject();
+
+            while (reader.hasNext()) {
+                String name = reader.nextName();
+                if(name.equals("rgba")) {
+                    reader.beginArray();
+                    while (reader.hasNext())
+                        ret.put(reader.nextDouble());
+                    reader.endArray();;
+                }
+            }
+            reader.endObject();
+
+            return ret;
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    private Triple<String, Integer, Integer> loadBitmapToBase64(File file) {
+        try {
+            FileInputStream inputStream = new FileInputStream(file);
+            Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+
+            int width = bitmap.getWidth();
+            int height = bitmap.getHeight();
+
+            int size = bitmap.getRowBytes() * bitmap.getHeight();
+            ByteBuffer byteBuffer = ByteBuffer.allocate(size);
+            bitmap.copyPixelsToBuffer(byteBuffer);
+            byte[] bytes = byteBuffer.array();
+
+            return new ImmutableTriple<>(
+                    Base64.encodeToString(bytes, Base64.NO_WRAP),
+                    width, height);
+
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    private void lightMarkup() {
+        File lightMarkupDir = new File(getExternalFilesDir("assets"),
+                "Resource/light_makeup/light_makeup.bundle");
+
+        File blusherDir = new File(getExternalFilesDir("assets"),
+                "Resource/light_makeup/blusher/mu_blush_02.png");
+        File eyebrowDir = new File(getExternalFilesDir("assets"),
+                "Resource/light_makeup/eyebrow/mu_eyebrow_02.png");
+        File eyeShadow = new File(getExternalFilesDir("assets"),
+                "Resource/light_makeup/eyeshadow/mu_eyeshadow_02.png");
+        File eyeLiner = new File(getExternalFilesDir("assets"),
+                "Resource/light_makeup/eyeliner/mu_eyeliner_04.png");
+        File eyelash = new File(getExternalFilesDir("assets"),
+                "Resource/light_makeup/eyelash/mu_eyelash_03.png");
+        File lipstickDir = new File(getExternalFilesDir("assets"),
+                "Resource/light_makeup/lipstick/mu_lip_01.json");
+
+        File[] texLoads = {
+                blusherDir,
+                eyebrowDir,
+                eyeShadow,
+                eyeLiner,
+                eyelash};
+
+        String[] texNames = {
+                "tex_blusher",
+                "tex_brow",
+                "tex_eye",
+                "tex_eyeLiner",
+                "tex_eyeLash"};
+
+        enableLightMarkup = !enableLightMarkup;
+
+        try {
+            if(enableLightMarkup) {
+                //桃花妆 90
+                // mu_lip_01 90
+                // mu_blush_01 90
+                // mu_eyebrow_01 50
+                // mu_eyeshadow_01
+
+                ProgressDialog dialog =
+                        ProgressDialog.show(this, "", "Loading lightMarkup stuff. Please wait...", true);
+                new Thread() {
+                    @Override
+                    public void run() {
+                        try {
+                            final double makeup_intensity_lip = 0.9;
+                            final double makeup_intensity_blusher = 0.9;
+                            final double makeup_intensity_eyeBrow = 1.0;
+                            final double makeup_intensity_eye = 1.0;
+                            final double makeup_intensity_eyeLiner = 1.0;
+                            final double makeup_intensity_eyelash = 1.0;
+
+                            final int is_use_fix = 1;
+
+                            //off
+                            final double makeup_intensity_pupil = 0;
+
+                            JSONObject jsonObject = new JSONObject();
+                            jsonObject.put("data", lightMarkupDir.getAbsolutePath());
+                            setExtensionProperty("fuCreateItemFromPackage", jsonObject.toString());
+
+                            //--
+                            jsonObject = new JSONObject();
+                            jsonObject.put("obj_handle", lightMarkupDir);
+                            jsonObject.put("name", "is_makeup_on");
+                            jsonObject.put("value", 1);
+                            setExtensionProperty("fuItemSetParam", jsonObject.toString());
+
+                            jsonObject = new JSONObject();
+                            jsonObject.put("obj_handle", lightMarkupDir);
+                            jsonObject.put("name", "is_use_fix");
+                            jsonObject.put("value", is_use_fix);
+                            setExtensionProperty("fuItemSetParam", jsonObject.toString());
+
+                            jsonObject = new JSONObject();
+                            jsonObject.put("obj_handle", lightMarkupDir);
+                            jsonObject.put("name", "makeup_intensity");
+                            jsonObject.put("value", 1.0);
+                            setExtensionProperty("fuItemSetParam", jsonObject.toString());
+
+                            jsonObject = new JSONObject();
+                            jsonObject.put("obj_handle", lightMarkupDir);
+                            jsonObject.put("name", "makeup_intensity_eye");
+                            jsonObject.put("value", makeup_intensity_eye);
+                            setExtensionProperty("fuItemSetParam", jsonObject.toString());
+
+                            jsonObject = new JSONObject();
+                            jsonObject.put("obj_handle", lightMarkupDir);
+                            jsonObject.put("name", "makeup_intensity_eyeBrow");
+                            jsonObject.put("value", makeup_intensity_eyeBrow);
+                            setExtensionProperty("fuItemSetParam", jsonObject.toString());
+
+                            jsonObject = new JSONObject();
+                            jsonObject.put("obj_handle", lightMarkupDir);
+                            jsonObject.put("name", "makeup_intensity_lip");
+                            jsonObject.put("value", makeup_intensity_lip);
+                            setExtensionProperty("fuItemSetParam", jsonObject.toString());
+
+                            jsonObject = new JSONObject();
+                            jsonObject.put("obj_handle", lightMarkupDir);
+                            jsonObject.put("name", "makeup_intensity_pupil");
+                            jsonObject.put("value", makeup_intensity_pupil);
+                            setExtensionProperty("fuItemSetParam", jsonObject.toString());
+
+                            jsonObject = new JSONObject();
+                            jsonObject.put("obj_handle", lightMarkupDir);
+                            jsonObject.put("name", "makeup_intensity_eyeLiner");
+                            jsonObject.put("value", makeup_intensity_eyeLiner);
+                            setExtensionProperty("fuItemSetParam", jsonObject.toString());
+
+                            jsonObject = new JSONObject();
+                            jsonObject.put("obj_handle", lightMarkupDir);
+                            jsonObject.put("name", "makeup_intensity_eyelash");
+                            jsonObject.put("value", makeup_intensity_eyelash);
+                            setExtensionProperty("fuItemSetParam", jsonObject.toString());
+
+                            jsonObject = new JSONObject();
+                            jsonObject.put("obj_handle", lightMarkupDir);
+                            jsonObject.put("name", "makeup_intensity_blusher");
+                            jsonObject.put("value", makeup_intensity_blusher);
+                            setExtensionProperty("fuItemSetParam", jsonObject.toString());
+
+                            jsonObject = new JSONObject();
+                            jsonObject.put("obj_handle", lightMarkupDir);
+                            jsonObject.put("name", "makeup_lip_mask");
+                            jsonObject.put("value", 1.0);
+                            setExtensionProperty("fuItemSetParam", jsonObject.toString());
+
+                            jsonObject = new JSONObject();
+                            jsonObject.put("obj_handle", lightMarkupDir);
+                            jsonObject.put("name", "makeup_lip_color");
+                            jsonObject.put("value", loadLipstickJSON(lipstickDir));
+                            setExtensionProperty("fuItemSetParam", jsonObject.toString());
+
+                            //---
+                            for (int i = 0; i < texLoads.length; i++) {
+                                File currentFile = texLoads[i];
+                                String currentName = texNames[i];
+                                jsonObject = new JSONObject();
+                                jsonObject.put("item", lightMarkupDir.getAbsolutePath());
+                                jsonObject.put("name", currentName);
+
+                                Triple<String, Integer, Integer> ret = loadBitmapToBase64(currentFile);
+                                String base64_value = ret.getLeft();
+                                jsonObject.put("value", base64_value);
+                                jsonObject.put("width", ret.getMiddle());
+                                jsonObject.put("height", ret.getRight());
+                                setExtensionProperty("fuCreateTexForItem", jsonObject.toString());
+                            }
+
+                            runOnUiThread(() -> {
+                                btnLightMarkup.setText(R.string.disable_lightmarkup);
+                            });
+
+                            handler.post(dialog::dismiss);
+                        } catch (JSONException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                }.start();
+            }
+            else {
+                JSONObject jsonObject = new JSONObject();
+
+                for (int i = 0; i < texLoads.length; i++) {
+                    String currentName = texNames[i];
+
+                    jsonObject.put("item", lightMarkupDir.getAbsolutePath());
+                    jsonObject.put("name", currentName);
+
+                    setExtensionProperty("fuDeleteTexForItem", jsonObject.toString());
+                }
+
+                jsonObject.put("item", lightMarkupDir.getAbsolutePath());
+                setExtensionProperty("fuDestroyItem", jsonObject.toString());
+
+                btnLightMarkup.setText(R.string.enable_lightmarkup);
+            }
+
+        } catch (JSONException e) {
+            Log.e(TAG, e.toString());
+        }
+    }
     private void choiceComposer() {
         File composerDir = new File(getExternalFilesDir("assets"),
                 "Resource/graphics/face_beautification.bundle");
@@ -453,7 +693,6 @@ public class MainActivity
         config.mContext = getApplicationContext();
         config.mAppId = Config.mAppId;
         config.mExtensionObserver = this;
-        config.addExtension("AgoraFaceUnityExtension");
         config.mEventHandler = new IRtcEngineEventHandler() {
             @Override
             public void onWarning(int warn) {
@@ -516,7 +755,9 @@ public class MainActivity
     }
 
     private void enableExtension(boolean enabled) {
-        mRtcEngine.enableExtension("FaceUnity", "Effect", enabled);
+        ExtensionManager.getInstance(mRtcEngine).initialize();
+        int ret = mRtcEngine.enableExtension("FaceUnity", "Effect", enabled);
+        Log.i(TAG, "mRtcEngine.enableExtension ret: " + ret + ", enabled: " + enabled);
     }
 
     @Override

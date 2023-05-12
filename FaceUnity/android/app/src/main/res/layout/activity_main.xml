@@ -19,6 +19,8 @@
         android:id="@+id/button_enable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/enable_extension"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@id/button_enable_ai"
@@ -28,26 +30,41 @@
         android:id="@+id/button_enable_ai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
         android:text="enableAITracking"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@id/button_composers"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
+        android:id="@+id/button_stickers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/set_sticker"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/btn_lightmarkup"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
         android:id="@+id/button_composers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
         android:text="@string/set_composer"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@id/button_stickers"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button_stickers"
+        android:id="@+id/btn_lightmarkup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/set_sticker"
-        android:textAllCaps="false"
+        android:layout_marginBottom="4dp"
+        android:text="@string/set_lightmarkup"
         app:layout_constraintBottom_toTopOf="@+id/color_level"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -64,9 +81,8 @@
         android:id="@+id/color_level"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/filter_level"
-        />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
