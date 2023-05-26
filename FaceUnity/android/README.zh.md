@@ -100,14 +100,16 @@ mToken: 声网appid对应的token, 若appid未开通token可不填写
 
 ### 3.3 Demo效果
 
-> <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-effect-1.jpg" width="300" height="640"><img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-effect-2.jpg" width="300" height="640">
->
+> <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-effect-3.jpg.jpg" width="300" height="640">
+> <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-effect-4.jpg.jpg" width="300" height="640">
+> 
 > ---
 >
 > * enableExtension: 开启/关闭插件
 > * enableAITracking: 开启人脸检测
 > * setComposer: 设置美颜效果
 > * setSticker: 设置猫脸贴纸效果
+> * ENABLELIGHTMAKEUP：开启/关闭轻美妆效果
 
 ---
 
