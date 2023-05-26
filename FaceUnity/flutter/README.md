@@ -72,6 +72,20 @@
 ├── ios
 |__ Resource // The beauty resources files
 ```
+---
+### 3.3 Demo Effect
+
+> <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-effect-3.jpg.jpg" width="300" height="640">
+> <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-effect-4.jpg.jpg" width="300" height="640">
+>
+> ---
+>
+> * enableExtension: Enable/Disable Extension
+> * enableAITracking: Enable Face Detection Display Results
+> * setComposer: Set Beauty Effect
+> * setSticker: Set Sticker Effect
+> * ENABLELIGHTMAKEUP: Enable/Disable Lightmakeup Effect
+
 
 ---
 
