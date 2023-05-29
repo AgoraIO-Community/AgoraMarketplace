@@ -47,7 +47,7 @@
 
 ##### 2.6 Download the **android-release.aar** file of the extension and copy it to the [**android/libs/**](android/libs/)directory of the project.
 
-* [Click here to download the extension aar required for the demo](https://download.agora.io/marketplace/release/Agora_Marketplace_FaceUnity_v8.4.1_Extension_for_Android_v4.1.1.zip)
+* [Click here to download the extension aar required for the demo](https://download.agora.io/marketplace/release/Agora_Marketplace_FaceUnity_v8.6.0_Extension_for_Android_v4.1.1.zip)
 
 <img src="https://web-cdn.agora.io/docs-files/1673335651833" alt="xxx" style="zoom:50%;" />
 
@@ -72,6 +72,20 @@
 ├── ios
 |__ Resource // The beauty resources files
 ```
+---
+### 3.3 Demo Effect
+
+> <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-effect-3.jpg.jpg" width="300" height="640">
+> <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-effect-4.jpg.jpg" width="300" height="640">
+>
+> ---
+>
+> * enableExtension: Enable/Disable Extension
+> * enableAITracking: Enable Face Detection Display Results
+> * setComposer: Set Beauty Effect
+> * setSticker: Set Sticker Effect
+> * ENABLELIGHTMAKEUP: Enable/Disable Lightmakeup Effect
+
 
 ---
 

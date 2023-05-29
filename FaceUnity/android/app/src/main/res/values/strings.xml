@@ -4,4 +4,7 @@
     <string name="init_extension">initExtension</string>
     <string name="set_composer">setComposer</string>
     <string name="set_sticker">setSticker</string>
+    <string name="set_lightmarkup">SetLightMarkup</string>
+    <string name="enable_lightmarkup">enableLightMarkup</string>
+    <string name="disable_lightmarkup">disableLightMarkup</string>
 </resources>

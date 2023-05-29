@@ -57,7 +57,7 @@ token: 声网appid对应的token, 若appid未开通token可不填写
 
 ##### 2.6 下载插件 .framework 文件, 并拷贝到项目 [**ExtensionExample/**](ExtensionExample/) 目录下
 
-* [点击此处下载demo需要的插件framework](https://download.agora.io/marketplace/release/Agora_Marketplace_FaceUnity_v8.4.1_Extension_for_iOS_v4.1.1.zip)
+* [点击此处下载demo需要的插件framework](https://download.agora.io/marketplace/release/Agora_Marketplace_FaceUnity_v8.6.0_Extension_for_iOS_v4.1.1.zip)
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-iOS-2.png)
 
@@ -79,14 +79,16 @@ token: 声网appid对应的token, 若appid未开通token可不填写
 
 ### 3.2 Demo效果
 
-> <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-effect-1.jpg" width="300" height="640"><img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-effect-2.jpg" width="300" height="640">
+> <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-effect-3.jpg.jpg" width="300" height="640">
+> <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-effect-4.jpg.jpg" width="300" height="640">
 >
 > ---
 >
-> * enableExtension: 开启/关闭插件
-> * enableAITracking: 开启人脸检测
-> * setComposer: 设置美颜效果
-> * setSticker: 设置猫脸贴纸效果
+> * enableExtension: Enable/Disable Extension
+> * enableAITracking: Enable Face Detection Display Results
+> * setComposer: Set Beauty Effect
+> * setSticker: Set Sticker Effect
+> * ENABLELIGHTMAKEUP: Enable/Disable Lightmakeup Effect
 
 ---
 
