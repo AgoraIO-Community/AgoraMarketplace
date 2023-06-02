@@ -42,7 +42,7 @@
 
 ##### 2.4 将相芯美颜需要的资源文件拷贝到项目的 [**Resource/**](Resource/) 目录下
 
-* [点击此处下载demo需要的资源文件包](https://download.agora.io/marketplace/release/FaceUnity_v8.4.1_Resources.zip)
+* [点击此处下载demo需要的资源文件包](https://download.agora.io/marketplace/release/FaceUnity_v8.6.1_Resources.zip)
 
 ![xxx](https://web-cdn.agora.io/docs-files/1673335775613)
 
