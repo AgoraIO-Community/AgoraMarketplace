@@ -47,7 +47,7 @@ token: 声网appid对应的token, 若appid未开通token可不填写
 
 ##### 2.4 **将相芯美颜需要的资源文件拷贝到项目的** [**Resource**](Resource/) 目录下
 
-* [点击此处下载demo需要的资源文件包](https://download.agora.io/marketplace/release/FaceUnity_v8.4.1_Resources.zip)
+* [点击此处下载demo需要的资源文件包](https://download.agora.io/marketplace/release/FaceUnity_v8.6.1_Resources.zip)
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-iOS-1.png)
 
