@@ -37,7 +37,7 @@
 
 ##### 2.4 Copy the necessary resource files to the [**Resource/**](Resource/) directory of the project.
 
-* [Click here to download the resource file package required for the demo](https://download.agora.io/marketplace/release/FaceUnity_v8.4.1_Resources.zip)
+* [Click here to download the resource file package required for the demo](https://download.agora.io/marketplace/release/FaceUnity_v8.6.1_Resources.zip)
 
 ![xxx](https://web-cdn.agora.io/docs-files/1673335775613)
 
