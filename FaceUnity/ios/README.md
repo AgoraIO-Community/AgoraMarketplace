@@ -41,7 +41,7 @@ token: Token corresponding to Agora App ID. If token is not activated for appid,
 
 ##### 2.4 Copy the necessary resource files to the [**Resource**](Resource/) directory of the project.
 
-* [Click here to download the resource file package required for the demo](https://download.agora.io/marketplace/release/FaceUnity_v8.4.1_Resources.zip)
+* [Click here to download the resource file package required for the demo](https://download.agora.io/marketplace/release/FaceUnity_v8.6.1_Resources.zip)
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-iOS-1.png)
 
