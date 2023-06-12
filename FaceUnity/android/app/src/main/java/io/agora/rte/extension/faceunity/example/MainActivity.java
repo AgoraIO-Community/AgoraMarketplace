@@ -33,11 +33,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.ByteBuffer;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -301,7 +298,7 @@ public class MainActivity
         try {
             // Load AI model
             File modelDir = new File(getExternalFilesDir("assets"),
-                    "Resource/model/ai_human_processor_gpu.bundle");
+                    "Resource/model/ai_human_processor.bundle");
 
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", modelDir.getAbsolutePath());
@@ -313,7 +310,7 @@ public class MainActivity
 
         try {
             File modelDir = new File(getExternalFilesDir("assets"),
-                    "Resource/graphics/aitype.bundle");
+                    "Resource/others/aitype.bundle");
 
             {
                 JSONObject jsonObject = new JSONObject();

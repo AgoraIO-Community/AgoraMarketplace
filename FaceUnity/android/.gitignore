@@ -5,3 +5,4 @@ local.properties
 app/src/main/jniLibs/
 build/
 app/src/main/java/io/agora/rte/extension/faceunity/example/authpack.java
+app/src/main/assets/Resource/
