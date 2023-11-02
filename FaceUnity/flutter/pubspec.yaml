@@ -20,7 +20,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.6 <3.0.0'
+  sdk: '>=2.18.2 <3.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -37,10 +37,13 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   
-  agora_rtc_engine: ^6.0.0
+  agora_rtc_engine: 6.1.1+1
   path_provider: ^2.0.11
   permission_handler: ^8.3.0
   path: ^1.8.0
+
+  image: ^4.0.17
+  tuple: ^2.0.1
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +72,16 @@ flutter:
     - Resource/graphics/aitype.bundle
     - Resource/items/ItemSticker/CatSparks.bundle
     - Resource/model/ai_face_processor.bundle
+    - Resource/model/ai_hand_processor.bundle
+    - Resource/model/ai_human_processor_gpu.bundle
+    - Resource/graphics/face_beautification.bundle
+    - Resource/light_makeup/
+    - Resource/light_makeup/blusher/
+    - Resource/light_makeup/eyebrow/
+    - Resource/light_makeup/eyeshadow/
+    - Resource/light_makeup/eyeliner/
+    - Resource/light_makeup/eyelash/
+    - Resource/light_makeup/lipstick/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
