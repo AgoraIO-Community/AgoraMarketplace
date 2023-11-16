@@ -65,6 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:text="@string/set_lightmarkup"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/color_level"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -105,11 +106,36 @@
         android:id="@+id/tv_ai_tracking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="16dp"
-        android:visibility="gone"
         android:text="faces: 0\nhands: 0\npeople: 0"
-        android:layout_marginRight="16dp" />
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_makeup_combine_id"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="14dp"
+        android:text="Markup"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/button_enable"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/markup_textview_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:scrollbarSize="15dp"
+        android:text="TextView"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/surfaceView"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

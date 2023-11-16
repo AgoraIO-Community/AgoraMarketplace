@@ -1,4 +1,5 @@
-package io.agora.rte.extension.faceunity.example;
+package io.agora.rte.extension.faceunity;
+
 
 import static io.agora.rtc2.Constants.VIDEO_SOURCE_CAMERA_PRIMARY;
 
@@ -33,11 +34,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.ByteBuffer;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -47,16 +45,18 @@ import io.agora.rtc2.IRtcEngineEventHandler;
 import io.agora.rtc2.RtcEngine;
 import io.agora.rtc2.RtcEngineConfig;
 import io.agora.rtc2.video.VideoCanvas;
-import io.agora.rte.extension.faceunity.ExtensionManager;
 
 import org.apache.commons.lang3.tuple.Triple;
 
 public class MainActivity
         extends AppCompatActivity implements IMediaExtensionObserver {
-
+    static {
+        System.loadLibrary("AgoraFaceUnityExtension");
+    }
     private static final String TAG = "MainActivity";
 
     private boolean enableLightMarkup = false;
+    private boolean enableSticker = false;
 
     private RtcEngine mRtcEngine;
 
@@ -65,6 +65,7 @@ public class MainActivity
     private Button btnComposers;
     private Button btnSticker;
     private TextView tvAITracking;
+    private TextView textViewMarkup;
     private Button enableAITracking;
     private AppCompatSeekBar colorLevelSeekBar;
     private AppCompatSeekBar filterLevelSeekBar;
@@ -108,7 +109,113 @@ public class MainActivity
         initBundle();
     }
 
+    static int idx = 1;
+    static int curCombineMarkupIdx = 0;
+    static String curCombineMarkupPath = "";
     private void initUI() {
+        textViewMarkup = findViewById(R.id.markup_textview_id);
+
+        Button btnMarkupCombine = findViewById(R.id.btn_makeup_combine_id);
+        btnMarkupCombine.setOnClickListener(view -> {
+            File makeupDir = new File(getExternalFilesDir("assets"),
+                    "Resource/graphics/face_makeup.bundle");
+
+            String[] combineMarkupNames = {
+                    "ailing.bundle",
+                    "chaomo.bundle",
+                    "chuju.bundle",
+                    "chuqiu.bundle",
+                    "danyan.bundle",
+                    "diadiatu.bundle",
+                    "dongling.bundle",
+                    "gangfeng.bundle",
+                    "guofeng.bundle",
+                    "hanguoxuemei.bundle",
+                    "hongfeng.bundle",
+                    "hunxue.bundle",
+                    "jianling.bundle",
+                    "jingdian.bundle",
+                    "linjia.bundle",
+                    "nanshen.bundle",
+                    "nuandong.bundle",
+                    "nvshen.bundle",
+                    "oumei.bundle",
+                    "qianzhihe.bundle",
+                    "qizhi.bundle",
+                    "renyu.bundle",
+                    "rose.bundle",
+                    "shaonv.bundle",
+                    "tianmei.bundle",
+                    "wumei.bundle",
+                    "xinggan.bundle",
+                    "xuejie.bundle",
+                    "yanshimao.bundle",
+                    "yuansheng.bundle",
+                    "zhigan.bundle",
+                    "zhiya.bundle",
+                    "ziyun.bundle",
+            };
+
+            int curIdx = curCombineMarkupIdx++ % combineMarkupNames.length;
+
+            File combinationmakeupItemDir = new File(getExternalFilesDir("assets"),
+                    "Resource/makeup/combination_bundle/" + combineMarkupNames[curIdx]);
+
+            {
+                try {
+
+                    {
+                        if(curCombineMarkupPath.isEmpty()) {
+                            JSONObject jsonObject = new JSONObject();
+                            jsonObject.put("data", makeupDir.getAbsolutePath());
+                            setExtensionProperty("fuCreateItemFromPackage", jsonObject.toString());
+                        }
+                    }
+
+                    {
+                        if(!curCombineMarkupPath.isEmpty()) {
+                            // remove preload
+                            JSONObject jsonObject = new JSONObject();
+                            jsonObject.put("obj_handle", makeupDir.getAbsolutePath());
+                            setExtensionProperty("fuUnbindAllItems", jsonObject.toString());
+
+                            jsonObject = new JSONObject();
+                            jsonObject.put("item", curCombineMarkupPath);
+                            setExtensionProperty("fuDestroyItem", jsonObject.toString());
+                        }
+
+                        curCombineMarkupPath = combinationmakeupItemDir.getAbsolutePath();
+                    }
+
+                    {
+                        JSONObject jsonObject = new JSONObject();
+                        jsonObject.put("data", combinationmakeupItemDir.getAbsolutePath());
+                        setExtensionProperty("fuCreateItemFromPackage", jsonObject.toString());
+
+                        jsonObject = new JSONObject();
+                        JSONArray jsonArray = new JSONArray();
+                        jsonArray.put(combinationmakeupItemDir.getAbsolutePath());
+                        jsonObject.put("obj_handle", makeupDir.getAbsolutePath());
+                        jsonObject.put("p_items", jsonArray);
+                        setExtensionProperty("fuBindItems", jsonObject.toString());
+
+                        jsonObject = new JSONObject();
+                        jsonObject.put("obj_handle", makeupDir.getAbsolutePath());
+                        jsonObject.put("name", "makeup_intensity");
+                        jsonObject.put("value", 0.8);
+                        setExtensionProperty("fuItemSetParam", jsonObject.toString());
+                    }
+
+                    textViewMarkup.setVisibility(View.VISIBLE);
+                    textViewMarkup.setText(Integer.toString(curIdx) + "-" + combineMarkupNames[curIdx]);
+
+                } catch (JSONException e) {
+                    Log.e(TAG, e.toString());
+                }
+            }
+        });
+
+        //
         button = findViewById(R.id.button_enable);
         tvAITracking = findViewById(R.id.tv_ai_tracking);
         enableAITracking = findViewById(R.id.button_enable_ai);
@@ -234,6 +341,22 @@ public class MainActivity
             }
             jsonObject.put("authdata", jsonArray);
             setExtensionProperty("fuSetup", jsonObject.toString());
+
+            //_fuSetLogLevel
+            /*
+            typedef enum FULOGLEVEL {
+                FU_LOG_LEVEL_TRACE = 0,
+                FU_LOG_LEVEL_DEBUG = 1,
+                FU_LOG_LEVEL_INFO = 2,
+                FU_LOG_LEVEL_WARN = 3,
+                FU_LOG_LEVEL_ERROR = 4,
+                FU_LOG_LEVEL_CRITICAL = 5,
+                FU_LOG_LEVEL_OFF = 6
+            } FULOGLEVEL;
+            */
+            jsonObject = new JSONObject();
+            jsonObject.put("level", 6);
+            setExtensionProperty("fuSetLogLevel", jsonObject.toString());
         } catch (JSONException e) {
             Log.e(TAG, e.toString());
         }
@@ -245,7 +368,7 @@ public class MainActivity
         people = 0;
         tvAITracking.setVisibility(View.GONE);
         enableAITracking.setText("enableAITracking");
-        updateAITrackingResult(0, 0, 0);
+        updateAITrackingResult(0, 0, 0, 0);
 
         try {
             {
@@ -281,6 +404,15 @@ public class MainActivity
             jsonObject.put("type", 1 << 8);
 
             setExtensionProperty("fuLoadAIModelFromPackage", jsonObject.toString());
+
+            jsonObject = new JSONObject();
+            jsonObject.put("n", 5);
+            setExtensionProperty("fuSetMaxFaces", jsonObject.toString());
+
+            jsonObject = new JSONObject();
+            jsonObject.put("enable", true);
+            setExtensionProperty("fuIsTracking", jsonObject.toString());
+
         } catch (JSONException e) {
             Log.e(TAG, e.toString());
         }
@@ -301,7 +433,7 @@ public class MainActivity
         try {
             // Load AI model
             File modelDir = new File(getExternalFilesDir("assets"),
-                    "Resource/model/ai_human_processor_gpu.bundle");
+                    "Resource/model/ai_human_processor.bundle");
 
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("data", modelDir.getAbsolutePath());
@@ -311,7 +443,9 @@ public class MainActivity
             Log.e(TAG, e.toString());
         }
 
+
         try {
+
             File modelDir = new File(getExternalFilesDir("assets"),
                     "Resource/graphics/aitype.bundle");
 
@@ -325,7 +459,7 @@ public class MainActivity
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.put("obj_handle", modelDir);
                 jsonObject.put("name", "aitype");
-                jsonObject.put("value", 1 << 8 | 1 << 30 | 1 << 3);
+                jsonObject.put("value", 1 << 8 | 16777216 | 1 << 4 | 1 << 9 | 1 << 30 | 1 << 3);
                 setExtensionProperty("fuItemSetParam", jsonObject.toString());
             }
         } catch (JSONException e) {
@@ -340,7 +474,7 @@ public class MainActivity
         try {
             {
                 JSONObject jsonObject = new JSONObject();
-                jsonObject.put("n", 5);
+                jsonObject.put("n", 1);
                 setExtensionProperty("fuSetMaxFaces", jsonObject.toString());
             }
 
@@ -372,9 +506,9 @@ public class MainActivity
         }
     }
 
-    private void updateAITrackingResult(int faces, int hands, int people) {
+    private void updateAITrackingResult(int faces, int hands, int people, int motion) {
         runOnUiThread(() -> {
-            String result = "faces: " + faces + "\nhands: " + hands + "\npeople: " + people;
+            String result = "faces: " + faces + "\nhands: " + hands + "\npeople: " + people + "\nmotion: " + motion;
             tvAITracking.setText(result);
         });
     }
@@ -476,6 +610,10 @@ public class MainActivity
                 new Thread() {
                     @Override
                     public void run() {
+                        runOnUiThread(() -> {
+                            btnLightMarkup.setEnabled(false);
+                        });
+
                         try {
                             final double makeup_intensity_lip = 0.9;
                             final double makeup_intensity_blusher = 0.9;
@@ -583,6 +721,7 @@ public class MainActivity
                             }
 
                             runOnUiThread(() -> {
+                                btnLightMarkup.setEnabled(true);
                                 btnLightMarkup.setText(R.string.disable_lightmarkup);
                             });
 
@@ -632,18 +771,38 @@ public class MainActivity
     }
 
     private void choiceSticker() {
-        File stickerDir =
-                new File(getExternalFilesDir("assets"),
-                        "Resource/items/ItemSticker/CatSparks.bundle");
-        try {
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("data", stickerDir.getAbsolutePath());
-            setExtensionProperty("fuCreateItemFromPackage", jsonObject.toString());
+        int count = 1;
+        for(int i = 0; i < count; ++i) {
+            File stickerDir =
+                    new File(getExternalFilesDir("assets"),
+                            "Resource/effect/normal/cat_sparks.bundle");
 
-            btnSticker.setEnabled(false);
-        } catch (JSONException e) {
-            Log.e(TAG, e.toString());
+            enableSticker = !enableSticker;
+
+            if(enableSticker) {
+                try {
+                    JSONObject jsonObject = new JSONObject();
+                    jsonObject.put("data", stickerDir.getAbsolutePath());
+                    setExtensionProperty("fuCreateItemFromPackage", jsonObject.toString());
+
+                    btnSticker.setText("disableSticker");
+                } catch (JSONException e) {
+                    Log.e(TAG, e.toString());
+                }
+            }
+            else {
+                try {
+                    JSONObject jsonObject = new JSONObject();
+                    jsonObject.put("item", stickerDir.getAbsolutePath());
+                    setExtensionProperty("fuDestroyItem", jsonObject.toString());
+
+                    btnSticker.setText("setSticker");
+                } catch (JSONException e) {
+                    Log.e(TAG, e.toString());
+                }
+            }
         }
+
     }
 
     private void initBundle() {
@@ -694,10 +853,10 @@ public class MainActivity
         config.mAppId = Config.mAppId;
         config.mExtensionObserver = this;
         config.mEventHandler = new IRtcEngineEventHandler() {
-            @Override
-            public void onWarning(int warn) {
-                Log.w(TAG, String.format("onWarning %d", warn));
-            }
+//            @Override
+//            public void onWarning(int warn) {
+//                Log.w(TAG, String.format("onWarning %d", warn));
+//            }
 
             @Override
             public void onError(int err) {
@@ -744,7 +903,7 @@ public class MainActivity
         mRtcEngine.startPreview();
 
         initExtension();
-        loadAIModels();
+        //loadAIModels();
         runOnUiThread(() -> {
             btnSticker.setEnabled(true);
             btnComposers.setEnabled(true);
@@ -755,7 +914,7 @@ public class MainActivity
     }
 
     private void enableExtension(boolean enabled) {
-        ExtensionManager.getInstance(mRtcEngine).initialize();
+        //ExtensionManager.getInstance(mRtcEngine).initialize();
         int ret = mRtcEngine.enableExtension("FaceUnity", "Effect", enabled);
         Log.i(TAG, "mRtcEngine.enableExtension ret: " + ret + ", enabled: " + enabled);
     }
@@ -763,26 +922,61 @@ public class MainActivity
     @Override
     public void onEvent(String vendor, String extension, String key, String value) {
         Log.d(TAG, "onEvent vendor: " + vendor + "  extension: " + extension + "  key: " + key + "  value: " + value);
-
+        int motion = 0;
         try {
             JSONObject jsonObject = new JSONObject(value);
             if ("fuIsTracking".equals(key)) {
                 faces = jsonObject.getInt("faces");
+
+                /**
+                 typedef enum FUAIEXPRESSIONTYPE {
+                 FUAIEXPRESSION_UNKNOWN = 0,
+                 FUAIEXPRESSION_BROW_UP = 1 << 1,
+                 FUAIEXPRESSION_BROW_FROWN = 1 << 2,
+                 FUAIEXPRESSION_LEFT_EYE_CLOSE = 1 << 3,
+                 FUAIEXPRESSION_RIGHT_EYE_CLOSE = 1 << 4,
+                 FUAIEXPRESSION_EYE_WIDE = 1 << 5,
+                 FUAIEXPRESSION_MOUTH_SMILE_LEFT = 1 << 6,
+                 FUAIEXPRESSION_MOUTH_SMILE_RIGHT = 1 << 7,
+                 FUAIEXPRESSION_MOUTH_FUNNEL = 1 << 8,
+                 FUAIEXPRESSION_MOUTH_OPEN = 1 << 9,
+                 FUAIEXPRESSION_MOUTH_PUCKER = 1 << 10,
+                 FUAIEXPRESSION_MOUTH_ROLL = 1 << 11,
+                 FUAIEXPRESSION_MOUTH_PUFF = 1 << 12,
+                 FUAIEXPRESSION_MOUTH_SMILE = 1 << 13,
+                 FUAIEXPRESSION_MOUTH_FROWN = 1 << 14,
+                 FUAIEXPRESSION_HEAD_LEFT = 1 << 15,
+                 FUAIEXPRESSION_HEAD_RIGHT = 1 << 16,
+                 FUAIEXPRESSION_HEAD_NOD = 1 << 17,
+                 } FUAIEXPRESSIONTYPE;
+                 */
+
+                if(jsonObject.has("expression_type")) {
+                    motion = (int) (Math.log(jsonObject.getInt("expression_type")) / Math.log(2));
+
+                    if(motion > 17 || motion < 0)
+                        motion = 0;
+                }
+
+
             } else if ("fuHandDetectorGetResultNumHands".equals(key)) {
                 hands = jsonObject.getInt("hands");
             } else if ("fuHumanProcessorGetNumResults".equals(key)) {
                 people = jsonObject.getInt("people");
             }
+            else {
+                Log.i(TAG, "test test test");
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        updateAITrackingResult(faces, hands, people);
+        updateAITrackingResult(faces, hands, people, motion);
     }
 
     @Override
     public void onStarted(String s, String s1) {
-
+        Log.i(TAG, String.format("PeterPeterPeter: Extension OnStarted: (%s - %s)", s, s1));
     }
 
     @Override

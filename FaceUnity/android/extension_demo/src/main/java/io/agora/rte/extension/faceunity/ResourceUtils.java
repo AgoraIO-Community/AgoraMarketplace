@@ -1,4 +1,4 @@
-package io.agora.rte.extension.faceunity.example;
+package io.agora.rte.extension.faceunity;
 
 import android.content.res.AssetManager;
 
