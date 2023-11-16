@@ -1,13 +1,19 @@
-include ':app'
-rootProject.name = "FaceUnity"
-
-def localPropertiesFile = new File(rootProject.projectDir.absolutePath + File.separator + ".plugin_dev.properties")
-def localProperties = new Properties()
-if (localPropertiesFile.exists()) {
-    localPropertiesFile.withReader('UTF-8') { reader ->
-        localProperties.load(reader)
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
     }
-    def localPluginPath = localProperties.getProperty('local_plugin_path')
-    include ":plugin"
-    project(":plugin").projectDir = new File(localPluginPath)
 }
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "FaceUnityExtension"
+//include ':extension_app'
+//include ':extension_aar'
+include ':extension_demo'
+//include ':extension_joinchannel_app'

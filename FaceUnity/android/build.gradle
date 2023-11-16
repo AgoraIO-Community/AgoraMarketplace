@@ -1,24 +1,17 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath "com.android.tools.build:gradle:4.1.0"
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }
+plugins {
+    id 'com.android.application' version '8.1.1' apply false
+    id 'com.android.library' version '8.1.1' apply false
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+project.ext {
+//    agoraSDKVersion = "4.0.0"
+//    agoraSDKPackage = "io.agora.rtc:full-sdk:4.0.0-rc.1"
+    agoraSDKVersion = "4.2.2"
+    agoraSDKPackage = "io.agora.rtc:full-sdk:4.2.2"
+    agoraSDKDebug = false
+    faceUnitySDKVersion = "8.6.0"
+    extensionName = "AgoraFaceUnityExtension"
+    devExtension = false
 }
