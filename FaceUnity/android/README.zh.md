@@ -29,13 +29,13 @@
 >
 >   ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/get_app_id.jpg)
 
-##### 2.2 在声网控制台 [购买和激活](https://docs.agora.io/cn/extension_customer/get_extension?platform=All%20Platforms) 相芯美颜道具高级版插件，点击**联系我们**获取专属的证书文件
+##### 2.2 在声网控制台 [购买和激活](https://doc.shengwang.cn/doc/marketplace/android/get-started/enable-service#%E8%B4%AD%E4%B9%B0%E5%92%8C%E6%BF%80%E6%B4%BB%E6%8F%92%E4%BB%B6) 相芯美颜道具高级版插件，点击**联系我们**获取专属的证书文件
 
-- 申请时请提供绑定 License 的包名, 并将项目 [**build.gradle**](app/build.gradle) 文件中的applicaitionId 改为您自己 License 绑定的包名
+- 申请时请提供绑定 License 的包名, 并将项目 [**build.gradle**](extension_demo/build.gradle) 文件中的applicaitionId 改为您自己 License 绑定的包名
 
 ![xxx](https://web-cdn.agora.io/docs-files/1679457359046)
 
-##### 2.3 在项目的 [**Config.java**](app/src/main/java/io/agora/rte/extension/faceunity/example/Config.java) 里填写需要的声网 App ID 、token, 注意⚠️:
+##### 2.3 在项目的 [**Config.java**](extension_demo/src/main/java/io/agora/rte/extension/faceunity/Config.java) 里填写需要的声网 App ID 、token, 注意⚠️:
 
 * 若 appid 未开通 token 可不填写 mToken
 
@@ -46,19 +46,18 @@ mAppid: 声网appid
 mToken: 声网appid对应的token, 若appid未开通token可不填写
 ```
 
-##### 2.4 将相芯美颜需要的资源文件拷贝到项目的 [**app/src/main/assets/**](app/src/main/assets/) 目录下
+##### 2.4 将相芯美颜需要的资源文件拷贝到项目的 [**extension_demo/src/main/assets/**](app/src/main/assets/) 目录下
 
 * [点击此处下载demo需要的资源文件包](https://download.agora.io/marketplace/release/FaceUnity_v8.6.1_Resources.zip)
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-Android-1.png)
 
-##### 2.5 将相芯美颜 authpack.java 文件拷贝到项目 [**app/src/main/java/io/agora/rte/extension/faceunity/example/**](app/src/main/java/io/agora/rte/extension/faceunity/example/) 目录下, 并修改文件内的 package
+##### 2.5 将相芯美颜 authpack.java 文件拷贝到项目 [**extension_demo/src/main/java/io/agora/rte/extension/faceunity/**](app/src/main/java/io/agora/rte/extension/faceunity/) 目录下, 并修改文件内的 package（本Demo中已包含与 io.agora.rte.extension.faceunity 绑定的authpack.java 文件）
 
 ![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-Android-2.png)
 
-##### 2.6 下载插件 android-release.aar 文件, 并拷贝到项目 [**app/libs/**](app/libs/) 目录下
+##### 2.6 下载插件 android-release.aar 文件, 并拷贝到项目 [**extension_demo/libs/**](extension_demo/libs/) 目录下 （本Demo中已包含该插件文件）
 
-* [点击此处下载demo需要的插件aar](https://download.agora.io/marketplace/release/Agora_Marketplace_FaceUnity_v8.6.0_Extension_for_Android_v4.1.1.zip)
 
 <img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-Android-3.png" alt="xxx" style="zoom:50%;" />
 
@@ -75,13 +74,13 @@ mToken: 声网appid对应的token, 若appid未开通token可不填写
 ### 3.2 项目文件结构简介
 
 ```
-├── app
+├── extension_demo
 │   ├── src
 │   │   ├── androidTest //包含针对 Android 设备的测试代码
 │   │   └── main
 │   │       ├── assets //包含美颜需要的所有资源文件
 │   │       ├── java //包含主要的 Java 代码
-│   │       │   ├── io/agora/rte/extension/faceunity/example
+│   │       │   ├── io/agora/rte/extension/faceunity/
 │   │       │   │   ├── Config.java //包含所有需要填写的配置
 │   │       │   │   └── ......
 │   │       │   └── androidManifest.xml //应用程序清单文件
