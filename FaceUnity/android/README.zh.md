@@ -33,33 +33,33 @@
 
 - 申请时请提供绑定 License 的包名, 并将项目 [**build.gradle**](extension_demo/build.gradle) 文件中的applicaitionId 改为您自己 License 绑定的包名
 
-![xxx](https://web-cdn.agora.io/docs-files/1679457359046)
+![xxx](https://github.com/AgoraIO-Community/AgoraMarketplace/assets/47940328/23210c29-d55e-4abb-aaf6-5da25a3a2135)
 
 ##### 2.3 在项目的 [**Config.java**](extension_demo/src/main/java/io/agora/rte/extension/faceunity/Config.java) 里填写需要的声网 App ID 、token, 注意⚠️:
 
 * 若 appid 未开通 token 可不填写 mToken
 
-![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-Android-5.png)
+![xxx](https://github.com/AgoraIO-Community/AgoraMarketplace/assets/47940328/7c090cd6-4645-4040-9d24-ab1ddab5a3a2)
 
 ```texag-0-1gpap96h0ag-1-1gpap96h0ag-0-1gpap96h0ag-1-1gpap96h0ag-0-1gpap96h0ag-1-1gpap96h0ag-0-1gpap96h0ag-1-1gpap96h0ag-0-1gpap96h0ag-1-1gpap96h0
 mAppid: 声网appid
 mToken: 声网appid对应的token, 若appid未开通token可不填写
 ```
 
-##### 2.4 将相芯美颜需要的资源文件拷贝到项目的 [**extension_demo/src/main/assets/**](app/src/main/assets/) 目录下
+##### 2.4 将相芯美颜需要的资源文件拷贝到项目的 [**extension_demo/src/main/assets/**](extension_demo/src/main/assets/) 目录下
 
-* [点击此处下载demo需要的资源文件包](https://download.agora.io/marketplace/release/FaceUnity_v8.6.1_Resources.zip)
+* [点击此处下载demo需要的资源文件包](https://github.com/AgoraIO-Community/AgoraMarketplace/tree/master/FaceUnity/ResourceNG)
 
-![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-Android-1.png)
+![xxx](https://github.com/AgoraIO-Community/AgoraMarketplace/assets/47940328/ce9b29d0-1aa4-4831-a3ec-2c21ebfcf091)
 
 ##### 2.5 将相芯美颜 authpack.java 文件拷贝到项目 [**extension_demo/src/main/java/io/agora/rte/extension/faceunity/**](app/src/main/java/io/agora/rte/extension/faceunity/) 目录下, 并修改文件内的 package（本Demo中已包含与 io.agora.rte.extension.faceunity 绑定的authpack.java 文件）
 
-![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-Android-2.png)
+![xxx](https://github.com/AgoraIO-Community/AgoraMarketplace/assets/47940328/6600ecaf-a845-4c19-b80c-638a23d27519)
 
 ##### 2.6 下载插件 android-release.aar 文件, 并拷贝到项目 [**extension_demo/libs/**](extension_demo/libs/) 目录下 （本Demo中已包含该插件文件）
 
 
-<img src="https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-Android-3.png" alt="xxx" style="zoom:50%;" />
+<img src="https://github.com/AgoraIO-Community/AgoraMarketplace/assets/47940328/7517ae8c-9f1c-4b1a-8d54-ffa5424cdb8f" alt="xxx" style="zoom:50%;" />
 
 ##### 2.7 用 Android Studio 打开项目、将项目与 Gradle 文件同步, 连接一台 Android 真机（非模拟器），运行项目
 
