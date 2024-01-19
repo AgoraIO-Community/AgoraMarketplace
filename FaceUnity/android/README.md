@@ -28,34 +28,32 @@
 
 - Provide the package name bound to the license during the application and change "applicationId" in the "build.gradle" file of the project to your own bound package name.
 
-![xxx](https://web-cdn.agora.io/docs-files/1679457359046)
+![xxx](https://github.com/AgoraIO-Community/AgoraMarketplace/assets/47940328/23210c29-d55e-4abb-aaf6-5da25a3a2135)
 
-##### 2.3 ill in the required Agora App ID, token, and FaceUnity certificate file name in [**Config.java**](app/src/main/java/io/agora/rte/extension/faceunity/example/Config.java) of the project. Note⚠️:
+##### 2.3 Fill in the required Agora App ID, token, and FaceUnity certificate file name in [**Config.java**](extension_demo/src/main/java/io/agora/rte/extension/faceunity/Config.java) of the project. Note⚠️:
 
 * If token is not activated for appid, mToken can be left blank.
 
-![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-Android-5.png)
+![xxx](https://github.com/AgoraIO-Community/AgoraMarketplace/assets/47940328/7c090cd6-4645-4040-9d24-ab1ddab5a3a2)
 
 ```texag-0-1gpap96h0ag-1-1gpap96h0ag-0-1gpap96h0ag-1-1gpap96h0ag-0-1gpap96h0ag-1-1gpap96h0ag-0-1gpap96h0ag-1-1gpap96h0ag-0-1gpap96h0ag-1-1gpap96h0
 appID: Agora App ID
 token: Token corresponding to Agora App ID. If token is not activated for appid, it can be left blank. 
 ```
 
-##### 2.4 Copy the necessary resource files to the [**app/src/main/assets/**](app/src/main/assets/) directory of the project.
+##### 2.4 Copy the necessary resource files to the [**extension_demo/src/main/assets/**](extension_demo/src/main/assets/) directory of the project.
 
-* [Click here to download the resource file package required for the demo](https://download.agora.io/marketplace/release/FaceUnity_v8.6.1_Resources.zip)
+* [Click here to download the resource file package required for the demo](https://github.com/AgoraIO-Community/AgoraMarketplace/tree/master/FaceUnity/ResourceNG)
 
-![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-Android-1.png)
+![xxx](https://github.com/AgoraIO-Community/AgoraMarketplace/assets/47940328/ce9b29d0-1aa4-4831-a3ec-2c21ebfcf091)
 
-##### 2.5 Copy the FaceUnity Beauty License authpack.java file to the project's [**app/src/main/java/io/agora/rte/extension/faceunity/example/**](app/src/main/java/io/agora/rte/extension/faceunity/example/) directory.
+##### 2.5 Copy the FaceUnity Beauty License authpack.java file to the project's [**extension_demo/src/main/java/io/agora/rte/extension/faceunity/**](app/src/main/java/io/agora/rte/extension/faceunity/) directory. （This Demo contains an authpack bound to the package name io.agora.rte.extension.faceunity)
 
-![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-Android-2.png)
+![xxx](https://github.com/AgoraIO-Community/AgoraMarketplace/assets/47940328/6600ecaf-a845-4c19-b80c-638a23d27519)
+##### 2.6 Download the **android-release.aar** file of the extension and copy it to the [**app/libs/**](app/libs/) directory of the project. (This Demo already has this aar file in place)
 
-##### 2.6 Download the **android-release.aar** file of the extension and copy it to the [**app/libs/**](app/libs/) directory of the project.
 
-* [Click here to download the extension aar required for the demo](https://download.agora.io/marketplace/release/Agora_Marketplace_FaceUnity_v8.6.0_Extension_for_Android_v4.1.1.zip)
-
-![xxx](https://accktvpic.oss-cn-beijing.aliyuncs.com/pic/github_readme/market-place/FaceUnity/FaceUnity-Android-3.png)
+![xxx](https://github.com/AgoraIO-Community/AgoraMarketplace/assets/47940328/7517ae8c-9f1c-4b1a-8d54-ffa5424cdb8f)
 
 ##### 2.7 Open the project with Android Studio, synchronize the project with Gradle files, connect to an Android device (not emulator), and run the project.
 
@@ -70,13 +68,13 @@ token: Token corresponding to Agora App ID. If token is not activated for appid,
 ### 3.2 Project File Structure
 
 ~~~
-├── app
+├── extension_demo
 │   ├── src
 │   │   ├── androidTest //Contains testing code for Android devices.
 │   │   └── main
 │   │       ├── assets //Contains all resource files required for beauty.
 │   │       ├── java //Contains the main Java code.
-│   │       │   ├── io/agora/rte/extension/faceunity/example //Contains all the configuration needed to be filled.
+│   │       │   ├── io/agora/rte/extension/faceunity/ //Contains all the configuration needed to be filled.
 │   │       │   └── ...
 │   │       └── res //Contains all resource files.
 │   │           └── libs //Contains the extension aar.
